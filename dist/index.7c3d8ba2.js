@@ -945,23 +945,29 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _reactDom = require("react-dom");
 var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
-var _loader = require("rsuite/Loader");
-var _loaderDefault = parcelHelpers.interopDefault(_loader);
+var _dateRangePicker = require("rsuite/DateRangePicker");
+var _dateRangePickerDefault = parcelHelpers.interopDefault(_dateRangePicker);
+var _indexLess = require("rsuite/styles/index.less");
 var mountNode = document.getElementById("app");
-_reactDomDefault.default.render(/*#__PURE__*/ _jsxRuntime.jsx(_loaderDefault.default, {
+const instance = /*#__PURE__*/ _jsxRuntime.jsx(_dateRangePickerDefault.default, {
+    style: {
+        paddingTop: 5
+    },
+    placeholder: "Select Date Range",
     __source: {
         fileName: "App.js",
-        lineNumber: 6
+        lineNumber: 9
     },
     __self: undefined
-}), mountNode);
+});
+_reactDomDefault.default.render(instance, mountNode);
 
   $parcel$ReactRefreshHelpers$f046.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","rsuite/Loader":"bsNF4","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J"}],"8xIwr":[function(require,module,exports) {
+},{"react/jsx-runtime":"8xIwr","react":"6TuXu","react-dom":"gkWJK","rsuite/styles/index.less":"keAbp","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"5V79J","rsuite/DateRangePicker":"u3UpD"}],"8xIwr":[function(require,module,exports) {
 'use strict';
 module.exports = require('./cjs/react-jsx-runtime.development.js');
 
@@ -22719,108 +22725,7 @@ module.exports = require('./cjs/scheduler-tracing.development.js');
     exports.unstable_wrap = unstable_wrap;
 })();
 
-},{}],"bsNF4":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _loader = require("./Loader");
-var _loaderDefault = parcelHelpers.interopDefault(_loader);
-exports.default = _loaderDefault.default;
-
-},{"./Loader":"eOqRc","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eOqRc":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _propTypes = require("prop-types");
-var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
-var _utils = require("../utils");
-var defaultProps = {
-    as: 'div',
-    classPrefix: 'loader',
-    speed: 'normal'
-};
-var Loader = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
-    var Component = props.as, classPrefix = props.classPrefix, className = props.className, inverse = props.inverse, backdrop = props.backdrop, speed = props.speed, center = props.center, vertical = props.vertical, content = props.content, size = props.size, rest = _objectWithoutPropertiesLooseDefault.default(props, [
-        "as",
-        "classPrefix",
-        "className",
-        "inverse",
-        "backdrop",
-        "speed",
-        "center",
-        "vertical",
-        "content",
-        "size"
-    ]);
-    var hasContent = !!content;
-    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix, prefix = _useClassNames.prefix;
-    var classes = merge(className, prefix('wrapper', "speed-" + speed, size, {
-        'backdrop-wrapper': backdrop,
-        'has-content': hasContent,
-        vertical: vertical,
-        inverse: inverse,
-        center: center
-    }));
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
-        role: "progressbar"
-    }, rest, {
-        ref: ref,
-        className: classes
-    }), backdrop && /*#__PURE__*/ _reactDefault.default.createElement("div", {
-        className: prefix('backdrop')
-    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
-        className: withClassPrefix()
-    }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
-        className: prefix('spin')
-    }), hasContent && /*#__PURE__*/ _reactDefault.default.createElement("span", {
-        className: prefix('content')
-    }, content))));
-});
-Loader.displayName = 'Loader';
-Loader.defaultProps = defaultProps;
-Loader.propTypes = {
-    as: _propTypesDefault.default.elementType,
-    className: _propTypesDefault.default.string,
-    classPrefix: _propTypesDefault.default.string,
-    center: _propTypesDefault.default.bool,
-    backdrop: _propTypesDefault.default.bool,
-    inverse: _propTypesDefault.default.bool,
-    vertical: _propTypesDefault.default.bool,
-    content: _propTypesDefault.default.node,
-    size: _propTypesDefault.default.oneOf([
-        'lg',
-        'md',
-        'sm',
-        'xs'
-    ]),
-    speed: _propTypesDefault.default.oneOf([
-        'normal',
-        'fast',
-        'slow'
-    ])
-};
-exports.default = Loader;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bKAu6":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function _extends() {
-    _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    return _extends.apply(this, arguments);
-}
-exports.default = _extends;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"JacNc":[function(require,module,exports) {
+},{}],"keAbp":[function() {},{}],"JacNc":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -22852,7 +22757,714 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}],"3Rubg":[function(require,module,exports) {
+},{}],"5V79J":[function(require,module,exports) {
+"use strict";
+var Refresh = require('react-refresh/runtime');
+function debounce(func, delay) {
+    var args;
+    var timeout = undefined;
+    return function(args1) {
+        clearTimeout(timeout);
+        timeout = setTimeout(function() {
+            timeout = undefined;
+            func.call(null, args1);
+        }, delay);
+    };
+}
+var enqueueUpdate = debounce(function() {
+    Refresh.performReactRefresh();
+}, 30); // Everthing below is either adapted or copied from
+// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
+// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
+module.exports.prelude = function(module) {
+    window.$RefreshReg$ = function(type, id) {
+        Refresh.register(type, module.id + ' ' + id);
+    };
+    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+};
+module.exports.postlude = function(module) {
+    if (isReactRefreshBoundary(module.exports)) {
+        registerExportsForReactRefresh(module);
+        if (module.hot) {
+            module.hot.dispose(function(data) {
+                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
+                data.prevExports = module.exports;
+            });
+            module.hot.accept(function(getParents) {
+                var prevExports = module.hot.data.prevExports;
+                var nextExports = module.exports; // Since we just executed the code for it, it's possible
+                // that the new exports make it ineligible for being a boundary.
+                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
+                // with the previous exports.
+                // For example, if you add/remove/change exports, we'll want
+                // to re-execute the importing modules, and force those components
+                // to re-render. Similarly, if you convert a class component
+                // to a function, we want to invalidate the boundary.
+                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
+                if (isNoLongerABoundary || didInvalidate) {
+                    // We'll be conservative. The only case in which we won't do a full
+                    // reload is if all parent modules are also refresh boundaries.
+                    // In that case we'll add them to the current queue.
+                    var parents = getParents();
+                    if (parents.length === 0) {
+                        // Looks like we bubbled to the root. Can't recover from that.
+                        window.location.reload();
+                        return;
+                    }
+                    return parents;
+                }
+                enqueueUpdate();
+            });
+        }
+    }
+};
+function isReactRefreshBoundary(exports) {
+    if (Refresh.isLikelyComponentType(exports)) return true;
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    return false;
+    var hasExports = false;
+    var areAllExportsComponents = true;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        hasExports = true;
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+        return false;
+        var exportValue = exports[key];
+        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
+    }
+    return hasExports && areAllExportsComponents;
+}
+function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
+    var prevSignature = getRefreshBoundarySignature(prevExports);
+    var nextSignature = getRefreshBoundarySignature(nextExports);
+    if (prevSignature.length !== nextSignature.length) return true;
+    for(var i = 0; i < nextSignature.length; i++){
+        if (prevSignature[i] !== nextSignature[i]) return true;
+    }
+    return false;
+} // When this signature changes, it's unsafe to stop at this refresh boundary.
+function getRefreshBoundarySignature(exports) {
+    var signature = [];
+    signature.push(Refresh.getFamilyByType(exports));
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return signature;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        if (key === '__esModule') continue;
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        signature.push(key);
+        signature.push(Refresh.getFamilyByType(exportValue));
+    }
+    return signature;
+}
+function registerExportsForReactRefresh(module) {
+    var exports = module.exports, id = module.id;
+    Refresh.register(exports, id + ' %exports%');
+    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
+    // (This is important for legacy environments.)
+    return;
+    let isESM = '__esModule' in exports;
+    for(var key in exports){
+        var desc = Object.getOwnPropertyDescriptor(exports, key);
+        if (desc && desc.get && !isESM) continue;
+        var exportValue = exports[key];
+        Refresh.register(exportValue, id + ' %exports% ' + key);
+    }
+}
+
+},{"react-refresh/runtime":"fNmB3"}],"u3UpD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _dateRangePicker = require("./DateRangePicker");
+var _dateRangePickerDefault = parcelHelpers.interopDefault(_dateRangePicker);
+exports.default = _dateRangePickerDefault.default;
+
+},{"./DateRangePicker":"bvqaA","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bvqaA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _calendar = require("@rsuite/icons/legacy/Calendar");
+var _calendarDefault = parcelHelpers.interopDefault(_calendar);
+var _isUndefined = require("lodash/isUndefined");
+var _isUndefinedDefault = parcelHelpers.interopDefault(_isUndefined);
+var _omit = require("lodash/omit");
+var _omitDefault = parcelHelpers.interopDefault(_omit);
+var _partial = require("lodash/partial");
+var _partialDefault = parcelHelpers.interopDefault(_partial);
+var _pick = require("lodash/pick");
+var _pickDefault = parcelHelpers.interopDefault(_pick);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _customProvider = require("../CustomProvider");
+var _toolbar = require("../DatePicker/Toolbar");
+var _toolbarDefault = parcelHelpers.interopDefault(_toolbar);
+var _picker = require("../Picker");
+var _utils = require("../utils");
+var _dateUtils = require("../utils/dateUtils");
+var _calendar1 = require("./Calendar");
+var _calendarDefault1 = parcelHelpers.interopDefault(_calendar1);
+var _disabledDateUtils = require("./disabledDateUtils");
+var _utils1 = require("./utils");
+var defaultProps = _extendsDefault.default({
+}, _picker.pickerDefaultProps, {
+    as: 'div',
+    classPrefix: 'picker',
+    cleanable: true,
+    placement: 'bottomStart',
+    appearance: 'default',
+    format: 'yyyy-MM-dd',
+    limitEndYear: 1000,
+    placeholder: '',
+    showOneCalendar: false,
+    character: ' ~ '
+});
+var DateRangePicker = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var _ref, _merge;
+    var Component = props.as, classPrefix = props.classPrefix, className = props.className, cleanable = props.cleanable, character = props.character, defaultCalendarValue = props.defaultCalendarValue, defaultValue = props.defaultValue, disabled = props.disabled, disabledDateProp = props.disabledDate, formatStr = props.format, hoverRange = props.hoverRange, isoWeek = props.isoWeek, limitEndYear = props.limitEndYear, overrideLocale = props.locale, menuClassName = props.menuClassName, menuStyle = props.menuStyle, oneTap = props.oneTap, placeholder = props.placeholder, placement = props.placement, ranges = props.ranges, renderValue = props.renderValue, showOneCalendar = props.showOneCalendar, showWeekNumbers = props.showWeekNumbers, style = props.style, toggleAs = props.toggleAs, valueProp = props.value, onChange = props.onChange, onClean = props.onClean, onClose = props.onClose, onEnter = props.onEnter, onEntered = props.onEntered, onExited = props.onExited, onOk = props.onOk, onOpen = props.onOpen, onSelect = props.onSelect, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "classPrefix",
+        "className",
+        "cleanable",
+        "character",
+        "defaultCalendarValue",
+        "defaultValue",
+        "disabled",
+        "disabledDate",
+        "format",
+        "hoverRange",
+        "isoWeek",
+        "limitEndYear",
+        "locale",
+        "menuClassName",
+        "menuStyle",
+        "oneTap",
+        "placeholder",
+        "placement",
+        "ranges",
+        "renderValue",
+        "showOneCalendar",
+        "showWeekNumbers",
+        "style",
+        "toggleAs",
+        "value",
+        "onChange",
+        "onClean",
+        "onClose",
+        "onEnter",
+        "onEntered",
+        "onExited",
+        "onOk",
+        "onOpen",
+        "onSelect"
+    ]);
+    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, prefix = _useClassNames.prefix;
+    var _useCustom = _utils.useCustom('DateRangePicker', overrideLocale), locale = _useCustom.locale, formatDate = _useCustom.formatDate;
+    var rangeFormatStr = "" + formatStr + character + formatStr;
+    var _useControlled = _utils.useControlled(valueProp, defaultValue !== null && defaultValue !== void 0 ? defaultValue : []), value = _useControlled[0], setValue = _useControlled[1];
+    /**
+   * Whether to complete the selection.
+   * Everytime selection will change this value. If the value is false, it means that the selection has not been completed.
+   *
+   * In `oneTap` mode, select action will not change this value, its value should be true always.
+   */ var hasDoneSelect = _react.useRef(true);
+    /**
+   * The currently selected date range.
+   *
+   * The time range is selected by two clicks. After the first click,
+   * the cursor will store a temporary event date in the process until
+   * the second click to determine the end date of the date range.
+   *
+   */ var _useState = _react.useState((_ref = valueProp !== null && valueProp !== void 0 ? valueProp : defaultValue) !== null && _ref !== void 0 ? _ref : []), selectValue = _useState[0], setSelectValue = _useState[1]; // The date of the current hover, used to reduce the calculation of `handleMouseMove`
+    var _useState2 = _react.useState([]), hoverValue = _useState2[0], setHoverValue = _useState2[1]; // The displayed calendar panel is rendered based on this value.
+    var _useState3 = _react.useState(_utils1.getCalendarDate({
+        value: valueProp !== null && valueProp !== void 0 ? valueProp : defaultCalendarValue
+    })), calendarDate = _useState3[0], setCalendarDate = _useState3[1];
+    var _useState4 = _react.useState(), inputState = _useState4[0], setInputState = _useState4[1];
+    /**
+   * When hoverRange is set, `selectValue` will be updated during the hover process,
+   * which will cause the `selectValue` to be updated after the first click,
+   * so declare a Ref to temporarily store the `selectValue` of the first click.
+   */ var selectRangeValueRef = _react.useRef(null);
+    /**
+   * Call this function to update the calendar panel rendering benchmark value.
+   * If params `value` is not passed, it defaults to [new Date(), addMonth(new Date(), 1)].
+   */ var updateCalendarDate = _react.useCallback(function(value1) {
+        setCalendarDate(_utils1.getCalendarDate({
+            value: value1
+        }));
+    }, []); // if valueProp changed then update selectValue/hoverValue
+    _react.useEffect(function() {
+        setSelectValue(valueProp !== null && valueProp !== void 0 ? valueProp : []);
+        setHoverValue(valueProp !== null && valueProp !== void 0 ? valueProp : []);
+    }, [
+        valueProp
+    ]);
+    var _useState5 = _react.useState(false), isPickerToggleActive = _useState5[0], setPickerToggleActive = _useState5[1];
+    var rootRef = _react.useRef();
+    var overlayRef = _react.useRef();
+    var targetRef = _react.useRef();
+    var triggerRef = _react.useRef();
+    var handleCloseDropdown = _react.useCallback(function() {
+        var _triggerRef$current, _triggerRef$current$c;
+        (_triggerRef$current = triggerRef.current) === null || _triggerRef$current === void 0 || (_triggerRef$current$c = _triggerRef$current.close) === null || _triggerRef$current$c === void 0 || _triggerRef$current$c.call(_triggerRef$current);
+    }, []);
+    _picker.usePublicMethods(ref, {
+        triggerRef: triggerRef,
+        overlayRef: overlayRef,
+        targetRef: targetRef,
+        rootRef: rootRef
+    });
+    var getDisplayString = _react.useCallback(function(nextValue, isPlaintext) {
+        var _nextValue, _nextValue2;
+        if (nextValue === void 0) nextValue = value;
+        var startDate = (_nextValue = nextValue) === null || _nextValue === void 0 ? void 0 : _nextValue[0];
+        var endDate = (_nextValue2 = nextValue) === null || _nextValue2 === void 0 ? void 0 : _nextValue2[1];
+        if (startDate && endDate) {
+            var displayValue = [
+                startDate,
+                endDate
+            ].sort(_dateUtils.compareAsc);
+            if (isPlaintext) return formatDate(displayValue[0], formatStr) + character + formatDate(displayValue[1], formatStr);
+            return renderValue ? renderValue(displayValue, formatStr) : /*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, /*#__PURE__*/ _reactDefault.default.createElement(_customProvider.FormattedDate, {
+                date: displayValue[0],
+                formatStr: formatStr
+            }), character, /*#__PURE__*/ _reactDefault.default.createElement(_customProvider.FormattedDate, {
+                date: displayValue[1],
+                formatStr: formatStr
+            }));
+        }
+        return isPlaintext ? '' : placeholder || rangeFormatStr;
+    }, [
+        character,
+        formatDate,
+        formatStr,
+        placeholder,
+        rangeFormatStr,
+        renderValue,
+        value
+    ]);
+    /**
+   * preset hover range
+   */ var getHoverRangeValue = _react.useCallback(function(date) {
+        if (!hoverRange) return [];
+        var hoverRangeFunc = hoverRange;
+        if (hoverRange === 'week') hoverRangeFunc = _partialDefault.default(_utils1.getWeekHoverRange, isoWeek);
+        if (hoverRangeFunc === 'month') hoverRangeFunc = _utils1.getMonthHoverRange;
+        if (typeof hoverRangeFunc !== 'function') return [];
+        var hoverValues = hoverRangeFunc(date);
+        var isHoverRangeValid = hoverValues instanceof Array && hoverValues.length === 2;
+        if (!isHoverRangeValid) return [];
+        if (_utils.DateUtils.isAfter(hoverValues[0], hoverValues[1])) hoverValues.reverse();
+        return hoverValues;
+    }, [
+        hoverRange,
+        isoWeek
+    ]);
+    var handleValueUpdate = _react.useCallback(function(event, nextSelectValue, closeOverlay) {
+        if (closeOverlay === void 0) closeOverlay = true;
+        var nextValue = !_isUndefinedDefault.default(nextSelectValue) ? nextSelectValue : selectValue;
+        setSelectValue(nextValue || []);
+        if (!_utils1.isSameRange(nextValue, value, formatStr)) {
+            setValue(nextValue);
+            onChange === null || onChange === void 0 || onChange(nextValue, event);
+        } // `closeOverlay` default value is `true`
+        if (closeOverlay !== false) handleCloseDropdown();
+    }, [
+        formatStr,
+        handleCloseDropdown,
+        onChange,
+        selectValue,
+        setValue,
+        value
+    ]);
+    /**
+   * Select the date range. If oneTap is not set, you need to click twice to select the start time and end time.
+   * The MouseMove event is called between the first click and the second click to update the selection state.
+   */ var handleMouseMove = _react.useCallback(function(date) {
+        var hoverRangeValue = getHoverRangeValue(date); // After the first click
+        if (!hasDoneSelect.current) {
+            // If hoverRange is set, you need to change the value of hoverValue according to the rules
+            if (hoverRange) {
+                var nextHoverValue = [
+                    selectRangeValueRef.current[0],
+                    hoverRangeValue[1]
+                ];
+                if (_utils.DateUtils.isBefore(hoverRangeValue[0], selectRangeValueRef.current[0])) {
+                    nextHoverValue[0] = hoverRangeValue[0];
+                    nextHoverValue[1] = selectRangeValueRef.current[1];
+                }
+                setSelectValue(nextHoverValue);
+            } else setHoverValue(function(prevHoverValue) {
+                return [
+                    prevHoverValue[0],
+                    date
+                ];
+            });
+             // Before the first click, if hoverRangeValue has a value, hoverValue needs to be updated
+        } else if (hoverRange && hoverRangeValue.length) setHoverValue(hoverRangeValue);
+    }, [
+        getHoverRangeValue,
+        hoverRange
+    ]);
+    var handleSelectValueChange = _react.useCallback(function(date, event) {
+        var nextSelectValue = Array.from(hoverValue);
+        var hoverRangeValue = getHoverRangeValue(date);
+        var noHoverRangeValid = hoverRangeValue.length !== 2; // in `oneTap` mode
+        if (hasDoneSelect.current && oneTap) {
+            handleValueUpdate(event, noHoverRangeValid ? [
+                _utils1.setTimingMargin(date),
+                _utils1.setTimingMargin(date, 'right')
+            ] : hoverRangeValue);
+            hasDoneSelect.current = false;
+            return;
+        } // no preset hover range can use
+        if (noHoverRangeValid) {
+            // start select
+            if (hasDoneSelect.current) nextSelectValue = [
+                date
+            ];
+            else // finish select
+            nextSelectValue[1] = date;
+        } else if (!hasDoneSelect.current) {
+            nextSelectValue = selectValue;
+            selectRangeValueRef.current = null;
+        } else {
+            nextSelectValue = hoverRangeValue;
+            selectRangeValueRef.current = hoverRangeValue;
+        }
+         // If user have completed the selection, then sort
+        if (nextSelectValue.length === 2 && _utils.DateUtils.isAfter(nextSelectValue[0], nextSelectValue[1])) nextSelectValue.reverse();
+        setHoverValue(nextSelectValue);
+        setSelectValue(nextSelectValue);
+        updateCalendarDate(nextSelectValue);
+        onSelect === null || onSelect === void 0 || onSelect(date, event);
+        hasDoneSelect.current = !hasDoneSelect.current;
+    }, [
+        getHoverRangeValue,
+        handleValueUpdate,
+        hoverValue,
+        onSelect,
+        oneTap,
+        selectValue,
+        updateCalendarDate
+    ]);
+    /**
+   * If `selectValue` changed, there will be the following effects.
+   * 1. Check if the selection is completed.
+   * 2. if the selection is completed, set the temporary `hoverValue` empty.
+   */ _react.useEffect(function() {
+        var _selectValue$length;
+        var selectValueLength = (_selectValue$length = selectValue === null || selectValue === void 0 ? void 0 : selectValue.length) !== null && _selectValue$length !== void 0 ? _selectValue$length : 0;
+        var doneSelected = selectValueLength === 0 || selectValueLength === 2;
+        doneSelected && setHoverValue([]);
+    }, [
+        selectValue
+    ]);
+    var handleChangeCalendarDate = _react.useCallback(function(index, date) {
+        var nextCalendarDate = Array.from(calendarDate);
+        nextCalendarDate[index] = date;
+        updateCalendarDate(nextCalendarDate);
+    }, [
+        calendarDate,
+        updateCalendarDate
+    ]);
+    var handleChangeCalendarTime = _react.useCallback(function(index, date) {
+        setSelectValue(function(prev) {
+            var next = [].concat(prev);
+            var clonedDate = new Date(date.valueOf()); // if next[index] is not empty, only update the time after aligning the year, month and day
+            if (next[index]) clonedDate.setFullYear(next[index].getFullYear(), next[index].getMonth(), next[index].getDate());
+            next[index] = clonedDate;
+            return next;
+        });
+        handleChangeCalendarDate(index, date);
+    }, [
+        handleChangeCalendarDate
+    ]);
+    /**
+   * Toolbar operation callback function
+   */ var handleShortcutPageDate = _react.useCallback(function(value1, closeOverlay, event) {
+        handleValueUpdate(event, value1, closeOverlay);
+    }, [
+        handleValueUpdate
+    ]);
+    var handleOK = _react.useCallback(function(event) {
+        handleValueUpdate(event);
+        onOk === null || onOk === void 0 || onOk(selectValue, event);
+    }, [
+        handleValueUpdate,
+        onOk,
+        selectValue
+    ]);
+    var handleClean = _react.useCallback(function(event) {
+        updateCalendarDate();
+        handleValueUpdate(event, []);
+    }, [
+        handleValueUpdate,
+        updateCalendarDate
+    ]);
+    /**
+   * Callback after the input box value is changed.
+   */ var handleInputChange = _react.useCallback(function(value1) {
+        setInputState('Typing');
+        var rangeValue = value1.split(character); // isMatch('01/11/2020', 'MM/dd/yyyy') ==> true
+        // isMatch('2020-11-01', 'MM/dd/yyyy') ==> false
+        if (!_utils.DateUtils.isMatch(rangeValue[0], formatStr) || !_utils.DateUtils.isMatch(rangeValue[1], formatStr)) {
+            setInputState('Error');
+            return;
+        }
+        var startDate = new Date(rangeValue[0]);
+        var endDate = new Date(rangeValue[1]);
+        var selectValue1 = [
+            startDate,
+            endDate
+        ];
+        if (!_utils.DateUtils.isValid(startDate) || !_utils.DateUtils.isValid(endDate)) {
+            setInputState('Error');
+            return;
+        }
+        if (disabledDate(startDate, selectValue1, true, _utils.DATERANGE_DISABLED_TARGET.CALENDAR)) {
+            setInputState('Error');
+            return;
+        }
+        setHoverValue(selectValue1);
+        setSelectValue(selectValue1);
+        updateCalendarDate(selectValue1);
+    }, [
+        character,
+        rangeFormatStr,
+        updateCalendarDate
+    ]);
+    /**
+   * The callback after the enter key is triggered on the input
+   */ var handleInputBlur = _react.useCallback(function(event) {
+        if (inputState === 'Typing') handleValueUpdate(event, selectValue);
+        setInputState('Initial');
+    }, [
+        handleValueUpdate,
+        selectValue,
+        inputState
+    ]);
+    var handleEnter = _react.useCallback(function() {
+        var nextCalendarDate;
+        if (value && value.length) {
+            var _startDate = value[0], endData = value[1];
+            nextCalendarDate = [
+                _startDate,
+                _dateUtils.isSameMonth(_startDate, endData) ? _dateUtils.addMonths(endData, 1) : endData
+            ];
+        } else nextCalendarDate = _utils1.getCalendarDate({
+            value: defaultCalendarValue
+        });
+        setSelectValue(value);
+        updateCalendarDate(nextCalendarDate);
+    }, [
+        defaultCalendarValue,
+        updateCalendarDate,
+        setSelectValue,
+        value
+    ]);
+    var handleEntered = _react.useCallback(function() {
+        onOpen === null || onOpen === void 0 || onOpen();
+        setPickerToggleActive(true);
+    }, [
+        onOpen
+    ]);
+    var handleExited = _react.useCallback(function() {
+        setPickerToggleActive(false);
+        hasDoneSelect.current = true;
+        onClose === null || onClose === void 0 || onClose();
+    }, [
+        onClose
+    ]);
+    var disabledDate = _react.useCallback(function(date, selectDate, selectedDone, target) {
+        return disabledDateProp === null || disabledDateProp === void 0 ? void 0 : disabledDateProp(date, selectDate, selectedDone, target);
+    }, [
+        disabledDateProp
+    ]);
+    var disabledByBetween = _react.useCallback(function(start, end, type) {
+        var selectStartDate = selectValue[0], selectEndDate = selectValue[1];
+        var nextSelectValue = [
+            selectStartDate,
+            selectEndDate
+        ]; // If the date is between the start and the end
+        // the button is disabled
+        while(_utils.DateUtils.isBefore(start, end) || _utils.DateUtils.isSameDay(start, end)){
+            if (disabledDate(start, nextSelectValue, hasDoneSelect.current, type)) return true;
+            start = _utils.DateUtils.addDays(start, 1);
+        }
+        return false;
+    }, [
+        disabledDate,
+        selectValue
+    ]);
+    var disabledOkButton = _react.useCallback(function() {
+        var start = selectValue[0], end = selectValue[1];
+        if (!start || !end || !hasDoneSelect.current) return true;
+        return disabledByBetween(start, end, _utils.DATERANGE_DISABLED_TARGET.TOOLBAR_BUTTON_OK);
+    }, [
+        disabledByBetween,
+        selectValue
+    ]);
+    var disabledShortcutButton = _react.useCallback(function(value1) {
+        if (value1 === void 0) value1 = [];
+        var _value = value1, start = _value[0], end = _value[1];
+        if (!start || !end) return true;
+        return disabledByBetween(start, end, _utils.DATERANGE_DISABLED_TARGET.TOOLBAR_SHORTCUT);
+    }, [
+        disabledByBetween
+    ]);
+    var handleDisabledDate = _react.useCallback(function(date, values, type) {
+        return disabledDate(date, values, hasDoneSelect.current, type);
+    }, [
+        disabledDate
+    ]);
+    var onPickerKeyDown = _picker.useToggleKeyDownEvent(_extendsDefault.default({
+        triggerRef: triggerRef,
+        targetRef: targetRef,
+        active: isPickerToggleActive,
+        onExit: handleClean
+    }, rest));
+    var renderDropdownMenu = function renderDropdownMenu1(positionProps, speakerRef) {
+        var left = positionProps.left, top = positionProps.top, className1 = positionProps.className;
+        var classes = merge(className1, menuClassName, prefix('daterange-menu'));
+        var panelClasses = prefix('daterange-panel', {
+            'daterange-panel-show-one-calendar': showOneCalendar
+        });
+        var styles = _extendsDefault.default({
+        }, menuStyle, {
+            left: left,
+            top: top
+        });
+        var panelProps = {
+            calendarDate: calendarDate,
+            disabledDate: handleDisabledDate,
+            format: formatStr,
+            hoverRangeValue: hoverValue,
+            isoWeek: isoWeek,
+            limitEndYear: limitEndYear,
+            locale: locale,
+            showOneCalendar: showOneCalendar,
+            showWeekNumbers: showWeekNumbers,
+            value: selectValue,
+            onChangeCalendarDate: handleChangeCalendarDate,
+            onChangeCalendarTime: handleChangeCalendarTime,
+            onMouseMove: handleMouseMove,
+            onSelect: handleSelectValueChange
+        };
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_picker.PickerOverlay, {
+            className: classes,
+            ref: _utils.mergeRefs(overlayRef, speakerRef),
+            target: triggerRef,
+            style: styles
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: panelClasses
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix('daterange-content')
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix('daterange-header')
+        }, getDisplayString(selectValue)), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix("daterange-calendar-" + (showOneCalendar ? 'single' : 'group'))
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_calendarDefault1.default, _extendsDefault.default({
+            index: 0
+        }, panelProps)), !showOneCalendar && /*#__PURE__*/ _reactDefault.default.createElement(_calendarDefault1.default, _extendsDefault.default({
+            index: 1
+        }, panelProps)))), /*#__PURE__*/ _reactDefault.default.createElement(_toolbarDefault.default, {
+            locale: locale,
+            calendarDate: selectValue,
+            disabledOkBtn: disabledOkButton,
+            disabledShortcut: disabledShortcutButton,
+            hideOkBtn: oneTap,
+            onOk: handleOK,
+            onClickShortcut: handleShortcutPageDate,
+            ranges: ranges
+        }))));
+    };
+    var hasValue = value && value.length > 1;
+    var _usePickerClassName = _picker.usePickerClassName(_extendsDefault.default({
+    }, props, {
+        name: 'daterange',
+        hasValue: hasValue
+    })), classes = _usePickerClassName[0], usedClassNamePropKeys = _usePickerClassName[1];
+    return(/*#__PURE__*/ _reactDefault.default.createElement(_picker.PickerToggleTrigger, {
+        pickerProps: _pickDefault.default(props, _picker.pickTriggerPropKeys),
+        ref: triggerRef,
+        placement: placement,
+        onEnter: _utils.createChainedFunction(handleEnter, onEnter),
+        onEntered: _utils.createChainedFunction(handleEntered, onEntered),
+        onExited: _utils.createChainedFunction(handleExited, onExited),
+        speaker: renderDropdownMenu
+    }, /*#__PURE__*/ _reactDefault.default.createElement(Component, {
+        ref: rootRef,
+        className: merge(className, classes, (_merge = {
+        }, _merge[prefix('error')] = inputState === 'Error', _merge)),
+        style: style
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_picker.PickerToggle, _extendsDefault.default({
+    }, _omitDefault.default(rest, [].concat(_picker.omitTriggerPropKeys, usedClassNamePropKeys, _utils.DateUtils.calendarOnlyProps)), {
+        as: toggleAs,
+        ref: targetRef,
+        input: true,
+        inputMask: _utils.DateUtils.getDateMask(rangeFormatStr),
+        inputValue: value ? getDisplayString(value, true) : '',
+        inputPlaceholder: typeof placeholder === 'string' && placeholder ? placeholder : rangeFormatStr,
+        onInputChange: handleInputChange,
+        onInputBlur: handleInputBlur,
+        onKeyDown: onPickerKeyDown,
+        onClean: _utils.createChainedFunction(handleClean, onClean),
+        cleanable: cleanable && !disabled,
+        hasValue: hasValue,
+        active: isPickerToggleActive,
+        placement: placement,
+        caretComponent: _calendarDefault.default,
+        disabled: disabled
+    }), getDisplayString()))));
+});
+DateRangePicker.after = _disabledDateUtils.after;
+DateRangePicker.afterToday = _disabledDateUtils.afterToday;
+DateRangePicker.allowedDays = _disabledDateUtils.allowedDays;
+DateRangePicker.allowedMaxDays = _disabledDateUtils.allowedMaxDays;
+DateRangePicker.allowedRange = _disabledDateUtils.allowedRange;
+DateRangePicker.before = _disabledDateUtils.before;
+DateRangePicker.beforeToday = _disabledDateUtils.beforeToday;
+DateRangePicker.combine = _disabledDateUtils.combine;
+DateRangePicker.displayName = 'DateRangePicker';
+DateRangePicker.defaultProps = defaultProps;
+DateRangePicker.propTypes = _extendsDefault.default({
+}, _picker.pickerPropTypes, {
+    ranges: _propTypesDefault.default.array,
+    value: _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date)),
+    defaultValue: _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date)),
+    defaultCalendarValue: _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date)),
+    hoverRange: _propTypesDefault.default.oneOfType([
+        _propTypesDefault.default.oneOf([
+            'week',
+            'month'
+        ]),
+        _propTypesDefault.default.func
+    ]),
+    format: _propTypesDefault.default.string,
+    isoWeek: _propTypesDefault.default.bool,
+    oneTap: _propTypesDefault.default.bool,
+    limitEndYear: _propTypesDefault.default.number,
+    showWeekNumbers: _propTypesDefault.default.bool,
+    onChange: _propTypesDefault.default.func,
+    onOk: _propTypesDefault.default.func,
+    disabledDate: _propTypesDefault.default.func,
+    onSelect: _propTypesDefault.default.func,
+    showOneCalendar: _propTypesDefault.default.bool
+});
+exports.default = DateRangePicker;
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","@babel/runtime/helpers/esm/extends":"bKAu6","@rsuite/icons/legacy/Calendar":"jWqP2","lodash/isUndefined":"2aodM","lodash/omit":"jd3w3","lodash/partial":"g9xWX","lodash/pick":"kLdKc","prop-types":"1tgq3","react":"6TuXu","../CustomProvider":"fvq4Z","../DatePicker/Toolbar":"kzFZ3","../Picker":"jJbcD","../utils":"iz9Dz","../utils/dateUtils":"jqDhs","./Calendar":"gKbay","./disabledDateUtils":"amO87","./utils":"fe6jy","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3Rubg":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -22871,7 +23483,245 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 }
 exports.default = _objectWithoutPropertiesLoose;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1tgq3":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bKAu6":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+exports.default = _extends;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"jWqP2":[function(require,module,exports) {
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+Object.defineProperty(exports, "default", {
+    enumerable: true,
+    get: function get() {
+        return _Calendar["default"];
+    }
+});
+var _Calendar = _interopRequireDefault(require("../lib/icons/legacy/Calendar"));
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        default: obj
+    };
+}
+
+},{"../lib/icons/legacy/Calendar":"cRes7"}],"cRes7":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(require("../../createSvgIcon"));
+var _Calendar = _interopRequireDefault(require("@rsuite/icon-font/lib/legacy/Calendar"));
+// Generated by script, don't edit it please.
+var Calendar = _createSvgIcon["default"]({
+    as: _Calendar["default"],
+    ariaLabel: 'calendar',
+    category: 'legacy',
+    displayName: 'Calendar'
+});
+var _default = Calendar;
+exports["default"] = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","../../createSvgIcon":"ayDyh","@rsuite/icon-font/lib/legacy/Calendar":"hB8C4"}],"eigyQ":[function(require,module,exports) {
+function _interopRequireDefault(obj) {
+    return obj && obj.__esModule ? obj : {
+        "default": obj
+    };
+}
+module.exports = _interopRequireDefault;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+},{}],"ayDyh":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports["default"] = void 0;
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _react = _interopRequireDefault(require("react"));
+var _Icon = _interopRequireDefault(require("./Icon"));
+function createSvgIcon(_ref) {
+    var as = _ref.as, ariaLabel = _ref.ariaLabel, displayName = _ref.displayName, category = _ref.category;
+    var IconComponent = /*#__PURE__*/ _react["default"].forwardRef(function(props, ref) {
+        return(/*#__PURE__*/ _react["default"].createElement(_Icon["default"], _extends2["default"]({
+            "aria-label": ariaLabel,
+            "data-category": category,
+            ref: ref,
+            as: as
+        }, props)));
+    });
+    IconComponent.displayName = displayName;
+    return IconComponent;
+}
+var _default = createSvgIcon;
+exports["default"] = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","@babel/runtime/helpers/extends":"fpVWj","react":"6TuXu","./Icon":"72tAz"}],"fpVWj":[function(require,module,exports) {
+function _extends() {
+    module.exports = _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    module.exports["default"] = module.exports, module.exports.__esModule = true;
+    return _extends.apply(this, arguments);
+}
+module.exports = _extends;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+},{}],"72tAz":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports["default"] = void 0;
+var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
+var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
+var _react = _interopRequireDefault(require("react"));
+var _classnames = _interopRequireDefault(require("classnames"));
+var _propTypes = _interopRequireDefault(require("prop-types"));
+var _utils = require("./utils");
+var defaultProps = {
+    as: 'svg',
+    fill: 'currentColor',
+    width: '1em',
+    height: '1em'
+};
+function filterProps(props) {
+    var nextProps = {
+    };
+    Object.entries(props).forEach(function(_ref) {
+        var key = _ref[0], value = _ref[1];
+        if (typeof value !== 'undefined') nextProps[key] = value;
+    });
+    return nextProps;
+}
+var Icon = /*#__PURE__*/ _react["default"].forwardRef(function(props, ref) {
+    var _classNames;
+    var Component = props.as, spin = props.spin, pulse = props.pulse, flip = props.flip, fill = props.fill, className = props.className, rotate = props.rotate, children = props.children, viewBox = props.viewBox, width = props.width, height = props.height, style = props.style, rest = _objectWithoutPropertiesLoose2["default"](props, [
+        "as",
+        "spin",
+        "pulse",
+        "flip",
+        "fill",
+        "className",
+        "rotate",
+        "children",
+        "viewBox",
+        "width",
+        "height",
+        "style"
+    ]);
+    var _useClassNames = _utils.useClassNames(), componentClassName = _useClassNames[0], addPrefix = _useClassNames[1];
+    var classes = _classnames["default"](className, componentClassName, (_classNames = {
+    }, _classNames[addPrefix('spin')] = spin, _classNames[addPrefix('pulse')] = pulse, _classNames[addPrefix("flip-" + flip)] = !!flip, _classNames));
+    var rotateStyles = {
+        msTransform: "rotate(" + rotate + "deg)",
+        transform: "rotate(" + rotate + "deg)"
+    };
+    _utils.useInsertStyles();
+    var svgProps = filterProps({
+        width: width,
+        height: height,
+        fill: fill,
+        viewBox: viewBox,
+        className: classes,
+        style: rotate ? _extends2["default"]({
+        }, rotateStyles, style) : style
+    });
+    return(/*#__PURE__*/ _react["default"].createElement(Component, _extends2["default"]({
+        "aria-hidden": true,
+        focusable: false,
+        ref: ref
+    }, svgProps, rest), children));
+});
+Icon.displayName = 'Icon';
+Icon.defaultProps = defaultProps;
+Icon.propTypes = {
+    spin: _propTypes["default"].bool,
+    pulse: _propTypes["default"].bool,
+    rotate: _propTypes["default"].number,
+    viewBox: _propTypes["default"].string,
+    as: _propTypes["default"].oneOfType([
+        _propTypes["default"].elementType,
+        _propTypes["default"].string
+    ]),
+    flip: _propTypes["default"].oneOf([
+        'horizontal',
+        'vertical'
+    ]),
+    fill: _propTypes["default"].string
+};
+var _default = Icon;
+exports["default"] = _default;
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","@babel/runtime/helpers/extends":"fpVWj","@babel/runtime/helpers/objectWithoutPropertiesLoose":"ab5Ln","react":"6TuXu","classnames":"bOXOh","prop-types":"1tgq3","./utils":"7Dulf"}],"ab5Ln":[function(require,module,exports) {
+function _objectWithoutPropertiesLoose(source, excluded) {
+    if (source == null) return {
+    };
+    var target = {
+    };
+    var sourceKeys = Object.keys(source);
+    var key, i;
+    for(i = 0; i < sourceKeys.length; i++){
+        key = sourceKeys[i];
+        if (excluded.indexOf(key) >= 0) continue;
+        target[key] = source[key];
+    }
+    return target;
+}
+module.exports = _objectWithoutPropertiesLoose;
+module.exports["default"] = module.exports, module.exports.__esModule = true;
+
+},{}],"bOXOh":[function(require,module,exports) {
+(function() {
+    var hasOwn = {
+    }.hasOwnProperty;
+    function classNames() {
+        var classes = [];
+        for(var i = 0; i < arguments.length; i++){
+            var arg = arguments[i];
+            if (!arg) continue;
+            var argType = typeof arg;
+            if (argType === 'string' || argType === 'number') classes.push(arg);
+            else if (Array.isArray(arg)) {
+                if (arg.length) {
+                    var inner = classNames.apply(null, arg);
+                    if (inner) classes.push(inner);
+                }
+            } else if (argType === 'object') {
+                if (arg.toString === Object.prototype.toString) {
+                    for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
+                } else classes.push(arg.toString());
+            }
+        }
+        return classes.join(' ');
+    }
+    if (typeof module !== 'undefined' && module.exports) {
+        classNames.default = classNames;
+        module.exports = classNames;
+    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) // register as 'classnames', consistent with npm package name
+    define('classnames', [], function() {
+        return classNames;
+    });
+    else window.classNames = classNames;
+})();
+
+},{}],"1tgq3":[function(require,module,exports) {
 var ReactIs = require('react-is');
 // By explicitly using `prop-types` you are opting into new development behavior.
 // http://fb.me/prop-types-in-prod
@@ -23550,7 +24400,5768 @@ printWarning = function(text) {
 };
 module.exports = checkPropTypes;
 
-},{"./lib/ReactPropTypesSecret":"lYuBM"}],"iz9Dz":[function(require,module,exports) {
+},{"./lib/ReactPropTypesSecret":"lYuBM"}],"7Dulf":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+var _exportNames = {
+    useClassNames: true,
+    inBrowserEnv: true,
+    useInsertStyles: true
+};
+exports.useInsertStyles = exports.inBrowserEnv = exports.useClassNames = void 0;
+var _prefix = require("./prefix");
+Object.keys(_prefix).forEach(function(key) {
+    if (key === "default" || key === "__esModule") return;
+    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
+    if (key in exports && exports[key] === _prefix[key]) return;
+    exports[key] = _prefix[key];
+});
+var _useClassNames = _interopRequireDefault(require("./useClassNames"));
+exports.useClassNames = _useClassNames["default"];
+var _inBrowserEnv = _interopRequireDefault(require("./inBrowserEnv"));
+exports.inBrowserEnv = _inBrowserEnv["default"];
+var _useInsertStyles = _interopRequireDefault(require("./useInsertStyles"));
+exports.useInsertStyles = _useInsertStyles["default"];
+
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","./prefix":"3Jn12","./useClassNames":"5hRHL","./inBrowserEnv":"fdn6Q","./useInsertStyles":"2SLaI"}],"3Jn12":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports.prefix = exports.defaultClassPrefix = exports.getClassNamePrefix = exports.globalKey = void 0;
+var _curry = _interopRequireDefault(require("lodash/curry"));
+var _classnames = _interopRequireDefault(require("classnames"));
+var globalKey = 'rs-';
+exports.globalKey = globalKey;
+var getClassNamePrefix = function getClassNamePrefix1() {
+    if (typeof __RSUITE_CLASSNAME_PREFIX__ !== 'undefined') return __RSUITE_CLASSNAME_PREFIX__;
+    return globalKey;
+};
+exports.getClassNamePrefix = getClassNamePrefix;
+var defaultClassPrefix = function defaultClassPrefix1(name) {
+    return name ? "" + getClassNamePrefix() + name : undefined;
+};
+exports.defaultClassPrefix = defaultClassPrefix;
+var prefix = _curry["default"](function(pre, className) {
+    if (!pre || !className) return '';
+    if (Array.isArray(className)) return _classnames["default"](className.filter(function(name) {
+        return !!name;
+    }).map(function(name) {
+        return pre + "-" + name;
+    }));
+    return pre + "-" + className;
+});
+exports.prefix = prefix;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","lodash/curry":"4AtTE","classnames":"bOXOh"}],"4AtTE":[function(require,module,exports) {
+var createWrap = require('./_createWrap');
+/** Used to compose bitmasks for function metadata. */ var WRAP_CURRY_FLAG = 8;
+/**
+ * Creates a function that accepts arguments of `func` and either invokes
+ * `func` returning its result, if at least `arity` number of arguments have
+ * been provided, or returns a function that accepts the remaining `func`
+ * arguments, and so on. The arity of `func` may be specified if `func.length`
+ * is not sufficient.
+ *
+ * The `_.curry.placeholder` value, which defaults to `_` in monolithic builds,
+ * may be used as a placeholder for provided arguments.
+ *
+ * **Note:** This method doesn't set the "length" property of curried functions.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.0.0
+ * @category Function
+ * @param {Function} func The function to curry.
+ * @param {number} [arity=func.length] The arity of `func`.
+ * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
+ * @returns {Function} Returns the new curried function.
+ * @example
+ *
+ * var abc = function(a, b, c) {
+ *   return [a, b, c];
+ * };
+ *
+ * var curried = _.curry(abc);
+ *
+ * curried(1)(2)(3);
+ * // => [1, 2, 3]
+ *
+ * curried(1, 2)(3);
+ * // => [1, 2, 3]
+ *
+ * curried(1, 2, 3);
+ * // => [1, 2, 3]
+ *
+ * // Curried with placeholders.
+ * curried(1)(_, 3)(2);
+ * // => [1, 2, 3]
+ */ function curry(func, arity, guard) {
+    arity = guard ? undefined : arity;
+    var result = createWrap(func, WRAP_CURRY_FLAG, undefined, undefined, undefined, undefined, undefined, arity);
+    result.placeholder = curry.placeholder;
+    return result;
+}
+// Assign default placeholders.
+curry.placeholder = {
+};
+module.exports = curry;
+
+},{"./_createWrap":"jWTIp"}],"jWTIp":[function(require,module,exports) {
+var baseSetData = require('./_baseSetData'), createBind = require('./_createBind'), createCurry = require('./_createCurry'), createHybrid = require('./_createHybrid'), createPartial = require('./_createPartial'), getData = require('./_getData'), mergeData = require('./_mergeData'), setData = require('./_setData'), setWrapToString = require('./_setWrapToString'), toInteger = require('./toInteger');
+/** Error message constants. */ var FUNC_ERROR_TEXT = 'Expected a function';
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_FLAG = 8, WRAP_CURRY_RIGHT_FLAG = 16, WRAP_PARTIAL_FLAG = 32, WRAP_PARTIAL_RIGHT_FLAG = 64;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * Creates a function that either curries or invokes `func` with optional
+ * `this` binding and partially applied arguments.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to wrap.
+ * @param {number} bitmask The bitmask flags.
+ *    1 - `_.bind`
+ *    2 - `_.bindKey`
+ *    4 - `_.curry` or `_.curryRight` of a bound function
+ *    8 - `_.curry`
+ *   16 - `_.curryRight`
+ *   32 - `_.partial`
+ *   64 - `_.partialRight`
+ *  128 - `_.rearg`
+ *  256 - `_.ary`
+ *  512 - `_.flip`
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to be partially applied.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
+    var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
+    if (!isBindKey && typeof func != 'function') throw new TypeError(FUNC_ERROR_TEXT);
+    var length = partials ? partials.length : 0;
+    if (!length) {
+        bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
+        partials = holders = undefined;
+    }
+    ary = ary === undefined ? ary : nativeMax(toInteger(ary), 0);
+    arity = arity === undefined ? arity : toInteger(arity);
+    length -= holders ? holders.length : 0;
+    if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
+        var partialsRight = partials, holdersRight = holders;
+        partials = holders = undefined;
+    }
+    var data = isBindKey ? undefined : getData(func);
+    var newData = [
+        func,
+        bitmask,
+        thisArg,
+        partials,
+        holders,
+        partialsRight,
+        holdersRight,
+        argPos,
+        ary,
+        arity
+    ];
+    if (data) mergeData(newData, data);
+    func = newData[0];
+    bitmask = newData[1];
+    thisArg = newData[2];
+    partials = newData[3];
+    holders = newData[4];
+    arity = newData[9] = newData[9] === undefined ? isBindKey ? 0 : func.length : nativeMax(newData[9] - length, 0);
+    if (!arity && bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG)) bitmask &= ~(WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG);
+    if (!bitmask || bitmask == WRAP_BIND_FLAG) var result = createBind(func, bitmask, thisArg);
+    else if (bitmask == WRAP_CURRY_FLAG || bitmask == WRAP_CURRY_RIGHT_FLAG) result = createCurry(func, bitmask, arity);
+    else if ((bitmask == WRAP_PARTIAL_FLAG || bitmask == (WRAP_BIND_FLAG | WRAP_PARTIAL_FLAG)) && !holders.length) result = createPartial(func, bitmask, thisArg, partials);
+    else result = createHybrid.apply(undefined, newData);
+    var setter = data ? baseSetData : setData;
+    return setWrapToString(setter(result, newData), func, bitmask);
+}
+module.exports = createWrap;
+
+},{"./_baseSetData":"q9Ejo","./_createBind":"dMusv","./_createCurry":"2PEkE","./_createHybrid":"5aUjM","./_createPartial":"j9vFV","./_getData":"g4Fmy","./_mergeData":"eavA7","./_setData":"XwiwS","./_setWrapToString":"3scxv","./toInteger":"5HLSg"}],"q9Ejo":[function(require,module,exports) {
+var identity = require('./identity'), metaMap = require('./_metaMap');
+/**
+ * The base implementation of `setData` without support for hot loop shorting.
+ *
+ * @private
+ * @param {Function} func The function to associate metadata with.
+ * @param {*} data The metadata.
+ * @returns {Function} Returns `func`.
+ */ var baseSetData = !metaMap ? identity : function(func, data) {
+    metaMap.set(func, data);
+    return func;
+};
+module.exports = baseSetData;
+
+},{"./identity":"czYGV","./_metaMap":"kMAlx"}],"czYGV":[function(require,module,exports) {
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */ function identity(value) {
+    return value;
+}
+module.exports = identity;
+
+},{}],"kMAlx":[function(require,module,exports) {
+var WeakMap1 = require('./_WeakMap');
+/** Used to store function metadata. */ var metaMap = WeakMap1 && new WeakMap1;
+module.exports = metaMap;
+
+},{"./_WeakMap":"7zpLL"}],"7zpLL":[function(require,module,exports) {
+var getNative = require('./_getNative'), root = require('./_root');
+/* Built-in method references that are verified to be native. */ var WeakMap1 = getNative(root, 'WeakMap');
+module.exports = WeakMap1;
+
+},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"iGRIN":[function(require,module,exports) {
+var baseIsNative = require('./_baseIsNative'), getValue = require('./_getValue');
+/**
+ * Gets the native function at `key` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {string} key The key of the method to get.
+ * @returns {*} Returns the function if it's native, else `undefined`.
+ */ function getNative(object, key) {
+    var value = getValue(object, key);
+    return baseIsNative(value) ? value : undefined;
+}
+module.exports = getNative;
+
+},{"./_baseIsNative":"dLuo9","./_getValue":"gc1r1"}],"dLuo9":[function(require,module,exports) {
+var isFunction = require('./isFunction'), isMasked = require('./_isMasked'), isObject = require('./isObject'), toSource = require('./_toSource');
+/**
+ * Used to match `RegExp`
+ * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
+ */ var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
+/** Used to detect host constructors (Safari). */ var reIsHostCtor = /^\[object .+?Constructor\]$/;
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to detect if a method is native. */ var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
+/**
+ * The base implementation of `_.isNative` without bad shim checks.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a native function,
+ *  else `false`.
+ */ function baseIsNative(value) {
+    if (!isObject(value) || isMasked(value)) return false;
+    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
+    return pattern.test(toSource(value));
+}
+module.exports = baseIsNative;
+
+},{"./isFunction":"4vlJm","./_isMasked":"1y7kD","./isObject":"hZIId","./_toSource":"cvYQ0"}],"4vlJm":[function(require,module,exports) {
+var baseGetTag = require('./_baseGetTag'), isObject = require('./isObject');
+/** `Object#toString` result references. */ var asyncTag = '[object AsyncFunction]', funcTag = '[object Function]', genTag = '[object GeneratorFunction]', proxyTag = '[object Proxy]';
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */ function isFunction(value) {
+    if (!isObject(value)) return false;
+    // The use of `Object#toString` avoids issues with the `typeof` operator
+    // in Safari 9 which returns 'object' for typed arrays and other constructors.
+    var tag = baseGetTag(value);
+    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+module.exports = isFunction;
+
+},{"./_baseGetTag":"hvTL4","./isObject":"hZIId"}],"hvTL4":[function(require,module,exports) {
+var Symbol1 = require('./_Symbol'), getRawTag = require('./_getRawTag'), objectToString = require('./_objectToString');
+/** `Object#toString` result references. */ var nullTag = '[object Null]', undefinedTag = '[object Undefined]';
+/** Built-in value references. */ var symToStringTag = Symbol1 ? Symbol1.toStringTag : undefined;
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ function baseGetTag(value) {
+    if (value == null) return value === undefined ? undefinedTag : nullTag;
+    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
+}
+module.exports = baseGetTag;
+
+},{"./_Symbol":"g8MbF","./_getRawTag":"emeHW","./_objectToString":"agUt8"}],"g8MbF":[function(require,module,exports) {
+var root = require('./_root');
+/** Built-in value references. */ var Symbol1 = root.Symbol;
+module.exports = Symbol1;
+
+},{"./_root":"9w0IQ"}],"9w0IQ":[function(require,module,exports) {
+var freeGlobal = require('./_freeGlobal');
+/** Detect free variable `self`. */ var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+/** Used as a reference to the global object. */ var root = freeGlobal || freeSelf || Function('return this')();
+module.exports = root;
+
+},{"./_freeGlobal":"jmyqD"}],"jmyqD":[function(require,module,exports) {
+var global = arguments[3];
+/** Detect free variable `global` from Node.js. */ var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
+module.exports = freeGlobal;
+
+},{}],"emeHW":[function(require,module,exports) {
+var Symbol1 = require('./_Symbol');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/** Built-in value references. */ var symToStringTag = Symbol1 ? Symbol1.toStringTag : undefined;
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */ function getRawTag(value) {
+    var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
+    try {
+        value[symToStringTag] = undefined;
+        var unmasked = true;
+    } catch (e) {
+    }
+    var result = nativeObjectToString.call(value);
+    if (unmasked) {
+        if (isOwn) value[symToStringTag] = tag;
+        else delete value[symToStringTag];
+    }
+    return result;
+}
+module.exports = getRawTag;
+
+},{"./_Symbol":"g8MbF"}],"agUt8":[function(require,module,exports) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */ var nativeObjectToString = objectProto.toString;
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */ function objectToString(value) {
+    return nativeObjectToString.call(value);
+}
+module.exports = objectToString;
+
+},{}],"hZIId":[function(require,module,exports) {
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */ function isObject(value) {
+    var type = typeof value;
+    return value != null && (type == 'object' || type == 'function');
+}
+module.exports = isObject;
+
+},{}],"1y7kD":[function(require,module,exports) {
+var coreJsData = require('./_coreJsData');
+/** Used to detect methods masquerading as native. */ var maskSrcKey = function() {
+    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
+    return uid ? 'Symbol(src)_1.' + uid : '';
+}();
+/**
+ * Checks if `func` has its source masked.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` is masked, else `false`.
+ */ function isMasked(func) {
+    return !!maskSrcKey && maskSrcKey in func;
+}
+module.exports = isMasked;
+
+},{"./_coreJsData":"9Mghd"}],"9Mghd":[function(require,module,exports) {
+var root = require('./_root');
+/** Used to detect overreaching core-js shims. */ var coreJsData = root['__core-js_shared__'];
+module.exports = coreJsData;
+
+},{"./_root":"9w0IQ"}],"cvYQ0":[function(require,module,exports) {
+/** Used for built-in method references. */ var funcProto = Function.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/**
+ * Converts `func` to its source code.
+ *
+ * @private
+ * @param {Function} func The function to convert.
+ * @returns {string} Returns the source code.
+ */ function toSource(func) {
+    if (func != null) {
+        try {
+            return funcToString.call(func);
+        } catch (e) {
+        }
+        try {
+            return func + '';
+        } catch (e) {
+        }
+    }
+    return '';
+}
+module.exports = toSource;
+
+},{}],"gc1r1":[function(require,module,exports) {
+/**
+ * Gets the value at `key` of `object`.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {string} key The key of the property to get.
+ * @returns {*} Returns the property value.
+ */ function getValue(object, key) {
+    return object == null ? undefined : object[key];
+}
+module.exports = getValue;
+
+},{}],"dMusv":[function(require,module,exports) {
+var createCtor = require('./_createCtor'), root = require('./_root');
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1;
+/**
+ * Creates a function that wraps `func` to invoke it with the optional `this`
+ * binding of `thisArg`.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createBind(func, bitmask, thisArg) {
+    var isBind = bitmask & WRAP_BIND_FLAG, Ctor = createCtor(func);
+    function wrapper() {
+        var fn = this && this !== root && this instanceof wrapper ? Ctor : func;
+        return fn.apply(isBind ? thisArg : this, arguments);
+    }
+    return wrapper;
+}
+module.exports = createBind;
+
+},{"./_createCtor":"ibWBw","./_root":"9w0IQ"}],"ibWBw":[function(require,module,exports) {
+var baseCreate = require('./_baseCreate'), isObject = require('./isObject');
+/**
+ * Creates a function that produces an instance of `Ctor` regardless of
+ * whether it was invoked as part of a `new` expression or by `call` or `apply`.
+ *
+ * @private
+ * @param {Function} Ctor The constructor to wrap.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createCtor(Ctor) {
+    return function() {
+        // Use a `switch` statement to work with class constructors. See
+        // http://ecma-international.org/ecma-262/7.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
+        // for more details.
+        var args = arguments;
+        switch(args.length){
+            case 0:
+                return new Ctor;
+            case 1:
+                return new Ctor(args[0]);
+            case 2:
+                return new Ctor(args[0], args[1]);
+            case 3:
+                return new Ctor(args[0], args[1], args[2]);
+            case 4:
+                return new Ctor(args[0], args[1], args[2], args[3]);
+            case 5:
+                return new Ctor(args[0], args[1], args[2], args[3], args[4]);
+            case 6:
+                return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
+            case 7:
+                return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
+        }
+        var thisBinding = baseCreate(Ctor.prototype), result = Ctor.apply(thisBinding, args);
+        // Mimic the constructor's `return` behavior.
+        // See https://es5.github.io/#x13.2.2 for more details.
+        return isObject(result) ? result : thisBinding;
+    };
+}
+module.exports = createCtor;
+
+},{"./_baseCreate":"1SO2E","./isObject":"hZIId"}],"1SO2E":[function(require,module,exports) {
+var isObject = require('./isObject');
+/** Built-in value references. */ var objectCreate = Object.create;
+/**
+ * The base implementation of `_.create` without support for assigning
+ * properties to the created object.
+ *
+ * @private
+ * @param {Object} proto The object to inherit from.
+ * @returns {Object} Returns the new object.
+ */ var baseCreate = function() {
+    function object() {
+    }
+    return function(proto) {
+        if (!isObject(proto)) return {
+        };
+        if (objectCreate) return objectCreate(proto);
+        object.prototype = proto;
+        var result = new object;
+        object.prototype = undefined;
+        return result;
+    };
+}();
+module.exports = baseCreate;
+
+},{"./isObject":"hZIId"}],"2PEkE":[function(require,module,exports) {
+var apply = require('./_apply'), createCtor = require('./_createCtor'), createHybrid = require('./_createHybrid'), createRecurry = require('./_createRecurry'), getHolder = require('./_getHolder'), replaceHolders = require('./_replaceHolders'), root = require('./_root');
+/**
+ * Creates a function that wraps `func` to enable currying.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {number} arity The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createCurry(func, bitmask, arity) {
+    var Ctor = createCtor(func);
+    function wrapper() {
+        var length = arguments.length, args = Array(length), index = length, placeholder = getHolder(wrapper);
+        while(index--)args[index] = arguments[index];
+        var holders = length < 3 && args[0] !== placeholder && args[length - 1] !== placeholder ? [] : replaceHolders(args, placeholder);
+        length -= holders.length;
+        if (length < arity) return createRecurry(func, bitmask, createHybrid, wrapper.placeholder, undefined, args, holders, undefined, undefined, arity - length);
+        var fn = this && this !== root && this instanceof wrapper ? Ctor : func;
+        return apply(fn, this, args);
+    }
+    return wrapper;
+}
+module.exports = createCurry;
+
+},{"./_apply":"koVpD","./_createCtor":"ibWBw","./_createHybrid":"5aUjM","./_createRecurry":"6QHHK","./_getHolder":"fQE8c","./_replaceHolders":"8Pk3T","./_root":"9w0IQ"}],"koVpD":[function(require,module,exports) {
+/**
+ * A faster alternative to `Function#apply`, this function invokes `func`
+ * with the `this` binding of `thisArg` and the arguments of `args`.
+ *
+ * @private
+ * @param {Function} func The function to invoke.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} args The arguments to invoke `func` with.
+ * @returns {*} Returns the result of `func`.
+ */ function apply(func, thisArg, args) {
+    switch(args.length){
+        case 0:
+            return func.call(thisArg);
+        case 1:
+            return func.call(thisArg, args[0]);
+        case 2:
+            return func.call(thisArg, args[0], args[1]);
+        case 3:
+            return func.call(thisArg, args[0], args[1], args[2]);
+    }
+    return func.apply(thisArg, args);
+}
+module.exports = apply;
+
+},{}],"5aUjM":[function(require,module,exports) {
+var composeArgs = require('./_composeArgs'), composeArgsRight = require('./_composeArgsRight'), countHolders = require('./_countHolders'), createCtor = require('./_createCtor'), createRecurry = require('./_createRecurry'), getHolder = require('./_getHolder'), reorder = require('./_reorder'), replaceHolders = require('./_replaceHolders'), root = require('./_root');
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_FLAG = 8, WRAP_CURRY_RIGHT_FLAG = 16, WRAP_ARY_FLAG = 128, WRAP_FLIP_FLAG = 512;
+/**
+ * Creates a function that wraps `func` to invoke it with optional `this`
+ * binding of `thisArg`, partial application, and currying.
+ *
+ * @private
+ * @param {Function|string} func The function or method name to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to prepend to those provided to
+ *  the new function.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [partialsRight] The arguments to append to those provided
+ *  to the new function.
+ * @param {Array} [holdersRight] The `partialsRight` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createHybrid(func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity) {
+    var isAry = bitmask & WRAP_ARY_FLAG, isBind = bitmask & WRAP_BIND_FLAG, isBindKey = bitmask & WRAP_BIND_KEY_FLAG, isCurried = bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG), isFlip = bitmask & WRAP_FLIP_FLAG, Ctor = isBindKey ? undefined : createCtor(func);
+    function wrapper() {
+        var length = arguments.length, args = Array(length), index = length;
+        while(index--)args[index] = arguments[index];
+        if (isCurried) var placeholder = getHolder(wrapper), holdersCount = countHolders(args, placeholder);
+        if (partials) args = composeArgs(args, partials, holders, isCurried);
+        if (partialsRight) args = composeArgsRight(args, partialsRight, holdersRight, isCurried);
+        length -= holdersCount;
+        if (isCurried && length < arity) {
+            var newHolders = replaceHolders(args, placeholder);
+            return createRecurry(func, bitmask, createHybrid, wrapper.placeholder, thisArg, args, newHolders, argPos, ary, arity - length);
+        }
+        var thisBinding = isBind ? thisArg : this, fn = isBindKey ? thisBinding[func] : func;
+        length = args.length;
+        if (argPos) args = reorder(args, argPos);
+        else if (isFlip && length > 1) args.reverse();
+        if (isAry && ary < length) args.length = ary;
+        if (this && this !== root && this instanceof wrapper) fn = Ctor || createCtor(fn);
+        return fn.apply(thisBinding, args);
+    }
+    return wrapper;
+}
+module.exports = createHybrid;
+
+},{"./_composeArgs":"c73Lg","./_composeArgsRight":"cSTDh","./_countHolders":"fPVGD","./_createCtor":"ibWBw","./_createRecurry":"6QHHK","./_getHolder":"fQE8c","./_reorder":"32jG3","./_replaceHolders":"8Pk3T","./_root":"9w0IQ"}],"c73Lg":[function(require,module,exports) {
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * Creates an array that is the composition of partially applied arguments,
+ * placeholders, and provided arguments into a single array of arguments.
+ *
+ * @private
+ * @param {Array} args The provided arguments.
+ * @param {Array} partials The arguments to prepend to those provided.
+ * @param {Array} holders The `partials` placeholder indexes.
+ * @params {boolean} [isCurried] Specify composing for a curried function.
+ * @returns {Array} Returns the new array of composed arguments.
+ */ function composeArgs(args, partials, holders, isCurried) {
+    var argsIndex = -1, argsLength = args.length, holdersLength = holders.length, leftIndex = -1, leftLength = partials.length, rangeLength = nativeMax(argsLength - holdersLength, 0), result = Array(leftLength + rangeLength), isUncurried = !isCurried;
+    while((++leftIndex) < leftLength)result[leftIndex] = partials[leftIndex];
+    while((++argsIndex) < holdersLength)if (isUncurried || argsIndex < argsLength) result[holders[argsIndex]] = args[argsIndex];
+    while(rangeLength--)result[leftIndex++] = args[argsIndex++];
+    return result;
+}
+module.exports = composeArgs;
+
+},{}],"cSTDh":[function(require,module,exports) {
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * This function is like `composeArgs` except that the arguments composition
+ * is tailored for `_.partialRight`.
+ *
+ * @private
+ * @param {Array} args The provided arguments.
+ * @param {Array} partials The arguments to append to those provided.
+ * @param {Array} holders The `partials` placeholder indexes.
+ * @params {boolean} [isCurried] Specify composing for a curried function.
+ * @returns {Array} Returns the new array of composed arguments.
+ */ function composeArgsRight(args, partials, holders, isCurried) {
+    var argsIndex = -1, argsLength = args.length, holdersIndex = -1, holdersLength = holders.length, rightIndex = -1, rightLength = partials.length, rangeLength = nativeMax(argsLength - holdersLength, 0), result = Array(rangeLength + rightLength), isUncurried = !isCurried;
+    while((++argsIndex) < rangeLength)result[argsIndex] = args[argsIndex];
+    var offset = argsIndex;
+    while((++rightIndex) < rightLength)result[offset + rightIndex] = partials[rightIndex];
+    while((++holdersIndex) < holdersLength)if (isUncurried || argsIndex < argsLength) result[offset + holders[holdersIndex]] = args[argsIndex++];
+    return result;
+}
+module.exports = composeArgsRight;
+
+},{}],"fPVGD":[function(require,module,exports) {
+/**
+ * Gets the number of `placeholder` occurrences in `array`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} placeholder The placeholder to search for.
+ * @returns {number} Returns the placeholder count.
+ */ function countHolders(array, placeholder) {
+    var length = array.length, result = 0;
+    while(length--)if (array[length] === placeholder) ++result;
+    return result;
+}
+module.exports = countHolders;
+
+},{}],"6QHHK":[function(require,module,exports) {
+var isLaziable = require('./_isLaziable'), setData = require('./_setData'), setWrapToString = require('./_setWrapToString');
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_BOUND_FLAG = 4, WRAP_CURRY_FLAG = 8, WRAP_PARTIAL_FLAG = 32, WRAP_PARTIAL_RIGHT_FLAG = 64;
+/**
+ * Creates a function that wraps `func` to continue currying.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {Function} wrapFunc The function to create the `func` wrapper.
+ * @param {*} placeholder The placeholder value.
+ * @param {*} [thisArg] The `this` binding of `func`.
+ * @param {Array} [partials] The arguments to prepend to those provided to
+ *  the new function.
+ * @param {Array} [holders] The `partials` placeholder indexes.
+ * @param {Array} [argPos] The argument positions of the new function.
+ * @param {number} [ary] The arity cap of `func`.
+ * @param {number} [arity] The arity of `func`.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createRecurry(func, bitmask, wrapFunc, placeholder, thisArg, partials, holders, argPos, ary, arity) {
+    var isCurry = bitmask & WRAP_CURRY_FLAG, newHolders = isCurry ? holders : undefined, newHoldersRight = isCurry ? undefined : holders, newPartials = isCurry ? partials : undefined, newPartialsRight = isCurry ? undefined : partials;
+    bitmask |= isCurry ? WRAP_PARTIAL_FLAG : WRAP_PARTIAL_RIGHT_FLAG;
+    bitmask &= ~(isCurry ? WRAP_PARTIAL_RIGHT_FLAG : WRAP_PARTIAL_FLAG);
+    if (!(bitmask & WRAP_CURRY_BOUND_FLAG)) bitmask &= ~(WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG);
+    var newData = [
+        func,
+        bitmask,
+        thisArg,
+        newPartials,
+        newHolders,
+        newPartialsRight,
+        newHoldersRight,
+        argPos,
+        ary,
+        arity
+    ];
+    var result = wrapFunc.apply(undefined, newData);
+    if (isLaziable(func)) setData(result, newData);
+    result.placeholder = placeholder;
+    return setWrapToString(result, func, bitmask);
+}
+module.exports = createRecurry;
+
+},{"./_isLaziable":"d5nZZ","./_setData":"XwiwS","./_setWrapToString":"3scxv"}],"d5nZZ":[function(require,module,exports) {
+var LazyWrapper = require('./_LazyWrapper'), getData = require('./_getData'), getFuncName = require('./_getFuncName'), lodash = require('./wrapperLodash');
+/**
+ * Checks if `func` has a lazy counterpart.
+ *
+ * @private
+ * @param {Function} func The function to check.
+ * @returns {boolean} Returns `true` if `func` has a lazy counterpart,
+ *  else `false`.
+ */ function isLaziable(func) {
+    var funcName = getFuncName(func), other = lodash[funcName];
+    if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) return false;
+    if (func === other) return true;
+    var data = getData(other);
+    return !!data && func === data[0];
+}
+module.exports = isLaziable;
+
+},{"./_LazyWrapper":"4chU7","./_getData":"g4Fmy","./_getFuncName":"dr13S","./wrapperLodash":"kNP0U"}],"4chU7":[function(require,module,exports) {
+var baseCreate = require('./_baseCreate'), baseLodash = require('./_baseLodash');
+/** Used as references for the maximum length and index of an array. */ var MAX_ARRAY_LENGTH = 4294967295;
+/**
+ * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
+ *
+ * @private
+ * @constructor
+ * @param {*} value The value to wrap.
+ */ function LazyWrapper(value) {
+    this.__wrapped__ = value;
+    this.__actions__ = [];
+    this.__dir__ = 1;
+    this.__filtered__ = false;
+    this.__iteratees__ = [];
+    this.__takeCount__ = MAX_ARRAY_LENGTH;
+    this.__views__ = [];
+}
+// Ensure `LazyWrapper` is an instance of `baseLodash`.
+LazyWrapper.prototype = baseCreate(baseLodash.prototype);
+LazyWrapper.prototype.constructor = LazyWrapper;
+module.exports = LazyWrapper;
+
+},{"./_baseCreate":"1SO2E","./_baseLodash":"4VGJz"}],"4VGJz":[function(require,module,exports) {
+/**
+ * The function whose prototype chain sequence wrappers inherit from.
+ *
+ * @private
+ */ function baseLodash() {
+// No operation performed.
+}
+module.exports = baseLodash;
+
+},{}],"g4Fmy":[function(require,module,exports) {
+var metaMap = require('./_metaMap'), noop = require('./noop');
+/**
+ * Gets metadata for `func`.
+ *
+ * @private
+ * @param {Function} func The function to query.
+ * @returns {*} Returns the metadata for `func`.
+ */ var getData = !metaMap ? noop : function(func) {
+    return metaMap.get(func);
+};
+module.exports = getData;
+
+},{"./_metaMap":"kMAlx","./noop":"hdG5L"}],"hdG5L":[function(require,module,exports) {
+/**
+ * This method returns `undefined`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.3.0
+ * @category Util
+ * @example
+ *
+ * _.times(2, _.noop);
+ * // => [undefined, undefined]
+ */ function noop() {
+// No operation performed.
+}
+module.exports = noop;
+
+},{}],"dr13S":[function(require,module,exports) {
+var realNames = require('./_realNames');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Gets the name of `func`.
+ *
+ * @private
+ * @param {Function} func The function to query.
+ * @returns {string} Returns the function name.
+ */ function getFuncName(func) {
+    var result = func.name + '', array = realNames[result], length = hasOwnProperty.call(realNames, result) ? array.length : 0;
+    while(length--){
+        var data = array[length], otherFunc = data.func;
+        if (otherFunc == null || otherFunc == func) return data.name;
+    }
+    return result;
+}
+module.exports = getFuncName;
+
+},{"./_realNames":"hAXSU"}],"hAXSU":[function(require,module,exports) {
+/** Used to lookup unminified function names. */ var realNames = {
+};
+module.exports = realNames;
+
+},{}],"kNP0U":[function(require,module,exports) {
+var LazyWrapper = require('./_LazyWrapper'), LodashWrapper = require('./_LodashWrapper'), baseLodash = require('./_baseLodash'), isArray = require('./isArray'), isObjectLike = require('./isObjectLike'), wrapperClone = require('./_wrapperClone');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Creates a `lodash` object which wraps `value` to enable implicit method
+ * chain sequences. Methods that operate on and return arrays, collections,
+ * and functions can be chained together. Methods that retrieve a single value
+ * or may return a primitive value will automatically end the chain sequence
+ * and return the unwrapped value. Otherwise, the value must be unwrapped
+ * with `_#value`.
+ *
+ * Explicit chain sequences, which must be unwrapped with `_#value`, may be
+ * enabled using `_.chain`.
+ *
+ * The execution of chained methods is lazy, that is, it's deferred until
+ * `_#value` is implicitly or explicitly called.
+ *
+ * Lazy evaluation allows several methods to support shortcut fusion.
+ * Shortcut fusion is an optimization to merge iteratee calls; this avoids
+ * the creation of intermediate arrays and can greatly reduce the number of
+ * iteratee executions. Sections of a chain sequence qualify for shortcut
+ * fusion if the section is applied to an array and iteratees accept only
+ * one argument. The heuristic for whether a section qualifies for shortcut
+ * fusion is subject to change.
+ *
+ * Chaining is supported in custom builds as long as the `_#value` method is
+ * directly or indirectly included in the build.
+ *
+ * In addition to lodash methods, wrappers have `Array` and `String` methods.
+ *
+ * The wrapper `Array` methods are:
+ * `concat`, `join`, `pop`, `push`, `shift`, `sort`, `splice`, and `unshift`
+ *
+ * The wrapper `String` methods are:
+ * `replace` and `split`
+ *
+ * The wrapper methods that support shortcut fusion are:
+ * `at`, `compact`, `drop`, `dropRight`, `dropWhile`, `filter`, `find`,
+ * `findLast`, `head`, `initial`, `last`, `map`, `reject`, `reverse`, `slice`,
+ * `tail`, `take`, `takeRight`, `takeRightWhile`, `takeWhile`, and `toArray`
+ *
+ * The chainable wrapper methods are:
+ * `after`, `ary`, `assign`, `assignIn`, `assignInWith`, `assignWith`, `at`,
+ * `before`, `bind`, `bindAll`, `bindKey`, `castArray`, `chain`, `chunk`,
+ * `commit`, `compact`, `concat`, `conforms`, `constant`, `countBy`, `create`,
+ * `curry`, `debounce`, `defaults`, `defaultsDeep`, `defer`, `delay`,
+ * `difference`, `differenceBy`, `differenceWith`, `drop`, `dropRight`,
+ * `dropRightWhile`, `dropWhile`, `extend`, `extendWith`, `fill`, `filter`,
+ * `flatMap`, `flatMapDeep`, `flatMapDepth`, `flatten`, `flattenDeep`,
+ * `flattenDepth`, `flip`, `flow`, `flowRight`, `fromPairs`, `functions`,
+ * `functionsIn`, `groupBy`, `initial`, `intersection`, `intersectionBy`,
+ * `intersectionWith`, `invert`, `invertBy`, `invokeMap`, `iteratee`, `keyBy`,
+ * `keys`, `keysIn`, `map`, `mapKeys`, `mapValues`, `matches`, `matchesProperty`,
+ * `memoize`, `merge`, `mergeWith`, `method`, `methodOf`, `mixin`, `negate`,
+ * `nthArg`, `omit`, `omitBy`, `once`, `orderBy`, `over`, `overArgs`,
+ * `overEvery`, `overSome`, `partial`, `partialRight`, `partition`, `pick`,
+ * `pickBy`, `plant`, `property`, `propertyOf`, `pull`, `pullAll`, `pullAllBy`,
+ * `pullAllWith`, `pullAt`, `push`, `range`, `rangeRight`, `rearg`, `reject`,
+ * `remove`, `rest`, `reverse`, `sampleSize`, `set`, `setWith`, `shuffle`,
+ * `slice`, `sort`, `sortBy`, `splice`, `spread`, `tail`, `take`, `takeRight`,
+ * `takeRightWhile`, `takeWhile`, `tap`, `throttle`, `thru`, `toArray`,
+ * `toPairs`, `toPairsIn`, `toPath`, `toPlainObject`, `transform`, `unary`,
+ * `union`, `unionBy`, `unionWith`, `uniq`, `uniqBy`, `uniqWith`, `unset`,
+ * `unshift`, `unzip`, `unzipWith`, `update`, `updateWith`, `values`,
+ * `valuesIn`, `without`, `wrap`, `xor`, `xorBy`, `xorWith`, `zip`,
+ * `zipObject`, `zipObjectDeep`, and `zipWith`
+ *
+ * The wrapper methods that are **not** chainable by default are:
+ * `add`, `attempt`, `camelCase`, `capitalize`, `ceil`, `clamp`, `clone`,
+ * `cloneDeep`, `cloneDeepWith`, `cloneWith`, `conformsTo`, `deburr`,
+ * `defaultTo`, `divide`, `each`, `eachRight`, `endsWith`, `eq`, `escape`,
+ * `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`, `findLast`,
+ * `findLastIndex`, `findLastKey`, `first`, `floor`, `forEach`, `forEachRight`,
+ * `forIn`, `forInRight`, `forOwn`, `forOwnRight`, `get`, `gt`, `gte`, `has`,
+ * `hasIn`, `head`, `identity`, `includes`, `indexOf`, `inRange`, `invoke`,
+ * `isArguments`, `isArray`, `isArrayBuffer`, `isArrayLike`, `isArrayLikeObject`,
+ * `isBoolean`, `isBuffer`, `isDate`, `isElement`, `isEmpty`, `isEqual`,
+ * `isEqualWith`, `isError`, `isFinite`, `isFunction`, `isInteger`, `isLength`,
+ * `isMap`, `isMatch`, `isMatchWith`, `isNaN`, `isNative`, `isNil`, `isNull`,
+ * `isNumber`, `isObject`, `isObjectLike`, `isPlainObject`, `isRegExp`,
+ * `isSafeInteger`, `isSet`, `isString`, `isUndefined`, `isTypedArray`,
+ * `isWeakMap`, `isWeakSet`, `join`, `kebabCase`, `last`, `lastIndexOf`,
+ * `lowerCase`, `lowerFirst`, `lt`, `lte`, `max`, `maxBy`, `mean`, `meanBy`,
+ * `min`, `minBy`, `multiply`, `noConflict`, `noop`, `now`, `nth`, `pad`,
+ * `padEnd`, `padStart`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`,
+ * `repeat`, `result`, `round`, `runInContext`, `sample`, `shift`, `size`,
+ * `snakeCase`, `some`, `sortedIndex`, `sortedIndexBy`, `sortedLastIndex`,
+ * `sortedLastIndexBy`, `startCase`, `startsWith`, `stubArray`, `stubFalse`,
+ * `stubObject`, `stubString`, `stubTrue`, `subtract`, `sum`, `sumBy`,
+ * `template`, `times`, `toFinite`, `toInteger`, `toJSON`, `toLength`,
+ * `toLower`, `toNumber`, `toSafeInteger`, `toString`, `toUpper`, `trim`,
+ * `trimEnd`, `trimStart`, `truncate`, `unescape`, `uniqueId`, `upperCase`,
+ * `upperFirst`, `value`, and `words`
+ *
+ * @name _
+ * @constructor
+ * @category Seq
+ * @param {*} value The value to wrap in a `lodash` instance.
+ * @returns {Object} Returns the new `lodash` wrapper instance.
+ * @example
+ *
+ * function square(n) {
+ *   return n * n;
+ * }
+ *
+ * var wrapped = _([1, 2, 3]);
+ *
+ * // Returns an unwrapped value.
+ * wrapped.reduce(_.add);
+ * // => 6
+ *
+ * // Returns a wrapped value.
+ * var squares = wrapped.map(square);
+ *
+ * _.isArray(squares);
+ * // => false
+ *
+ * _.isArray(squares.value());
+ * // => true
+ */ function lodash(value) {
+    if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
+        if (value instanceof LodashWrapper) return value;
+        if (hasOwnProperty.call(value, '__wrapped__')) return wrapperClone(value);
+    }
+    return new LodashWrapper(value);
+}
+// Ensure wrappers are instances of `baseLodash`.
+lodash.prototype = baseLodash.prototype;
+lodash.prototype.constructor = lodash;
+module.exports = lodash;
+
+},{"./_LazyWrapper":"4chU7","./_LodashWrapper":"1MAIv","./_baseLodash":"4VGJz","./isArray":"9D9dp","./isObjectLike":"6ihSr","./_wrapperClone":"8ditg"}],"1MAIv":[function(require,module,exports) {
+var baseCreate = require('./_baseCreate'), baseLodash = require('./_baseLodash');
+/**
+ * The base constructor for creating `lodash` wrapper objects.
+ *
+ * @private
+ * @param {*} value The value to wrap.
+ * @param {boolean} [chainAll] Enable explicit method chain sequences.
+ */ function LodashWrapper(value, chainAll) {
+    this.__wrapped__ = value;
+    this.__actions__ = [];
+    this.__chain__ = !!chainAll;
+    this.__index__ = 0;
+    this.__values__ = undefined;
+}
+LodashWrapper.prototype = baseCreate(baseLodash.prototype);
+LodashWrapper.prototype.constructor = LodashWrapper;
+module.exports = LodashWrapper;
+
+},{"./_baseCreate":"1SO2E","./_baseLodash":"4VGJz"}],"9D9dp":[function(require,module,exports) {
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */ var isArray = Array.isArray;
+module.exports = isArray;
+
+},{}],"6ihSr":[function(require,module,exports) {
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */ function isObjectLike(value) {
+    return value != null && typeof value == 'object';
+}
+module.exports = isObjectLike;
+
+},{}],"8ditg":[function(require,module,exports) {
+var LazyWrapper = require('./_LazyWrapper'), LodashWrapper = require('./_LodashWrapper'), copyArray = require('./_copyArray');
+/**
+ * Creates a clone of `wrapper`.
+ *
+ * @private
+ * @param {Object} wrapper The wrapper to clone.
+ * @returns {Object} Returns the cloned wrapper.
+ */ function wrapperClone(wrapper) {
+    if (wrapper instanceof LazyWrapper) return wrapper.clone();
+    var result = new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__);
+    result.__actions__ = copyArray(wrapper.__actions__);
+    result.__index__ = wrapper.__index__;
+    result.__values__ = wrapper.__values__;
+    return result;
+}
+module.exports = wrapperClone;
+
+},{"./_LazyWrapper":"4chU7","./_LodashWrapper":"1MAIv","./_copyArray":"7dekD"}],"7dekD":[function(require,module,exports) {
+/**
+ * Copies the values of `source` to `array`.
+ *
+ * @private
+ * @param {Array} source The array to copy values from.
+ * @param {Array} [array=[]] The array to copy values to.
+ * @returns {Array} Returns `array`.
+ */ function copyArray(source, array) {
+    var index = -1, length = source.length;
+    array || (array = Array(length));
+    while((++index) < length)array[index] = source[index];
+    return array;
+}
+module.exports = copyArray;
+
+},{}],"XwiwS":[function(require,module,exports) {
+var baseSetData = require('./_baseSetData'), shortOut = require('./_shortOut');
+/**
+ * Sets metadata for `func`.
+ *
+ * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
+ * period of time, it will trip its breaker and transition to an identity
+ * function to avoid garbage collection pauses in V8. See
+ * [V8 issue 2070](https://bugs.chromium.org/p/v8/issues/detail?id=2070)
+ * for more details.
+ *
+ * @private
+ * @param {Function} func The function to associate metadata with.
+ * @param {*} data The metadata.
+ * @returns {Function} Returns `func`.
+ */ var setData = shortOut(baseSetData);
+module.exports = setData;
+
+},{"./_baseSetData":"q9Ejo","./_shortOut":"axdhe"}],"axdhe":[function(require,module,exports) {
+/** Used to detect hot functions by number of calls within a span of milliseconds. */ var HOT_COUNT = 800, HOT_SPAN = 16;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeNow = Date.now;
+/**
+ * Creates a function that'll short out and invoke `identity` instead
+ * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
+ * milliseconds.
+ *
+ * @private
+ * @param {Function} func The function to restrict.
+ * @returns {Function} Returns the new shortable function.
+ */ function shortOut(func) {
+    var count = 0, lastCalled = 0;
+    return function() {
+        var stamp = nativeNow(), remaining = HOT_SPAN - (stamp - lastCalled);
+        lastCalled = stamp;
+        if (remaining > 0) {
+            if ((++count) >= HOT_COUNT) return arguments[0];
+        } else count = 0;
+        return func.apply(undefined, arguments);
+    };
+}
+module.exports = shortOut;
+
+},{}],"3scxv":[function(require,module,exports) {
+var getWrapDetails = require('./_getWrapDetails'), insertWrapDetails = require('./_insertWrapDetails'), setToString = require('./_setToString'), updateWrapDetails = require('./_updateWrapDetails');
+/**
+ * Sets the `toString` method of `wrapper` to mimic the source of `reference`
+ * with wrapper details in a comment at the top of the source body.
+ *
+ * @private
+ * @param {Function} wrapper The function to modify.
+ * @param {Function} reference The reference function.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @returns {Function} Returns `wrapper`.
+ */ function setWrapToString(wrapper, reference, bitmask) {
+    var source = reference + '';
+    return setToString(wrapper, insertWrapDetails(source, updateWrapDetails(getWrapDetails(source), bitmask)));
+}
+module.exports = setWrapToString;
+
+},{"./_getWrapDetails":"elIkU","./_insertWrapDetails":"9DKes","./_setToString":"duOCt","./_updateWrapDetails":"eMGEz"}],"elIkU":[function(require,module,exports) {
+/** Used to match wrap detail comments. */ var reWrapDetails = /\{\n\/\* \[wrapped with (.+)\] \*/, reSplitDetails = /,? & /;
+/**
+ * Extracts wrapper details from the `source` body comment.
+ *
+ * @private
+ * @param {string} source The source to inspect.
+ * @returns {Array} Returns the wrapper details.
+ */ function getWrapDetails(source) {
+    var match = source.match(reWrapDetails);
+    return match ? match[1].split(reSplitDetails) : [];
+}
+module.exports = getWrapDetails;
+
+},{}],"9DKes":[function(require,module,exports) {
+/** Used to match wrap detail comments. */ var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/;
+/**
+ * Inserts wrapper `details` in a comment at the top of the `source` body.
+ *
+ * @private
+ * @param {string} source The source to modify.
+ * @returns {Array} details The details to insert.
+ * @returns {string} Returns the modified source.
+ */ function insertWrapDetails(source, details) {
+    var length = details.length;
+    if (!length) return source;
+    var lastIndex = length - 1;
+    details[lastIndex] = (length > 1 ? '& ' : '') + details[lastIndex];
+    details = details.join(length > 2 ? ', ' : ' ');
+    return source.replace(reWrapComment, '{\n/* [wrapped with ' + details + '] */\n');
+}
+module.exports = insertWrapDetails;
+
+},{}],"duOCt":[function(require,module,exports) {
+var baseSetToString = require('./_baseSetToString'), shortOut = require('./_shortOut');
+/**
+ * Sets the `toString` method of `func` to return `string`.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */ var setToString = shortOut(baseSetToString);
+module.exports = setToString;
+
+},{"./_baseSetToString":"4Oalm","./_shortOut":"axdhe"}],"4Oalm":[function(require,module,exports) {
+var constant = require('./constant'), defineProperty = require('./_defineProperty'), identity = require('./identity');
+/**
+ * The base implementation of `setToString` without support for hot loop shorting.
+ *
+ * @private
+ * @param {Function} func The function to modify.
+ * @param {Function} string The `toString` result.
+ * @returns {Function} Returns `func`.
+ */ var baseSetToString = !defineProperty ? identity : function(func, string) {
+    return defineProperty(func, 'toString', {
+        'configurable': true,
+        'enumerable': false,
+        'value': constant(string),
+        'writable': true
+    });
+};
+module.exports = baseSetToString;
+
+},{"./constant":"eoPgC","./_defineProperty":"kXqjt","./identity":"czYGV"}],"eoPgC":[function(require,module,exports) {
+/**
+ * Creates a function that returns `value`.
+ *
+ * @static
+ * @memberOf _
+ * @since 2.4.0
+ * @category Util
+ * @param {*} value The value to return from the new function.
+ * @returns {Function} Returns the new constant function.
+ * @example
+ *
+ * var objects = _.times(2, _.constant({ 'a': 1 }));
+ *
+ * console.log(objects);
+ * // => [{ 'a': 1 }, { 'a': 1 }]
+ *
+ * console.log(objects[0] === objects[1]);
+ * // => true
+ */ function constant(value) {
+    return function() {
+        return value;
+    };
+}
+module.exports = constant;
+
+},{}],"kXqjt":[function(require,module,exports) {
+var getNative = require('./_getNative');
+var defineProperty = function() {
+    try {
+        var func = getNative(Object, 'defineProperty');
+        func({
+        }, '', {
+        });
+        return func;
+    } catch (e) {
+    }
+}();
+module.exports = defineProperty;
+
+},{"./_getNative":"iGRIN"}],"eMGEz":[function(require,module,exports) {
+var arrayEach = require('./_arrayEach'), arrayIncludes = require('./_arrayIncludes');
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_FLAG = 8, WRAP_CURRY_RIGHT_FLAG = 16, WRAP_PARTIAL_FLAG = 32, WRAP_PARTIAL_RIGHT_FLAG = 64, WRAP_ARY_FLAG = 128, WRAP_REARG_FLAG = 256, WRAP_FLIP_FLAG = 512;
+/** Used to associate wrap methods with their bit flags. */ var wrapFlags = [
+    [
+        'ary',
+        WRAP_ARY_FLAG
+    ],
+    [
+        'bind',
+        WRAP_BIND_FLAG
+    ],
+    [
+        'bindKey',
+        WRAP_BIND_KEY_FLAG
+    ],
+    [
+        'curry',
+        WRAP_CURRY_FLAG
+    ],
+    [
+        'curryRight',
+        WRAP_CURRY_RIGHT_FLAG
+    ],
+    [
+        'flip',
+        WRAP_FLIP_FLAG
+    ],
+    [
+        'partial',
+        WRAP_PARTIAL_FLAG
+    ],
+    [
+        'partialRight',
+        WRAP_PARTIAL_RIGHT_FLAG
+    ],
+    [
+        'rearg',
+        WRAP_REARG_FLAG
+    ]
+];
+/**
+ * Updates wrapper `details` based on `bitmask` flags.
+ *
+ * @private
+ * @returns {Array} details The details to modify.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @returns {Array} Returns `details`.
+ */ function updateWrapDetails(details, bitmask) {
+    arrayEach(wrapFlags, function(pair) {
+        var value = '_.' + pair[0];
+        if (bitmask & pair[1] && !arrayIncludes(details, value)) details.push(value);
+    });
+    return details.sort();
+}
+module.exports = updateWrapDetails;
+
+},{"./_arrayEach":"9K3TC","./_arrayIncludes":"c9L47"}],"9K3TC":[function(require,module,exports) {
+/**
+ * A specialized version of `_.forEach` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns `array`.
+ */ function arrayEach(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length;
+    while((++index) < length){
+        if (iteratee(array[index], index, array) === false) break;
+    }
+    return array;
+}
+module.exports = arrayEach;
+
+},{}],"c9L47":[function(require,module,exports) {
+var baseIndexOf = require('./_baseIndexOf');
+/**
+ * A specialized version of `_.includes` for arrays without support for
+ * specifying an index to search from.
+ *
+ * @private
+ * @param {Array} [array] The array to inspect.
+ * @param {*} target The value to search for.
+ * @returns {boolean} Returns `true` if `target` is found, else `false`.
+ */ function arrayIncludes(array, value) {
+    var length = array == null ? 0 : array.length;
+    return !!length && baseIndexOf(array, value, 0) > -1;
+}
+module.exports = arrayIncludes;
+
+},{"./_baseIndexOf":"lS37n"}],"lS37n":[function(require,module,exports) {
+var baseFindIndex = require('./_baseFindIndex'), baseIsNaN = require('./_baseIsNaN'), strictIndexOf = require('./_strictIndexOf');
+/**
+ * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function baseIndexOf(array, value, fromIndex) {
+    return value === value ? strictIndexOf(array, value, fromIndex) : baseFindIndex(array, baseIsNaN, fromIndex);
+}
+module.exports = baseIndexOf;
+
+},{"./_baseFindIndex":"7ckcV","./_baseIsNaN":"4CQYy","./_strictIndexOf":"1nzTN"}],"7ckcV":[function(require,module,exports) {
+/**
+ * The base implementation of `_.findIndex` and `_.findLastIndex` without
+ * support for iteratee shorthands.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {Function} predicate The function invoked per iteration.
+ * @param {number} fromIndex The index to search from.
+ * @param {boolean} [fromRight] Specify iterating from right to left.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function baseFindIndex(array, predicate, fromIndex, fromRight) {
+    var length = array.length, index = fromIndex + (fromRight ? 1 : -1);
+    while(fromRight ? index-- : (++index) < length){
+        if (predicate(array[index], index, array)) return index;
+    }
+    return -1;
+}
+module.exports = baseFindIndex;
+
+},{}],"4CQYy":[function(require,module,exports) {
+/**
+ * The base implementation of `_.isNaN` without support for number objects.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
+ */ function baseIsNaN(value) {
+    return value !== value;
+}
+module.exports = baseIsNaN;
+
+},{}],"1nzTN":[function(require,module,exports) {
+/**
+ * A specialized version of `_.indexOf` which performs strict equality
+ * comparisons of values, i.e. `===`.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} value The value to search for.
+ * @param {number} fromIndex The index to search from.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function strictIndexOf(array, value, fromIndex) {
+    var index = fromIndex - 1, length = array.length;
+    while((++index) < length){
+        if (array[index] === value) return index;
+    }
+    return -1;
+}
+module.exports = strictIndexOf;
+
+},{}],"fQE8c":[function(require,module,exports) {
+/**
+ * Gets the argument placeholder value for `func`.
+ *
+ * @private
+ * @param {Function} func The function to inspect.
+ * @returns {*} Returns the placeholder value.
+ */ function getHolder(func) {
+    var object = func;
+    return object.placeholder;
+}
+module.exports = getHolder;
+
+},{}],"32jG3":[function(require,module,exports) {
+var copyArray = require('./_copyArray'), isIndex = require('./_isIndex');
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMin = Math.min;
+/**
+ * Reorder `array` according to the specified indexes where the element at
+ * the first index is assigned as the first element, the element at
+ * the second index is assigned as the second element, and so on.
+ *
+ * @private
+ * @param {Array} array The array to reorder.
+ * @param {Array} indexes The arranged array indexes.
+ * @returns {Array} Returns `array`.
+ */ function reorder(array, indexes) {
+    var arrLength = array.length, length = nativeMin(indexes.length, arrLength), oldArray = copyArray(array);
+    while(length--){
+        var index = indexes[length];
+        array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
+    }
+    return array;
+}
+module.exports = reorder;
+
+},{"./_copyArray":"7dekD","./_isIndex":"2RH5V"}],"2RH5V":[function(require,module,exports) {
+/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
+/** Used to detect unsigned integer values. */ var reIsUint = /^(?:0|[1-9]\d*)$/;
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */ function isIndex(value, length) {
+    var type = typeof value;
+    length = length == null ? MAX_SAFE_INTEGER : length;
+    return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
+}
+module.exports = isIndex;
+
+},{}],"8Pk3T":[function(require,module,exports) {
+/** Used as the internal argument placeholder. */ var PLACEHOLDER = '__lodash_placeholder__';
+/**
+ * Replaces all `placeholder` elements in `array` with an internal placeholder
+ * and returns an array of their indexes.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {*} placeholder The placeholder to replace.
+ * @returns {Array} Returns the new array of placeholder indexes.
+ */ function replaceHolders(array, placeholder) {
+    var index = -1, length = array.length, resIndex = 0, result = [];
+    while((++index) < length){
+        var value = array[index];
+        if (value === placeholder || value === PLACEHOLDER) {
+            array[index] = PLACEHOLDER;
+            result[resIndex++] = index;
+        }
+    }
+    return result;
+}
+module.exports = replaceHolders;
+
+},{}],"j9vFV":[function(require,module,exports) {
+var apply = require('./_apply'), createCtor = require('./_createCtor'), root = require('./_root');
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1;
+/**
+ * Creates a function that wraps `func` to invoke it with the `this` binding
+ * of `thisArg` and `partials` prepended to the arguments it receives.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
+ * @param {*} thisArg The `this` binding of `func`.
+ * @param {Array} partials The arguments to prepend to those provided to
+ *  the new function.
+ * @returns {Function} Returns the new wrapped function.
+ */ function createPartial(func, bitmask, thisArg, partials) {
+    var isBind = bitmask & WRAP_BIND_FLAG, Ctor = createCtor(func);
+    function wrapper() {
+        var argsIndex = -1, argsLength = arguments.length, leftIndex = -1, leftLength = partials.length, args = Array(leftLength + argsLength), fn = this && this !== root && this instanceof wrapper ? Ctor : func;
+        while((++leftIndex) < leftLength)args[leftIndex] = partials[leftIndex];
+        while(argsLength--)args[leftIndex++] = arguments[++argsIndex];
+        return apply(fn, isBind ? thisArg : this, args);
+    }
+    return wrapper;
+}
+module.exports = createPartial;
+
+},{"./_apply":"koVpD","./_createCtor":"ibWBw","./_root":"9w0IQ"}],"eavA7":[function(require,module,exports) {
+var composeArgs = require('./_composeArgs'), composeArgsRight = require('./_composeArgsRight'), replaceHolders = require('./_replaceHolders');
+/** Used as the internal argument placeholder. */ var PLACEHOLDER = '__lodash_placeholder__';
+/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_BOUND_FLAG = 4, WRAP_CURRY_FLAG = 8, WRAP_ARY_FLAG = 128, WRAP_REARG_FLAG = 256;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMin = Math.min;
+/**
+ * Merges the function metadata of `source` into `data`.
+ *
+ * Merging metadata reduces the number of wrappers used to invoke a function.
+ * This is possible because methods like `_.bind`, `_.curry`, and `_.partial`
+ * may be applied regardless of execution order. Methods like `_.ary` and
+ * `_.rearg` modify function arguments, making the order in which they are
+ * executed important, preventing the merging of metadata. However, we make
+ * an exception for a safe combined case where curried functions have `_.ary`
+ * and or `_.rearg` applied.
+ *
+ * @private
+ * @param {Array} data The destination metadata.
+ * @param {Array} source The source metadata.
+ * @returns {Array} Returns `data`.
+ */ function mergeData(data, source) {
+    var bitmask = data[1], srcBitmask = source[1], newBitmask = bitmask | srcBitmask, isCommon = newBitmask < (WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG | WRAP_ARY_FLAG);
+    var isCombo = srcBitmask == WRAP_ARY_FLAG && bitmask == WRAP_CURRY_FLAG || srcBitmask == WRAP_ARY_FLAG && bitmask == WRAP_REARG_FLAG && data[7].length <= source[8] || srcBitmask == (WRAP_ARY_FLAG | WRAP_REARG_FLAG) && source[7].length <= source[8] && bitmask == WRAP_CURRY_FLAG;
+    // Exit early if metadata can't be merged.
+    if (!(isCommon || isCombo)) return data;
+    // Use source `thisArg` if available.
+    if (srcBitmask & WRAP_BIND_FLAG) {
+        data[2] = source[2];
+        // Set when currying a bound function.
+        newBitmask |= bitmask & WRAP_BIND_FLAG ? 0 : WRAP_CURRY_BOUND_FLAG;
+    }
+    // Compose partial arguments.
+    var value = source[3];
+    if (value) {
+        var partials = data[3];
+        data[3] = partials ? composeArgs(partials, value, source[4]) : value;
+        data[4] = partials ? replaceHolders(data[3], PLACEHOLDER) : source[4];
+    }
+    // Compose partial right arguments.
+    value = source[5];
+    if (value) {
+        partials = data[5];
+        data[5] = partials ? composeArgsRight(partials, value, source[6]) : value;
+        data[6] = partials ? replaceHolders(data[5], PLACEHOLDER) : source[6];
+    }
+    // Use source `argPos` if available.
+    value = source[7];
+    if (value) data[7] = value;
+    // Use source `ary` if it's smaller.
+    if (srcBitmask & WRAP_ARY_FLAG) data[8] = data[8] == null ? source[8] : nativeMin(data[8], source[8]);
+    // Use source `arity` if one is not provided.
+    if (data[9] == null) data[9] = source[9];
+    // Use source `func` and merge bitmasks.
+    data[0] = source[0];
+    data[1] = newBitmask;
+    return data;
+}
+module.exports = mergeData;
+
+},{"./_composeArgs":"c73Lg","./_composeArgsRight":"cSTDh","./_replaceHolders":"8Pk3T"}],"5HLSg":[function(require,module,exports) {
+var toFinite = require('./toFinite');
+/**
+ * Converts `value` to an integer.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted integer.
+ * @example
+ *
+ * _.toInteger(3.2);
+ * // => 3
+ *
+ * _.toInteger(Number.MIN_VALUE);
+ * // => 0
+ *
+ * _.toInteger(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toInteger('3.2');
+ * // => 3
+ */ function toInteger(value) {
+    var result = toFinite(value), remainder = result % 1;
+    return result === result ? remainder ? result - remainder : result : 0;
+}
+module.exports = toInteger;
+
+},{"./toFinite":"8q4Zg"}],"8q4Zg":[function(require,module,exports) {
+var toNumber = require('./toNumber');
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0, MAX_INTEGER = 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
+/**
+ * Converts `value` to a finite number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.12.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {number} Returns the converted number.
+ * @example
+ *
+ * _.toFinite(3.2);
+ * // => 3.2
+ *
+ * _.toFinite(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toFinite(Infinity);
+ * // => 1.7976931348623157e+308
+ *
+ * _.toFinite('3.2');
+ * // => 3.2
+ */ function toFinite(value) {
+    if (!value) return value === 0 ? value : 0;
+    value = toNumber(value);
+    if (value === INFINITY || value === -INFINITY) {
+        var sign = value < 0 ? -1 : 1;
+        return sign * MAX_INTEGER;
+    }
+    return value === value ? value : 0;
+}
+module.exports = toFinite;
+
+},{"./toNumber":"fwGK9"}],"fwGK9":[function(require,module,exports) {
+var baseTrim = require('./_baseTrim'), isObject = require('./isObject'), isSymbol = require('./isSymbol');
+/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
+/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
+/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
+/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
+/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
+/**
+ * Converts `value` to a number.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to process.
+ * @returns {number} Returns the number.
+ * @example
+ *
+ * _.toNumber(3.2);
+ * // => 3.2
+ *
+ * _.toNumber(Number.MIN_VALUE);
+ * // => 5e-324
+ *
+ * _.toNumber(Infinity);
+ * // => Infinity
+ *
+ * _.toNumber('3.2');
+ * // => 3.2
+ */ function toNumber(value) {
+    if (typeof value == 'number') return value;
+    if (isSymbol(value)) return NAN;
+    if (isObject(value)) {
+        var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
+        value = isObject(other) ? other + '' : other;
+    }
+    if (typeof value != 'string') return value === 0 ? value : +value;
+    value = baseTrim(value);
+    var isBinary = reIsBinary.test(value);
+    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
+}
+module.exports = toNumber;
+
+},{"./_baseTrim":"8Ux5p","./isObject":"hZIId","./isSymbol":"hrV74"}],"8Ux5p":[function(require,module,exports) {
+var trimmedEndIndex = require('./_trimmedEndIndex');
+/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
+/**
+ * The base implementation of `_.trim`.
+ *
+ * @private
+ * @param {string} string The string to trim.
+ * @returns {string} Returns the trimmed string.
+ */ function baseTrim(string) {
+    return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '') : string;
+}
+module.exports = baseTrim;
+
+},{"./_trimmedEndIndex":"7U1EC"}],"7U1EC":[function(require,module,exports) {
+/** Used to match a single whitespace character. */ var reWhitespace = /\s/;
+/**
+ * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
+ * character of `string`.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {number} Returns the index of the last non-whitespace character.
+ */ function trimmedEndIndex(string) {
+    var index = string.length;
+    while((index--) && reWhitespace.test(string.charAt(index)));
+    return index;
+}
+module.exports = trimmedEndIndex;
+
+},{}],"hrV74":[function(require,module,exports) {
+var baseGetTag = require('./_baseGetTag'), isObjectLike = require('./isObjectLike');
+/** `Object#toString` result references. */ var symbolTag = '[object Symbol]';
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */ function isSymbol(value) {
+    return typeof value == 'symbol' || isObjectLike(value) && baseGetTag(value) == symbolTag;
+}
+module.exports = isSymbol;
+
+},{"./_baseGetTag":"hvTL4","./isObjectLike":"6ihSr"}],"5hRHL":[function(require,module,exports) {
+"use strict";
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+exports.__esModule = true;
+exports["default"] = useClassNames;
+var _prefix = require("./prefix");
+var _classnames = _interopRequireDefault(require("classnames"));
+var _react = require("react");
+function useClassNames(componentClassName) {
+    var className = _prefix.defaultClassPrefix('icon');
+    var addPrefix = _react.useCallback(function(blockClassName) {
+        return _prefix.prefix(className, blockClassName);
+    }, []);
+    return [
+        _classnames["default"](className, _prefix.defaultClassPrefix(componentClassName)),
+        addPrefix
+    ];
+}
+module.exports = exports.default;
+
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","./prefix":"3Jn12","classnames":"bOXOh","react":"6TuXu"}],"fdn6Q":[function(require,module,exports) {
+"use strict";
+exports.__esModule = true;
+exports["default"] = _default;
+function _default() {
+    return typeof document !== 'undefined' && typeof window !== 'undefined' && typeof document.createElement === 'function';
+}
+module.exports = exports.default;
+
+},{}],"2SLaI":[function(require,module,exports) {
+"use strict";
+exports.__esModule = true;
+exports["default"] = void 0;
+var _insertCss = require("insert-css");
+var _prefix = require("./prefix");
+var _react = require("react");
+var prefix = _prefix.getClassNamePrefix(); // Generated with ../less/index.less
+var styles = "." + prefix + "icon {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n." + prefix + "icon[tabindex] {\n  cursor: pointer;\n}\n." + prefix + "icon-spin {\n  -webkit-animation: icon-spin 2s infinite linear;\n          animation: icon-spin 2s infinite linear;\n}\n." + prefix + "icon-pulse {\n  -webkit-animation: icon-spin 1s infinite steps(8);\n          animation: icon-spin 1s infinite steps(8);\n}\n." + prefix + "icon-flip-horizontal {\n  -webkit-transform: scaleX(-1);\n      -ms-transform: scaleX(-1);\n          transform: scaleX(-1);\n}\n." + prefix + "icon-flip-vertical {\n  -webkit-transform: scaleY(-1);\n      -ms-transform: scaleY(-1);\n          transform: scaleY(-1);\n}\n@-webkit-keyframes icon-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n  }\n}\n@keyframes icon-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n  }\n}";
+var cssInjected = false;
+var useInsertStyles = function useInsertStyles1(styleStr) {
+    if (styleStr === void 0) styleStr = styles;
+    _react.useEffect(function() {
+        // Make sure css injected once.
+        if (!cssInjected) {
+            _insertCss.insertCss(styleStr, {
+                prepend: true
+            });
+            cssInjected = true;
+        }
+    }, []);
+};
+var _default = useInsertStyles;
+exports["default"] = _default;
+module.exports = exports.default;
+
+},{"insert-css":"1ktDN","./prefix":"3Jn12","react":"6TuXu"}],"1ktDN":[function(require,module,exports) {
+var containers = []; // will store container HTMLElement references
+var styleElements = []; // will store {prepend: HTMLElement, append: HTMLElement}
+var usage = 'insert-css: You need to provide a CSS string. Usage: insertCss(cssString[, options]).';
+function insertCss(css, options) {
+    options = options || {
+    };
+    if (css === undefined) throw new Error(usage);
+    var position = options.prepend === true ? 'prepend' : 'append';
+    var container = options.container !== undefined ? options.container : document.querySelector('head');
+    var containerId = containers.indexOf(container);
+    // first time we see this container, create the necessary entries
+    if (containerId === -1) {
+        containerId = containers.push(container) - 1;
+        styleElements[containerId] = {
+        };
+    }
+    // try to get the correponding container + position styleElement, create it otherwise
+    var styleElement;
+    if (styleElements[containerId] !== undefined && styleElements[containerId][position] !== undefined) styleElement = styleElements[containerId][position];
+    else {
+        styleElement = styleElements[containerId][position] = createStyleElement();
+        if (position === 'prepend') container.insertBefore(styleElement, container.childNodes[0]);
+        else container.appendChild(styleElement);
+    }
+    // strip potential UTF-8 BOM if css was read from a file
+    if (css.charCodeAt(0) === 65279) css = css.substr(1, css.length);
+    // actually add the stylesheet
+    if (styleElement.styleSheet) styleElement.styleSheet.cssText += css;
+    else styleElement.textContent += css;
+    return styleElement;
+}
+function createStyleElement() {
+    var styleElement = document.createElement('style');
+    styleElement.setAttribute('type', 'text/css');
+    return styleElement;
+}
+module.exports = insertCss;
+module.exports.insertCss = insertCss;
+
+},{}],"hB8C4":[function(require,module,exports) {
+"use strict";
+function _typeof(obj) {
+    if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof1(obj1) {
+        return typeof obj1;
+    };
+    else _typeof = function _typeof2(obj1) {
+        return obj1 && typeof Symbol === "function" && obj1.constructor === Symbol && obj1 !== Symbol.prototype ? "symbol" : typeof obj1;
+    };
+    return _typeof(obj);
+}
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports["default"] = void 0;
+var React = _interopRequireWildcard(require("react"));
+function _getRequireWildcardCache() {
+    if (typeof WeakMap !== "function") return null;
+    var cache = new WeakMap();
+    _getRequireWildcardCache = function _getRequireWildcardCache1() {
+        return cache;
+    };
+    return cache;
+}
+function _interopRequireWildcard(obj) {
+    if (obj && obj.__esModule) return obj;
+    if (obj === null || _typeof(obj) !== "object" && typeof obj !== "function") return {
+        "default": obj
+    };
+    var cache = _getRequireWildcardCache();
+    if (cache && cache.has(obj)) return cache.get(obj);
+    var newObj = {
+    };
+    var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor;
+    for(var key in obj)if (Object.prototype.hasOwnProperty.call(obj, key)) {
+        var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null;
+        if (desc && (desc.get || desc.set)) Object.defineProperty(newObj, key, desc);
+        else newObj[key] = obj[key];
+    }
+    newObj["default"] = obj;
+    if (cache) cache.set(obj, newObj);
+    return newObj;
+}
+function _extends() {
+    _extends = Object.assign || function(target) {
+        for(var i = 1; i < arguments.length; i++){
+            var source = arguments[i];
+            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
+        }
+        return target;
+    };
+    return _extends.apply(this, arguments);
+}
+function Calendar(props, svgRef) {
+    return(/*#__PURE__*/ React.createElement("svg", _extends({
+        width: "1em",
+        height: "1em",
+        viewBox: "0 0 14 14",
+        fill: "currentColor",
+        ref: svgRef
+    }, props), /*#__PURE__*/ React.createElement("path", {
+        d: "M1 4v8.5a.5.5 0 00.5.5H8c0-.128.049-.256.146-.354.555-.555.854-1.6.854-3.146a.5.5 0 01.621-.485l.119.03A2.623 2.623 0 0012.999 6.5V4h-12zm3-2h6V0h1v2h1.5A1.5 1.5 0 0114 3.5v3a3.623 3.623 0 01-4.015 3.603c-.064 1.245-.335 2.212-.831 2.898H12.5a.5.5 0 00.5-.5v-2a.5.5 0 011 0v2a1.5 1.5 0 01-1.5 1.5h-11a1.5 1.5 0 01-1.5-1.5v-9a1.5 1.5 0 011.5-1.5H3v-2h1v2zm5 4V5h1v1h2v1h-2v1H9V7H7v2h1v1H7v2H6v-2H4v2H3v-2H1V9h2V7H1V6h2V5h1v1h2V5h1v1h2zM6 9V7H4v2h2z"
+    })));
+}
+var ForwardRef = /*#__PURE__*/ React.forwardRef(Calendar);
+var _default = ForwardRef;
+exports["default"] = _default;
+
+},{"react":"6TuXu"}],"2aodM":[function(require,module,exports) {
+/**
+ * Checks if `value` is `undefined`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
+ * @example
+ *
+ * _.isUndefined(void 0);
+ * // => true
+ *
+ * _.isUndefined(null);
+ * // => false
+ */ function isUndefined(value) {
+    return value === undefined;
+}
+module.exports = isUndefined;
+
+},{}],"jd3w3":[function(require,module,exports) {
+var arrayMap = require('./_arrayMap'), baseClone = require('./_baseClone'), baseUnset = require('./_baseUnset'), castPath = require('./_castPath'), copyObject = require('./_copyObject'), customOmitClone = require('./_customOmitClone'), flatRest = require('./_flatRest'), getAllKeysIn = require('./_getAllKeysIn');
+/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_FLAT_FLAG = 2, CLONE_SYMBOLS_FLAG = 4;
+/**
+ * The opposite of `_.pick`; this method creates an object composed of the
+ * own and inherited enumerable property paths of `object` that are not omitted.
+ *
+ * **Note:** This method is considerably slower than `_.pick`.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {...(string|string[])} [paths] The property paths to omit.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.omit(object, ['a', 'c']);
+ * // => { 'b': '2' }
+ */ var omit = flatRest(function(object, paths) {
+    var result = {
+    };
+    if (object == null) return result;
+    var isDeep = false;
+    paths = arrayMap(paths, function(path) {
+        path = castPath(path, object);
+        isDeep || (isDeep = path.length > 1);
+        return path;
+    });
+    copyObject(object, getAllKeysIn(object), result);
+    if (isDeep) result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
+    var length = paths.length;
+    while(length--)baseUnset(result, paths[length]);
+    return result;
+});
+module.exports = omit;
+
+},{"./_arrayMap":"dYHNK","./_baseClone":"4OMpY","./_baseUnset":"b5cLr","./_castPath":"9StUN","./_copyObject":"d0MPk","./_customOmitClone":"3EvFV","./_flatRest":"1F4bu","./_getAllKeysIn":"atjAU"}],"dYHNK":[function(require,module,exports) {
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */ function arrayMap(array, iteratee) {
+    var index = -1, length = array == null ? 0 : array.length, result = Array(length);
+    while((++index) < length)result[index] = iteratee(array[index], index, array);
+    return result;
+}
+module.exports = arrayMap;
+
+},{}],"4OMpY":[function(require,module,exports) {
+var Stack = require('./_Stack'), arrayEach = require('./_arrayEach'), assignValue = require('./_assignValue'), baseAssign = require('./_baseAssign'), baseAssignIn = require('./_baseAssignIn'), cloneBuffer = require('./_cloneBuffer'), copyArray = require('./_copyArray'), copySymbols = require('./_copySymbols'), copySymbolsIn = require('./_copySymbolsIn'), getAllKeys = require('./_getAllKeys'), getAllKeysIn = require('./_getAllKeysIn'), getTag = require('./_getTag'), initCloneArray = require('./_initCloneArray'), initCloneByTag = require('./_initCloneByTag'), initCloneObject = require('./_initCloneObject'), isArray = require('./isArray'), isBuffer = require('./isBuffer'), isMap = require('./isMap'), isObject = require('./isObject'), isSet = require('./isSet'), keys = require('./keys'), keysIn = require('./keysIn');
+/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_FLAT_FLAG = 2, CLONE_SYMBOLS_FLAG = 4;
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', genTag = '[object GeneratorFunction]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]', weakMapTag = '[object WeakMap]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
+/** Used to identify `toStringTag` values supported by `_.clone`. */ var cloneableTags = {
+};
+cloneableTags[argsTag] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag] = cloneableTags[dateTag] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag] = cloneableTags[numberTag] = cloneableTags[objectTag] = cloneableTags[regexpTag] = cloneableTags[setTag] = cloneableTags[stringTag] = cloneableTags[symbolTag] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
+cloneableTags[errorTag] = cloneableTags[funcTag] = cloneableTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.clone` and `_.cloneDeep` which tracks
+ * traversed objects.
+ *
+ * @private
+ * @param {*} value The value to clone.
+ * @param {boolean} bitmask The bitmask flags.
+ *  1 - Deep clone
+ *  2 - Flatten inherited properties
+ *  4 - Clone symbols
+ * @param {Function} [customizer] The function to customize cloning.
+ * @param {string} [key] The key of `value`.
+ * @param {Object} [object] The parent object of `value`.
+ * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
+ * @returns {*} Returns the cloned value.
+ */ function baseClone(value, bitmask, customizer, key, object, stack) {
+    var result, isDeep = bitmask & CLONE_DEEP_FLAG, isFlat = bitmask & CLONE_FLAT_FLAG, isFull = bitmask & CLONE_SYMBOLS_FLAG;
+    if (customizer) result = object ? customizer(value, key, object, stack) : customizer(value);
+    if (result !== undefined) return result;
+    if (!isObject(value)) return value;
+    var isArr = isArray(value);
+    if (isArr) {
+        result = initCloneArray(value);
+        if (!isDeep) return copyArray(value, result);
+    } else {
+        var tag = getTag(value), isFunc = tag == funcTag || tag == genTag;
+        if (isBuffer(value)) return cloneBuffer(value, isDeep);
+        if (tag == objectTag || tag == argsTag || isFunc && !object) {
+            result = isFlat || isFunc ? {
+            } : initCloneObject(value);
+            if (!isDeep) return isFlat ? copySymbolsIn(value, baseAssignIn(result, value)) : copySymbols(value, baseAssign(result, value));
+        } else {
+            if (!cloneableTags[tag]) return object ? value : {
+            };
+            result = initCloneByTag(value, tag, isDeep);
+        }
+    }
+    // Check for circular references and return its corresponding clone.
+    stack || (stack = new Stack);
+    var stacked = stack.get(value);
+    if (stacked) return stacked;
+    stack.set(value, result);
+    if (isSet(value)) value.forEach(function(subValue) {
+        result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
+    });
+    else if (isMap(value)) value.forEach(function(subValue, key1) {
+        result.set(key1, baseClone(subValue, bitmask, customizer, key1, value, stack));
+    });
+    var keysFunc = isFull ? isFlat ? getAllKeysIn : getAllKeys : isFlat ? keysIn : keys;
+    var props = isArr ? undefined : keysFunc(value);
+    arrayEach(props || value, function(subValue, key1) {
+        if (props) {
+            key1 = subValue;
+            subValue = value[key1];
+        }
+        // Recursively populate clone (susceptible to call stack limits).
+        assignValue(result, key1, baseClone(subValue, bitmask, customizer, key1, value, stack));
+    });
+    return result;
+}
+module.exports = baseClone;
+
+},{"./_Stack":"iSswE","./_arrayEach":"9K3TC","./_assignValue":"8WIi8","./_baseAssign":"OgLDa","./_baseAssignIn":"5y8uK","./_cloneBuffer":"47Mij","./_copyArray":"7dekD","./_copySymbols":"gpX9x","./_copySymbolsIn":"iaJIk","./_getAllKeys":"kHVQG","./_getAllKeysIn":"atjAU","./_getTag":"6GSwf","./_initCloneArray":"13CXQ","./_initCloneByTag":"5t6In","./_initCloneObject":"142qT","./isArray":"9D9dp","./isBuffer":"ltSVx","./isMap":"jrEYD","./isObject":"hZIId","./isSet":"aWgQ7","./keys":"5XTkY","./keysIn":"420IE"}],"iSswE":[function(require,module,exports) {
+var ListCache = require('./_ListCache'), stackClear = require('./_stackClear'), stackDelete = require('./_stackDelete'), stackGet = require('./_stackGet'), stackHas = require('./_stackHas'), stackSet = require('./_stackSet');
+/**
+ * Creates a stack cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Stack(entries) {
+    var data = this.__data__ = new ListCache(entries);
+    this.size = data.size;
+}
+// Add methods to `Stack`.
+Stack.prototype.clear = stackClear;
+Stack.prototype['delete'] = stackDelete;
+Stack.prototype.get = stackGet;
+Stack.prototype.has = stackHas;
+Stack.prototype.set = stackSet;
+module.exports = Stack;
+
+},{"./_ListCache":"lpr3N","./_stackClear":"3whtY","./_stackDelete":"d97gA","./_stackGet":"fwAy4","./_stackHas":"65b3w","./_stackSet":"37Y72"}],"lpr3N":[function(require,module,exports) {
+var listCacheClear = require('./_listCacheClear'), listCacheDelete = require('./_listCacheDelete'), listCacheGet = require('./_listCacheGet'), listCacheHas = require('./_listCacheHas'), listCacheSet = require('./_listCacheSet');
+/**
+ * Creates an list cache object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function ListCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while((++index) < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `ListCache`.
+ListCache.prototype.clear = listCacheClear;
+ListCache.prototype['delete'] = listCacheDelete;
+ListCache.prototype.get = listCacheGet;
+ListCache.prototype.has = listCacheHas;
+ListCache.prototype.set = listCacheSet;
+module.exports = ListCache;
+
+},{"./_listCacheClear":"5l6TE","./_listCacheDelete":"7Olr5","./_listCacheGet":"kf20q","./_listCacheHas":"JrbX7","./_listCacheSet":"heixL"}],"5l6TE":[function(require,module,exports) {
+/**
+ * Removes all key-value entries from the list cache.
+ *
+ * @private
+ * @name clear
+ * @memberOf ListCache
+ */ function listCacheClear() {
+    this.__data__ = [];
+    this.size = 0;
+}
+module.exports = listCacheClear;
+
+},{}],"7Olr5":[function(require,module,exports) {
+var assocIndexOf = require('./_assocIndexOf');
+/** Used for built-in method references. */ var arrayProto = Array.prototype;
+/** Built-in value references. */ var splice = arrayProto.splice;
+/**
+ * Removes `key` and its value from the list cache.
+ *
+ * @private
+ * @name delete
+ * @memberOf ListCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function listCacheDelete(key) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    if (index < 0) return false;
+    var lastIndex = data.length - 1;
+    if (index == lastIndex) data.pop();
+    else splice.call(data, index, 1);
+    --this.size;
+    return true;
+}
+module.exports = listCacheDelete;
+
+},{"./_assocIndexOf":"lg8aM"}],"lg8aM":[function(require,module,exports) {
+var eq = require('./eq');
+/**
+ * Gets the index at which the `key` is found in `array` of key-value pairs.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {*} key The key to search for.
+ * @returns {number} Returns the index of the matched value, else `-1`.
+ */ function assocIndexOf(array, key) {
+    var length = array.length;
+    while(length--){
+        if (eq(array[length][0], key)) return length;
+    }
+    return -1;
+}
+module.exports = assocIndexOf;
+
+},{"./eq":"2rhE2"}],"2rhE2":[function(require,module,exports) {
+/**
+ * Performs a
+ * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * comparison between two values to determine if they are equivalent.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to compare.
+ * @param {*} other The other value to compare.
+ * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ * var other = { 'a': 1 };
+ *
+ * _.eq(object, object);
+ * // => true
+ *
+ * _.eq(object, other);
+ * // => false
+ *
+ * _.eq('a', 'a');
+ * // => true
+ *
+ * _.eq('a', Object('a'));
+ * // => false
+ *
+ * _.eq(NaN, NaN);
+ * // => true
+ */ function eq(value, other) {
+    return value === other || value !== value && other !== other;
+}
+module.exports = eq;
+
+},{}],"kf20q":[function(require,module,exports) {
+var assocIndexOf = require('./_assocIndexOf');
+/**
+ * Gets the list cache value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf ListCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function listCacheGet(key) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    return index < 0 ? undefined : data[index][1];
+}
+module.exports = listCacheGet;
+
+},{"./_assocIndexOf":"lg8aM"}],"JrbX7":[function(require,module,exports) {
+var assocIndexOf = require('./_assocIndexOf');
+/**
+ * Checks if a list cache value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf ListCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function listCacheHas(key) {
+    return assocIndexOf(this.__data__, key) > -1;
+}
+module.exports = listCacheHas;
+
+},{"./_assocIndexOf":"lg8aM"}],"heixL":[function(require,module,exports) {
+var assocIndexOf = require('./_assocIndexOf');
+/**
+ * Sets the list cache `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf ListCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the list cache instance.
+ */ function listCacheSet(key, value) {
+    var data = this.__data__, index = assocIndexOf(data, key);
+    if (index < 0) {
+        ++this.size;
+        data.push([
+            key,
+            value
+        ]);
+    } else data[index][1] = value;
+    return this;
+}
+module.exports = listCacheSet;
+
+},{"./_assocIndexOf":"lg8aM"}],"3whtY":[function(require,module,exports) {
+var ListCache = require('./_ListCache');
+/**
+ * Removes all key-value entries from the stack.
+ *
+ * @private
+ * @name clear
+ * @memberOf Stack
+ */ function stackClear() {
+    this.__data__ = new ListCache;
+    this.size = 0;
+}
+module.exports = stackClear;
+
+},{"./_ListCache":"lpr3N"}],"d97gA":[function(require,module,exports) {
+/**
+ * Removes `key` and its value from the stack.
+ *
+ * @private
+ * @name delete
+ * @memberOf Stack
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function stackDelete(key) {
+    var data = this.__data__, result = data['delete'](key);
+    this.size = data.size;
+    return result;
+}
+module.exports = stackDelete;
+
+},{}],"fwAy4":[function(require,module,exports) {
+/**
+ * Gets the stack value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Stack
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function stackGet(key) {
+    return this.__data__.get(key);
+}
+module.exports = stackGet;
+
+},{}],"65b3w":[function(require,module,exports) {
+/**
+ * Checks if a stack value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Stack
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function stackHas(key) {
+    return this.__data__.has(key);
+}
+module.exports = stackHas;
+
+},{}],"37Y72":[function(require,module,exports) {
+var ListCache = require('./_ListCache'), Map1 = require('./_Map'), MapCache = require('./_MapCache');
+/** Used as the size to enable large array optimizations. */ var LARGE_ARRAY_SIZE = 200;
+/**
+ * Sets the stack `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Stack
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the stack cache instance.
+ */ function stackSet(key, value) {
+    var data = this.__data__;
+    if (data instanceof ListCache) {
+        var pairs = data.__data__;
+        if (!Map1 || pairs.length < LARGE_ARRAY_SIZE - 1) {
+            pairs.push([
+                key,
+                value
+            ]);
+            this.size = ++data.size;
+            return this;
+        }
+        data = this.__data__ = new MapCache(pairs);
+    }
+    data.set(key, value);
+    this.size = data.size;
+    return this;
+}
+module.exports = stackSet;
+
+},{"./_ListCache":"lpr3N","./_Map":"coy6p","./_MapCache":"7Yxy9"}],"coy6p":[function(require,module,exports) {
+var getNative = require('./_getNative'), root = require('./_root');
+/* Built-in method references that are verified to be native. */ var Map1 = getNative(root, 'Map');
+module.exports = Map1;
+
+},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"7Yxy9":[function(require,module,exports) {
+var mapCacheClear = require('./_mapCacheClear'), mapCacheDelete = require('./_mapCacheDelete'), mapCacheGet = require('./_mapCacheGet'), mapCacheHas = require('./_mapCacheHas'), mapCacheSet = require('./_mapCacheSet');
+/**
+ * Creates a map cache object to store key-value pairs.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function MapCache(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while((++index) < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `MapCache`.
+MapCache.prototype.clear = mapCacheClear;
+MapCache.prototype['delete'] = mapCacheDelete;
+MapCache.prototype.get = mapCacheGet;
+MapCache.prototype.has = mapCacheHas;
+MapCache.prototype.set = mapCacheSet;
+module.exports = MapCache;
+
+},{"./_mapCacheClear":"6Ne3T","./_mapCacheDelete":"22plT","./_mapCacheGet":"3wvvK","./_mapCacheHas":"htO0S","./_mapCacheSet":"byIIq"}],"6Ne3T":[function(require,module,exports) {
+var Hash = require('./_Hash'), ListCache = require('./_ListCache'), Map1 = require('./_Map');
+/**
+ * Removes all key-value entries from the map.
+ *
+ * @private
+ * @name clear
+ * @memberOf MapCache
+ */ function mapCacheClear() {
+    this.size = 0;
+    this.__data__ = {
+        'hash': new Hash,
+        'map': new (Map1 || ListCache),
+        'string': new Hash
+    };
+}
+module.exports = mapCacheClear;
+
+},{"./_Hash":"fhJxO","./_ListCache":"lpr3N","./_Map":"coy6p"}],"fhJxO":[function(require,module,exports) {
+var hashClear = require('./_hashClear'), hashDelete = require('./_hashDelete'), hashGet = require('./_hashGet'), hashHas = require('./_hashHas'), hashSet = require('./_hashSet');
+/**
+ * Creates a hash object.
+ *
+ * @private
+ * @constructor
+ * @param {Array} [entries] The key-value pairs to cache.
+ */ function Hash(entries) {
+    var index = -1, length = entries == null ? 0 : entries.length;
+    this.clear();
+    while((++index) < length){
+        var entry = entries[index];
+        this.set(entry[0], entry[1]);
+    }
+}
+// Add methods to `Hash`.
+Hash.prototype.clear = hashClear;
+Hash.prototype['delete'] = hashDelete;
+Hash.prototype.get = hashGet;
+Hash.prototype.has = hashHas;
+Hash.prototype.set = hashSet;
+module.exports = Hash;
+
+},{"./_hashClear":"hM9wg","./_hashDelete":"6IRnr","./_hashGet":"7iYiL","./_hashHas":"dL6ja","./_hashSet":"2gbPb"}],"hM9wg":[function(require,module,exports) {
+var nativeCreate = require('./_nativeCreate');
+/**
+ * Removes all key-value entries from the hash.
+ *
+ * @private
+ * @name clear
+ * @memberOf Hash
+ */ function hashClear() {
+    this.__data__ = nativeCreate ? nativeCreate(null) : {
+    };
+    this.size = 0;
+}
+module.exports = hashClear;
+
+},{"./_nativeCreate":"3CuNf"}],"3CuNf":[function(require,module,exports) {
+var getNative = require('./_getNative');
+/* Built-in method references that are verified to be native. */ var nativeCreate = getNative(Object, 'create');
+module.exports = nativeCreate;
+
+},{"./_getNative":"iGRIN"}],"6IRnr":[function(require,module,exports) {
+/**
+ * Removes `key` and its value from the hash.
+ *
+ * @private
+ * @name delete
+ * @memberOf Hash
+ * @param {Object} hash The hash to modify.
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function hashDelete(key) {
+    var result = this.has(key) && delete this.__data__[key];
+    this.size -= result ? 1 : 0;
+    return result;
+}
+module.exports = hashDelete;
+
+},{}],"7iYiL":[function(require,module,exports) {
+var nativeCreate = require('./_nativeCreate');
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Gets the hash value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf Hash
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function hashGet(key) {
+    var data = this.__data__;
+    if (nativeCreate) {
+        var result = data[key];
+        return result === HASH_UNDEFINED ? undefined : result;
+    }
+    return hasOwnProperty.call(data, key) ? data[key] : undefined;
+}
+module.exports = hashGet;
+
+},{"./_nativeCreate":"3CuNf"}],"dL6ja":[function(require,module,exports) {
+var nativeCreate = require('./_nativeCreate');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Checks if a hash value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf Hash
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function hashHas(key) {
+    var data = this.__data__;
+    return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
+}
+module.exports = hashHas;
+
+},{"./_nativeCreate":"3CuNf"}],"2gbPb":[function(require,module,exports) {
+var nativeCreate = require('./_nativeCreate');
+/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
+/**
+ * Sets the hash `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf Hash
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the hash instance.
+ */ function hashSet(key, value) {
+    var data = this.__data__;
+    this.size += this.has(key) ? 0 : 1;
+    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
+    return this;
+}
+module.exports = hashSet;
+
+},{"./_nativeCreate":"3CuNf"}],"22plT":[function(require,module,exports) {
+var getMapData = require('./_getMapData');
+/**
+ * Removes `key` and its value from the map.
+ *
+ * @private
+ * @name delete
+ * @memberOf MapCache
+ * @param {string} key The key of the value to remove.
+ * @returns {boolean} Returns `true` if the entry was removed, else `false`.
+ */ function mapCacheDelete(key) {
+    var result = getMapData(this, key)['delete'](key);
+    this.size -= result ? 1 : 0;
+    return result;
+}
+module.exports = mapCacheDelete;
+
+},{"./_getMapData":"14a95"}],"14a95":[function(require,module,exports) {
+var isKeyable = require('./_isKeyable');
+/**
+ * Gets the data for `map`.
+ *
+ * @private
+ * @param {Object} map The map to query.
+ * @param {string} key The reference key.
+ * @returns {*} Returns the map data.
+ */ function getMapData(map, key) {
+    var data = map.__data__;
+    return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
+}
+module.exports = getMapData;
+
+},{"./_isKeyable":"1vP10"}],"1vP10":[function(require,module,exports) {
+/**
+ * Checks if `value` is suitable for use as unique object key.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
+ */ function isKeyable(value) {
+    var type = typeof value;
+    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
+}
+module.exports = isKeyable;
+
+},{}],"3wvvK":[function(require,module,exports) {
+var getMapData = require('./_getMapData');
+/**
+ * Gets the map value for `key`.
+ *
+ * @private
+ * @name get
+ * @memberOf MapCache
+ * @param {string} key The key of the value to get.
+ * @returns {*} Returns the entry value.
+ */ function mapCacheGet(key) {
+    return getMapData(this, key).get(key);
+}
+module.exports = mapCacheGet;
+
+},{"./_getMapData":"14a95"}],"htO0S":[function(require,module,exports) {
+var getMapData = require('./_getMapData');
+/**
+ * Checks if a map value for `key` exists.
+ *
+ * @private
+ * @name has
+ * @memberOf MapCache
+ * @param {string} key The key of the entry to check.
+ * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
+ */ function mapCacheHas(key) {
+    return getMapData(this, key).has(key);
+}
+module.exports = mapCacheHas;
+
+},{"./_getMapData":"14a95"}],"byIIq":[function(require,module,exports) {
+var getMapData = require('./_getMapData');
+/**
+ * Sets the map `key` to `value`.
+ *
+ * @private
+ * @name set
+ * @memberOf MapCache
+ * @param {string} key The key of the value to set.
+ * @param {*} value The value to set.
+ * @returns {Object} Returns the map cache instance.
+ */ function mapCacheSet(key, value) {
+    var data = getMapData(this, key), size = data.size;
+    data.set(key, value);
+    this.size += data.size == size ? 0 : 1;
+    return this;
+}
+module.exports = mapCacheSet;
+
+},{"./_getMapData":"14a95"}],"8WIi8":[function(require,module,exports) {
+var baseAssignValue = require('./_baseAssignValue'), eq = require('./eq');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Assigns `value` to `key` of `object` if the existing value is not equivalent
+ * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+ * for equality comparisons.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function assignValue(object, key, value) {
+    var objValue = object[key];
+    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) baseAssignValue(object, key, value);
+}
+module.exports = assignValue;
+
+},{"./_baseAssignValue":"4l1Lw","./eq":"2rhE2"}],"4l1Lw":[function(require,module,exports) {
+var defineProperty = require('./_defineProperty');
+/**
+ * The base implementation of `assignValue` and `assignMergeValue` without
+ * value checks.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {string} key The key of the property to assign.
+ * @param {*} value The value to assign.
+ */ function baseAssignValue(object, key, value) {
+    if (key == '__proto__' && defineProperty) defineProperty(object, key, {
+        'configurable': true,
+        'enumerable': true,
+        'value': value,
+        'writable': true
+    });
+    else object[key] = value;
+}
+module.exports = baseAssignValue;
+
+},{"./_defineProperty":"kXqjt"}],"OgLDa":[function(require,module,exports) {
+var copyObject = require('./_copyObject'), keys = require('./keys');
+/**
+ * The base implementation of `_.assign` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */ function baseAssign(object, source) {
+    return object && copyObject(source, keys(source), object);
+}
+module.exports = baseAssign;
+
+},{"./_copyObject":"d0MPk","./keys":"5XTkY"}],"d0MPk":[function(require,module,exports) {
+var assignValue = require('./_assignValue'), baseAssignValue = require('./_baseAssignValue');
+/**
+ * Copies properties of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy properties from.
+ * @param {Array} props The property identifiers to copy.
+ * @param {Object} [object={}] The object to copy properties to.
+ * @param {Function} [customizer] The function to customize copied values.
+ * @returns {Object} Returns `object`.
+ */ function copyObject(source, props, object, customizer) {
+    var isNew = !object;
+    object || (object = {
+    });
+    var index = -1, length = props.length;
+    while((++index) < length){
+        var key = props[index];
+        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
+        if (newValue === undefined) newValue = source[key];
+        if (isNew) baseAssignValue(object, key, newValue);
+        else assignValue(object, key, newValue);
+    }
+    return object;
+}
+module.exports = copyObject;
+
+},{"./_assignValue":"8WIi8","./_baseAssignValue":"4l1Lw"}],"5XTkY":[function(require,module,exports) {
+var arrayLikeKeys = require('./_arrayLikeKeys'), baseKeys = require('./_baseKeys'), isArrayLike = require('./isArrayLike');
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */ function keys(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
+}
+module.exports = keys;
+
+},{"./_arrayLikeKeys":"e7sMV","./_baseKeys":"77Ehy","./isArrayLike":"eRE0j"}],"e7sMV":[function(require,module,exports) {
+var baseTimes = require('./_baseTimes'), isArguments = require('./isArguments'), isArray = require('./isArray'), isBuffer = require('./isBuffer'), isIndex = require('./_isIndex'), isTypedArray = require('./isTypedArray');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */ function arrayLikeKeys(value, inherited) {
+    var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes(value.length, String) : [], length = result.length;
+    for(var key in value)if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
+    (key == 'length' || isBuff && (key == 'offset' || key == 'parent') || isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') || // Skip index properties.
+    isIndex(key, length)))) result.push(key);
+    return result;
+}
+module.exports = arrayLikeKeys;
+
+},{"./_baseTimes":"dkOAg","./isArguments":"fTXal","./isArray":"9D9dp","./isBuffer":"ltSVx","./_isIndex":"2RH5V","./isTypedArray":"81D2R"}],"dkOAg":[function(require,module,exports) {
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */ function baseTimes(n, iteratee) {
+    var index = -1, result = Array(n);
+    while((++index) < n)result[index] = iteratee(index);
+    return result;
+}
+module.exports = baseTimes;
+
+},{}],"fTXal":[function(require,module,exports) {
+var baseIsArguments = require('./_baseIsArguments'), isObjectLike = require('./isObjectLike');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */ var isArguments = baseIsArguments(function() {
+    return arguments;
+}()) ? baseIsArguments : function(value) {
+    return isObjectLike(value) && hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
+};
+module.exports = isArguments;
+
+},{"./_baseIsArguments":"fgSe8","./isObjectLike":"6ihSr"}],"fgSe8":[function(require,module,exports) {
+var baseGetTag = require('./_baseGetTag'), isObjectLike = require('./isObjectLike');
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]';
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */ function baseIsArguments(value) {
+    return isObjectLike(value) && baseGetTag(value) == argsTag;
+}
+module.exports = baseIsArguments;
+
+},{"./_baseGetTag":"hvTL4","./isObjectLike":"6ihSr"}],"ltSVx":[function(require,module,exports) {
+var root = require('./_root'), stubFalse = require('./stubFalse');
+/** Detect free variable `exports`. */ var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */ var isBuffer = nativeIsBuffer || stubFalse;
+module.exports = isBuffer;
+
+},{"./_root":"9w0IQ","./stubFalse":"4E65x"}],"4E65x":[function(require,module,exports) {
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */ function stubFalse() {
+    return false;
+}
+module.exports = stubFalse;
+
+},{}],"81D2R":[function(require,module,exports) {
+var baseIsTypedArray = require('./_baseIsTypedArray'), baseUnary = require('./_baseUnary'), nodeUtil = require('./_nodeUtil');
+/* Node.js helper references. */ var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
+module.exports = isTypedArray;
+
+},{"./_baseIsTypedArray":"bHMiV","./_baseUnary":"4SrX0","./_nodeUtil":"2vDMj"}],"bHMiV":[function(require,module,exports) {
+var baseGetTag = require('./_baseGetTag'), isLength = require('./isLength'), isObjectLike = require('./isObjectLike');
+/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', weakMapTag = '[object WeakMap]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
+/** Used to identify `toStringTag` values of typed arrays. */ var typedArrayTags = {
+};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */ function baseIsTypedArray(value) {
+    return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
+}
+module.exports = baseIsTypedArray;
+
+},{"./_baseGetTag":"hvTL4","./isLength":"7FAwN","./isObjectLike":"6ihSr"}],"7FAwN":[function(require,module,exports) {
+/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */ function isLength(value) {
+    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
+}
+module.exports = isLength;
+
+},{}],"4SrX0":[function(require,module,exports) {
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */ function baseUnary(func) {
+    return function(value) {
+        return func(value);
+    };
+}
+module.exports = baseUnary;
+
+},{}],"2vDMj":[function(require,module,exports) {
+var freeGlobal = require('./_freeGlobal');
+/** Detect free variable `exports`. */ var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Detect free variable `process` from Node.js. */ var freeProcess = moduleExports && freeGlobal.process;
+/** Used to access faster Node.js helpers. */ var nodeUtil = function() {
+    try {
+        // Use `util.types` for Node.js 10+.
+        var types = freeModule && freeModule.require && freeModule.require('util').types;
+        if (types) return types;
+        // Legacy `process.binding('util')` for Node.js < 10.
+        return freeProcess && freeProcess.binding && freeProcess.binding('util');
+    } catch (e) {
+    }
+}();
+module.exports = nodeUtil;
+
+},{"./_freeGlobal":"jmyqD"}],"77Ehy":[function(require,module,exports) {
+var isPrototype = require('./_isPrototype'), nativeKeys = require('./_nativeKeys');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeys(object) {
+    if (!isPrototype(object)) return nativeKeys(object);
+    var result = [];
+    for(var key in Object(object))if (hasOwnProperty.call(object, key) && key != 'constructor') result.push(key);
+    return result;
+}
+module.exports = baseKeys;
+
+},{"./_isPrototype":"3LrfV","./_nativeKeys":"kM37V"}],"3LrfV":[function(require,module,exports) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */ function isPrototype(value) {
+    var Ctor = value && value.constructor, proto = typeof Ctor == 'function' && Ctor.prototype || objectProto;
+    return value === proto;
+}
+module.exports = isPrototype;
+
+},{}],"kM37V":[function(require,module,exports) {
+var overArg = require('./_overArg');
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeKeys = overArg(Object.keys, Object);
+module.exports = nativeKeys;
+
+},{"./_overArg":"fkGvn"}],"fkGvn":[function(require,module,exports) {
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */ function overArg(func, transform) {
+    return function(arg) {
+        return func(transform(arg));
+    };
+}
+module.exports = overArg;
+
+},{}],"eRE0j":[function(require,module,exports) {
+var isFunction = require('./isFunction'), isLength = require('./isLength');
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */ function isArrayLike(value) {
+    return value != null && isLength(value.length) && !isFunction(value);
+}
+module.exports = isArrayLike;
+
+},{"./isFunction":"4vlJm","./isLength":"7FAwN"}],"5y8uK":[function(require,module,exports) {
+var copyObject = require('./_copyObject'), keysIn = require('./keysIn');
+/**
+ * The base implementation of `_.assignIn` without support for multiple sources
+ * or `customizer` functions.
+ *
+ * @private
+ * @param {Object} object The destination object.
+ * @param {Object} source The source object.
+ * @returns {Object} Returns `object`.
+ */ function baseAssignIn(object, source) {
+    return object && copyObject(source, keysIn(source), object);
+}
+module.exports = baseAssignIn;
+
+},{"./_copyObject":"d0MPk","./keysIn":"420IE"}],"420IE":[function(require,module,exports) {
+var arrayLikeKeys = require('./_arrayLikeKeys'), baseKeysIn = require('./_baseKeysIn'), isArrayLike = require('./isArrayLike');
+/**
+ * Creates an array of the own and inherited enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keysIn(new Foo);
+ * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
+ */ function keysIn(object) {
+    return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
+}
+module.exports = keysIn;
+
+},{"./_arrayLikeKeys":"e7sMV","./_baseKeysIn":"Auchz","./isArrayLike":"eRE0j"}],"Auchz":[function(require,module,exports) {
+var isObject = require('./isObject'), isPrototype = require('./_isPrototype'), nativeKeysIn = require('./_nativeKeysIn');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function baseKeysIn(object) {
+    if (!isObject(object)) return nativeKeysIn(object);
+    var isProto = isPrototype(object), result = [];
+    for(var key in object)if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) result.push(key);
+    return result;
+}
+module.exports = baseKeysIn;
+
+},{"./isObject":"hZIId","./_isPrototype":"3LrfV","./_nativeKeysIn":"1n6iW"}],"1n6iW":[function(require,module,exports) {
+/**
+ * This function is like
+ * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * except that it includes inherited enumerable properties.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */ function nativeKeysIn(object) {
+    var result = [];
+    if (object != null) for(var key in Object(object))result.push(key);
+    return result;
+}
+module.exports = nativeKeysIn;
+
+},{}],"47Mij":[function(require,module,exports) {
+var root = require('./_root');
+/** Detect free variable `exports`. */ var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
+/** Detect free variable `module`. */ var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
+/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
+/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined, allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
+/**
+ * Creates a clone of  `buffer`.
+ *
+ * @private
+ * @param {Buffer} buffer The buffer to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Buffer} Returns the cloned buffer.
+ */ function cloneBuffer(buffer, isDeep) {
+    if (isDeep) return buffer.slice();
+    var length = buffer.length, result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
+    buffer.copy(result);
+    return result;
+}
+module.exports = cloneBuffer;
+
+},{"./_root":"9w0IQ"}],"gpX9x":[function(require,module,exports) {
+var copyObject = require('./_copyObject'), getSymbols = require('./_getSymbols');
+/**
+ * Copies own symbols of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */ function copySymbols(source, object) {
+    return copyObject(source, getSymbols(source), object);
+}
+module.exports = copySymbols;
+
+},{"./_copyObject":"d0MPk","./_getSymbols":"fHCPQ"}],"fHCPQ":[function(require,module,exports) {
+var arrayFilter = require('./_arrayFilter'), stubArray = require('./stubArray');
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
+    if (object == null) return [];
+    object = Object(object);
+    return arrayFilter(nativeGetSymbols(object), function(symbol) {
+        return propertyIsEnumerable.call(object, symbol);
+    });
+};
+module.exports = getSymbols;
+
+},{"./_arrayFilter":"d3Wlg","./stubArray":"bOAZN"}],"d3Wlg":[function(require,module,exports) {
+/**
+ * A specialized version of `_.filter` for arrays without support for
+ * iteratee shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} predicate The function invoked per iteration.
+ * @returns {Array} Returns the new filtered array.
+ */ function arrayFilter(array, predicate) {
+    var index = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
+    while((++index) < length){
+        var value = array[index];
+        if (predicate(value, index, array)) result[resIndex++] = value;
+    }
+    return result;
+}
+module.exports = arrayFilter;
+
+},{}],"bOAZN":[function(require,module,exports) {
+/**
+ * This method returns a new empty array.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {Array} Returns the new empty array.
+ * @example
+ *
+ * var arrays = _.times(2, _.stubArray);
+ *
+ * console.log(arrays);
+ * // => [[], []]
+ *
+ * console.log(arrays[0] === arrays[1]);
+ * // => false
+ */ function stubArray() {
+    return [];
+}
+module.exports = stubArray;
+
+},{}],"iaJIk":[function(require,module,exports) {
+var copyObject = require('./_copyObject'), getSymbolsIn = require('./_getSymbolsIn');
+/**
+ * Copies own and inherited symbols of `source` to `object`.
+ *
+ * @private
+ * @param {Object} source The object to copy symbols from.
+ * @param {Object} [object={}] The object to copy symbols to.
+ * @returns {Object} Returns `object`.
+ */ function copySymbolsIn(source, object) {
+    return copyObject(source, getSymbolsIn(source), object);
+}
+module.exports = copySymbolsIn;
+
+},{"./_copyObject":"d0MPk","./_getSymbolsIn":"cvvFk"}],"cvvFk":[function(require,module,exports) {
+var arrayPush = require('./_arrayPush'), getPrototype = require('./_getPrototype'), getSymbols = require('./_getSymbols'), stubArray = require('./stubArray');
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
+/**
+ * Creates an array of the own and inherited enumerable symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of symbols.
+ */ var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
+    var result = [];
+    while(object){
+        arrayPush(result, getSymbols(object));
+        object = getPrototype(object);
+    }
+    return result;
+};
+module.exports = getSymbolsIn;
+
+},{"./_arrayPush":"gQq20","./_getPrototype":"eqMRO","./_getSymbols":"fHCPQ","./stubArray":"bOAZN"}],"gQq20":[function(require,module,exports) {
+/**
+ * Appends the elements of `values` to `array`.
+ *
+ * @private
+ * @param {Array} array The array to modify.
+ * @param {Array} values The values to append.
+ * @returns {Array} Returns `array`.
+ */ function arrayPush(array, values) {
+    var index = -1, length = values.length, offset = array.length;
+    while((++index) < length)array[offset + index] = values[index];
+    return array;
+}
+module.exports = arrayPush;
+
+},{}],"eqMRO":[function(require,module,exports) {
+var overArg = require('./_overArg');
+/** Built-in value references. */ var getPrototype = overArg(Object.getPrototypeOf, Object);
+module.exports = getPrototype;
+
+},{"./_overArg":"fkGvn"}],"kHVQG":[function(require,module,exports) {
+var baseGetAllKeys = require('./_baseGetAllKeys'), getSymbols = require('./_getSymbols'), keys = require('./keys');
+/**
+ * Creates an array of own enumerable property names and symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeys(object) {
+    return baseGetAllKeys(object, keys, getSymbols);
+}
+module.exports = getAllKeys;
+
+},{"./_baseGetAllKeys":"k9ii8","./_getSymbols":"fHCPQ","./keys":"5XTkY"}],"k9ii8":[function(require,module,exports) {
+var arrayPush = require('./_arrayPush'), isArray = require('./isArray');
+/**
+ * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
+ * `keysFunc` and `symbolsFunc` to get the enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Function} keysFunc The function to get the keys of `object`.
+ * @param {Function} symbolsFunc The function to get the symbols of `object`.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
+    var result = keysFunc(object);
+    return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
+}
+module.exports = baseGetAllKeys;
+
+},{"./_arrayPush":"gQq20","./isArray":"9D9dp"}],"atjAU":[function(require,module,exports) {
+var baseGetAllKeys = require('./_baseGetAllKeys'), getSymbolsIn = require('./_getSymbolsIn'), keysIn = require('./keysIn');
+/**
+ * Creates an array of own and inherited enumerable property names and
+ * symbols of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names and symbols.
+ */ function getAllKeysIn(object) {
+    return baseGetAllKeys(object, keysIn, getSymbolsIn);
+}
+module.exports = getAllKeysIn;
+
+},{"./_baseGetAllKeys":"k9ii8","./_getSymbolsIn":"cvvFk","./keysIn":"420IE"}],"6GSwf":[function(require,module,exports) {
+var DataView1 = require('./_DataView'), Map1 = require('./_Map'), Promise1 = require('./_Promise'), Set1 = require('./_Set'), WeakMap1 = require('./_WeakMap'), baseGetTag = require('./_baseGetTag'), toSource = require('./_toSource');
+/** `Object#toString` result references. */ var mapTag = '[object Map]', objectTag = '[object Object]', promiseTag = '[object Promise]', setTag = '[object Set]', weakMapTag = '[object WeakMap]';
+var dataViewTag = '[object DataView]';
+/** Used to detect maps, sets, and weakmaps. */ var dataViewCtorString = toSource(DataView1), mapCtorString = toSource(Map1), promiseCtorString = toSource(Promise1), setCtorString = toSource(Set1), weakMapCtorString = toSource(WeakMap1);
+/**
+ * Gets the `toStringTag` of `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */ var getTag = baseGetTag;
+// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
+if (DataView1 && getTag(new DataView1(new ArrayBuffer(1))) != dataViewTag || Map1 && getTag(new Map1) != mapTag || Promise1 && getTag(Promise1.resolve()) != promiseTag || Set1 && getTag(new Set1) != setTag || WeakMap1 && getTag(new WeakMap1) != weakMapTag) getTag = function(value) {
+    var result = baseGetTag(value), Ctor = result == objectTag ? value.constructor : undefined, ctorString = Ctor ? toSource(Ctor) : '';
+    if (ctorString) switch(ctorString){
+        case dataViewCtorString:
+            return dataViewTag;
+        case mapCtorString:
+            return mapTag;
+        case promiseCtorString:
+            return promiseTag;
+        case setCtorString:
+            return setTag;
+        case weakMapCtorString:
+            return weakMapTag;
+    }
+    return result;
+};
+module.exports = getTag;
+
+},{"./_DataView":"9oCuB","./_Map":"coy6p","./_Promise":"fgNZD","./_Set":"2Jmwe","./_WeakMap":"7zpLL","./_baseGetTag":"hvTL4","./_toSource":"cvYQ0"}],"9oCuB":[function(require,module,exports) {
+var getNative = require('./_getNative'), root = require('./_root');
+/* Built-in method references that are verified to be native. */ var DataView1 = getNative(root, 'DataView');
+module.exports = DataView1;
+
+},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"fgNZD":[function(require,module,exports) {
+var getNative = require('./_getNative'), root = require('./_root');
+/* Built-in method references that are verified to be native. */ var Promise1 = getNative(root, 'Promise');
+module.exports = Promise1;
+
+},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"2Jmwe":[function(require,module,exports) {
+var getNative = require('./_getNative'), root = require('./_root');
+/* Built-in method references that are verified to be native. */ var Set1 = getNative(root, 'Set');
+module.exports = Set1;
+
+},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"13CXQ":[function(require,module,exports) {
+/** Used for built-in method references. */ var objectProto = Object.prototype;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/**
+ * Initializes an array clone.
+ *
+ * @private
+ * @param {Array} array The array to clone.
+ * @returns {Array} Returns the initialized clone.
+ */ function initCloneArray(array) {
+    var length = array.length, result = new array.constructor(length);
+    // Add properties assigned by `RegExp#exec`.
+    if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
+        result.index = array.index;
+        result.input = array.input;
+    }
+    return result;
+}
+module.exports = initCloneArray;
+
+},{}],"5t6In":[function(require,module,exports) {
+var cloneArrayBuffer = require('./_cloneArrayBuffer'), cloneDataView = require('./_cloneDataView'), cloneRegExp = require('./_cloneRegExp'), cloneSymbol = require('./_cloneSymbol'), cloneTypedArray = require('./_cloneTypedArray');
+/** `Object#toString` result references. */ var boolTag = '[object Boolean]', dateTag = '[object Date]', mapTag = '[object Map]', numberTag = '[object Number]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]';
+var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
+/**
+ * Initializes an object clone based on its `toStringTag`.
+ *
+ * **Note:** This function only supports cloning values with tags of
+ * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @param {string} tag The `toStringTag` of the object to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneByTag(object, tag, isDeep) {
+    var Ctor = object.constructor;
+    switch(tag){
+        case arrayBufferTag:
+            return cloneArrayBuffer(object);
+        case boolTag:
+        case dateTag:
+            return new Ctor(+object);
+        case dataViewTag:
+            return cloneDataView(object, isDeep);
+        case float32Tag:
+        case float64Tag:
+        case int8Tag:
+        case int16Tag:
+        case int32Tag:
+        case uint8Tag:
+        case uint8ClampedTag:
+        case uint16Tag:
+        case uint32Tag:
+            return cloneTypedArray(object, isDeep);
+        case mapTag:
+            return new Ctor;
+        case numberTag:
+        case stringTag:
+            return new Ctor(object);
+        case regexpTag:
+            return cloneRegExp(object);
+        case setTag:
+            return new Ctor;
+        case symbolTag:
+            return cloneSymbol(object);
+    }
+}
+module.exports = initCloneByTag;
+
+},{"./_cloneArrayBuffer":"2akbJ","./_cloneDataView":"9iLAx","./_cloneRegExp":"6oNbI","./_cloneSymbol":"6J9yI","./_cloneTypedArray":"fThpe"}],"2akbJ":[function(require,module,exports) {
+var Uint8Array1 = require('./_Uint8Array');
+/**
+ * Creates a clone of `arrayBuffer`.
+ *
+ * @private
+ * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
+ * @returns {ArrayBuffer} Returns the cloned array buffer.
+ */ function cloneArrayBuffer(arrayBuffer) {
+    var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
+    new Uint8Array1(result).set(new Uint8Array1(arrayBuffer));
+    return result;
+}
+module.exports = cloneArrayBuffer;
+
+},{"./_Uint8Array":"j5ZqO"}],"j5ZqO":[function(require,module,exports) {
+var root = require('./_root');
+/** Built-in value references. */ var Uint8Array1 = root.Uint8Array;
+module.exports = Uint8Array1;
+
+},{"./_root":"9w0IQ"}],"9iLAx":[function(require,module,exports) {
+var cloneArrayBuffer = require('./_cloneArrayBuffer');
+/**
+ * Creates a clone of `dataView`.
+ *
+ * @private
+ * @param {Object} dataView The data view to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned data view.
+ */ function cloneDataView(dataView, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
+    return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
+}
+module.exports = cloneDataView;
+
+},{"./_cloneArrayBuffer":"2akbJ"}],"6oNbI":[function(require,module,exports) {
+/** Used to match `RegExp` flags from their coerced string values. */ var reFlags = /\w*$/;
+/**
+ * Creates a clone of `regexp`.
+ *
+ * @private
+ * @param {Object} regexp The regexp to clone.
+ * @returns {Object} Returns the cloned regexp.
+ */ function cloneRegExp(regexp) {
+    var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
+    result.lastIndex = regexp.lastIndex;
+    return result;
+}
+module.exports = cloneRegExp;
+
+},{}],"6J9yI":[function(require,module,exports) {
+var Symbol1 = require('./_Symbol');
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol1 ? Symbol1.prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
+/**
+ * Creates a clone of the `symbol` object.
+ *
+ * @private
+ * @param {Object} symbol The symbol object to clone.
+ * @returns {Object} Returns the cloned symbol object.
+ */ function cloneSymbol(symbol) {
+    return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {
+    };
+}
+module.exports = cloneSymbol;
+
+},{"./_Symbol":"g8MbF"}],"fThpe":[function(require,module,exports) {
+var cloneArrayBuffer = require('./_cloneArrayBuffer');
+/**
+ * Creates a clone of `typedArray`.
+ *
+ * @private
+ * @param {Object} typedArray The typed array to clone.
+ * @param {boolean} [isDeep] Specify a deep clone.
+ * @returns {Object} Returns the cloned typed array.
+ */ function cloneTypedArray(typedArray, isDeep) {
+    var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
+    return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
+}
+module.exports = cloneTypedArray;
+
+},{"./_cloneArrayBuffer":"2akbJ"}],"142qT":[function(require,module,exports) {
+var baseCreate = require('./_baseCreate'), getPrototype = require('./_getPrototype'), isPrototype = require('./_isPrototype');
+/**
+ * Initializes an object clone.
+ *
+ * @private
+ * @param {Object} object The object to clone.
+ * @returns {Object} Returns the initialized clone.
+ */ function initCloneObject(object) {
+    return typeof object.constructor == 'function' && !isPrototype(object) ? baseCreate(getPrototype(object)) : {
+    };
+}
+module.exports = initCloneObject;
+
+},{"./_baseCreate":"1SO2E","./_getPrototype":"eqMRO","./_isPrototype":"3LrfV"}],"jrEYD":[function(require,module,exports) {
+var baseIsMap = require('./_baseIsMap'), baseUnary = require('./_baseUnary'), nodeUtil = require('./_nodeUtil');
+/* Node.js helper references. */ var nodeIsMap = nodeUtil && nodeUtil.isMap;
+/**
+ * Checks if `value` is classified as a `Map` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ * @example
+ *
+ * _.isMap(new Map);
+ * // => true
+ *
+ * _.isMap(new WeakMap);
+ * // => false
+ */ var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
+module.exports = isMap;
+
+},{"./_baseIsMap":"gKGqk","./_baseUnary":"4SrX0","./_nodeUtil":"2vDMj"}],"gKGqk":[function(require,module,exports) {
+var getTag = require('./_getTag'), isObjectLike = require('./isObjectLike');
+/** `Object#toString` result references. */ var mapTag = '[object Map]';
+/**
+ * The base implementation of `_.isMap` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a map, else `false`.
+ */ function baseIsMap(value) {
+    return isObjectLike(value) && getTag(value) == mapTag;
+}
+module.exports = baseIsMap;
+
+},{"./_getTag":"6GSwf","./isObjectLike":"6ihSr"}],"aWgQ7":[function(require,module,exports) {
+var baseIsSet = require('./_baseIsSet'), baseUnary = require('./_baseUnary'), nodeUtil = require('./_nodeUtil');
+/* Node.js helper references. */ var nodeIsSet = nodeUtil && nodeUtil.isSet;
+/**
+ * Checks if `value` is classified as a `Set` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+ * @example
+ *
+ * _.isSet(new Set);
+ * // => true
+ *
+ * _.isSet(new WeakSet);
+ * // => false
+ */ var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
+module.exports = isSet;
+
+},{"./_baseIsSet":"8JLsF","./_baseUnary":"4SrX0","./_nodeUtil":"2vDMj"}],"8JLsF":[function(require,module,exports) {
+var getTag = require('./_getTag'), isObjectLike = require('./isObjectLike');
+/** `Object#toString` result references. */ var setTag = '[object Set]';
+/**
+ * The base implementation of `_.isSet` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a set, else `false`.
+ */ function baseIsSet(value) {
+    return isObjectLike(value) && getTag(value) == setTag;
+}
+module.exports = baseIsSet;
+
+},{"./_getTag":"6GSwf","./isObjectLike":"6ihSr"}],"b5cLr":[function(require,module,exports) {
+var castPath = require('./_castPath'), last = require('./last'), parent = require('./_parent'), toKey = require('./_toKey');
+/**
+ * The base implementation of `_.unset`.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {Array|string} path The property path to unset.
+ * @returns {boolean} Returns `true` if the property is deleted, else `false`.
+ */ function baseUnset(object, path) {
+    path = castPath(path, object);
+    object = parent(object, path);
+    return object == null || delete object[toKey(last(path))];
+}
+module.exports = baseUnset;
+
+},{"./_castPath":"9StUN","./last":"9xHy1","./_parent":"ecABN","./_toKey":"8TD4q"}],"9StUN":[function(require,module,exports) {
+var isArray = require('./isArray'), isKey = require('./_isKey'), stringToPath = require('./_stringToPath'), toString = require('./toString');
+/**
+ * Casts `value` to a path array if it's not one.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {Array} Returns the cast property path array.
+ */ function castPath(value, object) {
+    if (isArray(value)) return value;
+    return isKey(value, object) ? [
+        value
+    ] : stringToPath(toString(value));
+}
+module.exports = castPath;
+
+},{"./isArray":"9D9dp","./_isKey":"9Nx6f","./_stringToPath":"k9O0Q","./toString":"aVIvq"}],"9Nx6f":[function(require,module,exports) {
+var isArray = require('./isArray'), isSymbol = require('./isSymbol');
+/** Used to match property names within property paths. */ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
+/**
+ * Checks if `value` is a property name and not a property path.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {Object} [object] The object to query keys on.
+ * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
+ */ function isKey(value, object) {
+    if (isArray(value)) return false;
+    var type = typeof value;
+    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol(value)) return true;
+    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
+}
+module.exports = isKey;
+
+},{"./isArray":"9D9dp","./isSymbol":"hrV74"}],"k9O0Q":[function(require,module,exports) {
+var memoizeCapped = require('./_memoizeCapped');
+/** Used to match property names within property paths. */ var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
+/** Used to match backslashes in property paths. */ var reEscapeChar = /\\(\\)?/g;
+/**
+ * Converts `string` to a property path array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the property path array.
+ */ var stringToPath = memoizeCapped(function(string) {
+    var result = [];
+    if (string.charCodeAt(0) === 46 /* . */ ) result.push('');
+    string.replace(rePropName, function(match, number, quote, subString) {
+        result.push(quote ? subString.replace(reEscapeChar, '$1') : number || match);
+    });
+    return result;
+});
+module.exports = stringToPath;
+
+},{"./_memoizeCapped":"5MsEb"}],"5MsEb":[function(require,module,exports) {
+var memoize = require('./memoize');
+/** Used as the maximum memoize cache size. */ var MAX_MEMOIZE_SIZE = 500;
+/**
+ * A specialized version of `_.memoize` which clears the memoized function's
+ * cache when it exceeds `MAX_MEMOIZE_SIZE`.
+ *
+ * @private
+ * @param {Function} func The function to have its output memoized.
+ * @returns {Function} Returns the new memoized function.
+ */ function memoizeCapped(func) {
+    var result = memoize(func, function(key) {
+        if (cache.size === MAX_MEMOIZE_SIZE) cache.clear();
+        return key;
+    });
+    var cache = result.cache;
+    return result;
+}
+module.exports = memoizeCapped;
+
+},{"./memoize":"bEREl"}],"bEREl":[function(require,module,exports) {
+var MapCache = require('./_MapCache');
+/** Error message constants. */ var FUNC_ERROR_TEXT = 'Expected a function';
+/**
+ * Creates a function that memoizes the result of `func`. If `resolver` is
+ * provided, it determines the cache key for storing the result based on the
+ * arguments provided to the memoized function. By default, the first argument
+ * provided to the memoized function is used as the map cache key. The `func`
+ * is invoked with the `this` binding of the memoized function.
+ *
+ * **Note:** The cache is exposed as the `cache` property on the memoized
+ * function. Its creation may be customized by replacing the `_.memoize.Cache`
+ * constructor with one whose instances implement the
+ * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
+ * method interface of `clear`, `delete`, `get`, `has`, and `set`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Function
+ * @param {Function} func The function to have its output memoized.
+ * @param {Function} [resolver] The function to resolve the cache key.
+ * @returns {Function} Returns the new memoized function.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': 2 };
+ * var other = { 'c': 3, 'd': 4 };
+ *
+ * var values = _.memoize(_.values);
+ * values(object);
+ * // => [1, 2]
+ *
+ * values(other);
+ * // => [3, 4]
+ *
+ * object.a = 2;
+ * values(object);
+ * // => [1, 2]
+ *
+ * // Modify the result cache.
+ * values.cache.set(object, ['a', 'b']);
+ * values(object);
+ * // => ['a', 'b']
+ *
+ * // Replace `_.memoize.Cache`.
+ * _.memoize.Cache = WeakMap;
+ */ function memoize(func, resolver) {
+    if (typeof func != 'function' || resolver != null && typeof resolver != 'function') throw new TypeError(FUNC_ERROR_TEXT);
+    var memoized = function() {
+        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
+        if (cache.has(key)) return cache.get(key);
+        var result = func.apply(this, args);
+        memoized.cache = cache.set(key, result) || cache;
+        return result;
+    };
+    memoized.cache = new (memoize.Cache || MapCache);
+    return memoized;
+}
+// Expose `MapCache`.
+memoize.Cache = MapCache;
+module.exports = memoize;
+
+},{"./_MapCache":"7Yxy9"}],"aVIvq":[function(require,module,exports) {
+var baseToString = require('./_baseToString');
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */ function toString(value) {
+    return value == null ? '' : baseToString(value);
+}
+module.exports = toString;
+
+},{"./_baseToString":"cmpT2"}],"cmpT2":[function(require,module,exports) {
+var Symbol1 = require('./_Symbol'), arrayMap = require('./_arrayMap'), isArray = require('./isArray'), isSymbol = require('./isSymbol');
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol1 ? Symbol1.prototype : undefined, symbolToString = symbolProto ? symbolProto.toString : undefined;
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */ function baseToString(value) {
+    // Exit early for strings to avoid a performance hit in some environments.
+    if (typeof value == 'string') return value;
+    if (isArray(value)) // Recursively convert values (susceptible to call stack limits).
+    return arrayMap(value, baseToString) + '';
+    if (isSymbol(value)) return symbolToString ? symbolToString.call(value) : '';
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+module.exports = baseToString;
+
+},{"./_Symbol":"g8MbF","./_arrayMap":"dYHNK","./isArray":"9D9dp","./isSymbol":"hrV74"}],"9xHy1":[function(require,module,exports) {
+/**
+ * Gets the last element of `array`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to query.
+ * @returns {*} Returns the last element of `array`.
+ * @example
+ *
+ * _.last([1, 2, 3]);
+ * // => 3
+ */ function last(array) {
+    var length = array == null ? 0 : array.length;
+    return length ? array[length - 1] : undefined;
+}
+module.exports = last;
+
+},{}],"ecABN":[function(require,module,exports) {
+var baseGet = require('./_baseGet'), baseSlice = require('./_baseSlice');
+/**
+ * Gets the parent value at `path` of `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} path The path to get the parent value of.
+ * @returns {*} Returns the parent value.
+ */ function parent(object, path) {
+    return path.length < 2 ? object : baseGet(object, baseSlice(path, 0, -1));
+}
+module.exports = parent;
+
+},{"./_baseGet":"awr9U","./_baseSlice":"lcI7n"}],"awr9U":[function(require,module,exports) {
+var castPath = require('./_castPath'), toKey = require('./_toKey');
+/**
+ * The base implementation of `_.get` without support for default values.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path of the property to get.
+ * @returns {*} Returns the resolved value.
+ */ function baseGet(object, path) {
+    path = castPath(path, object);
+    var index = 0, length = path.length;
+    while(object != null && index < length)object = object[toKey(path[index++])];
+    return index && index == length ? object : undefined;
+}
+module.exports = baseGet;
+
+},{"./_castPath":"9StUN","./_toKey":"8TD4q"}],"8TD4q":[function(require,module,exports) {
+var isSymbol = require('./isSymbol');
+/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
+/**
+ * Converts `value` to a string key if it's not a string or symbol.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @returns {string|symbol} Returns the key.
+ */ function toKey(value) {
+    if (typeof value == 'string' || isSymbol(value)) return value;
+    var result = value + '';
+    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
+}
+module.exports = toKey;
+
+},{"./isSymbol":"hrV74"}],"lcI7n":[function(require,module,exports) {
+/**
+ * The base implementation of `_.slice` without an iteratee call guard.
+ *
+ * @private
+ * @param {Array} array The array to slice.
+ * @param {number} [start=0] The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the slice of `array`.
+ */ function baseSlice(array, start, end) {
+    var index = -1, length = array.length;
+    if (start < 0) start = -start > length ? 0 : length + start;
+    end = end > length ? length : end;
+    if (end < 0) end += length;
+    length = start > end ? 0 : end - start >>> 0;
+    start >>>= 0;
+    var result = Array(length);
+    while((++index) < length)result[index] = array[index + start];
+    return result;
+}
+module.exports = baseSlice;
+
+},{}],"3EvFV":[function(require,module,exports) {
+var isPlainObject = require('./isPlainObject');
+/**
+ * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
+ * objects.
+ *
+ * @private
+ * @param {*} value The value to inspect.
+ * @param {string} key The key of the property to inspect.
+ * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
+ */ function customOmitClone(value) {
+    return isPlainObject(value) ? undefined : value;
+}
+module.exports = customOmitClone;
+
+},{"./isPlainObject":"kxZNP"}],"kxZNP":[function(require,module,exports) {
+var baseGetTag = require('./_baseGetTag'), getPrototype = require('./_getPrototype'), isObjectLike = require('./isObjectLike');
+/** `Object#toString` result references. */ var objectTag = '[object Object]';
+/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
+/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
+/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
+/** Used to infer the `Object` constructor. */ var objectCtorString = funcToString.call(Object);
+/**
+ * Checks if `value` is a plain object, that is, an object created by the
+ * `Object` constructor or one with a `[[Prototype]]` of `null`.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.8.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ * }
+ *
+ * _.isPlainObject(new Foo);
+ * // => false
+ *
+ * _.isPlainObject([1, 2, 3]);
+ * // => false
+ *
+ * _.isPlainObject({ 'x': 0, 'y': 0 });
+ * // => true
+ *
+ * _.isPlainObject(Object.create(null));
+ * // => true
+ */ function isPlainObject(value) {
+    if (!isObjectLike(value) || baseGetTag(value) != objectTag) return false;
+    var proto = getPrototype(value);
+    if (proto === null) return true;
+    var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
+    return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
+}
+module.exports = isPlainObject;
+
+},{"./_baseGetTag":"hvTL4","./_getPrototype":"eqMRO","./isObjectLike":"6ihSr"}],"1F4bu":[function(require,module,exports) {
+var flatten = require('./flatten'), overRest = require('./_overRest'), setToString = require('./_setToString');
+/**
+ * A specialized version of `baseRest` which flattens the rest array.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @returns {Function} Returns the new function.
+ */ function flatRest(func) {
+    return setToString(overRest(func, undefined, flatten), func + '');
+}
+module.exports = flatRest;
+
+},{"./flatten":"fxG0z","./_overRest":"ad34B","./_setToString":"duOCt"}],"fxG0z":[function(require,module,exports) {
+var baseFlatten = require('./_baseFlatten');
+/**
+ * Flattens `array` a single level deep.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Array
+ * @param {Array} array The array to flatten.
+ * @returns {Array} Returns the new flattened array.
+ * @example
+ *
+ * _.flatten([1, [2, [3, [4]], 5]]);
+ * // => [1, 2, [3, [4]], 5]
+ */ function flatten(array) {
+    var length = array == null ? 0 : array.length;
+    return length ? baseFlatten(array, 1) : [];
+}
+module.exports = flatten;
+
+},{"./_baseFlatten":"ixkHq"}],"ixkHq":[function(require,module,exports) {
+var arrayPush = require('./_arrayPush'), isFlattenable = require('./_isFlattenable');
+/**
+ * The base implementation of `_.flatten` with support for restricting flattening.
+ *
+ * @private
+ * @param {Array} array The array to flatten.
+ * @param {number} depth The maximum recursion depth.
+ * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
+ * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
+ * @param {Array} [result=[]] The initial result value.
+ * @returns {Array} Returns the new flattened array.
+ */ function baseFlatten(array, depth, predicate, isStrict, result) {
+    var index = -1, length = array.length;
+    predicate || (predicate = isFlattenable);
+    result || (result = []);
+    while((++index) < length){
+        var value = array[index];
+        if (depth > 0 && predicate(value)) {
+            if (depth > 1) // Recursively flatten arrays (susceptible to call stack limits).
+            baseFlatten(value, depth - 1, predicate, isStrict, result);
+            else arrayPush(result, value);
+        } else if (!isStrict) result[result.length] = value;
+    }
+    return result;
+}
+module.exports = baseFlatten;
+
+},{"./_arrayPush":"gQq20","./_isFlattenable":"j6MOs"}],"j6MOs":[function(require,module,exports) {
+var Symbol1 = require('./_Symbol'), isArguments = require('./isArguments'), isArray = require('./isArray');
+/** Built-in value references. */ var spreadableSymbol = Symbol1 ? Symbol1.isConcatSpreadable : undefined;
+/**
+ * Checks if `value` is a flattenable `arguments` object or array.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
+ */ function isFlattenable(value) {
+    return isArray(value) || isArguments(value) || !!(spreadableSymbol && value && value[spreadableSymbol]);
+}
+module.exports = isFlattenable;
+
+},{"./_Symbol":"g8MbF","./isArguments":"fTXal","./isArray":"9D9dp"}],"ad34B":[function(require,module,exports) {
+var apply = require('./_apply');
+/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
+/**
+ * A specialized version of `baseRest` which transforms the rest array.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @param {Function} transform The rest array transform.
+ * @returns {Function} Returns the new function.
+ */ function overRest(func, start, transform) {
+    start = nativeMax(start === undefined ? func.length - 1 : start, 0);
+    return function() {
+        var args = arguments, index = -1, length = nativeMax(args.length - start, 0), array = Array(length);
+        while((++index) < length)array[index] = args[start + index];
+        index = -1;
+        var otherArgs = Array(start + 1);
+        while((++index) < start)otherArgs[index] = args[index];
+        otherArgs[start] = transform(array);
+        return apply(func, this, otherArgs);
+    };
+}
+module.exports = overRest;
+
+},{"./_apply":"koVpD"}],"g9xWX":[function(require,module,exports) {
+var baseRest = require('./_baseRest'), createWrap = require('./_createWrap'), getHolder = require('./_getHolder'), replaceHolders = require('./_replaceHolders');
+/** Used to compose bitmasks for function metadata. */ var WRAP_PARTIAL_FLAG = 32;
+/**
+ * Creates a function that invokes `func` with `partials` prepended to the
+ * arguments it receives. This method is like `_.bind` except it does **not**
+ * alter the `this` binding.
+ *
+ * The `_.partial.placeholder` value, which defaults to `_` in monolithic
+ * builds, may be used as a placeholder for partially applied arguments.
+ *
+ * **Note:** This method doesn't set the "length" property of partially
+ * applied functions.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.2.0
+ * @category Function
+ * @param {Function} func The function to partially apply arguments to.
+ * @param {...*} [partials] The arguments to be partially applied.
+ * @returns {Function} Returns the new partially applied function.
+ * @example
+ *
+ * function greet(greeting, name) {
+ *   return greeting + ' ' + name;
+ * }
+ *
+ * var sayHelloTo = _.partial(greet, 'hello');
+ * sayHelloTo('fred');
+ * // => 'hello fred'
+ *
+ * // Partially applied with placeholders.
+ * var greetFred = _.partial(greet, _, 'fred');
+ * greetFred('hi');
+ * // => 'hi fred'
+ */ var partial = baseRest(function(func, partials) {
+    var holders = replaceHolders(partials, getHolder(partial));
+    return createWrap(func, WRAP_PARTIAL_FLAG, undefined, partials, holders);
+});
+// Assign default placeholders.
+partial.placeholder = {
+};
+module.exports = partial;
+
+},{"./_baseRest":"3aq4z","./_createWrap":"jWTIp","./_getHolder":"fQE8c","./_replaceHolders":"8Pk3T"}],"3aq4z":[function(require,module,exports) {
+var identity = require('./identity'), overRest = require('./_overRest'), setToString = require('./_setToString');
+/**
+ * The base implementation of `_.rest` which doesn't validate or coerce arguments.
+ *
+ * @private
+ * @param {Function} func The function to apply a rest parameter to.
+ * @param {number} [start=func.length-1] The start position of the rest parameter.
+ * @returns {Function} Returns the new function.
+ */ function baseRest(func, start) {
+    return setToString(overRest(func, start, identity), func + '');
+}
+module.exports = baseRest;
+
+},{"./identity":"czYGV","./_overRest":"ad34B","./_setToString":"duOCt"}],"kLdKc":[function(require,module,exports) {
+var basePick = require('./_basePick'), flatRest = require('./_flatRest');
+/**
+ * Creates an object composed of the picked `object` properties.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The source object.
+ * @param {...(string|string[])} [paths] The property paths to pick.
+ * @returns {Object} Returns the new object.
+ * @example
+ *
+ * var object = { 'a': 1, 'b': '2', 'c': 3 };
+ *
+ * _.pick(object, ['a', 'c']);
+ * // => { 'a': 1, 'c': 3 }
+ */ var pick = flatRest(function(object, paths) {
+    return object == null ? {
+    } : basePick(object, paths);
+});
+module.exports = pick;
+
+},{"./_basePick":"68TGg","./_flatRest":"1F4bu"}],"68TGg":[function(require,module,exports) {
+var basePickBy = require('./_basePickBy'), hasIn = require('./hasIn');
+/**
+ * The base implementation of `_.pick` without support for individual
+ * property identifiers.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} paths The property paths to pick.
+ * @returns {Object} Returns the new object.
+ */ function basePick(object, paths) {
+    return basePickBy(object, paths, function(value, path) {
+        return hasIn(object, path);
+    });
+}
+module.exports = basePick;
+
+},{"./_basePickBy":"cBdXI","./hasIn":"ktfle"}],"cBdXI":[function(require,module,exports) {
+var baseGet = require('./_baseGet'), baseSet = require('./_baseSet'), castPath = require('./_castPath');
+/**
+ * The base implementation of  `_.pickBy` without support for iteratee shorthands.
+ *
+ * @private
+ * @param {Object} object The source object.
+ * @param {string[]} paths The property paths to pick.
+ * @param {Function} predicate The function invoked per property.
+ * @returns {Object} Returns the new object.
+ */ function basePickBy(object, paths, predicate) {
+    var index = -1, length = paths.length, result = {
+    };
+    while((++index) < length){
+        var path = paths[index], value = baseGet(object, path);
+        if (predicate(value, path)) baseSet(result, castPath(path, object), value);
+    }
+    return result;
+}
+module.exports = basePickBy;
+
+},{"./_baseGet":"awr9U","./_baseSet":"blERh","./_castPath":"9StUN"}],"blERh":[function(require,module,exports) {
+var assignValue = require('./_assignValue'), castPath = require('./_castPath'), isIndex = require('./_isIndex'), isObject = require('./isObject'), toKey = require('./_toKey');
+/**
+ * The base implementation of `_.set`.
+ *
+ * @private
+ * @param {Object} object The object to modify.
+ * @param {Array|string} path The path of the property to set.
+ * @param {*} value The value to set.
+ * @param {Function} [customizer] The function to customize path creation.
+ * @returns {Object} Returns `object`.
+ */ function baseSet(object, path, value, customizer) {
+    if (!isObject(object)) return object;
+    path = castPath(path, object);
+    var index = -1, length = path.length, lastIndex = length - 1, nested = object;
+    while(nested != null && (++index) < length){
+        var key = toKey(path[index]), newValue = value;
+        if (key === '__proto__' || key === 'constructor' || key === 'prototype') return object;
+        if (index != lastIndex) {
+            var objValue = nested[key];
+            newValue = customizer ? customizer(objValue, key, nested) : undefined;
+            if (newValue === undefined) newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {
+            };
+        }
+        assignValue(nested, key, newValue);
+        nested = nested[key];
+    }
+    return object;
+}
+module.exports = baseSet;
+
+},{"./_assignValue":"8WIi8","./_castPath":"9StUN","./_isIndex":"2RH5V","./isObject":"hZIId","./_toKey":"8TD4q"}],"ktfle":[function(require,module,exports) {
+var baseHasIn = require('./_baseHasIn'), hasPath = require('./_hasPath');
+/**
+ * Checks if `path` is a direct or inherited property of `object`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Object
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ * @example
+ *
+ * var object = _.create({ 'a': _.create({ 'b': 2 }) });
+ *
+ * _.hasIn(object, 'a');
+ * // => true
+ *
+ * _.hasIn(object, 'a.b');
+ * // => true
+ *
+ * _.hasIn(object, ['a', 'b']);
+ * // => true
+ *
+ * _.hasIn(object, 'b');
+ * // => false
+ */ function hasIn(object, path) {
+    return object != null && hasPath(object, path, baseHasIn);
+}
+module.exports = hasIn;
+
+},{"./_baseHasIn":"9PKM5","./_hasPath":"cM0pW"}],"9PKM5":[function(require,module,exports) {
+/**
+ * The base implementation of `_.hasIn` without support for deep paths.
+ *
+ * @private
+ * @param {Object} [object] The object to query.
+ * @param {Array|string} key The key to check.
+ * @returns {boolean} Returns `true` if `key` exists, else `false`.
+ */ function baseHasIn(object, key) {
+    return object != null && key in Object(object);
+}
+module.exports = baseHasIn;
+
+},{}],"cM0pW":[function(require,module,exports) {
+var castPath = require('./_castPath'), isArguments = require('./isArguments'), isArray = require('./isArray'), isIndex = require('./_isIndex'), isLength = require('./isLength'), toKey = require('./_toKey');
+/**
+ * Checks if `path` exists on `object`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array|string} path The path to check.
+ * @param {Function} hasFunc The function to check properties.
+ * @returns {boolean} Returns `true` if `path` exists, else `false`.
+ */ function hasPath(object, path, hasFunc) {
+    path = castPath(path, object);
+    var index = -1, length = path.length, result = false;
+    while((++index) < length){
+        var key = toKey(path[index]);
+        if (!(result = object != null && hasFunc(object, key))) break;
+        object = object[key];
+    }
+    if (result || (++index) != length) return result;
+    length = object == null ? 0 : object.length;
+    return !!length && isLength(length) && isIndex(key, length) && (isArray(object) || isArguments(object));
+}
+module.exports = hasPath;
+
+},{"./_castPath":"9StUN","./isArguments":"fTXal","./isArray":"9D9dp","./_isIndex":"2RH5V","./isLength":"7FAwN","./_toKey":"8TD4q"}],"fvq4Z":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CustomContext", ()=>_customProvider.CustomContext
+);
+parcelHelpers.export(exports, "CustomConsumer", ()=>_customProvider.CustomConsumer
+);
+parcelHelpers.export(exports, "FormattedDate", ()=>_formattedDateDefault.default
+);
+var _customProvider = require("./CustomProvider");
+var _customProviderDefault = parcelHelpers.interopDefault(_customProvider);
+var _formattedDate = require("./FormattedDate");
+var _formattedDateDefault = parcelHelpers.interopDefault(_formattedDate);
+exports.default = _customProviderDefault.default;
+
+},{"./CustomProvider":"eLdDg","./FormattedDate":"fZGOX","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eLdDg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CustomContext", ()=>CustomContext
+);
+parcelHelpers.export(exports, "CustomConsumer", ()=>Consumer
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _prefix = require("../utils/prefix");
+var _domhelper = require("../DOMHelper");
+var CustomContext = /*#__PURE__*/ _reactDefault.default.createContext({
+});
+var Consumer = CustomContext.Consumer, Provider = CustomContext.Provider;
+var themes = [
+    'light',
+    'dark',
+    'high-contrast'
+];
+var CustomProvider = function CustomProvider1(props) {
+    var children = props.children, _props$classPrefix = props.classPrefix, classPrefix = _props$classPrefix === void 0 ? _prefix.getClassNamePrefix() : _props$classPrefix, theme = props.theme, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "children",
+        "classPrefix",
+        "theme"
+    ]);
+    var value = _reactDefault.default.useMemo(function() {
+        return _extendsDefault.default({
+            classPrefix: classPrefix,
+            theme: theme
+        }, rest);
+    }, [
+        classPrefix,
+        theme,
+        rest
+    ]);
+    _reactDefault.default.useEffect(function() {
+        if (_domhelper.canUseDOM && theme) {
+            _domhelper.addClass(document.body, _prefix.prefix(classPrefix, "theme-" + theme)); // Remove the className that will cause style conflicts
+            themes.forEach(function(t) {
+                if (t !== theme) _domhelper.removeClass(document.body, _prefix.prefix(classPrefix, "theme-" + t));
+            });
+        }
+    }, [
+        classPrefix,
+        theme
+    ]);
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Provider, {
+        value: value
+    }, children));
+};
+exports.default = CustomProvider;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","../utils/prefix":"laXhr","../DOMHelper":"8RlUt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"laXhr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "globalKey", ()=>globalKey
+);
+parcelHelpers.export(exports, "getClassNamePrefix", ()=>getClassNamePrefix
+);
+parcelHelpers.export(exports, "defaultClassPrefix", ()=>defaultClassPrefix
+);
+parcelHelpers.export(exports, "prefix", ()=>prefix
+);
+var _classnames = require("classnames");
+var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
+var _curry = require("lodash/curry");
+var _curryDefault = parcelHelpers.interopDefault(_curry);
+var globalKey = 'rs-';
+var getClassNamePrefix = function getClassNamePrefix1() {
+    // TODO: A prefix that can be replaced at runtime.
+    return globalKey;
+};
+var defaultClassPrefix = function defaultClassPrefix1(name) {
+    return "" + getClassNamePrefix() + name;
+};
+function prefix(pre, className) {
+    if (!pre || !className) return '';
+    if (Array.isArray(className)) return _classnamesDefault.default(className.filter(function(name) {
+        return !!name;
+    }).map(function(name) {
+        return pre + "-" + name;
+    }));
+     // TODO Compatible with V4
+    if (pre[pre.length - 1] === '-') return "" + pre + className;
+    return pre + "-" + className;
+}
+exports.default = _curryDefault.default(prefix);
+
+},{"classnames":"bOXOh","lodash/curry":"4AtTE","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8RlUt":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _domLib = require("dom-lib");
+parcelHelpers.exportAll(_domLib, exports);
+var DOMHelper = _extendsDefault.default({
+}, _domLib, {
+    isElement: function isElement(node) {
+        return (node === null || node === void 0 ? void 0 : node.nodeType) && typeof (node === null || node === void 0 ? void 0 : node.nodeName) === 'string';
+    }
+});
+exports.default = DOMHelper;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","dom-lib":"hluqp","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hluqp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "animation", ()=>_animation
+);
+parcelHelpers.export(exports, "transition", ()=>_transitionDefault.default
+);
+parcelHelpers.export(exports, "translateDOMPositionXY", ()=>_translateDOMPositionXYDefault.default
+);
+parcelHelpers.export(exports, "getVendorPrefixedName", ()=>_getVendorPrefixedNameDefault.default
+);
+parcelHelpers.export(exports, "BrowserSupportCore", ()=>_browserSupportCoreDefault.default
+);
+parcelHelpers.export(exports, "DOMMouseMoveTracker", ()=>_dommouseMoveTrackerDefault.default
+);
+parcelHelpers.export(exports, "WheelHandler", ()=>_wheelHandlerDefault.default
+);
+var _animation = require("./animation");
+var _classNames = require("./classNames");
+parcelHelpers.exportAll(_classNames, exports);
+var _style = require("./style");
+parcelHelpers.exportAll(_style, exports);
+var _query = require("./query");
+parcelHelpers.exportAll(_query, exports);
+var _events = require("./events");
+parcelHelpers.exportAll(_events, exports);
+var _transition = require("./transition");
+var _transitionDefault = parcelHelpers.interopDefault(_transition);
+var _translateDOMPositionXY = require("./transition/translateDOMPositionXY");
+var _translateDOMPositionXYDefault = parcelHelpers.interopDefault(_translateDOMPositionXY);
+var _getVendorPrefixedName = require("./getVendorPrefixedName");
+var _getVendorPrefixedNameDefault = parcelHelpers.interopDefault(_getVendorPrefixedName);
+var _browserSupportCore = require("./BrowserSupportCore");
+var _browserSupportCoreDefault = parcelHelpers.interopDefault(_browserSupportCore);
+var _dommouseMoveTracker = require("./DOMMouseMoveTracker");
+var _dommouseMoveTrackerDefault = parcelHelpers.interopDefault(_dommouseMoveTracker);
+var _wheelHandler = require("./WheelHandler");
+var _wheelHandlerDefault = parcelHelpers.interopDefault(_wheelHandler);
+
+},{"./classNames":"7zlrg","./style":"hHjWl","./query":"dX3vZ","./events":"6jkjG","./animation":"cdMa5","./transition":"8yzia","./transition/translateDOMPositionXY":"j8w56","./getVendorPrefixedName":"9fNX7","./BrowserSupportCore":"dgMaP","./DOMMouseMoveTracker":"adY8d","./WheelHandler":"6ID40","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7zlrg":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "addClass", ()=>_addClassDefault.default
+);
+parcelHelpers.export(exports, "hasClass", ()=>_hasClassDefault.default
+);
+parcelHelpers.export(exports, "removeClass", ()=>_removeClassDefault.default
+);
+parcelHelpers.export(exports, "toggleClass", ()=>_toggleClassDefault.default
+);
+var _addClass = require("./addClass");
+var _addClassDefault = parcelHelpers.interopDefault(_addClass);
+var _hasClass = require("./hasClass");
+var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
+var _removeClass = require("./removeClass");
+var _removeClassDefault = parcelHelpers.interopDefault(_removeClass);
+var _toggleClass = require("./toggleClass");
+var _toggleClassDefault = parcelHelpers.interopDefault(_toggleClass);
+
+},{"./addClass":"aFO2c","./hasClass":"axVAB","./removeClass":"hk0tr","./toggleClass":"5EzQG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aFO2c":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _hasClass = require("./hasClass");
+var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
+exports.default = function(target, className) {
+    if (className) {
+        if (target.classList) target.classList.add(className);
+        else if (!_hasClassDefault.default(target, className)) target.className = target.className + " " + className;
+    }
+    return target;
+};
+
+},{"./hasClass":"axVAB","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"axVAB":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(target, className) {
+    if (target.classList) return !!className && target.classList.contains(className);
+    return (" " + target.className + " ").indexOf(" " + className + " ") !== -1;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hk0tr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(target, className) {
+    if (className) {
+        if (target.classList) target.classList.remove(className);
+        else target.className = target.className.replace(new RegExp("(^|\\s)" + className + "(?:\\s|$)", 'g'), '$1').replace(/\s+/g, ' ') // multiple spaces to one
+        .replace(/^\s*|\s*$/g, ''); // trim the ends
+    }
+    return target;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5EzQG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _hasClass = require("./hasClass");
+var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
+var _addClass = require("./addClass");
+var _addClassDefault = parcelHelpers.interopDefault(_addClass);
+var _removeClass = require("./removeClass");
+var _removeClassDefault = parcelHelpers.interopDefault(_removeClass);
+exports.default = function(target, className) {
+    if (_hasClassDefault.default(target, className)) return _removeClassDefault.default(target, className);
+    return _addClassDefault.default(target, className);
+};
+
+},{"./hasClass":"axVAB","./addClass":"aFO2c","./removeClass":"hk0tr","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hHjWl":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getStyle", ()=>_getStyleDefault.default
+);
+parcelHelpers.export(exports, "removeStyle", ()=>_removeStyleDefault.default
+);
+parcelHelpers.export(exports, "addStyle", ()=>_addStyleDefault.default
+);
+parcelHelpers.export(exports, "getComputedStyle", ()=>_getComputedStyleDefault.default
+);
+var _getStyle = require("./getStyle");
+var _getStyleDefault = parcelHelpers.interopDefault(_getStyle);
+var _removeStyle = require("./removeStyle");
+var _removeStyleDefault = parcelHelpers.interopDefault(_removeStyle);
+var _addStyle = require("./addStyle");
+var _addStyleDefault = parcelHelpers.interopDefault(_addStyle);
+var _getComputedStyle = require("./getComputedStyle");
+var _getComputedStyleDefault = parcelHelpers.interopDefault(_getComputedStyle);
+
+},{"./getStyle":"hTkp8","./removeStyle":"8r5se","./addStyle":"lJ0MF","./getComputedStyle":"bV7Mo","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hTkp8":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _camelizeStyleName = require("./camelizeStyleName");
+var _camelizeStyleNameDefault = parcelHelpers.interopDefault(_camelizeStyleName);
+var _getComputedStyle = require("./getComputedStyle");
+var _getComputedStyleDefault = parcelHelpers.interopDefault(_getComputedStyle);
+var _hyphenateStyleName = require("./hyphenateStyleName");
+var _hyphenateStyleNameDefault = parcelHelpers.interopDefault(_hyphenateStyleName);
+exports.default = function(node, property) {
+    if (property) {
+        var value = node.style[_camelizeStyleNameDefault.default(property)];
+        if (value) return value;
+        var styles = _getComputedStyleDefault.default(node);
+        if (styles) return styles.getPropertyValue(_hyphenateStyleNameDefault.default(property));
+    }
+    return node.style || _getComputedStyleDefault.default(node);
+};
+
+},{"./camelizeStyleName":"cDmPD","./getComputedStyle":"bV7Mo","./hyphenateStyleName":"eCW3M","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cDmPD":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _stringFormatter = require("../utils/stringFormatter");
+var msPattern = /^ms-/;
+exports.default = function(name) {
+    return _stringFormatter.camelize(name.replace(msPattern, 'ms-'));
+};
+
+},{"../utils/stringFormatter":"fXjfF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fXjfF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/* eslint-disable */ /**
+ * @example
+ * underscoreName('getList');
+ * => get_list
+ */ parcelHelpers.export(exports, "underscore", ()=>underscore
+);
+/**
+ * @example
+ * camelize('font-size');
+ * => fontSize
+ */ parcelHelpers.export(exports, "camelize", ()=>camelize
+);
+/**
+ * @example
+ * camelize('fontSize');
+ * => font-size
+ */ parcelHelpers.export(exports, "hyphenate", ()=>hyphenate
+);
+/**
+ * @example
+ * merge('{0} - A front-end {1} ','Suite','framework');
+ * => Suite - A front-end framework
+ */ parcelHelpers.export(exports, "merge", ()=>merge
+);
+function underscore(string) {
+    return string.replace(/([A-Z])/g, '_$1').toLowerCase();
+}
+function camelize(string) {
+    return string.replace(/\-(\w)/g, function(_char) {
+        return _char.slice(1).toUpperCase();
+    });
+}
+function hyphenate(string) {
+    return string.replace(/([A-Z])/g, '-$1').toLowerCase();
+}
+function merge(pattern) {
+    var pointer = 0, i;
+    for(i = 1; i < arguments.length; i += 1){
+        pattern = pattern.split("{" + pointer + "}").join(arguments[i]);
+        pointer += 1;
+    }
+    return pattern;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bV7Mo":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(node) {
+    if (!node) throw new TypeError('No Element passed to `getComputedStyle()`');
+    var doc = node.ownerDocument;
+    if ('defaultView' in doc) {
+        if (doc.defaultView.opener) return node.ownerDocument.defaultView.getComputedStyle(node, null);
+        return window.getComputedStyle(node, null);
+    }
+    return null;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eCW3M":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _stringFormatter = require("../utils/stringFormatter");
+var msPattern = /^ms-/;
+exports.default = function(string) {
+    return _stringFormatter.hyphenate(string).replace(msPattern, '-ms-');
+};
+
+},{"../utils/stringFormatter":"fXjfF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8r5se":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function removeStyle(node, key) {
+    var _style, _style$removeProperty;
+    (_style = node.style) === null || _style === void 0 || (_style$removeProperty = _style.removeProperty) === null || _style$removeProperty === void 0 || _style$removeProperty.call(_style, key);
+}
+exports.default = function(node, keys) {
+    if (typeof keys === 'string') removeStyle(node, keys);
+    else if (Array.isArray(keys)) keys.forEach(function(key) {
+        return removeStyle(node, key);
+    });
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"lJ0MF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _hyphenateStyleName = require("./hyphenateStyleName");
+var _hyphenateStyleNameDefault = parcelHelpers.interopDefault(_hyphenateStyleName);
+var _removeStyle = require("./removeStyle");
+var _removeStyleDefault = parcelHelpers.interopDefault(_removeStyle);
+exports.default = function(node, property, value) {
+    var css = '';
+    var props = property;
+    if (typeof property === 'string') {
+        if (value === undefined) throw new Error('value is undefined');
+        (props = {
+        })[property] = value;
+    }
+    if (typeof props === 'object') {
+        for(var _key in props)if (Object.prototype.hasOwnProperty.call(props, _key)) {
+            if (!props[_key] && props[_key] !== 0) _removeStyleDefault.default(node, _hyphenateStyleNameDefault.default(_key));
+            else css += _hyphenateStyleNameDefault.default(_key) + ":" + props[_key] + ";";
+        }
+    }
+    node.style.cssText += ";" + css;
+};
+
+},{"./hyphenateStyleName":"eCW3M","./removeStyle":"8r5se","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"dX3vZ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ownerDocument", ()=>_ownerDocumentDefault.default
+);
+parcelHelpers.export(exports, "ownerWindow", ()=>_ownerWindowDefault.default
+);
+parcelHelpers.export(exports, "getWindow", ()=>_getWindowDefault.default
+);
+parcelHelpers.export(exports, "getContainer", ()=>_getContainerDefault.default
+);
+parcelHelpers.export(exports, "canUseDOM", ()=>_canUseDOMDefault.default
+);
+parcelHelpers.export(exports, "contains", ()=>_containsDefault.default
+);
+parcelHelpers.export(exports, "scrollTop", ()=>_scrollTopDefault.default
+);
+parcelHelpers.export(exports, "scrollLeft", ()=>_scrollLeftDefault.default
+);
+parcelHelpers.export(exports, "getOffset", ()=>_getOffsetDefault.default
+);
+parcelHelpers.export(exports, "nodeName", ()=>_nodeNameDefault.default
+);
+parcelHelpers.export(exports, "getOffsetParent", ()=>_getOffsetParentDefault.default
+);
+parcelHelpers.export(exports, "getPosition", ()=>_getPositionDefault.default
+);
+parcelHelpers.export(exports, "isOverflowing", ()=>_isOverflowingDefault.default
+);
+parcelHelpers.export(exports, "activeElement", ()=>_activeElementDefault.default
+);
+parcelHelpers.export(exports, "getScrollbarSize", ()=>_getScrollbarSizeDefault.default
+);
+parcelHelpers.export(exports, "getHeight", ()=>_getHeightDefault.default
+);
+parcelHelpers.export(exports, "getWidth", ()=>_getWidthDefault.default
+);
+var _ownerDocument = require("./ownerDocument");
+var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
+var _ownerWindow = require("./ownerWindow");
+var _ownerWindowDefault = parcelHelpers.interopDefault(_ownerWindow);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+var _getContainer = require("./getContainer");
+var _getContainerDefault = parcelHelpers.interopDefault(_getContainer);
+var _canUseDOM = require("./canUseDOM");
+var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
+var _contains = require("./contains");
+var _containsDefault = parcelHelpers.interopDefault(_contains);
+var _scrollTop = require("./scrollTop");
+var _scrollTopDefault = parcelHelpers.interopDefault(_scrollTop);
+var _scrollLeft = require("./scrollLeft");
+var _scrollLeftDefault = parcelHelpers.interopDefault(_scrollLeft);
+var _getOffset = require("./getOffset");
+var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
+var _nodeName = require("./nodeName");
+var _nodeNameDefault = parcelHelpers.interopDefault(_nodeName);
+var _getOffsetParent = require("./getOffsetParent");
+var _getOffsetParentDefault = parcelHelpers.interopDefault(_getOffsetParent);
+var _getPosition = require("./getPosition");
+var _getPositionDefault = parcelHelpers.interopDefault(_getPosition);
+var _isOverflowing = require("./isOverflowing");
+var _isOverflowingDefault = parcelHelpers.interopDefault(_isOverflowing);
+var _activeElement = require("./activeElement");
+var _activeElementDefault = parcelHelpers.interopDefault(_activeElement);
+var _getScrollbarSize = require("./getScrollbarSize");
+var _getScrollbarSizeDefault = parcelHelpers.interopDefault(_getScrollbarSize);
+var _getHeight = require("./getHeight");
+var _getHeightDefault = parcelHelpers.interopDefault(_getHeight);
+var _getWidth = require("./getWidth");
+var _getWidthDefault = parcelHelpers.interopDefault(_getWidth);
+
+},{"./ownerDocument":"5p6uk","./ownerWindow":"7xYdA","./getWindow":"gjq3Q","./getContainer":"hve0I","./canUseDOM":"d71TM","./contains":"h2Ttx","./scrollTop":"3okGk","./scrollLeft":"c2AFm","./getOffset":"cRld0","./nodeName":"eANiG","./getOffsetParent":"kAWFI","./getPosition":"8ZbAV","./isOverflowing":"ahG2B","./activeElement":"7b2Jv","./getScrollbarSize":"636L2","./getHeight":"Ic6Z4","./getWidth":"aN1RF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5p6uk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(node) {
+    return node && node.ownerDocument || document;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7xYdA":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ownerDocument = require("./ownerDocument");
+var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
+exports.default = function(componentOrElement) {
+    var doc = _ownerDocumentDefault.default(componentOrElement);
+    return doc.defaultView;
+};
+
+},{"./ownerDocument":"5p6uk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gjq3Q":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(node) {
+    if (node === (node === null || node === void 0 ? void 0 : node.window)) return node;
+    return (node === null || node === void 0 ? void 0 : node.nodeType) === 9 ? (node === null || node === void 0 ? void 0 : node.defaultView) || (node === null || node === void 0 ? void 0 : node.parentWindow) : null;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hve0I":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(container, defaultContainer) {
+    container = typeof container === 'function' ? container() : container;
+    return container || defaultContainer;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"d71TM":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
+exports.default = canUseDOM;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"h2Ttx":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _canUseDOM = require("./canUseDOM");
+var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
+var fallback = function fallback1(context, node) {
+    if (node) do {
+        if (node === context) return true;
+    }while (node = node.parentNode)
+    return false;
+}; // HTML DOM and SVG DOM may have different support levels,
+// so we need to check on context instead of a document root element.
+var contains = function contains1(context, node) {
+    if (context.contains) return context.contains(node);
+    else if (context.compareDocumentPosition) return context === node || !!(context.compareDocumentPosition(node) & 16);
+    return fallback(context, node);
+};
+exports.default = (function() {
+    return _canUseDOMDefault.default ? contains : fallback;
+})();
+
+},{"./canUseDOM":"d71TM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3okGk":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+exports.default = function(node, val) {
+    var win = _getWindowDefault.default(node);
+    var top = node.scrollTop;
+    var left = 0;
+    if (win) {
+        top = win.pageYOffset;
+        left = win.pageXOffset;
+    }
+    if (val !== undefined) {
+        if (win) win.scrollTo(left, val);
+        else node.scrollTop = val;
+    }
+    return top;
+};
+
+},{"./getWindow":"gjq3Q","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"c2AFm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+exports.default = function(node, val) {
+    var win = _getWindowDefault.default(node);
+    var left = node.scrollLeft;
+    var top = 0;
+    if (win) {
+        left = win.pageXOffset;
+        top = win.pageYOffset;
+    }
+    if (val !== undefined) {
+        if (win) win.scrollTo(val, top);
+        else node.scrollLeft = val;
+    }
+    return left;
+};
+
+},{"./getWindow":"gjq3Q","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cRld0":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ownerDocument = require("./ownerDocument");
+var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+var _contains = require("./contains");
+var _containsDefault = parcelHelpers.interopDefault(_contains);
+exports.default = function(node) {
+    var doc = _ownerDocumentDefault.default(node);
+    var win = _getWindowDefault.default(doc);
+    var docElem = doc && doc.documentElement;
+    var box = {
+        top: 0,
+        left: 0,
+        height: 0,
+        width: 0
+    };
+    if (!doc) return null;
+     // Make sure it's not a disconnected DOM node
+    if (!_containsDefault.default(docElem, node)) return box;
+    if (node.getBoundingClientRect !== undefined) box = node.getBoundingClientRect();
+    if ((box.width || box.height) && docElem && win) box = {
+        top: box.top + (win.pageYOffset || docElem.scrollTop) - (docElem.clientTop || 0),
+        left: box.left + (win.pageXOffset || docElem.scrollLeft) - (docElem.clientLeft || 0),
+        width: (box.width === null ? node.offsetWidth : box.width) || 0,
+        height: (box.height === null ? node.offsetHeight : box.height) || 0
+    };
+    return box;
+};
+
+},{"./ownerDocument":"5p6uk","./getWindow":"gjq3Q","./contains":"h2Ttx","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eANiG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(node) {
+    var _node$nodeName;
+    return (node === null || node === void 0 ? void 0 : node.nodeName) && (node === null || node === void 0 ? void 0 : (_node$nodeName = node.nodeName) === null || _node$nodeName === void 0 ? void 0 : _node$nodeName.toLowerCase());
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kAWFI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _ownerDocument = require("./ownerDocument");
+var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
+var _nodeName = require("./nodeName");
+var _nodeNameDefault = parcelHelpers.interopDefault(_nodeName);
+var _style = require("../style");
+exports.default = function(node) {
+    var _ref;
+    var doc = _ownerDocumentDefault.default(node);
+    var offsetParent = (_ref = node) === null || _ref === void 0 ? void 0 : _ref.offsetParent;
+    while(offsetParent && _nodeNameDefault.default(node) !== 'html' && _style.getStyle(offsetParent, 'position') === 'static')offsetParent = offsetParent.offsetParent;
+    return offsetParent || doc.documentElement;
+};
+
+},{"./ownerDocument":"5p6uk","./nodeName":"eANiG","../style":"hHjWl","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8ZbAV":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _getOffsetParent = require("./getOffsetParent");
+var _getOffsetParentDefault = parcelHelpers.interopDefault(_getOffsetParent);
+var _getOffset = require("./getOffset");
+var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
+var _style = require("../style");
+var _scrollTop = require("./scrollTop");
+var _scrollTopDefault = parcelHelpers.interopDefault(_scrollTop);
+var _scrollLeft = require("./scrollLeft");
+var _scrollLeftDefault = parcelHelpers.interopDefault(_scrollLeft);
+var _nodeName = require("./nodeName");
+var _nodeNameDefault = parcelHelpers.interopDefault(_nodeName);
+exports.default = function(node, offsetParent) {
+    var parentOffset = {
+        top: 0,
+        left: 0
+    };
+    var offset = null; // Fixed elements are offset from window (parentOffset = {top:0, left: 0},
+    // because it is its only offset parent
+    if (_style.getStyle(node, 'position') === 'fixed') offset = node.getBoundingClientRect();
+    else {
+        offsetParent = offsetParent || _getOffsetParentDefault.default(node);
+        offset = _getOffsetDefault.default(node);
+        if (_nodeNameDefault.default(offsetParent) !== 'html') {
+            var nextParentOffset = _getOffsetDefault.default(offsetParent);
+            if (nextParentOffset) {
+                parentOffset.top = nextParentOffset.top;
+                parentOffset.left = nextParentOffset.left;
+            }
+        }
+        parentOffset.top += parseInt(_style.getStyle(offsetParent, 'borderTopWidth'), 10) - _scrollTopDefault.default(offsetParent) || 0;
+        parentOffset.left += parseInt(_style.getStyle(offsetParent, 'borderLeftWidth'), 10) - _scrollLeftDefault.default(offsetParent) || 0;
+    } // Subtract parent offsets and node margins
+    if (offset) return _extendsDefault.default({
+    }, offset, {
+        top: offset.top - parentOffset.top - (parseInt(_style.getStyle(node, 'marginTop'), 10) || 0),
+        left: offset.left - parentOffset.left - (parseInt(_style.getStyle(node, 'marginLeft'), 10) || 0)
+    });
+    return null;
+};
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","./getOffsetParent":"kAWFI","./getOffset":"cRld0","../style":"hHjWl","./scrollTop":"3okGk","./scrollLeft":"c2AFm","./nodeName":"eANiG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ahG2B":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+var _ownerDocument = require("./ownerDocument");
+var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
+function bodyIsOverflowing(node) {
+    var doc = _ownerDocumentDefault.default(node);
+    var win = _getWindowDefault.default(doc);
+    var fullWidth = win.innerWidth;
+    if (doc.body) return doc.body.clientWidth < fullWidth;
+    return false;
+}
+exports.default = function(container) {
+    var win = _getWindowDefault.default(container);
+    var isBody = container && container.tagName.toLowerCase() === 'body';
+    return win || isBody ? bodyIsOverflowing(container) : container.scrollHeight > container.clientHeight;
+};
+
+},{"./getWindow":"gjq3Q","./ownerDocument":"5p6uk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7b2Jv":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+exports.default = function(doc) {
+    if (doc === void 0) doc = document;
+    return doc.activeElement;
+};
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"636L2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _canUseDOM = require("./canUseDOM");
+var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
+var size;
+exports.default = function(recalc) {
+    if (size === undefined || recalc) {
+        if (_canUseDOMDefault.default) {
+            var scrollDiv = document.createElement('div');
+            var body = document.body;
+            scrollDiv.style.position = 'absolute';
+            scrollDiv.style.top = '-9999px';
+            scrollDiv.style.width = '50px';
+            scrollDiv.style.height = '50px';
+            scrollDiv.style.overflow = 'scroll';
+            body.appendChild(scrollDiv);
+            size = scrollDiv.offsetWidth - scrollDiv.clientWidth;
+            body.removeChild(scrollDiv);
+        }
+    }
+    return size;
+};
+
+},{"./canUseDOM":"d71TM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"Ic6Z4":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+var _getOffset = require("./getOffset");
+var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
+exports.default = function(node, client) {
+    var win = _getWindowDefault.default(node);
+    if (win) return win.innerHeight;
+    return client ? node.clientHeight : _getOffsetDefault.default(node).height;
+};
+
+},{"./getWindow":"gjq3Q","./getOffset":"cRld0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aN1RF":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getWindow = require("./getWindow");
+var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
+var _getOffset = require("./getOffset");
+var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
+exports.default = function(node, client) {
+    var win = _getWindowDefault.default(node);
+    if (win) return win.innerWidth;
+    if (client) return node.clientWidth;
+    var offset = _getOffsetDefault.default(node);
+    return offset ? offset.width : 0;
+};
+
+},{"./getWindow":"gjq3Q","./getOffset":"cRld0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"6jkjG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "on", ()=>_onDefault.default
+);
+parcelHelpers.export(exports, "off", ()=>_offDefault.default
+);
+var _on = require("./on");
+var _onDefault = parcelHelpers.interopDefault(_on);
+var _off = require("./off");
+var _offDefault = parcelHelpers.interopDefault(_off);
+
+},{"./on":"4PPE2","./off":"eyjDS","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"4PPE2":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function on(target, eventType, listener, options) {
+    if (options === void 0) options = false;
+    target.addEventListener(eventType, listener, options);
+    return {
+        off: function off() {
+            target.removeEventListener(eventType, listener, options);
+        }
+    };
+}
+exports.default = on;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eyjDS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+function on(target, eventName, listener, options) {
+    if (options === void 0) options = false;
+    target.removeEventListener(eventName, listener, options);
+}
+exports.default = on;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cdMa5":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "cancelAnimationFramePolyfill", ()=>_cancelAnimationFramePolyfillDefault.default
+);
+parcelHelpers.export(exports, "nativeRequestAnimationFrame", ()=>_nativeRequestAnimationFrameDefault.default
+);
+parcelHelpers.export(exports, "requestAnimationFramePolyfill", ()=>_requestAnimationFramePolyfillDefault.default
+);
+parcelHelpers.export(exports, "events", ()=>events
+);
+var _query = require("../query");
+var _cancelAnimationFramePolyfill = require("./cancelAnimationFramePolyfill");
+var _cancelAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_cancelAnimationFramePolyfill);
+var _nativeRequestAnimationFrame = require("./nativeRequestAnimationFrame");
+var _nativeRequestAnimationFrameDefault = parcelHelpers.interopDefault(_nativeRequestAnimationFrame);
+var _requestAnimationFramePolyfill = require("./requestAnimationFramePolyfill");
+var _requestAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_requestAnimationFramePolyfill);
+var vendorMap = {
+    animation: 'animationend',
+    OAnimation: 'oAnimationEnd',
+    MozAnimation: 'animationend',
+    WebkitAnimation: 'webkitAnimationEnd'
+};
+function getAnimationEvent() {
+    if (!_query.canUseDOM) return;
+    var tempAnimationEnd;
+    var style = document.createElement('div').style;
+    for(tempAnimationEnd in vendorMap){
+        if (style[tempAnimationEnd] !== undefined) return vendorMap[tempAnimationEnd];
+    }
+}
+var events = function events1() {
+    return {
+        end: getAnimationEvent()
+    };
+};
+
+},{"../query":"dX3vZ","./cancelAnimationFramePolyfill":"1vT9O","./nativeRequestAnimationFrame":"kKKKT","./requestAnimationFramePolyfill":"fMwZt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1vT9O":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getGlobal = require("../getGlobal");
+var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
+var g = _getGlobalDefault.default();
+exports.default = g.cancelAnimationFrame || g.webkitCancelAnimationFrame || g.clearTimeout;
+
+},{"../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eTpKs":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+// the only reliable means to get the global object is
+// `Function('return this')()`
+// However, this causes CSP violations in Chrome apps.
+// https://github.com/tc39/proposal-global
+function getGlobal() {
+    if (typeof globalThis !== 'undefined') return globalThis;
+    if (typeof self !== 'undefined') return self;
+    if (typeof window !== 'undefined') return window;
+    throw new Error('unable to locate global object');
+}
+exports.default = getGlobal;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kKKKT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getGlobal = require("../getGlobal");
+var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
+var g = _getGlobalDefault.default();
+exports.default = g.requestAnimationFrame || g.webkitRequestAnimationFrame;
+
+},{"../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fMwZt":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _nativeRequestAnimationFrame = require("./nativeRequestAnimationFrame");
+var _nativeRequestAnimationFrameDefault = parcelHelpers.interopDefault(_nativeRequestAnimationFrame);
+var _emptyFunction = require("../utils/emptyFunction");
+var _emptyFunctionDefault = parcelHelpers.interopDefault(_emptyFunction);
+var _getGlobal = require("../getGlobal");
+var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
+var g = _getGlobalDefault.default();
+var lastTime = 0;
+function _setTimeout(callback) {
+    var currTime = Date.now();
+    var timeDelay = Math.max(0, 16 - (currTime - lastTime));
+    lastTime = currTime + timeDelay;
+    return g.setTimeout(function() {
+        callback(Date.now());
+    }, timeDelay);
+}
+/**
+ * Here is the native and polyfill version of requestAnimationFrame.
+ * Please don't use it directly and use requestAnimationFrame module instead.
+ */ var requestAnimationFrame = _nativeRequestAnimationFrameDefault.default && _nativeRequestAnimationFrameDefault.default.bind(g) || _setTimeout; // Works around a rare bug in Safari 6 where the first request is never invoked.
+requestAnimationFrame(_emptyFunctionDefault.default);
+exports.default = requestAnimationFrame;
+
+},{"./nativeRequestAnimationFrame":"kKKKT","../utils/emptyFunction":"gGpTG","../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gGpTG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _this = undefined;
+function makeEmptyFunction(arg) {
+    return function() {
+        return arg;
+    };
+}
+function emptyFunction() {
+}
+emptyFunction.thatReturns = makeEmptyFunction;
+emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
+emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
+emptyFunction.thatReturnsNull = makeEmptyFunction(null);
+emptyFunction.thatReturnsThis = function() {
+    return _this;
+};
+emptyFunction.thatReturnsArgument = function(arg) {
+    return arg;
+};
+exports.default = emptyFunction;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8yzia":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _query = require("../query");
+function getTransitionProperties() {
+    if (!_query.canUseDOM) return {
+    };
+    var vendorMap = {
+        O: function O(e) {
+            return "o" + e.toLowerCase();
+        },
+        Moz: function Moz(e) {
+            return e.toLowerCase();
+        },
+        Webkit: function Webkit(e) {
+            return "webkit" + e;
+        },
+        ms: function ms(e) {
+            return "MS" + e;
+        }
+    };
+    var vendors = Object.keys(vendorMap);
+    var style = document.createElement('div').style;
+    var tempTransitionEnd;
+    var tempPrefix = '';
+    for(var i = 0; i < vendors.length; i += 1){
+        var vendor = vendors[i];
+        if (vendor + "TransitionProperty" in style) {
+            tempPrefix = "-" + vendor.toLowerCase();
+            tempTransitionEnd = vendorMap[vendor]('TransitionEnd');
+            break;
+        }
+    }
+    if (!tempTransitionEnd && 'transitionProperty' in style) tempTransitionEnd = 'transitionend';
+    style = null;
+    return {
+        transitionEnd: tempTransitionEnd,
+        prefix: tempPrefix
+    };
+}
+exports.default = function() {
+    var _getTransitionPropert = getTransitionProperties(), prefix = _getTransitionPropert.prefix, transitionEnd = _getTransitionPropert.transitionEnd;
+    var addPrefix = function addPrefix1(name) {
+        return prefix + "-" + name;
+    };
+    return {
+        end: transitionEnd,
+        backfaceVisibility: addPrefix('backface-visibility'),
+        transform: addPrefix('transform'),
+        property: addPrefix('transition-property'),
+        timing: addPrefix('transition-timing-function'),
+        delay: addPrefix('transition-delay'),
+        duration: addPrefix('transition-duration')
+    };
+};
+
+},{"../query":"dX3vZ","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"j8w56":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getTranslateDOMPositionXY", ()=>getTranslateDOMPositionXY
+);
+/**
+ * Source code reference from:
+ * https://github.com/facebook/fbjs/blob/d308fa83c9/packages/fbjs/src/dom/translateDOMPositionXY.js
+ */ var _browserSupportCore = require("../BrowserSupportCore");
+var _browserSupportCoreDefault = parcelHelpers.interopDefault(_browserSupportCore);
+var _getVendorPrefixedName = require("../getVendorPrefixedName");
+var _getVendorPrefixedNameDefault = parcelHelpers.interopDefault(_getVendorPrefixedName);
+var _getGlobal = require("../getGlobal");
+var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
+var g = _getGlobalDefault.default();
+var TRANSFORM = _getVendorPrefixedNameDefault.default('transform');
+var BACKFACE_VISIBILITY = _getVendorPrefixedNameDefault.default('backfaceVisibility');
+var getTranslateDOMPositionXY = function getTranslateDOMPositionXY1(conf) {
+    if (conf === void 0) conf = {
+        enable3DTransform: true
+    };
+    if (_browserSupportCoreDefault.default.hasCSSTransforms()) {
+        var ua = g.window ? g.window.navigator.userAgent : 'UNKNOWN';
+        var isSafari = /Safari\//.test(ua) && !/Chrome\//.test(ua); // It appears that Safari messes up the composition order
+        // of GPU-accelerated layers
+        // (see bug https://bugs.webkit.org/show_bug.cgi?id=61824).
+        // Use 2D translation instead.
+        if (!isSafari && _browserSupportCoreDefault.default.hasCSS3DTransforms() && conf.enable3DTransform) return function(style, x, y) {
+            if (x === void 0) x = 0;
+            if (y === void 0) y = 0;
+            style[TRANSFORM] = "translate3d(" + x + "px," + y + "px,0)";
+            style[BACKFACE_VISIBILITY] = 'hidden';
+            return style;
+        };
+        return function(style, x, y) {
+            if (x === void 0) x = 0;
+            if (y === void 0) y = 0;
+            style[TRANSFORM] = "translate(" + x + "px," + y + "px)";
+            return style;
+        };
+    }
+    return function(style, x, y) {
+        if (x === void 0) x = 0;
+        if (y === void 0) y = 0;
+        style.left = x + "px";
+        style.top = y + "px";
+        return style;
+    };
+};
+var translateDOMPositionXY = getTranslateDOMPositionXY();
+exports.default = translateDOMPositionXY;
+
+},{"../BrowserSupportCore":"dgMaP","../getVendorPrefixedName":"9fNX7","../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"dgMaP":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _getVendorPrefixedName = require("./getVendorPrefixedName");
+var _getVendorPrefixedNameDefault = parcelHelpers.interopDefault(_getVendorPrefixedName);
+exports.default = {
+    /**
+   * @return {bool} True if browser supports css animations.
+   */ hasCSSAnimations: function hasCSSAnimations() {
+        return !!_getVendorPrefixedNameDefault.default('animationName');
+    },
+    /**
+   * @return {bool} True if browser supports css transforms.
+   */ hasCSSTransforms: function hasCSSTransforms() {
+        return !!_getVendorPrefixedNameDefault.default('transform');
+    },
+    /**
+   * @return {bool} True if browser supports css 3d transforms.
+   */ hasCSS3DTransforms: function hasCSS3DTransforms() {
+        return !!_getVendorPrefixedNameDefault.default('perspective');
+    },
+    /**
+   * @return {bool} True if browser supports css transitions.
+   */ hasCSSTransitions: function hasCSSTransitions() {
+        return !!_getVendorPrefixedNameDefault.default('transition');
+    }
+};
+
+},{"./getVendorPrefixedName":"9fNX7","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9fNX7":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _canUseDOM = require("./query/canUseDOM");
+var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
+var _stringFormatter = require("./utils/stringFormatter");
+var memoized = {
+};
+var prefixes = [
+    'Webkit',
+    'ms',
+    'Moz',
+    'O'
+];
+var prefixRegex = new RegExp("^(" + prefixes.join('|') + ")");
+var testStyle = _canUseDOMDefault.default ? document.createElement('div').style : {
+};
+function getWithPrefix(name) {
+    for(var i = 0; i < prefixes.length; i += 1){
+        var prefixedName = prefixes[i] + name;
+        if (prefixedName in testStyle) return prefixedName;
+    }
+    return null;
+}
+/**
+ * @param {string} property Name of a css property to check for.
+ * @return {?string} property name supported in the browser, or null if not
+ * supported.
+ */ function getVendorPrefixedName(property) {
+    var name = _stringFormatter.camelize(property);
+    if (memoized[name] === undefined) {
+        var capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
+        if (prefixRegex.test(capitalizedName)) throw new Error("getVendorPrefixedName must only be called with unprefixed\n          CSS property names. It was called with " + property);
+        memoized[name] = name in testStyle ? name : getWithPrefix(capitalizedName);
+    }
+    return memoized[name];
+}
+exports.default = getVendorPrefixedName;
+
+},{"./query/canUseDOM":"d71TM","./utils/stringFormatter":"fXjfF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"adY8d":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Source code reference from:
+ * https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/dom/DOMMouseMoveTracker.js
+ */ var _on = require("./events/on");
+var _onDefault = parcelHelpers.interopDefault(_on);
+var _cancelAnimationFramePolyfill = require("./animation/cancelAnimationFramePolyfill");
+var _cancelAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_cancelAnimationFramePolyfill);
+var _requestAnimationFramePolyfill = require("./animation/requestAnimationFramePolyfill");
+var _requestAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_requestAnimationFramePolyfill);
+var DOMMouseMoveTracker = /*#__PURE__*/ function() {
+    /**
+   * onMove is the callback that will be called on every mouse move.
+   * onMoveEnd is called on mouse up when movement has ended.
+   */ function DOMMouseMoveTracker1(onMove, onMoveEnd, domNode) {
+        var _this = this;
+        this.isDraggingStatus = false;
+        this.animationFrameID = null;
+        this.domNode = void 0;
+        this.onMove = null;
+        this.onMoveEnd = null;
+        this.eventMoveToken = null;
+        this.eventUpToken = null;
+        this.moveEvent = null;
+        this.deltaX = 0;
+        this.deltaY = 0;
+        this.x = 0;
+        this.y = 0;
+        this.isDragging = function() {
+            return _this.isDraggingStatus;
+        };
+        this.onMouseMove = function(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            _this.deltaX += x - _this.x;
+            _this.deltaY += y - _this.y;
+            if (_this.animationFrameID === null) // The mouse may move faster then the animation frame does.
+            // Use `requestAnimationFramePolyfill` to avoid over-updating.
+            _this.animationFrameID = _requestAnimationFramePolyfillDefault.default(_this.didMouseMove);
+            _this.x = x;
+            _this.y = y;
+            _this.moveEvent = event;
+            event.preventDefault();
+        };
+        this.didMouseMove = function() {
+            _this.animationFrameID = null;
+            _this.onMove(_this.deltaX, _this.deltaY, _this.moveEvent);
+            _this.deltaX = 0;
+            _this.deltaY = 0;
+        };
+        this.onMouseUp = function(event) {
+            if (_this.animationFrameID) _this.didMouseMove();
+            _this.onMoveEnd && _this.onMoveEnd(event);
+        };
+        this.domNode = domNode;
+        this.onMove = onMove;
+        this.onMoveEnd = onMoveEnd;
+    }
+    /**
+   * This is to set up the listeners for listening to mouse move
+   * and mouse up signaling the movement has ended. Please note that these
+   * listeners are added at the document.body level. It takes in an event
+   * in order to grab inital state.
+   */ var _proto = DOMMouseMoveTracker1.prototype;
+    _proto.captureMouseMoves = function captureMouseMoves(event) {
+        if (!this.eventMoveToken && !this.eventUpToken) {
+            this.eventMoveToken = _onDefault.default(this.domNode, 'mousemove', this.onMouseMove);
+            this.eventUpToken = _onDefault.default(this.domNode, 'mouseup', this.onMouseUp);
+        }
+        if (!this.isDraggingStatus) {
+            this.deltaX = 0;
+            this.deltaY = 0;
+            this.isDraggingStatus = true;
+            this.x = event.clientX;
+            this.y = event.clientY;
+        }
+        event.preventDefault();
+    };
+    _proto.releaseMouseMoves = function releaseMouseMoves() {
+        if (this.eventMoveToken) {
+            this.eventMoveToken.off();
+            this.eventMoveToken = null;
+        }
+        if (this.eventUpToken) {
+            this.eventUpToken.off();
+            this.eventUpToken = null;
+        }
+        if (this.animationFrameID !== null) {
+            _cancelAnimationFramePolyfillDefault.default(this.animationFrameID);
+            this.animationFrameID = null;
+        }
+        if (this.isDraggingStatus) {
+            this.isDraggingStatus = false;
+            this.x = 0;
+            this.y = 0;
+        }
+    };
+    return DOMMouseMoveTracker1;
+}();
+exports.default = DOMMouseMoveTracker;
+
+},{"./events/on":"4PPE2","./animation/cancelAnimationFramePolyfill":"1vT9O","./animation/requestAnimationFramePolyfill":"fMwZt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"6ID40":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _emptyFunction = require("./utils/emptyFunction");
+var _emptyFunctionDefault = parcelHelpers.interopDefault(_emptyFunction);
+var _normalizeWheel = require("./normalizeWheel");
+var _normalizeWheelDefault = parcelHelpers.interopDefault(_normalizeWheel);
+var _requestAnimationFramePolyfill = require("./animation/requestAnimationFramePolyfill");
+var _requestAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_requestAnimationFramePolyfill);
+var WheelHandler = /*#__PURE__*/ function() {
+    function WheelHandler1(onWheel, handleScrollX, handleScrollY, stopPropagation) {
+        this.animationFrameID = null;
+        this.deltaX = 0;
+        this.deltaY = 0;
+        this.handleScrollX = null;
+        this.handleScrollY = null;
+        this.stopPropagation = null;
+        this.onWheelCallback = null;
+        this.didWheel = this.didWheel.bind(this);
+        if (typeof handleScrollX !== 'function') handleScrollX = handleScrollX ? _emptyFunctionDefault.default.thatReturnsTrue : _emptyFunctionDefault.default.thatReturnsFalse;
+        if (typeof handleScrollY !== 'function') handleScrollY = handleScrollY ? _emptyFunctionDefault.default.thatReturnsTrue : _emptyFunctionDefault.default.thatReturnsFalse;
+        if (typeof stopPropagation !== 'function') stopPropagation = stopPropagation ? _emptyFunctionDefault.default.thatReturnsTrue : _emptyFunctionDefault.default.thatReturnsFalse;
+        this.handleScrollX = handleScrollX;
+        this.handleScrollY = handleScrollY;
+        this.stopPropagation = stopPropagation;
+        this.onWheelCallback = onWheel;
+        this.onWheel = this.onWheel.bind(this);
+    }
+    var _proto = WheelHandler1.prototype;
+    _proto.onWheel = function onWheel(event) {
+        var normalizedEvent = _normalizeWheelDefault.default(event);
+        var deltaX = this.deltaX + normalizedEvent.pixelX;
+        var deltaY = this.deltaY + normalizedEvent.pixelY;
+        var handleScrollX = this.handleScrollX(deltaX, deltaY);
+        var handleScrollY = this.handleScrollY(deltaY, deltaX);
+        if (!handleScrollX && !handleScrollY) return;
+        this.deltaX += handleScrollX ? normalizedEvent.pixelX : 0;
+        this.deltaY += handleScrollY ? normalizedEvent.pixelY : 0;
+        event.preventDefault();
+        var changed;
+        if (this.deltaX !== 0 || this.deltaY !== 0) {
+            if (this.stopPropagation()) event.stopPropagation();
+            changed = true;
+        }
+        if (changed === true && this.animationFrameID === null) this.animationFrameID = _requestAnimationFramePolyfillDefault.default(this.didWheel);
+    };
+    _proto.didWheel = function didWheel() {
+        this.animationFrameID = null;
+        this.onWheelCallback(this.deltaX, this.deltaY);
+        this.deltaX = 0;
+        this.deltaY = 0;
+    };
+    return WheelHandler1;
+}();
+exports.default = WheelHandler;
+
+},{"./utils/emptyFunction":"gGpTG","./normalizeWheel":"9hCfL","./animation/requestAnimationFramePolyfill":"fMwZt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9hCfL":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _userAgentDEPRECATED = require("./utils/UserAgent_DEPRECATED");
+var _userAgentDEPRECATEDDefault = parcelHelpers.interopDefault(_userAgentDEPRECATED);
+var _isEventSupported = require("./utils/isEventSupported"); // Reasonable defaults
+var _isEventSupportedDefault = parcelHelpers.interopDefault(_isEventSupported);
+var PIXEL_STEP = 10;
+var LINE_HEIGHT = 40;
+var PAGE_HEIGHT = 800;
+function normalizeWheel(event) {
+    var sX = 0;
+    var sY = 0; // spinX, spinY
+    var pX = 0;
+    var pY = 0; // pixelX, pixelY
+    // Legacy
+    if ('detail' in event) sY = event.detail;
+    if ('wheelDelta' in event) sY = -event.wheelDelta / 120;
+    if ('wheelDeltaY' in event) sY = -event.wheelDeltaY / 120;
+    if ('wheelDeltaX' in event) sX = -event.wheelDeltaX / 120;
+     // side scrolling on FF with DOMMouseScroll
+    if ('axis' in event && event.axis === event.HORIZONTAL_AXIS) {
+        sX = sY;
+        sY = 0;
+    }
+    pX = sX * PIXEL_STEP;
+    pY = sY * PIXEL_STEP;
+    if ('deltaY' in event) pY = event.deltaY;
+    if ('deltaX' in event) pX = event.deltaX;
+    if ((pX || pY) && event.deltaMode) {
+        if (event.deltaMode === 1) {
+            // delta in LINE units
+            pX *= LINE_HEIGHT;
+            pY *= LINE_HEIGHT;
+        } else {
+            // delta in PAGE units
+            pX *= PAGE_HEIGHT;
+            pY *= PAGE_HEIGHT;
+        }
+    } // Fall-back if spin cannot be determined
+    if (pX && !sX) sX = pX < 1 ? -1 : 1;
+    if (pY && !sY) sY = pY < 1 ? -1 : 1;
+    return {
+        spinX: sX,
+        spinY: sY,
+        pixelX: pX,
+        pixelY: pY
+    };
+}
+/**
+ * The best combination if you prefer spinX + spinY normalization.  It favors
+ * the older DOMMouseScroll for Firefox, as FF does not include wheelDelta with
+ * 'wheel' event, making spin speed determination impossible.
+ */ normalizeWheel.getEventType = function() {
+    if (_userAgentDEPRECATEDDefault.default.firefox()) return 'DOMMouseScroll';
+    return _isEventSupportedDefault.default('wheel') ? 'wheel' : 'mousewheel';
+};
+exports.default = normalizeWheel;
+
+},{"./utils/UserAgent_DEPRECATED":"3j8ZK","./utils/isEventSupported":"35Ffp","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3j8ZK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var populated = false; // Browsers
+var _ie;
+var _firefox;
+var _opera;
+var _webkit;
+var _chrome; // Actual IE browser for compatibility mode
+var ieRealVersion; // Platforms
+var _osx;
+var _windows;
+var _linux;
+var _android; // Architectures
+var win64; // Devices
+var _iphone;
+var _ipad;
+var _native;
+var _mobile;
+function populate() {
+    if (populated) return;
+    populated = true; // To work around buggy JS libraries that can't handle multi-digit
+    // version numbers, Opera 10's user agent string claims it's Opera
+    // 9, then later includes a Version/X.Y field:
+    //
+    // Opera/9.80 (foo) Presto/2.2.15 Version/10.10
+    var uas = navigator.userAgent;
+    var agent = /(?:MSIE.(\d+\.\d+))|(?:(?:Firefox|GranParadiso|Iceweasel).(\d+\.\d+))|(?:Opera(?:.+Version.|.)(\d+\.\d+))|(?:AppleWebKit.(\d+(?:\.\d+)?))|(?:Trident\/\d+\.\d+.*rv:(\d+\.\d+))/.exec(uas);
+    var os = /(Mac OS X)|(Windows)|(Linux)/.exec(uas);
+    _iphone = /\b(iPhone|iP[ao]d)/.exec(uas);
+    _ipad = /\b(iP[ao]d)/.exec(uas);
+    _android = /Android/i.exec(uas);
+    _native = /FBAN\/\w+;/i.exec(uas);
+    _mobile = /Mobile/i.exec(uas); // Note that the IE team blog would have you believe you should be checking
+    // for 'Win64; x64'.  But MSDN then reveals that you can actually be coming
+    // from either x64 or ia64;  so ultimately, you should just check for Win64
+    // as in indicator of whether you're in 64-bit IE.  32-bit IE on 64-bit
+    // Windows will send 'WOW64' instead.
+    win64 = !!/Win64/.exec(uas);
+    if (agent) {
+        if (agent[1]) _ie = parseFloat(agent[1]);
+        else _ie = agent[5] ? parseFloat(agent[5]) : NaN;
+         // IE compatibility mode
+        // @ts-ignore
+        if (_ie && document && document.documentMode) // @ts-ignore
+        _ie = document.documentMode;
+         // grab the "true" ie version from the trident token if available
+        var trident = /(?:Trident\/(\d+.\d+))/.exec(uas);
+        ieRealVersion = trident ? parseFloat(trident[1]) + 4 : _ie;
+        _firefox = agent[2] ? parseFloat(agent[2]) : NaN;
+        _opera = agent[3] ? parseFloat(agent[3]) : NaN;
+        _webkit = agent[4] ? parseFloat(agent[4]) : NaN;
+        if (_webkit) {
+            // We do not add the regexp to the above test, because it will always
+            // match 'safari' only since 'AppleWebKit' appears before 'Chrome' in
+            // the userAgent string.
+            agent = /(?:Chrome\/(\d+\.\d+))/.exec(uas);
+            _chrome = agent && agent[1] ? parseFloat(agent[1]) : NaN;
+        } else _chrome = NaN;
+    } else {
+        _ie = NaN;
+        _firefox = NaN;
+        _opera = NaN;
+        _chrome = NaN;
+        _webkit = NaN;
+    }
+    if (os) {
+        if (os[1]) {
+            // Detect OS X version.  If no version number matches, set osx to true.
+            // Version examples:  10, 10_6_1, 10.7
+            // Parses version number as a float, taking only first two sets of
+            // digits.  If only one set of digits is found, returns just the major
+            // version number.
+            var ver = /(?:Mac OS X (\d+(?:[._]\d+)?))/.exec(uas);
+            _osx = ver ? parseFloat(ver[1].replace('_', '.')) : true;
+        } else _osx = false;
+        _windows = !!os[2];
+        _linux = !!os[3];
+    } else {
+        _osx = false;
+        _windows = false;
+        _linux = false;
+    }
+}
+var UserAgent = {
+    /**
+   *  Check if the UA is Internet Explorer.
+   *
+   *
+   *  @return float|NaN Version number (if match) or NaN.
+   */ ie: function ie() {
+        return populate() || _ie;
+    },
+    /**
+   * Check if we're in Internet Explorer compatibility mode.
+   *
+   * @return bool true if in compatibility mode, false if
+   * not compatibility mode or not ie
+   */ ieCompatibilityMode: function ieCompatibilityMode() {
+        return populate() || ieRealVersion > _ie;
+    },
+    /**
+   * Whether the browser is 64-bit IE.  Really, this is kind of weak sauce;  we
+   * only need this because Skype can't handle 64-bit IE yet.  We need to remove
+   * this when we don't need it -- tracked by #601957.
+   */ ie64: function ie64() {
+        return UserAgent.ie() && win64;
+    },
+    /**
+   *  Check if the UA is Firefox.
+   *
+   *
+   *  @return float|NaN Version number (if match) or NaN.
+   */ firefox: function firefox() {
+        return populate() || _firefox;
+    },
+    /**
+   *  Check if the UA is Opera.
+   *
+   *
+   *  @return float|NaN Version number (if match) or NaN.
+   */ opera: function opera() {
+        return populate() || _opera;
+    },
+    /**
+   *  Check if the UA is WebKit.
+   *
+   *
+   *  @return float|NaN Version number (if match) or NaN.
+   */ webkit: function webkit() {
+        return populate() || _webkit;
+    },
+    /**
+   *  For Push
+   *  WILL BE REMOVED VERY SOON. Use UserAgent_DEPRECATED.webkit
+   */ safari: function safari() {
+        return UserAgent.webkit();
+    },
+    /**
+   *  Check if the UA is a Chrome browser.
+   *
+   *
+   *  @return float|NaN Version number (if match) or NaN.
+   */ chrome: function chrome() {
+        return populate() || _chrome;
+    },
+    /**
+   *  Check if the user is running Windows.
+   *
+   *  @return bool `true' if the user's OS is Windows.
+   */ windows: function windows() {
+        return populate() || _windows;
+    },
+    /**
+   *  Check if the user is running Mac OS X.
+   *
+   *  @return float|bool   Returns a float if a version number is detected,
+   *                       otherwise true/false.
+   */ osx: function osx() {
+        return populate() || _osx;
+    },
+    /**
+   * Check if the user is running Linux.
+   *
+   * @return bool `true' if the user's OS is some flavor of Linux.
+   */ linux: function linux() {
+        return populate() || _linux;
+    },
+    /**
+   * Check if the user is running on an iPhone or iPod platform.
+   *
+   * @return bool `true' if the user is running some flavor of the
+   *    iPhone OS.
+   */ iphone: function iphone() {
+        return populate() || _iphone;
+    },
+    mobile: function mobile() {
+        return populate() || _iphone || _ipad || _android || _mobile;
+    },
+    // webviews inside of the native apps
+    nativeApp: function nativeApp() {
+        return populate() || _native;
+    },
+    android: function android() {
+        return populate() || _android;
+    },
+    ipad: function ipad() {
+        return populate() || _ipad;
+    }
+};
+exports.default = UserAgent;
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"35Ffp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _canUseDOM = require("../query/canUseDOM");
+var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
+var useHasFeature;
+if (_canUseDOMDefault.default) useHasFeature = document.implementation && document.implementation.hasFeature && // @see http://dom.spec.whatwg.org/#dom-domimplementation-hasfeature
+document.implementation.hasFeature('', '') !== true;
+function isEventSupported(eventNameSuffix, capture) {
+    if (!_canUseDOMDefault.default || capture && !('addEventListener' in document)) return false;
+    var eventName = "on" + eventNameSuffix;
+    var isSupported = eventName in document;
+    if (!isSupported) {
+        var element = document.createElement('div');
+        element.setAttribute(eventName, 'return;');
+        isSupported = typeof element[eventName] === 'function';
+    }
+    if (!isSupported && useHasFeature && eventNameSuffix === 'wheel') // This is the only way to test support for the `wheel` event in IE9+.
+    isSupported = document.implementation.hasFeature('Events.wheel', '3.0');
+    return isSupported;
+}
+exports.default = isEventSupported;
+
+},{"../query/canUseDOM":"d71TM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fZGOX":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _utils = require("../utils");
+function FormattedDate(_ref) {
+    var date = _ref.date, formatStr = _ref.formatStr;
+    var _useCustom = _utils.useCustom('Calendar'), formatDate = _useCustom.formatDate;
+    return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, formatDate(date, formatStr)));
+}
+exports.default = FormattedDate;
+
+},{"react":"6TuXu","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"iz9Dz":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "DateUtils", ()=>_dateUtils
@@ -23880,25 +30491,7 @@ var arrayEach = require('./_arrayEach'), baseEach = require('./_baseEach'), cast
 }
 module.exports = forEach;
 
-},{"./_arrayEach":"9K3TC","./_baseEach":"jYjd1","./_castFunction":"h30ZT","./isArray":"9D9dp"}],"9K3TC":[function(require,module,exports) {
-/**
- * A specialized version of `_.forEach` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns `array`.
- */ function arrayEach(array, iteratee) {
-    var index = -1, length = array == null ? 0 : array.length;
-    while((++index) < length){
-        if (iteratee(array[index], index, array) === false) break;
-    }
-    return array;
-}
-module.exports = arrayEach;
-
-},{}],"jYjd1":[function(require,module,exports) {
+},{"./_arrayEach":"9K3TC","./_baseEach":"jYjd1","./_castFunction":"h30ZT","./isArray":"9D9dp"}],"jYjd1":[function(require,module,exports) {
 var baseForOwn = require('./_baseForOwn'), createBaseEach = require('./_createBaseEach');
 /**
  * The base implementation of `_.forEach` without support for iteratee shorthands.
@@ -23958,564 +30551,6 @@ module.exports = baseFor;
 }
 module.exports = createBaseFor;
 
-},{}],"5XTkY":[function(require,module,exports) {
-var arrayLikeKeys = require('./_arrayLikeKeys'), baseKeys = require('./_baseKeys'), isArrayLike = require('./isArrayLike');
-/**
- * Creates an array of the own enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects. See the
- * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
- * for more details.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keys(new Foo);
- * // => ['a', 'b'] (iteration order is not guaranteed)
- *
- * _.keys('hi');
- * // => ['0', '1']
- */ function keys(object) {
-    return isArrayLike(object) ? arrayLikeKeys(object) : baseKeys(object);
-}
-module.exports = keys;
-
-},{"./_arrayLikeKeys":"e7sMV","./_baseKeys":"77Ehy","./isArrayLike":"eRE0j"}],"e7sMV":[function(require,module,exports) {
-var baseTimes = require('./_baseTimes'), isArguments = require('./isArguments'), isArray = require('./isArray'), isBuffer = require('./isBuffer'), isIndex = require('./_isIndex'), isTypedArray = require('./isTypedArray');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Creates an array of the enumerable property names of the array-like `value`.
- *
- * @private
- * @param {*} value The value to query.
- * @param {boolean} inherited Specify returning inherited property names.
- * @returns {Array} Returns the array of property names.
- */ function arrayLikeKeys(value, inherited) {
-    var isArr = isArray(value), isArg = !isArr && isArguments(value), isBuff = !isArr && !isArg && isBuffer(value), isType = !isArr && !isArg && !isBuff && isTypedArray(value), skipIndexes = isArr || isArg || isBuff || isType, result = skipIndexes ? baseTimes(value.length, String) : [], length = result.length;
-    for(var key in value)if ((inherited || hasOwnProperty.call(value, key)) && !(skipIndexes && // Safari 9 has enumerable `arguments.length` in strict mode.
-    (key == 'length' || isBuff && (key == 'offset' || key == 'parent') || isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset') || // Skip index properties.
-    isIndex(key, length)))) result.push(key);
-    return result;
-}
-module.exports = arrayLikeKeys;
-
-},{"./_baseTimes":"dkOAg","./isArguments":"fTXal","./isArray":"9D9dp","./isBuffer":"ltSVx","./_isIndex":"2RH5V","./isTypedArray":"81D2R"}],"dkOAg":[function(require,module,exports) {
-/**
- * The base implementation of `_.times` without support for iteratee shorthands
- * or max array length checks.
- *
- * @private
- * @param {number} n The number of times to invoke `iteratee`.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns the array of results.
- */ function baseTimes(n, iteratee) {
-    var index = -1, result = Array(n);
-    while((++index) < n)result[index] = iteratee(index);
-    return result;
-}
-module.exports = baseTimes;
-
-},{}],"fTXal":[function(require,module,exports) {
-var baseIsArguments = require('./_baseIsArguments'), isObjectLike = require('./isObjectLike');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-/**
- * Checks if `value` is likely an `arguments` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object,
- *  else `false`.
- * @example
- *
- * _.isArguments(function() { return arguments; }());
- * // => true
- *
- * _.isArguments([1, 2, 3]);
- * // => false
- */ var isArguments = baseIsArguments(function() {
-    return arguments;
-}()) ? baseIsArguments : function(value) {
-    return isObjectLike(value) && hasOwnProperty.call(value, 'callee') && !propertyIsEnumerable.call(value, 'callee');
-};
-module.exports = isArguments;
-
-},{"./_baseIsArguments":"fgSe8","./isObjectLike":"6ihSr"}],"fgSe8":[function(require,module,exports) {
-var baseGetTag = require('./_baseGetTag'), isObjectLike = require('./isObjectLike');
-/** `Object#toString` result references. */ var argsTag = '[object Arguments]';
-/**
- * The base implementation of `_.isArguments`.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an `arguments` object,
- */ function baseIsArguments(value) {
-    return isObjectLike(value) && baseGetTag(value) == argsTag;
-}
-module.exports = baseIsArguments;
-
-},{"./_baseGetTag":"hvTL4","./isObjectLike":"6ihSr"}],"hvTL4":[function(require,module,exports) {
-var Symbol1 = require('./_Symbol'), getRawTag = require('./_getRawTag'), objectToString = require('./_objectToString');
-/** `Object#toString` result references. */ var nullTag = '[object Null]', undefinedTag = '[object Undefined]';
-/** Built-in value references. */ var symToStringTag = Symbol1 ? Symbol1.toStringTag : undefined;
-/**
- * The base implementation of `getTag` without fallbacks for buggy environments.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */ function baseGetTag(value) {
-    if (value == null) return value === undefined ? undefinedTag : nullTag;
-    return symToStringTag && symToStringTag in Object(value) ? getRawTag(value) : objectToString(value);
-}
-module.exports = baseGetTag;
-
-},{"./_Symbol":"g8MbF","./_getRawTag":"emeHW","./_objectToString":"agUt8"}],"g8MbF":[function(require,module,exports) {
-var root = require('./_root');
-/** Built-in value references. */ var Symbol1 = root.Symbol;
-module.exports = Symbol1;
-
-},{"./_root":"9w0IQ"}],"9w0IQ":[function(require,module,exports) {
-var freeGlobal = require('./_freeGlobal');
-/** Detect free variable `self`. */ var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
-/** Used as a reference to the global object. */ var root = freeGlobal || freeSelf || Function('return this')();
-module.exports = root;
-
-},{"./_freeGlobal":"jmyqD"}],"jmyqD":[function(require,module,exports) {
-var global = arguments[3];
-/** Detect free variable `global` from Node.js. */ var freeGlobal = typeof global == 'object' && global && global.Object === Object && global;
-module.exports = freeGlobal;
-
-},{}],"emeHW":[function(require,module,exports) {
-var Symbol1 = require('./_Symbol');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */ var nativeObjectToString = objectProto.toString;
-/** Built-in value references. */ var symToStringTag = Symbol1 ? Symbol1.toStringTag : undefined;
-/**
- * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the raw `toStringTag`.
- */ function getRawTag(value) {
-    var isOwn = hasOwnProperty.call(value, symToStringTag), tag = value[symToStringTag];
-    try {
-        value[symToStringTag] = undefined;
-        var unmasked = true;
-    } catch (e) {
-    }
-    var result = nativeObjectToString.call(value);
-    if (unmasked) {
-        if (isOwn) value[symToStringTag] = tag;
-        else delete value[symToStringTag];
-    }
-    return result;
-}
-module.exports = getRawTag;
-
-},{"./_Symbol":"g8MbF"}],"agUt8":[function(require,module,exports) {
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/**
- * Used to resolve the
- * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
- * of values.
- */ var nativeObjectToString = objectProto.toString;
-/**
- * Converts `value` to a string using `Object.prototype.toString`.
- *
- * @private
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- */ function objectToString(value) {
-    return nativeObjectToString.call(value);
-}
-module.exports = objectToString;
-
-},{}],"6ihSr":[function(require,module,exports) {
-/**
- * Checks if `value` is object-like. A value is object-like if it's not `null`
- * and has a `typeof` result of "object".
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
- * @example
- *
- * _.isObjectLike({});
- * // => true
- *
- * _.isObjectLike([1, 2, 3]);
- * // => true
- *
- * _.isObjectLike(_.noop);
- * // => false
- *
- * _.isObjectLike(null);
- * // => false
- */ function isObjectLike(value) {
-    return value != null && typeof value == 'object';
-}
-module.exports = isObjectLike;
-
-},{}],"9D9dp":[function(require,module,exports) {
-/**
- * Checks if `value` is classified as an `Array` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an array, else `false`.
- * @example
- *
- * _.isArray([1, 2, 3]);
- * // => true
- *
- * _.isArray(document.body.children);
- * // => false
- *
- * _.isArray('abc');
- * // => false
- *
- * _.isArray(_.noop);
- * // => false
- */ var isArray = Array.isArray;
-module.exports = isArray;
-
-},{}],"ltSVx":[function(require,module,exports) {
-var root = require('./_root'), stubFalse = require('./stubFalse');
-/** Detect free variable `exports`. */ var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-/** Detect free variable `module`. */ var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
-/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined;
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
-/**
- * Checks if `value` is a buffer.
- *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
- * @example
- *
- * _.isBuffer(new Buffer(2));
- * // => true
- *
- * _.isBuffer(new Uint8Array(2));
- * // => false
- */ var isBuffer = nativeIsBuffer || stubFalse;
-module.exports = isBuffer;
-
-},{"./_root":"9w0IQ","./stubFalse":"4E65x"}],"4E65x":[function(require,module,exports) {
-/**
- * This method returns `false`.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {boolean} Returns `false`.
- * @example
- *
- * _.times(2, _.stubFalse);
- * // => [false, false]
- */ function stubFalse() {
-    return false;
-}
-module.exports = stubFalse;
-
-},{}],"2RH5V":[function(require,module,exports) {
-/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
-/** Used to detect unsigned integer values. */ var reIsUint = /^(?:0|[1-9]\d*)$/;
-/**
- * Checks if `value` is a valid array-like index.
- *
- * @private
- * @param {*} value The value to check.
- * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
- * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
- */ function isIndex(value, length) {
-    var type = typeof value;
-    length = length == null ? MAX_SAFE_INTEGER : length;
-    return !!length && (type == 'number' || type != 'symbol' && reIsUint.test(value)) && value > -1 && value % 1 == 0 && value < length;
-}
-module.exports = isIndex;
-
-},{}],"81D2R":[function(require,module,exports) {
-var baseIsTypedArray = require('./_baseIsTypedArray'), baseUnary = require('./_baseUnary'), nodeUtil = require('./_nodeUtil');
-/* Node.js helper references. */ var nodeIsTypedArray = nodeUtil && nodeUtil.isTypedArray;
-/**
- * Checks if `value` is classified as a typed array.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
- * @example
- *
- * _.isTypedArray(new Uint8Array);
- * // => true
- *
- * _.isTypedArray([]);
- * // => false
- */ var isTypedArray = nodeIsTypedArray ? baseUnary(nodeIsTypedArray) : baseIsTypedArray;
-module.exports = isTypedArray;
-
-},{"./_baseIsTypedArray":"bHMiV","./_baseUnary":"4SrX0","./_nodeUtil":"2vDMj"}],"bHMiV":[function(require,module,exports) {
-var baseGetTag = require('./_baseGetTag'), isLength = require('./isLength'), isObjectLike = require('./isObjectLike');
-/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', weakMapTag = '[object WeakMap]';
-var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
-/** Used to identify `toStringTag` values of typed arrays. */ var typedArrayTags = {
-};
-typedArrayTags[float32Tag] = typedArrayTags[float64Tag] = typedArrayTags[int8Tag] = typedArrayTags[int16Tag] = typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] = typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] = typedArrayTags[uint32Tag] = true;
-typedArrayTags[argsTag] = typedArrayTags[arrayTag] = typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] = typedArrayTags[dataViewTag] = typedArrayTags[dateTag] = typedArrayTags[errorTag] = typedArrayTags[funcTag] = typedArrayTags[mapTag] = typedArrayTags[numberTag] = typedArrayTags[objectTag] = typedArrayTags[regexpTag] = typedArrayTags[setTag] = typedArrayTags[stringTag] = typedArrayTags[weakMapTag] = false;
-/**
- * The base implementation of `_.isTypedArray` without Node.js optimizations.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
- */ function baseIsTypedArray(value) {
-    return isObjectLike(value) && isLength(value.length) && !!typedArrayTags[baseGetTag(value)];
-}
-module.exports = baseIsTypedArray;
-
-},{"./_baseGetTag":"hvTL4","./isLength":"7FAwN","./isObjectLike":"6ihSr"}],"7FAwN":[function(require,module,exports) {
-/** Used as references for various `Number` constants. */ var MAX_SAFE_INTEGER = 9007199254740991;
-/**
- * Checks if `value` is a valid array-like length.
- *
- * **Note:** This method is loosely based on
- * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
- * @example
- *
- * _.isLength(3);
- * // => true
- *
- * _.isLength(Number.MIN_VALUE);
- * // => false
- *
- * _.isLength(Infinity);
- * // => false
- *
- * _.isLength('3');
- * // => false
- */ function isLength(value) {
-    return typeof value == 'number' && value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER;
-}
-module.exports = isLength;
-
-},{}],"4SrX0":[function(require,module,exports) {
-/**
- * The base implementation of `_.unary` without support for storing metadata.
- *
- * @private
- * @param {Function} func The function to cap arguments for.
- * @returns {Function} Returns the new capped function.
- */ function baseUnary(func) {
-    return function(value) {
-        return func(value);
-    };
-}
-module.exports = baseUnary;
-
-},{}],"2vDMj":[function(require,module,exports) {
-var freeGlobal = require('./_freeGlobal');
-/** Detect free variable `exports`. */ var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-/** Detect free variable `module`. */ var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
-/** Detect free variable `process` from Node.js. */ var freeProcess = moduleExports && freeGlobal.process;
-/** Used to access faster Node.js helpers. */ var nodeUtil = function() {
-    try {
-        // Use `util.types` for Node.js 10+.
-        var types = freeModule && freeModule.require && freeModule.require('util').types;
-        if (types) return types;
-        // Legacy `process.binding('util')` for Node.js < 10.
-        return freeProcess && freeProcess.binding && freeProcess.binding('util');
-    } catch (e) {
-    }
-}();
-module.exports = nodeUtil;
-
-},{"./_freeGlobal":"jmyqD"}],"77Ehy":[function(require,module,exports) {
-var isPrototype = require('./_isPrototype'), nativeKeys = require('./_nativeKeys');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- */ function baseKeys(object) {
-    if (!isPrototype(object)) return nativeKeys(object);
-    var result = [];
-    for(var key in Object(object))if (hasOwnProperty.call(object, key) && key != 'constructor') result.push(key);
-    return result;
-}
-module.exports = baseKeys;
-
-},{"./_isPrototype":"3LrfV","./_nativeKeys":"kM37V"}],"3LrfV":[function(require,module,exports) {
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/**
- * Checks if `value` is likely a prototype object.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
- */ function isPrototype(value) {
-    var Ctor = value && value.constructor, proto = typeof Ctor == 'function' && Ctor.prototype || objectProto;
-    return value === proto;
-}
-module.exports = isPrototype;
-
-},{}],"kM37V":[function(require,module,exports) {
-var overArg = require('./_overArg');
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeKeys = overArg(Object.keys, Object);
-module.exports = nativeKeys;
-
-},{"./_overArg":"fkGvn"}],"fkGvn":[function(require,module,exports) {
-/**
- * Creates a unary function that invokes `func` with its argument transformed.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {Function} transform The argument transform.
- * @returns {Function} Returns the new function.
- */ function overArg(func, transform) {
-    return function(arg) {
-        return func(transform(arg));
-    };
-}
-module.exports = overArg;
-
-},{}],"eRE0j":[function(require,module,exports) {
-var isFunction = require('./isFunction'), isLength = require('./isLength');
-/**
- * Checks if `value` is array-like. A value is considered array-like if it's
- * not a function and has a `value.length` that's an integer greater than or
- * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
- * @example
- *
- * _.isArrayLike([1, 2, 3]);
- * // => true
- *
- * _.isArrayLike(document.body.children);
- * // => true
- *
- * _.isArrayLike('abc');
- * // => true
- *
- * _.isArrayLike(_.noop);
- * // => false
- */ function isArrayLike(value) {
-    return value != null && isLength(value.length) && !isFunction(value);
-}
-module.exports = isArrayLike;
-
-},{"./isFunction":"4vlJm","./isLength":"7FAwN"}],"4vlJm":[function(require,module,exports) {
-var baseGetTag = require('./_baseGetTag'), isObject = require('./isObject');
-/** `Object#toString` result references. */ var asyncTag = '[object AsyncFunction]', funcTag = '[object Function]', genTag = '[object GeneratorFunction]', proxyTag = '[object Proxy]';
-/**
- * Checks if `value` is classified as a `Function` object.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a function, else `false`.
- * @example
- *
- * _.isFunction(_);
- * // => true
- *
- * _.isFunction(/abc/);
- * // => false
- */ function isFunction(value) {
-    if (!isObject(value)) return false;
-    // The use of `Object#toString` avoids issues with the `typeof` operator
-    // in Safari 9 which returns 'object' for typed arrays and other constructors.
-    var tag = baseGetTag(value);
-    return tag == funcTag || tag == genTag || tag == asyncTag || tag == proxyTag;
-}
-module.exports = isFunction;
-
-},{"./_baseGetTag":"hvTL4","./isObject":"hZIId"}],"hZIId":[function(require,module,exports) {
-/**
- * Checks if `value` is the
- * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
- * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is an object, else `false`.
- * @example
- *
- * _.isObject({});
- * // => true
- *
- * _.isObject([1, 2, 3]);
- * // => true
- *
- * _.isObject(_.noop);
- * // => true
- *
- * _.isObject(null);
- * // => false
- */ function isObject(value) {
-    var type = typeof value;
-    return value != null && (type == 'object' || type == 'function');
-}
-module.exports = isObject;
-
 },{}],"dVfvH":[function(require,module,exports) {
 var isArrayLike = require('./isArrayLike');
 /**
@@ -24551,28 +30586,7 @@ var identity = require('./identity');
 }
 module.exports = castFunction;
 
-},{"./identity":"czYGV"}],"czYGV":[function(require,module,exports) {
-/**
- * This method returns the first argument it receives.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Util
- * @param {*} value Any value.
- * @returns {*} Returns `value`.
- * @example
- *
- * var object = { 'a': 1 };
- *
- * console.log(_.identity(object) === object);
- * // => true
- */ function identity(value) {
-    return value;
-}
-module.exports = identity;
-
-},{}],"8SuwY":[function(require,module,exports) {
+},{"./identity":"czYGV"}],"8SuwY":[function(require,module,exports) {
 var baseIndexOf = require('./_baseIndexOf'), isArrayLike = require('./isArrayLike'), isString = require('./isString'), toInteger = require('./toInteger'), values = require('./values');
 /* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
 /**
@@ -24613,73 +30627,7 @@ var baseIndexOf = require('./_baseIndexOf'), isArrayLike = require('./isArrayLik
 }
 module.exports = includes;
 
-},{"./_baseIndexOf":"lS37n","./isArrayLike":"eRE0j","./isString":"9RwwD","./toInteger":"5HLSg","./values":"1DIYQ"}],"lS37n":[function(require,module,exports) {
-var baseFindIndex = require('./_baseFindIndex'), baseIsNaN = require('./_baseIsNaN'), strictIndexOf = require('./_strictIndexOf');
-/**
- * The base implementation of `_.indexOf` without `fromIndex` bounds checks.
- *
- * @private
- * @param {Array} array The array to inspect.
- * @param {*} value The value to search for.
- * @param {number} fromIndex The index to search from.
- * @returns {number} Returns the index of the matched value, else `-1`.
- */ function baseIndexOf(array, value, fromIndex) {
-    return value === value ? strictIndexOf(array, value, fromIndex) : baseFindIndex(array, baseIsNaN, fromIndex);
-}
-module.exports = baseIndexOf;
-
-},{"./_baseFindIndex":"7ckcV","./_baseIsNaN":"4CQYy","./_strictIndexOf":"1nzTN"}],"7ckcV":[function(require,module,exports) {
-/**
- * The base implementation of `_.findIndex` and `_.findLastIndex` without
- * support for iteratee shorthands.
- *
- * @private
- * @param {Array} array The array to inspect.
- * @param {Function} predicate The function invoked per iteration.
- * @param {number} fromIndex The index to search from.
- * @param {boolean} [fromRight] Specify iterating from right to left.
- * @returns {number} Returns the index of the matched value, else `-1`.
- */ function baseFindIndex(array, predicate, fromIndex, fromRight) {
-    var length = array.length, index = fromIndex + (fromRight ? 1 : -1);
-    while(fromRight ? index-- : (++index) < length){
-        if (predicate(array[index], index, array)) return index;
-    }
-    return -1;
-}
-module.exports = baseFindIndex;
-
-},{}],"4CQYy":[function(require,module,exports) {
-/**
- * The base implementation of `_.isNaN` without support for number objects.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is `NaN`, else `false`.
- */ function baseIsNaN(value) {
-    return value !== value;
-}
-module.exports = baseIsNaN;
-
-},{}],"1nzTN":[function(require,module,exports) {
-/**
- * A specialized version of `_.indexOf` which performs strict equality
- * comparisons of values, i.e. `===`.
- *
- * @private
- * @param {Array} array The array to inspect.
- * @param {*} value The value to search for.
- * @param {number} fromIndex The index to search from.
- * @returns {number} Returns the index of the matched value, else `-1`.
- */ function strictIndexOf(array, value, fromIndex) {
-    var index = fromIndex - 1, length = array.length;
-    while((++index) < length){
-        if (array[index] === value) return index;
-    }
-    return -1;
-}
-module.exports = strictIndexOf;
-
-},{}],"9RwwD":[function(require,module,exports) {
+},{"./_baseIndexOf":"lS37n","./isArrayLike":"eRE0j","./isString":"9RwwD","./toInteger":"5HLSg","./values":"1DIYQ"}],"9RwwD":[function(require,module,exports) {
 var baseGetTag = require('./_baseGetTag'), isArray = require('./isArray'), isObjectLike = require('./isObjectLike');
 /** `Object#toString` result references. */ var stringTag = '[object String]';
 /**
@@ -24703,173 +30651,7 @@ var baseGetTag = require('./_baseGetTag'), isArray = require('./isArray'), isObj
 }
 module.exports = isString;
 
-},{"./_baseGetTag":"hvTL4","./isArray":"9D9dp","./isObjectLike":"6ihSr"}],"5HLSg":[function(require,module,exports) {
-var toFinite = require('./toFinite');
-/**
- * Converts `value` to an integer.
- *
- * **Note:** This method is loosely based on
- * [`ToInteger`](http://www.ecma-international.org/ecma-262/7.0/#sec-tointeger).
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {number} Returns the converted integer.
- * @example
- *
- * _.toInteger(3.2);
- * // => 3
- *
- * _.toInteger(Number.MIN_VALUE);
- * // => 0
- *
- * _.toInteger(Infinity);
- * // => 1.7976931348623157e+308
- *
- * _.toInteger('3.2');
- * // => 3
- */ function toInteger(value) {
-    var result = toFinite(value), remainder = result % 1;
-    return result === result ? remainder ? result - remainder : result : 0;
-}
-module.exports = toInteger;
-
-},{"./toFinite":"8q4Zg"}],"8q4Zg":[function(require,module,exports) {
-var toNumber = require('./toNumber');
-/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0, MAX_INTEGER = 179769313486231570000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000;
-/**
- * Converts `value` to a finite number.
- *
- * @static
- * @memberOf _
- * @since 4.12.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {number} Returns the converted number.
- * @example
- *
- * _.toFinite(3.2);
- * // => 3.2
- *
- * _.toFinite(Number.MIN_VALUE);
- * // => 5e-324
- *
- * _.toFinite(Infinity);
- * // => 1.7976931348623157e+308
- *
- * _.toFinite('3.2');
- * // => 3.2
- */ function toFinite(value) {
-    if (!value) return value === 0 ? value : 0;
-    value = toNumber(value);
-    if (value === INFINITY || value === -INFINITY) {
-        var sign = value < 0 ? -1 : 1;
-        return sign * MAX_INTEGER;
-    }
-    return value === value ? value : 0;
-}
-module.exports = toFinite;
-
-},{"./toNumber":"fwGK9"}],"fwGK9":[function(require,module,exports) {
-var baseTrim = require('./_baseTrim'), isObject = require('./isObject'), isSymbol = require('./isSymbol');
-/** Used as references for various `Number` constants. */ var NAN = 0 / 0;
-/** Used to detect bad signed hexadecimal string values. */ var reIsBadHex = /^[-+]0x[0-9a-f]+$/i;
-/** Used to detect binary string values. */ var reIsBinary = /^0b[01]+$/i;
-/** Used to detect octal string values. */ var reIsOctal = /^0o[0-7]+$/i;
-/** Built-in method references without a dependency on `root`. */ var freeParseInt = parseInt;
-/**
- * Converts `value` to a number.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to process.
- * @returns {number} Returns the number.
- * @example
- *
- * _.toNumber(3.2);
- * // => 3.2
- *
- * _.toNumber(Number.MIN_VALUE);
- * // => 5e-324
- *
- * _.toNumber(Infinity);
- * // => Infinity
- *
- * _.toNumber('3.2');
- * // => 3.2
- */ function toNumber(value) {
-    if (typeof value == 'number') return value;
-    if (isSymbol(value)) return NAN;
-    if (isObject(value)) {
-        var other = typeof value.valueOf == 'function' ? value.valueOf() : value;
-        value = isObject(other) ? other + '' : other;
-    }
-    if (typeof value != 'string') return value === 0 ? value : +value;
-    value = baseTrim(value);
-    var isBinary = reIsBinary.test(value);
-    return isBinary || reIsOctal.test(value) ? freeParseInt(value.slice(2), isBinary ? 2 : 8) : reIsBadHex.test(value) ? NAN : +value;
-}
-module.exports = toNumber;
-
-},{"./_baseTrim":"8Ux5p","./isObject":"hZIId","./isSymbol":"hrV74"}],"8Ux5p":[function(require,module,exports) {
-var trimmedEndIndex = require('./_trimmedEndIndex');
-/** Used to match leading whitespace. */ var reTrimStart = /^\s+/;
-/**
- * The base implementation of `_.trim`.
- *
- * @private
- * @param {string} string The string to trim.
- * @returns {string} Returns the trimmed string.
- */ function baseTrim(string) {
-    return string ? string.slice(0, trimmedEndIndex(string) + 1).replace(reTrimStart, '') : string;
-}
-module.exports = baseTrim;
-
-},{"./_trimmedEndIndex":"7U1EC"}],"7U1EC":[function(require,module,exports) {
-/** Used to match a single whitespace character. */ var reWhitespace = /\s/;
-/**
- * Used by `_.trim` and `_.trimEnd` to get the index of the last non-whitespace
- * character of `string`.
- *
- * @private
- * @param {string} string The string to inspect.
- * @returns {number} Returns the index of the last non-whitespace character.
- */ function trimmedEndIndex(string) {
-    var index = string.length;
-    while((index--) && reWhitespace.test(string.charAt(index)));
-    return index;
-}
-module.exports = trimmedEndIndex;
-
-},{}],"hrV74":[function(require,module,exports) {
-var baseGetTag = require('./_baseGetTag'), isObjectLike = require('./isObjectLike');
-/** `Object#toString` result references. */ var symbolTag = '[object Symbol]';
-/**
- * Checks if `value` is classified as a `Symbol` primitive or object.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
- * @example
- *
- * _.isSymbol(Symbol.iterator);
- * // => true
- *
- * _.isSymbol('abc');
- * // => false
- */ function isSymbol(value) {
-    return typeof value == 'symbol' || isObjectLike(value) && baseGetTag(value) == symbolTag;
-}
-module.exports = isSymbol;
-
-},{"./_baseGetTag":"hvTL4","./isObjectLike":"6ihSr"}],"1DIYQ":[function(require,module,exports) {
+},{"./_baseGetTag":"hvTL4","./isArray":"9D9dp","./isObjectLike":"6ihSr"}],"1DIYQ":[function(require,module,exports) {
 var baseValues = require('./_baseValues'), keys = require('./keys');
 /**
  * Creates an array of the own enumerable string keyed property values of `object`.
@@ -24919,23 +30701,7 @@ var arrayMap = require('./_arrayMap');
 }
 module.exports = baseValues;
 
-},{"./_arrayMap":"dYHNK"}],"dYHNK":[function(require,module,exports) {
-/**
- * A specialized version of `_.map` for arrays without support for iteratee
- * shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} iteratee The function invoked per iteration.
- * @returns {Array} Returns the new mapped array.
- */ function arrayMap(array, iteratee) {
-    var index = -1, length = array == null ? 0 : array.length, result = Array(length);
-    while((++index) < length)result[index] = iteratee(array[index], index, array);
-    return result;
-}
-module.exports = arrayMap;
-
-},{}],"9b5CF":[function(require,module,exports) {
+},{"./_arrayMap":"dYHNK"}],"9b5CF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "SIZE", ()=>SIZE
@@ -25306,1196 +31072,7 @@ function getDateMask(formatStr) {
     });
 }
 
-},{"lodash/pick":"kLdKc","lodash/omitBy":"3ggbJ","date-fns/getHours":"jeanF","date-fns/getDay":"b3QZJ","date-fns/getMinutes":"4qrrL","date-fns/getSeconds":"8asYq","date-fns/addDays":"hYhFb","date-fns/addMonths":"8vzbZ","date-fns/compareAsc":"1Vr9W","date-fns/endOfDay":"436iN","date-fns/endOfISOWeek":"7KiAN","date-fns/endOfMonth":"gsQ47","date-fns/endOfWeek":"2OHc4","date-fns/format":"lNaGA","date-fns/getDate":"mNo56","date-fns/getDaysInMonth":"6NFs2","date-fns/getMonth":"crXFe","date-fns/getYear":"lS1Ek","date-fns/isAfter":"eDpLB","date-fns/isBefore":"djDIq","date-fns/isEqual":"bEmvR","date-fns/isSameDay":"kCT4K","date-fns/isSameMonth":"dlChX","date-fns/isSameSecond":"jE8AH","date-fns/parse":"bD2Un","date-fns/parseISO":"4axSD","date-fns/setDate":"gwxNy","date-fns/setHours":"49P9v","date-fns/setMinutes":"223QP","date-fns/setMonth":"cBgCL","date-fns/setSeconds":"b3oxB","date-fns/setYear":"1PzRy","date-fns/startOfDay":"kw7ww","date-fns/startOfISOWeek":"hgsCz","date-fns/startOfMonth":"1qC5t","date-fns/startOfWeek":"22WAP","date-fns/subDays":"f8ciJ","date-fns/isMatch":"hyWo3","date-fns/isValid":"1nJMs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kLdKc":[function(require,module,exports) {
-var basePick = require('./_basePick'), flatRest = require('./_flatRest');
-/**
- * Creates an object composed of the picked `object` properties.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The source object.
- * @param {...(string|string[])} [paths] The property paths to pick.
- * @returns {Object} Returns the new object.
- * @example
- *
- * var object = { 'a': 1, 'b': '2', 'c': 3 };
- *
- * _.pick(object, ['a', 'c']);
- * // => { 'a': 1, 'c': 3 }
- */ var pick = flatRest(function(object, paths) {
-    return object == null ? {
-    } : basePick(object, paths);
-});
-module.exports = pick;
-
-},{"./_basePick":"68TGg","./_flatRest":"1F4bu"}],"68TGg":[function(require,module,exports) {
-var basePickBy = require('./_basePickBy'), hasIn = require('./hasIn');
-/**
- * The base implementation of `_.pick` without support for individual
- * property identifiers.
- *
- * @private
- * @param {Object} object The source object.
- * @param {string[]} paths The property paths to pick.
- * @returns {Object} Returns the new object.
- */ function basePick(object, paths) {
-    return basePickBy(object, paths, function(value, path) {
-        return hasIn(object, path);
-    });
-}
-module.exports = basePick;
-
-},{"./_basePickBy":"cBdXI","./hasIn":"ktfle"}],"cBdXI":[function(require,module,exports) {
-var baseGet = require('./_baseGet'), baseSet = require('./_baseSet'), castPath = require('./_castPath');
-/**
- * The base implementation of  `_.pickBy` without support for iteratee shorthands.
- *
- * @private
- * @param {Object} object The source object.
- * @param {string[]} paths The property paths to pick.
- * @param {Function} predicate The function invoked per property.
- * @returns {Object} Returns the new object.
- */ function basePickBy(object, paths, predicate) {
-    var index = -1, length = paths.length, result = {
-    };
-    while((++index) < length){
-        var path = paths[index], value = baseGet(object, path);
-        if (predicate(value, path)) baseSet(result, castPath(path, object), value);
-    }
-    return result;
-}
-module.exports = basePickBy;
-
-},{"./_baseGet":"awr9U","./_baseSet":"blERh","./_castPath":"9StUN"}],"awr9U":[function(require,module,exports) {
-var castPath = require('./_castPath'), toKey = require('./_toKey');
-/**
- * The base implementation of `_.get` without support for default values.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Array|string} path The path of the property to get.
- * @returns {*} Returns the resolved value.
- */ function baseGet(object, path) {
-    path = castPath(path, object);
-    var index = 0, length = path.length;
-    while(object != null && index < length)object = object[toKey(path[index++])];
-    return index && index == length ? object : undefined;
-}
-module.exports = baseGet;
-
-},{"./_castPath":"9StUN","./_toKey":"8TD4q"}],"9StUN":[function(require,module,exports) {
-var isArray = require('./isArray'), isKey = require('./_isKey'), stringToPath = require('./_stringToPath'), toString = require('./toString');
-/**
- * Casts `value` to a path array if it's not one.
- *
- * @private
- * @param {*} value The value to inspect.
- * @param {Object} [object] The object to query keys on.
- * @returns {Array} Returns the cast property path array.
- */ function castPath(value, object) {
-    if (isArray(value)) return value;
-    return isKey(value, object) ? [
-        value
-    ] : stringToPath(toString(value));
-}
-module.exports = castPath;
-
-},{"./isArray":"9D9dp","./_isKey":"9Nx6f","./_stringToPath":"k9O0Q","./toString":"aVIvq"}],"9Nx6f":[function(require,module,exports) {
-var isArray = require('./isArray'), isSymbol = require('./isSymbol');
-/** Used to match property names within property paths. */ var reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/, reIsPlainProp = /^\w*$/;
-/**
- * Checks if `value` is a property name and not a property path.
- *
- * @private
- * @param {*} value The value to check.
- * @param {Object} [object] The object to query keys on.
- * @returns {boolean} Returns `true` if `value` is a property name, else `false`.
- */ function isKey(value, object) {
-    if (isArray(value)) return false;
-    var type = typeof value;
-    if (type == 'number' || type == 'symbol' || type == 'boolean' || value == null || isSymbol(value)) return true;
-    return reIsPlainProp.test(value) || !reIsDeepProp.test(value) || object != null && value in Object(object);
-}
-module.exports = isKey;
-
-},{"./isArray":"9D9dp","./isSymbol":"hrV74"}],"k9O0Q":[function(require,module,exports) {
-var memoizeCapped = require('./_memoizeCapped');
-/** Used to match property names within property paths. */ var rePropName = /[^.[\]]+|\[(?:(-?\d+(?:\.\d+)?)|(["'])((?:(?!\2)[^\\]|\\.)*?)\2)\]|(?=(?:\.|\[\])(?:\.|\[\]|$))/g;
-/** Used to match backslashes in property paths. */ var reEscapeChar = /\\(\\)?/g;
-/**
- * Converts `string` to a property path array.
- *
- * @private
- * @param {string} string The string to convert.
- * @returns {Array} Returns the property path array.
- */ var stringToPath = memoizeCapped(function(string) {
-    var result = [];
-    if (string.charCodeAt(0) === 46 /* . */ ) result.push('');
-    string.replace(rePropName, function(match, number, quote, subString) {
-        result.push(quote ? subString.replace(reEscapeChar, '$1') : number || match);
-    });
-    return result;
-});
-module.exports = stringToPath;
-
-},{"./_memoizeCapped":"5MsEb"}],"5MsEb":[function(require,module,exports) {
-var memoize = require('./memoize');
-/** Used as the maximum memoize cache size. */ var MAX_MEMOIZE_SIZE = 500;
-/**
- * A specialized version of `_.memoize` which clears the memoized function's
- * cache when it exceeds `MAX_MEMOIZE_SIZE`.
- *
- * @private
- * @param {Function} func The function to have its output memoized.
- * @returns {Function} Returns the new memoized function.
- */ function memoizeCapped(func) {
-    var result = memoize(func, function(key) {
-        if (cache.size === MAX_MEMOIZE_SIZE) cache.clear();
-        return key;
-    });
-    var cache = result.cache;
-    return result;
-}
-module.exports = memoizeCapped;
-
-},{"./memoize":"bEREl"}],"bEREl":[function(require,module,exports) {
-var MapCache = require('./_MapCache');
-/** Error message constants. */ var FUNC_ERROR_TEXT = 'Expected a function';
-/**
- * Creates a function that memoizes the result of `func`. If `resolver` is
- * provided, it determines the cache key for storing the result based on the
- * arguments provided to the memoized function. By default, the first argument
- * provided to the memoized function is used as the map cache key. The `func`
- * is invoked with the `this` binding of the memoized function.
- *
- * **Note:** The cache is exposed as the `cache` property on the memoized
- * function. Its creation may be customized by replacing the `_.memoize.Cache`
- * constructor with one whose instances implement the
- * [`Map`](http://ecma-international.org/ecma-262/7.0/#sec-properties-of-the-map-prototype-object)
- * method interface of `clear`, `delete`, `get`, `has`, and `set`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Function
- * @param {Function} func The function to have its output memoized.
- * @param {Function} [resolver] The function to resolve the cache key.
- * @returns {Function} Returns the new memoized function.
- * @example
- *
- * var object = { 'a': 1, 'b': 2 };
- * var other = { 'c': 3, 'd': 4 };
- *
- * var values = _.memoize(_.values);
- * values(object);
- * // => [1, 2]
- *
- * values(other);
- * // => [3, 4]
- *
- * object.a = 2;
- * values(object);
- * // => [1, 2]
- *
- * // Modify the result cache.
- * values.cache.set(object, ['a', 'b']);
- * values(object);
- * // => ['a', 'b']
- *
- * // Replace `_.memoize.Cache`.
- * _.memoize.Cache = WeakMap;
- */ function memoize(func, resolver) {
-    if (typeof func != 'function' || resolver != null && typeof resolver != 'function') throw new TypeError(FUNC_ERROR_TEXT);
-    var memoized = function() {
-        var args = arguments, key = resolver ? resolver.apply(this, args) : args[0], cache = memoized.cache;
-        if (cache.has(key)) return cache.get(key);
-        var result = func.apply(this, args);
-        memoized.cache = cache.set(key, result) || cache;
-        return result;
-    };
-    memoized.cache = new (memoize.Cache || MapCache);
-    return memoized;
-}
-// Expose `MapCache`.
-memoize.Cache = MapCache;
-module.exports = memoize;
-
-},{"./_MapCache":"7Yxy9"}],"7Yxy9":[function(require,module,exports) {
-var mapCacheClear = require('./_mapCacheClear'), mapCacheDelete = require('./_mapCacheDelete'), mapCacheGet = require('./_mapCacheGet'), mapCacheHas = require('./_mapCacheHas'), mapCacheSet = require('./_mapCacheSet');
-/**
- * Creates a map cache object to store key-value pairs.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */ function MapCache(entries) {
-    var index = -1, length = entries == null ? 0 : entries.length;
-    this.clear();
-    while((++index) < length){
-        var entry = entries[index];
-        this.set(entry[0], entry[1]);
-    }
-}
-// Add methods to `MapCache`.
-MapCache.prototype.clear = mapCacheClear;
-MapCache.prototype['delete'] = mapCacheDelete;
-MapCache.prototype.get = mapCacheGet;
-MapCache.prototype.has = mapCacheHas;
-MapCache.prototype.set = mapCacheSet;
-module.exports = MapCache;
-
-},{"./_mapCacheClear":"6Ne3T","./_mapCacheDelete":"22plT","./_mapCacheGet":"3wvvK","./_mapCacheHas":"htO0S","./_mapCacheSet":"byIIq"}],"6Ne3T":[function(require,module,exports) {
-var Hash = require('./_Hash'), ListCache = require('./_ListCache'), Map1 = require('./_Map');
-/**
- * Removes all key-value entries from the map.
- *
- * @private
- * @name clear
- * @memberOf MapCache
- */ function mapCacheClear() {
-    this.size = 0;
-    this.__data__ = {
-        'hash': new Hash,
-        'map': new (Map1 || ListCache),
-        'string': new Hash
-    };
-}
-module.exports = mapCacheClear;
-
-},{"./_Hash":"fhJxO","./_ListCache":"lpr3N","./_Map":"coy6p"}],"fhJxO":[function(require,module,exports) {
-var hashClear = require('./_hashClear'), hashDelete = require('./_hashDelete'), hashGet = require('./_hashGet'), hashHas = require('./_hashHas'), hashSet = require('./_hashSet');
-/**
- * Creates a hash object.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */ function Hash(entries) {
-    var index = -1, length = entries == null ? 0 : entries.length;
-    this.clear();
-    while((++index) < length){
-        var entry = entries[index];
-        this.set(entry[0], entry[1]);
-    }
-}
-// Add methods to `Hash`.
-Hash.prototype.clear = hashClear;
-Hash.prototype['delete'] = hashDelete;
-Hash.prototype.get = hashGet;
-Hash.prototype.has = hashHas;
-Hash.prototype.set = hashSet;
-module.exports = Hash;
-
-},{"./_hashClear":"hM9wg","./_hashDelete":"6IRnr","./_hashGet":"7iYiL","./_hashHas":"dL6ja","./_hashSet":"2gbPb"}],"hM9wg":[function(require,module,exports) {
-var nativeCreate = require('./_nativeCreate');
-/**
- * Removes all key-value entries from the hash.
- *
- * @private
- * @name clear
- * @memberOf Hash
- */ function hashClear() {
-    this.__data__ = nativeCreate ? nativeCreate(null) : {
-    };
-    this.size = 0;
-}
-module.exports = hashClear;
-
-},{"./_nativeCreate":"3CuNf"}],"3CuNf":[function(require,module,exports) {
-var getNative = require('./_getNative');
-/* Built-in method references that are verified to be native. */ var nativeCreate = getNative(Object, 'create');
-module.exports = nativeCreate;
-
-},{"./_getNative":"iGRIN"}],"iGRIN":[function(require,module,exports) {
-var baseIsNative = require('./_baseIsNative'), getValue = require('./_getValue');
-/**
- * Gets the native function at `key` of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {string} key The key of the method to get.
- * @returns {*} Returns the function if it's native, else `undefined`.
- */ function getNative(object, key) {
-    var value = getValue(object, key);
-    return baseIsNative(value) ? value : undefined;
-}
-module.exports = getNative;
-
-},{"./_baseIsNative":"dLuo9","./_getValue":"gc1r1"}],"dLuo9":[function(require,module,exports) {
-var isFunction = require('./isFunction'), isMasked = require('./_isMasked'), isObject = require('./isObject'), toSource = require('./_toSource');
-/**
- * Used to match `RegExp`
- * [syntax characters](http://ecma-international.org/ecma-262/7.0/#sec-patterns).
- */ var reRegExpChar = /[\\^$.*+?()[\]{}|]/g;
-/** Used to detect host constructors (Safari). */ var reIsHostCtor = /^\[object .+?Constructor\]$/;
-/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
-/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/** Used to detect if a method is native. */ var reIsNative = RegExp('^' + funcToString.call(hasOwnProperty).replace(reRegExpChar, '\\$&').replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, '$1.*?') + '$');
-/**
- * The base implementation of `_.isNative` without bad shim checks.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a native function,
- *  else `false`.
- */ function baseIsNative(value) {
-    if (!isObject(value) || isMasked(value)) return false;
-    var pattern = isFunction(value) ? reIsNative : reIsHostCtor;
-    return pattern.test(toSource(value));
-}
-module.exports = baseIsNative;
-
-},{"./isFunction":"4vlJm","./_isMasked":"1y7kD","./isObject":"hZIId","./_toSource":"cvYQ0"}],"1y7kD":[function(require,module,exports) {
-var coreJsData = require('./_coreJsData');
-/** Used to detect methods masquerading as native. */ var maskSrcKey = function() {
-    var uid = /[^.]+$/.exec(coreJsData && coreJsData.keys && coreJsData.keys.IE_PROTO || '');
-    return uid ? 'Symbol(src)_1.' + uid : '';
-}();
-/**
- * Checks if `func` has its source masked.
- *
- * @private
- * @param {Function} func The function to check.
- * @returns {boolean} Returns `true` if `func` is masked, else `false`.
- */ function isMasked(func) {
-    return !!maskSrcKey && maskSrcKey in func;
-}
-module.exports = isMasked;
-
-},{"./_coreJsData":"9Mghd"}],"9Mghd":[function(require,module,exports) {
-var root = require('./_root');
-/** Used to detect overreaching core-js shims. */ var coreJsData = root['__core-js_shared__'];
-module.exports = coreJsData;
-
-},{"./_root":"9w0IQ"}],"cvYQ0":[function(require,module,exports) {
-/** Used for built-in method references. */ var funcProto = Function.prototype;
-/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
-/**
- * Converts `func` to its source code.
- *
- * @private
- * @param {Function} func The function to convert.
- * @returns {string} Returns the source code.
- */ function toSource(func) {
-    if (func != null) {
-        try {
-            return funcToString.call(func);
-        } catch (e) {
-        }
-        try {
-            return func + '';
-        } catch (e) {
-        }
-    }
-    return '';
-}
-module.exports = toSource;
-
-},{}],"gc1r1":[function(require,module,exports) {
-/**
- * Gets the value at `key` of `object`.
- *
- * @private
- * @param {Object} [object] The object to query.
- * @param {string} key The key of the property to get.
- * @returns {*} Returns the property value.
- */ function getValue(object, key) {
-    return object == null ? undefined : object[key];
-}
-module.exports = getValue;
-
-},{}],"6IRnr":[function(require,module,exports) {
-/**
- * Removes `key` and its value from the hash.
- *
- * @private
- * @name delete
- * @memberOf Hash
- * @param {Object} hash The hash to modify.
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */ function hashDelete(key) {
-    var result = this.has(key) && delete this.__data__[key];
-    this.size -= result ? 1 : 0;
-    return result;
-}
-module.exports = hashDelete;
-
-},{}],"7iYiL":[function(require,module,exports) {
-var nativeCreate = require('./_nativeCreate');
-/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Gets the hash value for `key`.
- *
- * @private
- * @name get
- * @memberOf Hash
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */ function hashGet(key) {
-    var data = this.__data__;
-    if (nativeCreate) {
-        var result = data[key];
-        return result === HASH_UNDEFINED ? undefined : result;
-    }
-    return hasOwnProperty.call(data, key) ? data[key] : undefined;
-}
-module.exports = hashGet;
-
-},{"./_nativeCreate":"3CuNf"}],"dL6ja":[function(require,module,exports) {
-var nativeCreate = require('./_nativeCreate');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Checks if a hash value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf Hash
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */ function hashHas(key) {
-    var data = this.__data__;
-    return nativeCreate ? data[key] !== undefined : hasOwnProperty.call(data, key);
-}
-module.exports = hashHas;
-
-},{"./_nativeCreate":"3CuNf"}],"2gbPb":[function(require,module,exports) {
-var nativeCreate = require('./_nativeCreate');
-/** Used to stand-in for `undefined` hash values. */ var HASH_UNDEFINED = '__lodash_hash_undefined__';
-/**
- * Sets the hash `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf Hash
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the hash instance.
- */ function hashSet(key, value) {
-    var data = this.__data__;
-    this.size += this.has(key) ? 0 : 1;
-    data[key] = nativeCreate && value === undefined ? HASH_UNDEFINED : value;
-    return this;
-}
-module.exports = hashSet;
-
-},{"./_nativeCreate":"3CuNf"}],"lpr3N":[function(require,module,exports) {
-var listCacheClear = require('./_listCacheClear'), listCacheDelete = require('./_listCacheDelete'), listCacheGet = require('./_listCacheGet'), listCacheHas = require('./_listCacheHas'), listCacheSet = require('./_listCacheSet');
-/**
- * Creates an list cache object.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */ function ListCache(entries) {
-    var index = -1, length = entries == null ? 0 : entries.length;
-    this.clear();
-    while((++index) < length){
-        var entry = entries[index];
-        this.set(entry[0], entry[1]);
-    }
-}
-// Add methods to `ListCache`.
-ListCache.prototype.clear = listCacheClear;
-ListCache.prototype['delete'] = listCacheDelete;
-ListCache.prototype.get = listCacheGet;
-ListCache.prototype.has = listCacheHas;
-ListCache.prototype.set = listCacheSet;
-module.exports = ListCache;
-
-},{"./_listCacheClear":"5l6TE","./_listCacheDelete":"7Olr5","./_listCacheGet":"kf20q","./_listCacheHas":"JrbX7","./_listCacheSet":"heixL"}],"5l6TE":[function(require,module,exports) {
-/**
- * Removes all key-value entries from the list cache.
- *
- * @private
- * @name clear
- * @memberOf ListCache
- */ function listCacheClear() {
-    this.__data__ = [];
-    this.size = 0;
-}
-module.exports = listCacheClear;
-
-},{}],"7Olr5":[function(require,module,exports) {
-var assocIndexOf = require('./_assocIndexOf');
-/** Used for built-in method references. */ var arrayProto = Array.prototype;
-/** Built-in value references. */ var splice = arrayProto.splice;
-/**
- * Removes `key` and its value from the list cache.
- *
- * @private
- * @name delete
- * @memberOf ListCache
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */ function listCacheDelete(key) {
-    var data = this.__data__, index = assocIndexOf(data, key);
-    if (index < 0) return false;
-    var lastIndex = data.length - 1;
-    if (index == lastIndex) data.pop();
-    else splice.call(data, index, 1);
-    --this.size;
-    return true;
-}
-module.exports = listCacheDelete;
-
-},{"./_assocIndexOf":"lg8aM"}],"lg8aM":[function(require,module,exports) {
-var eq = require('./eq');
-/**
- * Gets the index at which the `key` is found in `array` of key-value pairs.
- *
- * @private
- * @param {Array} array The array to inspect.
- * @param {*} key The key to search for.
- * @returns {number} Returns the index of the matched value, else `-1`.
- */ function assocIndexOf(array, key) {
-    var length = array.length;
-    while(length--){
-        if (eq(array[length][0], key)) return length;
-    }
-    return -1;
-}
-module.exports = assocIndexOf;
-
-},{"./eq":"2rhE2"}],"2rhE2":[function(require,module,exports) {
-/**
- * Performs a
- * [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
- * comparison between two values to determine if they are equivalent.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to compare.
- * @param {*} other The other value to compare.
- * @returns {boolean} Returns `true` if the values are equivalent, else `false`.
- * @example
- *
- * var object = { 'a': 1 };
- * var other = { 'a': 1 };
- *
- * _.eq(object, object);
- * // => true
- *
- * _.eq(object, other);
- * // => false
- *
- * _.eq('a', 'a');
- * // => true
- *
- * _.eq('a', Object('a'));
- * // => false
- *
- * _.eq(NaN, NaN);
- * // => true
- */ function eq(value, other) {
-    return value === other || value !== value && other !== other;
-}
-module.exports = eq;
-
-},{}],"kf20q":[function(require,module,exports) {
-var assocIndexOf = require('./_assocIndexOf');
-/**
- * Gets the list cache value for `key`.
- *
- * @private
- * @name get
- * @memberOf ListCache
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */ function listCacheGet(key) {
-    var data = this.__data__, index = assocIndexOf(data, key);
-    return index < 0 ? undefined : data[index][1];
-}
-module.exports = listCacheGet;
-
-},{"./_assocIndexOf":"lg8aM"}],"JrbX7":[function(require,module,exports) {
-var assocIndexOf = require('./_assocIndexOf');
-/**
- * Checks if a list cache value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf ListCache
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */ function listCacheHas(key) {
-    return assocIndexOf(this.__data__, key) > -1;
-}
-module.exports = listCacheHas;
-
-},{"./_assocIndexOf":"lg8aM"}],"heixL":[function(require,module,exports) {
-var assocIndexOf = require('./_assocIndexOf');
-/**
- * Sets the list cache `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf ListCache
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the list cache instance.
- */ function listCacheSet(key, value) {
-    var data = this.__data__, index = assocIndexOf(data, key);
-    if (index < 0) {
-        ++this.size;
-        data.push([
-            key,
-            value
-        ]);
-    } else data[index][1] = value;
-    return this;
-}
-module.exports = listCacheSet;
-
-},{"./_assocIndexOf":"lg8aM"}],"coy6p":[function(require,module,exports) {
-var getNative = require('./_getNative'), root = require('./_root');
-/* Built-in method references that are verified to be native. */ var Map1 = getNative(root, 'Map');
-module.exports = Map1;
-
-},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"22plT":[function(require,module,exports) {
-var getMapData = require('./_getMapData');
-/**
- * Removes `key` and its value from the map.
- *
- * @private
- * @name delete
- * @memberOf MapCache
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */ function mapCacheDelete(key) {
-    var result = getMapData(this, key)['delete'](key);
-    this.size -= result ? 1 : 0;
-    return result;
-}
-module.exports = mapCacheDelete;
-
-},{"./_getMapData":"14a95"}],"14a95":[function(require,module,exports) {
-var isKeyable = require('./_isKeyable');
-/**
- * Gets the data for `map`.
- *
- * @private
- * @param {Object} map The map to query.
- * @param {string} key The reference key.
- * @returns {*} Returns the map data.
- */ function getMapData(map, key) {
-    var data = map.__data__;
-    return isKeyable(key) ? data[typeof key == 'string' ? 'string' : 'hash'] : data.map;
-}
-module.exports = getMapData;
-
-},{"./_isKeyable":"1vP10"}],"1vP10":[function(require,module,exports) {
-/**
- * Checks if `value` is suitable for use as unique object key.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is suitable, else `false`.
- */ function isKeyable(value) {
-    var type = typeof value;
-    return type == 'string' || type == 'number' || type == 'symbol' || type == 'boolean' ? value !== '__proto__' : value === null;
-}
-module.exports = isKeyable;
-
-},{}],"3wvvK":[function(require,module,exports) {
-var getMapData = require('./_getMapData');
-/**
- * Gets the map value for `key`.
- *
- * @private
- * @name get
- * @memberOf MapCache
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */ function mapCacheGet(key) {
-    return getMapData(this, key).get(key);
-}
-module.exports = mapCacheGet;
-
-},{"./_getMapData":"14a95"}],"htO0S":[function(require,module,exports) {
-var getMapData = require('./_getMapData');
-/**
- * Checks if a map value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf MapCache
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */ function mapCacheHas(key) {
-    return getMapData(this, key).has(key);
-}
-module.exports = mapCacheHas;
-
-},{"./_getMapData":"14a95"}],"byIIq":[function(require,module,exports) {
-var getMapData = require('./_getMapData');
-/**
- * Sets the map `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf MapCache
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the map cache instance.
- */ function mapCacheSet(key, value) {
-    var data = getMapData(this, key), size = data.size;
-    data.set(key, value);
-    this.size += data.size == size ? 0 : 1;
-    return this;
-}
-module.exports = mapCacheSet;
-
-},{"./_getMapData":"14a95"}],"aVIvq":[function(require,module,exports) {
-var baseToString = require('./_baseToString');
-/**
- * Converts `value` to a string. An empty string is returned for `null`
- * and `undefined` values. The sign of `-0` is preserved.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Lang
- * @param {*} value The value to convert.
- * @returns {string} Returns the converted string.
- * @example
- *
- * _.toString(null);
- * // => ''
- *
- * _.toString(-0);
- * // => '-0'
- *
- * _.toString([1, 2, 3]);
- * // => '1,2,3'
- */ function toString(value) {
-    return value == null ? '' : baseToString(value);
-}
-module.exports = toString;
-
-},{"./_baseToString":"cmpT2"}],"cmpT2":[function(require,module,exports) {
-var Symbol1 = require('./_Symbol'), arrayMap = require('./_arrayMap'), isArray = require('./isArray'), isSymbol = require('./isSymbol');
-/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
-/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol1 ? Symbol1.prototype : undefined, symbolToString = symbolProto ? symbolProto.toString : undefined;
-/**
- * The base implementation of `_.toString` which doesn't convert nullish
- * values to empty strings.
- *
- * @private
- * @param {*} value The value to process.
- * @returns {string} Returns the string.
- */ function baseToString(value) {
-    // Exit early for strings to avoid a performance hit in some environments.
-    if (typeof value == 'string') return value;
-    if (isArray(value)) // Recursively convert values (susceptible to call stack limits).
-    return arrayMap(value, baseToString) + '';
-    if (isSymbol(value)) return symbolToString ? symbolToString.call(value) : '';
-    var result = value + '';
-    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
-}
-module.exports = baseToString;
-
-},{"./_Symbol":"g8MbF","./_arrayMap":"dYHNK","./isArray":"9D9dp","./isSymbol":"hrV74"}],"8TD4q":[function(require,module,exports) {
-var isSymbol = require('./isSymbol');
-/** Used as references for various `Number` constants. */ var INFINITY = 1 / 0;
-/**
- * Converts `value` to a string key if it's not a string or symbol.
- *
- * @private
- * @param {*} value The value to inspect.
- * @returns {string|symbol} Returns the key.
- */ function toKey(value) {
-    if (typeof value == 'string' || isSymbol(value)) return value;
-    var result = value + '';
-    return result == '0' && 1 / value == -INFINITY ? '-0' : result;
-}
-module.exports = toKey;
-
-},{"./isSymbol":"hrV74"}],"blERh":[function(require,module,exports) {
-var assignValue = require('./_assignValue'), castPath = require('./_castPath'), isIndex = require('./_isIndex'), isObject = require('./isObject'), toKey = require('./_toKey');
-/**
- * The base implementation of `_.set`.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {Array|string} path The path of the property to set.
- * @param {*} value The value to set.
- * @param {Function} [customizer] The function to customize path creation.
- * @returns {Object} Returns `object`.
- */ function baseSet(object, path, value, customizer) {
-    if (!isObject(object)) return object;
-    path = castPath(path, object);
-    var index = -1, length = path.length, lastIndex = length - 1, nested = object;
-    while(nested != null && (++index) < length){
-        var key = toKey(path[index]), newValue = value;
-        if (key === '__proto__' || key === 'constructor' || key === 'prototype') return object;
-        if (index != lastIndex) {
-            var objValue = nested[key];
-            newValue = customizer ? customizer(objValue, key, nested) : undefined;
-            if (newValue === undefined) newValue = isObject(objValue) ? objValue : isIndex(path[index + 1]) ? [] : {
-            };
-        }
-        assignValue(nested, key, newValue);
-        nested = nested[key];
-    }
-    return object;
-}
-module.exports = baseSet;
-
-},{"./_assignValue":"8WIi8","./_castPath":"9StUN","./_isIndex":"2RH5V","./isObject":"hZIId","./_toKey":"8TD4q"}],"8WIi8":[function(require,module,exports) {
-var baseAssignValue = require('./_baseAssignValue'), eq = require('./eq');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Assigns `value` to `key` of `object` if the existing value is not equivalent
- * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
- * for equality comparisons.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {string} key The key of the property to assign.
- * @param {*} value The value to assign.
- */ function assignValue(object, key, value) {
-    var objValue = object[key];
-    if (!(hasOwnProperty.call(object, key) && eq(objValue, value)) || value === undefined && !(key in object)) baseAssignValue(object, key, value);
-}
-module.exports = assignValue;
-
-},{"./_baseAssignValue":"4l1Lw","./eq":"2rhE2"}],"4l1Lw":[function(require,module,exports) {
-var defineProperty = require('./_defineProperty');
-/**
- * The base implementation of `assignValue` and `assignMergeValue` without
- * value checks.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {string} key The key of the property to assign.
- * @param {*} value The value to assign.
- */ function baseAssignValue(object, key, value) {
-    if (key == '__proto__' && defineProperty) defineProperty(object, key, {
-        'configurable': true,
-        'enumerable': true,
-        'value': value,
-        'writable': true
-    });
-    else object[key] = value;
-}
-module.exports = baseAssignValue;
-
-},{"./_defineProperty":"kXqjt"}],"kXqjt":[function(require,module,exports) {
-var getNative = require('./_getNative');
-var defineProperty = function() {
-    try {
-        var func = getNative(Object, 'defineProperty');
-        func({
-        }, '', {
-        });
-        return func;
-    } catch (e) {
-    }
-}();
-module.exports = defineProperty;
-
-},{"./_getNative":"iGRIN"}],"ktfle":[function(require,module,exports) {
-var baseHasIn = require('./_baseHasIn'), hasPath = require('./_hasPath');
-/**
- * Checks if `path` is a direct or inherited property of `object`.
- *
- * @static
- * @memberOf _
- * @since 4.0.0
- * @category Object
- * @param {Object} object The object to query.
- * @param {Array|string} path The path to check.
- * @returns {boolean} Returns `true` if `path` exists, else `false`.
- * @example
- *
- * var object = _.create({ 'a': _.create({ 'b': 2 }) });
- *
- * _.hasIn(object, 'a');
- * // => true
- *
- * _.hasIn(object, 'a.b');
- * // => true
- *
- * _.hasIn(object, ['a', 'b']);
- * // => true
- *
- * _.hasIn(object, 'b');
- * // => false
- */ function hasIn(object, path) {
-    return object != null && hasPath(object, path, baseHasIn);
-}
-module.exports = hasIn;
-
-},{"./_baseHasIn":"9PKM5","./_hasPath":"cM0pW"}],"9PKM5":[function(require,module,exports) {
-/**
- * The base implementation of `_.hasIn` without support for deep paths.
- *
- * @private
- * @param {Object} [object] The object to query.
- * @param {Array|string} key The key to check.
- * @returns {boolean} Returns `true` if `key` exists, else `false`.
- */ function baseHasIn(object, key) {
-    return object != null && key in Object(object);
-}
-module.exports = baseHasIn;
-
-},{}],"cM0pW":[function(require,module,exports) {
-var castPath = require('./_castPath'), isArguments = require('./isArguments'), isArray = require('./isArray'), isIndex = require('./_isIndex'), isLength = require('./isLength'), toKey = require('./_toKey');
-/**
- * Checks if `path` exists on `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Array|string} path The path to check.
- * @param {Function} hasFunc The function to check properties.
- * @returns {boolean} Returns `true` if `path` exists, else `false`.
- */ function hasPath(object, path, hasFunc) {
-    path = castPath(path, object);
-    var index = -1, length = path.length, result = false;
-    while((++index) < length){
-        var key = toKey(path[index]);
-        if (!(result = object != null && hasFunc(object, key))) break;
-        object = object[key];
-    }
-    if (result || (++index) != length) return result;
-    length = object == null ? 0 : object.length;
-    return !!length && isLength(length) && isIndex(key, length) && (isArray(object) || isArguments(object));
-}
-module.exports = hasPath;
-
-},{"./_castPath":"9StUN","./isArguments":"fTXal","./isArray":"9D9dp","./_isIndex":"2RH5V","./isLength":"7FAwN","./_toKey":"8TD4q"}],"1F4bu":[function(require,module,exports) {
-var flatten = require('./flatten'), overRest = require('./_overRest'), setToString = require('./_setToString');
-/**
- * A specialized version of `baseRest` which flattens the rest array.
- *
- * @private
- * @param {Function} func The function to apply a rest parameter to.
- * @returns {Function} Returns the new function.
- */ function flatRest(func) {
-    return setToString(overRest(func, undefined, flatten), func + '');
-}
-module.exports = flatRest;
-
-},{"./flatten":"fxG0z","./_overRest":"ad34B","./_setToString":"duOCt"}],"fxG0z":[function(require,module,exports) {
-var baseFlatten = require('./_baseFlatten');
-/**
- * Flattens `array` a single level deep.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Array
- * @param {Array} array The array to flatten.
- * @returns {Array} Returns the new flattened array.
- * @example
- *
- * _.flatten([1, [2, [3, [4]], 5]]);
- * // => [1, 2, [3, [4]], 5]
- */ function flatten(array) {
-    var length = array == null ? 0 : array.length;
-    return length ? baseFlatten(array, 1) : [];
-}
-module.exports = flatten;
-
-},{"./_baseFlatten":"ixkHq"}],"ixkHq":[function(require,module,exports) {
-var arrayPush = require('./_arrayPush'), isFlattenable = require('./_isFlattenable');
-/**
- * The base implementation of `_.flatten` with support for restricting flattening.
- *
- * @private
- * @param {Array} array The array to flatten.
- * @param {number} depth The maximum recursion depth.
- * @param {boolean} [predicate=isFlattenable] The function invoked per iteration.
- * @param {boolean} [isStrict] Restrict to values that pass `predicate` checks.
- * @param {Array} [result=[]] The initial result value.
- * @returns {Array} Returns the new flattened array.
- */ function baseFlatten(array, depth, predicate, isStrict, result) {
-    var index = -1, length = array.length;
-    predicate || (predicate = isFlattenable);
-    result || (result = []);
-    while((++index) < length){
-        var value = array[index];
-        if (depth > 0 && predicate(value)) {
-            if (depth > 1) // Recursively flatten arrays (susceptible to call stack limits).
-            baseFlatten(value, depth - 1, predicate, isStrict, result);
-            else arrayPush(result, value);
-        } else if (!isStrict) result[result.length] = value;
-    }
-    return result;
-}
-module.exports = baseFlatten;
-
-},{"./_arrayPush":"gQq20","./_isFlattenable":"j6MOs"}],"gQq20":[function(require,module,exports) {
-/**
- * Appends the elements of `values` to `array`.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {Array} values The values to append.
- * @returns {Array} Returns `array`.
- */ function arrayPush(array, values) {
-    var index = -1, length = values.length, offset = array.length;
-    while((++index) < length)array[offset + index] = values[index];
-    return array;
-}
-module.exports = arrayPush;
-
-},{}],"j6MOs":[function(require,module,exports) {
-var Symbol1 = require('./_Symbol'), isArguments = require('./isArguments'), isArray = require('./isArray');
-/** Built-in value references. */ var spreadableSymbol = Symbol1 ? Symbol1.isConcatSpreadable : undefined;
-/**
- * Checks if `value` is a flattenable `arguments` object or array.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is flattenable, else `false`.
- */ function isFlattenable(value) {
-    return isArray(value) || isArguments(value) || !!(spreadableSymbol && value && value[spreadableSymbol]);
-}
-module.exports = isFlattenable;
-
-},{"./_Symbol":"g8MbF","./isArguments":"fTXal","./isArray":"9D9dp"}],"ad34B":[function(require,module,exports) {
-var apply = require('./_apply');
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
-/**
- * A specialized version of `baseRest` which transforms the rest array.
- *
- * @private
- * @param {Function} func The function to apply a rest parameter to.
- * @param {number} [start=func.length-1] The start position of the rest parameter.
- * @param {Function} transform The rest array transform.
- * @returns {Function} Returns the new function.
- */ function overRest(func, start, transform) {
-    start = nativeMax(start === undefined ? func.length - 1 : start, 0);
-    return function() {
-        var args = arguments, index = -1, length = nativeMax(args.length - start, 0), array = Array(length);
-        while((++index) < length)array[index] = args[start + index];
-        index = -1;
-        var otherArgs = Array(start + 1);
-        while((++index) < start)otherArgs[index] = args[index];
-        otherArgs[start] = transform(array);
-        return apply(func, this, otherArgs);
-    };
-}
-module.exports = overRest;
-
-},{"./_apply":"koVpD"}],"koVpD":[function(require,module,exports) {
-/**
- * A faster alternative to `Function#apply`, this function invokes `func`
- * with the `this` binding of `thisArg` and the arguments of `args`.
- *
- * @private
- * @param {Function} func The function to invoke.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {Array} args The arguments to invoke `func` with.
- * @returns {*} Returns the result of `func`.
- */ function apply(func, thisArg, args) {
-    switch(args.length){
-        case 0:
-            return func.call(thisArg);
-        case 1:
-            return func.call(thisArg, args[0]);
-        case 2:
-            return func.call(thisArg, args[0], args[1]);
-        case 3:
-            return func.call(thisArg, args[0], args[1], args[2]);
-    }
-    return func.apply(thisArg, args);
-}
-module.exports = apply;
-
-},{}],"duOCt":[function(require,module,exports) {
-var baseSetToString = require('./_baseSetToString'), shortOut = require('./_shortOut');
-/**
- * Sets the `toString` method of `func` to return `string`.
- *
- * @private
- * @param {Function} func The function to modify.
- * @param {Function} string The `toString` result.
- * @returns {Function} Returns `func`.
- */ var setToString = shortOut(baseSetToString);
-module.exports = setToString;
-
-},{"./_baseSetToString":"4Oalm","./_shortOut":"axdhe"}],"4Oalm":[function(require,module,exports) {
-var constant = require('./constant'), defineProperty = require('./_defineProperty'), identity = require('./identity');
-/**
- * The base implementation of `setToString` without support for hot loop shorting.
- *
- * @private
- * @param {Function} func The function to modify.
- * @param {Function} string The `toString` result.
- * @returns {Function} Returns `func`.
- */ var baseSetToString = !defineProperty ? identity : function(func, string) {
-    return defineProperty(func, 'toString', {
-        'configurable': true,
-        'enumerable': false,
-        'value': constant(string),
-        'writable': true
-    });
-};
-module.exports = baseSetToString;
-
-},{"./constant":"eoPgC","./_defineProperty":"kXqjt","./identity":"czYGV"}],"eoPgC":[function(require,module,exports) {
-/**
- * Creates a function that returns `value`.
- *
- * @static
- * @memberOf _
- * @since 2.4.0
- * @category Util
- * @param {*} value The value to return from the new function.
- * @returns {Function} Returns the new constant function.
- * @example
- *
- * var objects = _.times(2, _.constant({ 'a': 1 }));
- *
- * console.log(objects);
- * // => [{ 'a': 1 }, { 'a': 1 }]
- *
- * console.log(objects[0] === objects[1]);
- * // => true
- */ function constant(value) {
-    return function() {
-        return value;
-    };
-}
-module.exports = constant;
-
-},{}],"axdhe":[function(require,module,exports) {
-/** Used to detect hot functions by number of calls within a span of milliseconds. */ var HOT_COUNT = 800, HOT_SPAN = 16;
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeNow = Date.now;
-/**
- * Creates a function that'll short out and invoke `identity` instead
- * of `func` when it's called `HOT_COUNT` or more times in `HOT_SPAN`
- * milliseconds.
- *
- * @private
- * @param {Function} func The function to restrict.
- * @returns {Function} Returns the new shortable function.
- */ function shortOut(func) {
-    var count = 0, lastCalled = 0;
-    return function() {
-        var stamp = nativeNow(), remaining = HOT_SPAN - (stamp - lastCalled);
-        lastCalled = stamp;
-        if (remaining > 0) {
-            if ((++count) >= HOT_COUNT) return arguments[0];
-        } else count = 0;
-        return func.apply(undefined, arguments);
-    };
-}
-module.exports = shortOut;
-
-},{}],"3ggbJ":[function(require,module,exports) {
+},{"lodash/pick":"kLdKc","lodash/omitBy":"3ggbJ","date-fns/getHours":"jeanF","date-fns/getDay":"b3QZJ","date-fns/getMinutes":"4qrrL","date-fns/getSeconds":"8asYq","date-fns/addDays":"hYhFb","date-fns/addMonths":"8vzbZ","date-fns/compareAsc":"1Vr9W","date-fns/endOfDay":"436iN","date-fns/endOfISOWeek":"7KiAN","date-fns/endOfMonth":"gsQ47","date-fns/endOfWeek":"2OHc4","date-fns/format":"lNaGA","date-fns/getDate":"mNo56","date-fns/getDaysInMonth":"6NFs2","date-fns/getMonth":"crXFe","date-fns/getYear":"lS1Ek","date-fns/isAfter":"eDpLB","date-fns/isBefore":"djDIq","date-fns/isEqual":"bEmvR","date-fns/isSameDay":"kCT4K","date-fns/isSameMonth":"dlChX","date-fns/isSameSecond":"jE8AH","date-fns/parse":"bD2Un","date-fns/parseISO":"4axSD","date-fns/setDate":"gwxNy","date-fns/setHours":"49P9v","date-fns/setMinutes":"223QP","date-fns/setMonth":"cBgCL","date-fns/setSeconds":"b3oxB","date-fns/setYear":"1PzRy","date-fns/startOfDay":"kw7ww","date-fns/startOfISOWeek":"hgsCz","date-fns/startOfMonth":"1qC5t","date-fns/startOfWeek":"22WAP","date-fns/subDays":"f8ciJ","date-fns/isMatch":"hyWo3","date-fns/isValid":"1nJMs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3ggbJ":[function(require,module,exports) {
 var baseIteratee = require('./_baseIteratee'), negate = require('./negate'), pickBy = require('./pickBy');
 /**
  * The opposite of `_.pickBy`; this method creates an object composed of
@@ -26591,117 +31168,7 @@ var Stack = require('./_Stack'), baseIsEqual = require('./_baseIsEqual');
 }
 module.exports = baseIsMatch;
 
-},{"./_Stack":"iSswE","./_baseIsEqual":"eNrCs"}],"iSswE":[function(require,module,exports) {
-var ListCache = require('./_ListCache'), stackClear = require('./_stackClear'), stackDelete = require('./_stackDelete'), stackGet = require('./_stackGet'), stackHas = require('./_stackHas'), stackSet = require('./_stackSet');
-/**
- * Creates a stack cache object to store key-value pairs.
- *
- * @private
- * @constructor
- * @param {Array} [entries] The key-value pairs to cache.
- */ function Stack(entries) {
-    var data = this.__data__ = new ListCache(entries);
-    this.size = data.size;
-}
-// Add methods to `Stack`.
-Stack.prototype.clear = stackClear;
-Stack.prototype['delete'] = stackDelete;
-Stack.prototype.get = stackGet;
-Stack.prototype.has = stackHas;
-Stack.prototype.set = stackSet;
-module.exports = Stack;
-
-},{"./_ListCache":"lpr3N","./_stackClear":"3whtY","./_stackDelete":"d97gA","./_stackGet":"fwAy4","./_stackHas":"65b3w","./_stackSet":"37Y72"}],"3whtY":[function(require,module,exports) {
-var ListCache = require('./_ListCache');
-/**
- * Removes all key-value entries from the stack.
- *
- * @private
- * @name clear
- * @memberOf Stack
- */ function stackClear() {
-    this.__data__ = new ListCache;
-    this.size = 0;
-}
-module.exports = stackClear;
-
-},{"./_ListCache":"lpr3N"}],"d97gA":[function(require,module,exports) {
-/**
- * Removes `key` and its value from the stack.
- *
- * @private
- * @name delete
- * @memberOf Stack
- * @param {string} key The key of the value to remove.
- * @returns {boolean} Returns `true` if the entry was removed, else `false`.
- */ function stackDelete(key) {
-    var data = this.__data__, result = data['delete'](key);
-    this.size = data.size;
-    return result;
-}
-module.exports = stackDelete;
-
-},{}],"fwAy4":[function(require,module,exports) {
-/**
- * Gets the stack value for `key`.
- *
- * @private
- * @name get
- * @memberOf Stack
- * @param {string} key The key of the value to get.
- * @returns {*} Returns the entry value.
- */ function stackGet(key) {
-    return this.__data__.get(key);
-}
-module.exports = stackGet;
-
-},{}],"65b3w":[function(require,module,exports) {
-/**
- * Checks if a stack value for `key` exists.
- *
- * @private
- * @name has
- * @memberOf Stack
- * @param {string} key The key of the entry to check.
- * @returns {boolean} Returns `true` if an entry for `key` exists, else `false`.
- */ function stackHas(key) {
-    return this.__data__.has(key);
-}
-module.exports = stackHas;
-
-},{}],"37Y72":[function(require,module,exports) {
-var ListCache = require('./_ListCache'), Map1 = require('./_Map'), MapCache = require('./_MapCache');
-/** Used as the size to enable large array optimizations. */ var LARGE_ARRAY_SIZE = 200;
-/**
- * Sets the stack `key` to `value`.
- *
- * @private
- * @name set
- * @memberOf Stack
- * @param {string} key The key of the value to set.
- * @param {*} value The value to set.
- * @returns {Object} Returns the stack cache instance.
- */ function stackSet(key, value) {
-    var data = this.__data__;
-    if (data instanceof ListCache) {
-        var pairs = data.__data__;
-        if (!Map1 || pairs.length < LARGE_ARRAY_SIZE - 1) {
-            pairs.push([
-                key,
-                value
-            ]);
-            this.size = ++data.size;
-            return this;
-        }
-        data = this.__data__ = new MapCache(pairs);
-    }
-    data.set(key, value);
-    this.size = data.size;
-    return this;
-}
-module.exports = stackSet;
-
-},{"./_ListCache":"lpr3N","./_Map":"coy6p","./_MapCache":"7Yxy9"}],"eNrCs":[function(require,module,exports) {
+},{"./_Stack":"iSswE","./_baseIsEqual":"eNrCs"}],"eNrCs":[function(require,module,exports) {
 var baseIsEqualDeep = require('./_baseIsEqualDeep'), isObjectLike = require('./isObjectLike');
 /**
  * The base implementation of `_.isEqual` which supports partial comparisons
@@ -26972,12 +31439,7 @@ var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]';
 }
 module.exports = equalByTag;
 
-},{"./_Symbol":"g8MbF","./_Uint8Array":"j5ZqO","./eq":"2rhE2","./_equalArrays":"g3u8s","./_mapToArray":"h94fo","./_setToArray":"felNW"}],"j5ZqO":[function(require,module,exports) {
-var root = require('./_root');
-/** Built-in value references. */ var Uint8Array1 = root.Uint8Array;
-module.exports = Uint8Array1;
-
-},{"./_root":"9w0IQ"}],"h94fo":[function(require,module,exports) {
+},{"./_Symbol":"g8MbF","./_Uint8Array":"j5ZqO","./eq":"2rhE2","./_equalArrays":"g3u8s","./_mapToArray":"h94fo","./_setToArray":"felNW"}],"h94fo":[function(require,module,exports) {
 /**
  * Converts `map` to its key-value pairs.
  *
@@ -27067,151 +31529,7 @@ var getAllKeys = require('./_getAllKeys');
 }
 module.exports = equalObjects;
 
-},{"./_getAllKeys":"kHVQG"}],"kHVQG":[function(require,module,exports) {
-var baseGetAllKeys = require('./_baseGetAllKeys'), getSymbols = require('./_getSymbols'), keys = require('./keys');
-/**
- * Creates an array of own enumerable property names and symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names and symbols.
- */ function getAllKeys(object) {
-    return baseGetAllKeys(object, keys, getSymbols);
-}
-module.exports = getAllKeys;
-
-},{"./_baseGetAllKeys":"k9ii8","./_getSymbols":"fHCPQ","./keys":"5XTkY"}],"k9ii8":[function(require,module,exports) {
-var arrayPush = require('./_arrayPush'), isArray = require('./isArray');
-/**
- * The base implementation of `getAllKeys` and `getAllKeysIn` which uses
- * `keysFunc` and `symbolsFunc` to get the enumerable property names and
- * symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Function} keysFunc The function to get the keys of `object`.
- * @param {Function} symbolsFunc The function to get the symbols of `object`.
- * @returns {Array} Returns the array of property names and symbols.
- */ function baseGetAllKeys(object, keysFunc, symbolsFunc) {
-    var result = keysFunc(object);
-    return isArray(object) ? result : arrayPush(result, symbolsFunc(object));
-}
-module.exports = baseGetAllKeys;
-
-},{"./_arrayPush":"gQq20","./isArray":"9D9dp"}],"fHCPQ":[function(require,module,exports) {
-var arrayFilter = require('./_arrayFilter'), stubArray = require('./stubArray');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Built-in value references. */ var propertyIsEnumerable = objectProto.propertyIsEnumerable;
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
-/**
- * Creates an array of the own enumerable symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of symbols.
- */ var getSymbols = !nativeGetSymbols ? stubArray : function(object) {
-    if (object == null) return [];
-    object = Object(object);
-    return arrayFilter(nativeGetSymbols(object), function(symbol) {
-        return propertyIsEnumerable.call(object, symbol);
-    });
-};
-module.exports = getSymbols;
-
-},{"./_arrayFilter":"d3Wlg","./stubArray":"bOAZN"}],"d3Wlg":[function(require,module,exports) {
-/**
- * A specialized version of `_.filter` for arrays without support for
- * iteratee shorthands.
- *
- * @private
- * @param {Array} [array] The array to iterate over.
- * @param {Function} predicate The function invoked per iteration.
- * @returns {Array} Returns the new filtered array.
- */ function arrayFilter(array, predicate) {
-    var index = -1, length = array == null ? 0 : array.length, resIndex = 0, result = [];
-    while((++index) < length){
-        var value = array[index];
-        if (predicate(value, index, array)) result[resIndex++] = value;
-    }
-    return result;
-}
-module.exports = arrayFilter;
-
-},{}],"bOAZN":[function(require,module,exports) {
-/**
- * This method returns a new empty array.
- *
- * @static
- * @memberOf _
- * @since 4.13.0
- * @category Util
- * @returns {Array} Returns the new empty array.
- * @example
- *
- * var arrays = _.times(2, _.stubArray);
- *
- * console.log(arrays);
- * // => [[], []]
- *
- * console.log(arrays[0] === arrays[1]);
- * // => false
- */ function stubArray() {
-    return [];
-}
-module.exports = stubArray;
-
-},{}],"6GSwf":[function(require,module,exports) {
-var DataView1 = require('./_DataView'), Map1 = require('./_Map'), Promise1 = require('./_Promise'), Set1 = require('./_Set'), WeakMap1 = require('./_WeakMap'), baseGetTag = require('./_baseGetTag'), toSource = require('./_toSource');
-/** `Object#toString` result references. */ var mapTag = '[object Map]', objectTag = '[object Object]', promiseTag = '[object Promise]', setTag = '[object Set]', weakMapTag = '[object WeakMap]';
-var dataViewTag = '[object DataView]';
-/** Used to detect maps, sets, and weakmaps. */ var dataViewCtorString = toSource(DataView1), mapCtorString = toSource(Map1), promiseCtorString = toSource(Promise1), setCtorString = toSource(Set1), weakMapCtorString = toSource(WeakMap1);
-/**
- * Gets the `toStringTag` of `value`.
- *
- * @private
- * @param {*} value The value to query.
- * @returns {string} Returns the `toStringTag`.
- */ var getTag = baseGetTag;
-// Fallback for data views, maps, sets, and weak maps in IE 11 and promises in Node.js < 6.
-if (DataView1 && getTag(new DataView1(new ArrayBuffer(1))) != dataViewTag || Map1 && getTag(new Map1) != mapTag || Promise1 && getTag(Promise1.resolve()) != promiseTag || Set1 && getTag(new Set1) != setTag || WeakMap1 && getTag(new WeakMap1) != weakMapTag) getTag = function(value) {
-    var result = baseGetTag(value), Ctor = result == objectTag ? value.constructor : undefined, ctorString = Ctor ? toSource(Ctor) : '';
-    if (ctorString) switch(ctorString){
-        case dataViewCtorString:
-            return dataViewTag;
-        case mapCtorString:
-            return mapTag;
-        case promiseCtorString:
-            return promiseTag;
-        case setCtorString:
-            return setTag;
-        case weakMapCtorString:
-            return weakMapTag;
-    }
-    return result;
-};
-module.exports = getTag;
-
-},{"./_DataView":"9oCuB","./_Map":"coy6p","./_Promise":"fgNZD","./_Set":"2Jmwe","./_WeakMap":"7zpLL","./_baseGetTag":"hvTL4","./_toSource":"cvYQ0"}],"9oCuB":[function(require,module,exports) {
-var getNative = require('./_getNative'), root = require('./_root');
-/* Built-in method references that are verified to be native. */ var DataView1 = getNative(root, 'DataView');
-module.exports = DataView1;
-
-},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"fgNZD":[function(require,module,exports) {
-var getNative = require('./_getNative'), root = require('./_root');
-/* Built-in method references that are verified to be native. */ var Promise1 = getNative(root, 'Promise');
-module.exports = Promise1;
-
-},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"2Jmwe":[function(require,module,exports) {
-var getNative = require('./_getNative'), root = require('./_root');
-/* Built-in method references that are verified to be native. */ var Set1 = getNative(root, 'Set');
-module.exports = Set1;
-
-},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"7zpLL":[function(require,module,exports) {
-var getNative = require('./_getNative'), root = require('./_root');
-/* Built-in method references that are verified to be native. */ var WeakMap1 = getNative(root, 'WeakMap');
-module.exports = WeakMap1;
-
-},{"./_getNative":"iGRIN","./_root":"9w0IQ"}],"frDcI":[function(require,module,exports) {
+},{"./_getAllKeys":"kHVQG"}],"frDcI":[function(require,module,exports) {
 var isStrictComparable = require('./_isStrictComparable'), keys = require('./keys');
 /**
  * Gets the property names, values, and compare flags of `object`.
@@ -27446,108 +31764,7 @@ var arrayMap = require('./_arrayMap'), baseIteratee = require('./_baseIteratee')
 }
 module.exports = pickBy;
 
-},{"./_arrayMap":"dYHNK","./_baseIteratee":"bbpKv","./_basePickBy":"cBdXI","./_getAllKeysIn":"atjAU"}],"atjAU":[function(require,module,exports) {
-var baseGetAllKeys = require('./_baseGetAllKeys'), getSymbolsIn = require('./_getSymbolsIn'), keysIn = require('./keysIn');
-/**
- * Creates an array of own and inherited enumerable property names and
- * symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names and symbols.
- */ function getAllKeysIn(object) {
-    return baseGetAllKeys(object, keysIn, getSymbolsIn);
-}
-module.exports = getAllKeysIn;
-
-},{"./_baseGetAllKeys":"k9ii8","./_getSymbolsIn":"cvvFk","./keysIn":"420IE"}],"cvvFk":[function(require,module,exports) {
-var arrayPush = require('./_arrayPush'), getPrototype = require('./_getPrototype'), getSymbols = require('./_getSymbols'), stubArray = require('./stubArray');
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeGetSymbols = Object.getOwnPropertySymbols;
-/**
- * Creates an array of the own and inherited enumerable symbols of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of symbols.
- */ var getSymbolsIn = !nativeGetSymbols ? stubArray : function(object) {
-    var result = [];
-    while(object){
-        arrayPush(result, getSymbols(object));
-        object = getPrototype(object);
-    }
-    return result;
-};
-module.exports = getSymbolsIn;
-
-},{"./_arrayPush":"gQq20","./_getPrototype":"eqMRO","./_getSymbols":"fHCPQ","./stubArray":"bOAZN"}],"eqMRO":[function(require,module,exports) {
-var overArg = require('./_overArg');
-/** Built-in value references. */ var getPrototype = overArg(Object.getPrototypeOf, Object);
-module.exports = getPrototype;
-
-},{"./_overArg":"fkGvn"}],"420IE":[function(require,module,exports) {
-var arrayLikeKeys = require('./_arrayLikeKeys'), baseKeysIn = require('./_baseKeysIn'), isArrayLike = require('./isArrayLike');
-/**
- * Creates an array of the own and inherited enumerable property names of `object`.
- *
- * **Note:** Non-object values are coerced to objects.
- *
- * @static
- * @memberOf _
- * @since 3.0.0
- * @category Object
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- *   this.b = 2;
- * }
- *
- * Foo.prototype.c = 3;
- *
- * _.keysIn(new Foo);
- * // => ['a', 'b', 'c'] (iteration order is not guaranteed)
- */ function keysIn(object) {
-    return isArrayLike(object) ? arrayLikeKeys(object, true) : baseKeysIn(object);
-}
-module.exports = keysIn;
-
-},{"./_arrayLikeKeys":"e7sMV","./_baseKeysIn":"Auchz","./isArrayLike":"eRE0j"}],"Auchz":[function(require,module,exports) {
-var isObject = require('./isObject'), isPrototype = require('./_isPrototype'), nativeKeysIn = require('./_nativeKeysIn');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * The base implementation of `_.keysIn` which doesn't treat sparse arrays as dense.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- */ function baseKeysIn(object) {
-    if (!isObject(object)) return nativeKeysIn(object);
-    var isProto = isPrototype(object), result = [];
-    for(var key in object)if (!(key == 'constructor' && (isProto || !hasOwnProperty.call(object, key)))) result.push(key);
-    return result;
-}
-module.exports = baseKeysIn;
-
-},{"./isObject":"hZIId","./_isPrototype":"3LrfV","./_nativeKeysIn":"1n6iW"}],"1n6iW":[function(require,module,exports) {
-/**
- * This function is like
- * [`Object.keys`](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
- * except that it includes inherited enumerable properties.
- *
- * @private
- * @param {Object} object The object to query.
- * @returns {Array} Returns the array of property names.
- */ function nativeKeysIn(object) {
-    var result = [];
-    if (object != null) for(var key in Object(object))result.push(key);
-    return result;
-}
-module.exports = nativeKeysIn;
-
-},{}],"jeanF":[function(require,module,exports) {
+},{"./_arrayMap":"dYHNK","./_baseIteratee":"bbpKv","./_basePickBy":"cBdXI","./_getAllKeysIn":"atjAU"}],"jeanF":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _indexJs = require("../toDate/index.js");
@@ -32451,1325 +36668,7 @@ var _default = Info;
 exports["default"] = _default;
 module.exports = exports.default;
 
-},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","../../createSvgIcon":"ayDyh","@rsuite/icon-font/lib/legacy/Info":"gVWOr"}],"eigyQ":[function(require,module,exports) {
-function _interopRequireDefault(obj) {
-    return obj && obj.__esModule ? obj : {
-        "default": obj
-    };
-}
-module.exports = _interopRequireDefault;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-},{}],"ayDyh":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports["default"] = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _react = _interopRequireDefault(require("react"));
-var _Icon = _interopRequireDefault(require("./Icon"));
-function createSvgIcon(_ref) {
-    var as = _ref.as, ariaLabel = _ref.ariaLabel, displayName = _ref.displayName, category = _ref.category;
-    var IconComponent = /*#__PURE__*/ _react["default"].forwardRef(function(props, ref) {
-        return(/*#__PURE__*/ _react["default"].createElement(_Icon["default"], _extends2["default"]({
-            "aria-label": ariaLabel,
-            "data-category": category,
-            ref: ref,
-            as: as
-        }, props)));
-    });
-    IconComponent.displayName = displayName;
-    return IconComponent;
-}
-var _default = createSvgIcon;
-exports["default"] = _default;
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","@babel/runtime/helpers/extends":"fpVWj","react":"6TuXu","./Icon":"72tAz"}],"fpVWj":[function(require,module,exports) {
-function _extends() {
-    module.exports = _extends = Object.assign || function(target) {
-        for(var i = 1; i < arguments.length; i++){
-            var source = arguments[i];
-            for(var key in source)if (Object.prototype.hasOwnProperty.call(source, key)) target[key] = source[key];
-        }
-        return target;
-    };
-    module.exports["default"] = module.exports, module.exports.__esModule = true;
-    return _extends.apply(this, arguments);
-}
-module.exports = _extends;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-},{}],"72tAz":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports["default"] = void 0;
-var _extends2 = _interopRequireDefault(require("@babel/runtime/helpers/extends"));
-var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require("@babel/runtime/helpers/objectWithoutPropertiesLoose"));
-var _react = _interopRequireDefault(require("react"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var _propTypes = _interopRequireDefault(require("prop-types"));
-var _utils = require("./utils");
-var defaultProps = {
-    as: 'svg',
-    fill: 'currentColor',
-    width: '1em',
-    height: '1em'
-};
-function filterProps(props) {
-    var nextProps = {
-    };
-    Object.entries(props).forEach(function(_ref) {
-        var key = _ref[0], value = _ref[1];
-        if (typeof value !== 'undefined') nextProps[key] = value;
-    });
-    return nextProps;
-}
-var Icon = /*#__PURE__*/ _react["default"].forwardRef(function(props, ref) {
-    var _classNames;
-    var Component = props.as, spin = props.spin, pulse = props.pulse, flip = props.flip, fill = props.fill, className = props.className, rotate = props.rotate, children = props.children, viewBox = props.viewBox, width = props.width, height = props.height, style = props.style, rest = _objectWithoutPropertiesLoose2["default"](props, [
-        "as",
-        "spin",
-        "pulse",
-        "flip",
-        "fill",
-        "className",
-        "rotate",
-        "children",
-        "viewBox",
-        "width",
-        "height",
-        "style"
-    ]);
-    var _useClassNames = _utils.useClassNames(), componentClassName = _useClassNames[0], addPrefix = _useClassNames[1];
-    var classes = _classnames["default"](className, componentClassName, (_classNames = {
-    }, _classNames[addPrefix('spin')] = spin, _classNames[addPrefix('pulse')] = pulse, _classNames[addPrefix("flip-" + flip)] = !!flip, _classNames));
-    var rotateStyles = {
-        msTransform: "rotate(" + rotate + "deg)",
-        transform: "rotate(" + rotate + "deg)"
-    };
-    _utils.useInsertStyles();
-    var svgProps = filterProps({
-        width: width,
-        height: height,
-        fill: fill,
-        viewBox: viewBox,
-        className: classes,
-        style: rotate ? _extends2["default"]({
-        }, rotateStyles, style) : style
-    });
-    return(/*#__PURE__*/ _react["default"].createElement(Component, _extends2["default"]({
-        "aria-hidden": true,
-        focusable: false,
-        ref: ref
-    }, svgProps, rest), children));
-});
-Icon.displayName = 'Icon';
-Icon.defaultProps = defaultProps;
-Icon.propTypes = {
-    spin: _propTypes["default"].bool,
-    pulse: _propTypes["default"].bool,
-    rotate: _propTypes["default"].number,
-    viewBox: _propTypes["default"].string,
-    as: _propTypes["default"].oneOfType([
-        _propTypes["default"].elementType,
-        _propTypes["default"].string
-    ]),
-    flip: _propTypes["default"].oneOf([
-        'horizontal',
-        'vertical'
-    ]),
-    fill: _propTypes["default"].string
-};
-var _default = Icon;
-exports["default"] = _default;
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","@babel/runtime/helpers/extends":"fpVWj","@babel/runtime/helpers/objectWithoutPropertiesLoose":"ab5Ln","react":"6TuXu","classnames":"bOXOh","prop-types":"1tgq3","./utils":"7Dulf"}],"ab5Ln":[function(require,module,exports) {
-function _objectWithoutPropertiesLoose(source, excluded) {
-    if (source == null) return {
-    };
-    var target = {
-    };
-    var sourceKeys = Object.keys(source);
-    var key, i;
-    for(i = 0; i < sourceKeys.length; i++){
-        key = sourceKeys[i];
-        if (excluded.indexOf(key) >= 0) continue;
-        target[key] = source[key];
-    }
-    return target;
-}
-module.exports = _objectWithoutPropertiesLoose;
-module.exports["default"] = module.exports, module.exports.__esModule = true;
-
-},{}],"bOXOh":[function(require,module,exports) {
-(function() {
-    var hasOwn = {
-    }.hasOwnProperty;
-    function classNames() {
-        var classes = [];
-        for(var i = 0; i < arguments.length; i++){
-            var arg = arguments[i];
-            if (!arg) continue;
-            var argType = typeof arg;
-            if (argType === 'string' || argType === 'number') classes.push(arg);
-            else if (Array.isArray(arg)) {
-                if (arg.length) {
-                    var inner = classNames.apply(null, arg);
-                    if (inner) classes.push(inner);
-                }
-            } else if (argType === 'object') {
-                if (arg.toString === Object.prototype.toString) {
-                    for(var key in arg)if (hasOwn.call(arg, key) && arg[key]) classes.push(key);
-                } else classes.push(arg.toString());
-            }
-        }
-        return classes.join(' ');
-    }
-    if (typeof module !== 'undefined' && module.exports) {
-        classNames.default = classNames;
-        module.exports = classNames;
-    } else if (typeof define === 'function' && typeof define.amd === 'object' && define.amd) // register as 'classnames', consistent with npm package name
-    define('classnames', [], function() {
-        return classNames;
-    });
-    else window.classNames = classNames;
-})();
-
-},{}],"7Dulf":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-var _exportNames = {
-    useClassNames: true,
-    inBrowserEnv: true,
-    useInsertStyles: true
-};
-exports.useInsertStyles = exports.inBrowserEnv = exports.useClassNames = void 0;
-var _prefix = require("./prefix");
-Object.keys(_prefix).forEach(function(key) {
-    if (key === "default" || key === "__esModule") return;
-    if (Object.prototype.hasOwnProperty.call(_exportNames, key)) return;
-    if (key in exports && exports[key] === _prefix[key]) return;
-    exports[key] = _prefix[key];
-});
-var _useClassNames = _interopRequireDefault(require("./useClassNames"));
-exports.useClassNames = _useClassNames["default"];
-var _inBrowserEnv = _interopRequireDefault(require("./inBrowserEnv"));
-exports.inBrowserEnv = _inBrowserEnv["default"];
-var _useInsertStyles = _interopRequireDefault(require("./useInsertStyles"));
-exports.useInsertStyles = _useInsertStyles["default"];
-
-},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","./prefix":"3Jn12","./useClassNames":"5hRHL","./inBrowserEnv":"fdn6Q","./useInsertStyles":"2SLaI"}],"3Jn12":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports.prefix = exports.defaultClassPrefix = exports.getClassNamePrefix = exports.globalKey = void 0;
-var _curry = _interopRequireDefault(require("lodash/curry"));
-var _classnames = _interopRequireDefault(require("classnames"));
-var globalKey = 'rs-';
-exports.globalKey = globalKey;
-var getClassNamePrefix = function getClassNamePrefix1() {
-    if (typeof __RSUITE_CLASSNAME_PREFIX__ !== 'undefined') return __RSUITE_CLASSNAME_PREFIX__;
-    return globalKey;
-};
-exports.getClassNamePrefix = getClassNamePrefix;
-var defaultClassPrefix = function defaultClassPrefix1(name) {
-    return name ? "" + getClassNamePrefix() + name : undefined;
-};
-exports.defaultClassPrefix = defaultClassPrefix;
-var prefix = _curry["default"](function(pre, className) {
-    if (!pre || !className) return '';
-    if (Array.isArray(className)) return _classnames["default"](className.filter(function(name) {
-        return !!name;
-    }).map(function(name) {
-        return pre + "-" + name;
-    }));
-    return pre + "-" + className;
-});
-exports.prefix = prefix;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","lodash/curry":"4AtTE","classnames":"bOXOh"}],"4AtTE":[function(require,module,exports) {
-var createWrap = require('./_createWrap');
-/** Used to compose bitmasks for function metadata. */ var WRAP_CURRY_FLAG = 8;
-/**
- * Creates a function that accepts arguments of `func` and either invokes
- * `func` returning its result, if at least `arity` number of arguments have
- * been provided, or returns a function that accepts the remaining `func`
- * arguments, and so on. The arity of `func` may be specified if `func.length`
- * is not sufficient.
- *
- * The `_.curry.placeholder` value, which defaults to `_` in monolithic builds,
- * may be used as a placeholder for provided arguments.
- *
- * **Note:** This method doesn't set the "length" property of curried functions.
- *
- * @static
- * @memberOf _
- * @since 2.0.0
- * @category Function
- * @param {Function} func The function to curry.
- * @param {number} [arity=func.length] The arity of `func`.
- * @param- {Object} [guard] Enables use as an iteratee for methods like `_.map`.
- * @returns {Function} Returns the new curried function.
- * @example
- *
- * var abc = function(a, b, c) {
- *   return [a, b, c];
- * };
- *
- * var curried = _.curry(abc);
- *
- * curried(1)(2)(3);
- * // => [1, 2, 3]
- *
- * curried(1, 2)(3);
- * // => [1, 2, 3]
- *
- * curried(1, 2, 3);
- * // => [1, 2, 3]
- *
- * // Curried with placeholders.
- * curried(1)(_, 3)(2);
- * // => [1, 2, 3]
- */ function curry(func, arity, guard) {
-    arity = guard ? undefined : arity;
-    var result = createWrap(func, WRAP_CURRY_FLAG, undefined, undefined, undefined, undefined, undefined, arity);
-    result.placeholder = curry.placeholder;
-    return result;
-}
-// Assign default placeholders.
-curry.placeholder = {
-};
-module.exports = curry;
-
-},{"./_createWrap":"jWTIp"}],"jWTIp":[function(require,module,exports) {
-var baseSetData = require('./_baseSetData'), createBind = require('./_createBind'), createCurry = require('./_createCurry'), createHybrid = require('./_createHybrid'), createPartial = require('./_createPartial'), getData = require('./_getData'), mergeData = require('./_mergeData'), setData = require('./_setData'), setWrapToString = require('./_setWrapToString'), toInteger = require('./toInteger');
-/** Error message constants. */ var FUNC_ERROR_TEXT = 'Expected a function';
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_FLAG = 8, WRAP_CURRY_RIGHT_FLAG = 16, WRAP_PARTIAL_FLAG = 32, WRAP_PARTIAL_RIGHT_FLAG = 64;
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
-/**
- * Creates a function that either curries or invokes `func` with optional
- * `this` binding and partially applied arguments.
- *
- * @private
- * @param {Function|string} func The function or method name to wrap.
- * @param {number} bitmask The bitmask flags.
- *    1 - `_.bind`
- *    2 - `_.bindKey`
- *    4 - `_.curry` or `_.curryRight` of a bound function
- *    8 - `_.curry`
- *   16 - `_.curryRight`
- *   32 - `_.partial`
- *   64 - `_.partialRight`
- *  128 - `_.rearg`
- *  256 - `_.ary`
- *  512 - `_.flip`
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {Array} [partials] The arguments to be partially applied.
- * @param {Array} [holders] The `partials` placeholder indexes.
- * @param {Array} [argPos] The argument positions of the new function.
- * @param {number} [ary] The arity cap of `func`.
- * @param {number} [arity] The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */ function createWrap(func, bitmask, thisArg, partials, holders, argPos, ary, arity) {
-    var isBindKey = bitmask & WRAP_BIND_KEY_FLAG;
-    if (!isBindKey && typeof func != 'function') throw new TypeError(FUNC_ERROR_TEXT);
-    var length = partials ? partials.length : 0;
-    if (!length) {
-        bitmask &= ~(WRAP_PARTIAL_FLAG | WRAP_PARTIAL_RIGHT_FLAG);
-        partials = holders = undefined;
-    }
-    ary = ary === undefined ? ary : nativeMax(toInteger(ary), 0);
-    arity = arity === undefined ? arity : toInteger(arity);
-    length -= holders ? holders.length : 0;
-    if (bitmask & WRAP_PARTIAL_RIGHT_FLAG) {
-        var partialsRight = partials, holdersRight = holders;
-        partials = holders = undefined;
-    }
-    var data = isBindKey ? undefined : getData(func);
-    var newData = [
-        func,
-        bitmask,
-        thisArg,
-        partials,
-        holders,
-        partialsRight,
-        holdersRight,
-        argPos,
-        ary,
-        arity
-    ];
-    if (data) mergeData(newData, data);
-    func = newData[0];
-    bitmask = newData[1];
-    thisArg = newData[2];
-    partials = newData[3];
-    holders = newData[4];
-    arity = newData[9] = newData[9] === undefined ? isBindKey ? 0 : func.length : nativeMax(newData[9] - length, 0);
-    if (!arity && bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG)) bitmask &= ~(WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG);
-    if (!bitmask || bitmask == WRAP_BIND_FLAG) var result = createBind(func, bitmask, thisArg);
-    else if (bitmask == WRAP_CURRY_FLAG || bitmask == WRAP_CURRY_RIGHT_FLAG) result = createCurry(func, bitmask, arity);
-    else if ((bitmask == WRAP_PARTIAL_FLAG || bitmask == (WRAP_BIND_FLAG | WRAP_PARTIAL_FLAG)) && !holders.length) result = createPartial(func, bitmask, thisArg, partials);
-    else result = createHybrid.apply(undefined, newData);
-    var setter = data ? baseSetData : setData;
-    return setWrapToString(setter(result, newData), func, bitmask);
-}
-module.exports = createWrap;
-
-},{"./_baseSetData":"q9Ejo","./_createBind":"dMusv","./_createCurry":"2PEkE","./_createHybrid":"5aUjM","./_createPartial":"j9vFV","./_getData":"g4Fmy","./_mergeData":"eavA7","./_setData":"XwiwS","./_setWrapToString":"3scxv","./toInteger":"5HLSg"}],"q9Ejo":[function(require,module,exports) {
-var identity = require('./identity'), metaMap = require('./_metaMap');
-/**
- * The base implementation of `setData` without support for hot loop shorting.
- *
- * @private
- * @param {Function} func The function to associate metadata with.
- * @param {*} data The metadata.
- * @returns {Function} Returns `func`.
- */ var baseSetData = !metaMap ? identity : function(func, data) {
-    metaMap.set(func, data);
-    return func;
-};
-module.exports = baseSetData;
-
-},{"./identity":"czYGV","./_metaMap":"kMAlx"}],"kMAlx":[function(require,module,exports) {
-var WeakMap1 = require('./_WeakMap');
-/** Used to store function metadata. */ var metaMap = WeakMap1 && new WeakMap1;
-module.exports = metaMap;
-
-},{"./_WeakMap":"7zpLL"}],"dMusv":[function(require,module,exports) {
-var createCtor = require('./_createCtor'), root = require('./_root');
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1;
-/**
- * Creates a function that wraps `func` to invoke it with the optional `this`
- * binding of `thisArg`.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @param {*} [thisArg] The `this` binding of `func`.
- * @returns {Function} Returns the new wrapped function.
- */ function createBind(func, bitmask, thisArg) {
-    var isBind = bitmask & WRAP_BIND_FLAG, Ctor = createCtor(func);
-    function wrapper() {
-        var fn = this && this !== root && this instanceof wrapper ? Ctor : func;
-        return fn.apply(isBind ? thisArg : this, arguments);
-    }
-    return wrapper;
-}
-module.exports = createBind;
-
-},{"./_createCtor":"ibWBw","./_root":"9w0IQ"}],"ibWBw":[function(require,module,exports) {
-var baseCreate = require('./_baseCreate'), isObject = require('./isObject');
-/**
- * Creates a function that produces an instance of `Ctor` regardless of
- * whether it was invoked as part of a `new` expression or by `call` or `apply`.
- *
- * @private
- * @param {Function} Ctor The constructor to wrap.
- * @returns {Function} Returns the new wrapped function.
- */ function createCtor(Ctor) {
-    return function() {
-        // Use a `switch` statement to work with class constructors. See
-        // http://ecma-international.org/ecma-262/7.0/#sec-ecmascript-function-objects-call-thisargument-argumentslist
-        // for more details.
-        var args = arguments;
-        switch(args.length){
-            case 0:
-                return new Ctor;
-            case 1:
-                return new Ctor(args[0]);
-            case 2:
-                return new Ctor(args[0], args[1]);
-            case 3:
-                return new Ctor(args[0], args[1], args[2]);
-            case 4:
-                return new Ctor(args[0], args[1], args[2], args[3]);
-            case 5:
-                return new Ctor(args[0], args[1], args[2], args[3], args[4]);
-            case 6:
-                return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5]);
-            case 7:
-                return new Ctor(args[0], args[1], args[2], args[3], args[4], args[5], args[6]);
-        }
-        var thisBinding = baseCreate(Ctor.prototype), result = Ctor.apply(thisBinding, args);
-        // Mimic the constructor's `return` behavior.
-        // See https://es5.github.io/#x13.2.2 for more details.
-        return isObject(result) ? result : thisBinding;
-    };
-}
-module.exports = createCtor;
-
-},{"./_baseCreate":"1SO2E","./isObject":"hZIId"}],"1SO2E":[function(require,module,exports) {
-var isObject = require('./isObject');
-/** Built-in value references. */ var objectCreate = Object.create;
-/**
- * The base implementation of `_.create` without support for assigning
- * properties to the created object.
- *
- * @private
- * @param {Object} proto The object to inherit from.
- * @returns {Object} Returns the new object.
- */ var baseCreate = function() {
-    function object() {
-    }
-    return function(proto) {
-        if (!isObject(proto)) return {
-        };
-        if (objectCreate) return objectCreate(proto);
-        object.prototype = proto;
-        var result = new object;
-        object.prototype = undefined;
-        return result;
-    };
-}();
-module.exports = baseCreate;
-
-},{"./isObject":"hZIId"}],"2PEkE":[function(require,module,exports) {
-var apply = require('./_apply'), createCtor = require('./_createCtor'), createHybrid = require('./_createHybrid'), createRecurry = require('./_createRecurry'), getHolder = require('./_getHolder'), replaceHolders = require('./_replaceHolders'), root = require('./_root');
-/**
- * Creates a function that wraps `func` to enable currying.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @param {number} arity The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */ function createCurry(func, bitmask, arity) {
-    var Ctor = createCtor(func);
-    function wrapper() {
-        var length = arguments.length, args = Array(length), index = length, placeholder = getHolder(wrapper);
-        while(index--)args[index] = arguments[index];
-        var holders = length < 3 && args[0] !== placeholder && args[length - 1] !== placeholder ? [] : replaceHolders(args, placeholder);
-        length -= holders.length;
-        if (length < arity) return createRecurry(func, bitmask, createHybrid, wrapper.placeholder, undefined, args, holders, undefined, undefined, arity - length);
-        var fn = this && this !== root && this instanceof wrapper ? Ctor : func;
-        return apply(fn, this, args);
-    }
-    return wrapper;
-}
-module.exports = createCurry;
-
-},{"./_apply":"koVpD","./_createCtor":"ibWBw","./_createHybrid":"5aUjM","./_createRecurry":"6QHHK","./_getHolder":"fQE8c","./_replaceHolders":"8Pk3T","./_root":"9w0IQ"}],"5aUjM":[function(require,module,exports) {
-var composeArgs = require('./_composeArgs'), composeArgsRight = require('./_composeArgsRight'), countHolders = require('./_countHolders'), createCtor = require('./_createCtor'), createRecurry = require('./_createRecurry'), getHolder = require('./_getHolder'), reorder = require('./_reorder'), replaceHolders = require('./_replaceHolders'), root = require('./_root');
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_FLAG = 8, WRAP_CURRY_RIGHT_FLAG = 16, WRAP_ARY_FLAG = 128, WRAP_FLIP_FLAG = 512;
-/**
- * Creates a function that wraps `func` to invoke it with optional `this`
- * binding of `thisArg`, partial application, and currying.
- *
- * @private
- * @param {Function|string} func The function or method name to wrap.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {Array} [partials] The arguments to prepend to those provided to
- *  the new function.
- * @param {Array} [holders] The `partials` placeholder indexes.
- * @param {Array} [partialsRight] The arguments to append to those provided
- *  to the new function.
- * @param {Array} [holdersRight] The `partialsRight` placeholder indexes.
- * @param {Array} [argPos] The argument positions of the new function.
- * @param {number} [ary] The arity cap of `func`.
- * @param {number} [arity] The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */ function createHybrid(func, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary, arity) {
-    var isAry = bitmask & WRAP_ARY_FLAG, isBind = bitmask & WRAP_BIND_FLAG, isBindKey = bitmask & WRAP_BIND_KEY_FLAG, isCurried = bitmask & (WRAP_CURRY_FLAG | WRAP_CURRY_RIGHT_FLAG), isFlip = bitmask & WRAP_FLIP_FLAG, Ctor = isBindKey ? undefined : createCtor(func);
-    function wrapper() {
-        var length = arguments.length, args = Array(length), index = length;
-        while(index--)args[index] = arguments[index];
-        if (isCurried) var placeholder = getHolder(wrapper), holdersCount = countHolders(args, placeholder);
-        if (partials) args = composeArgs(args, partials, holders, isCurried);
-        if (partialsRight) args = composeArgsRight(args, partialsRight, holdersRight, isCurried);
-        length -= holdersCount;
-        if (isCurried && length < arity) {
-            var newHolders = replaceHolders(args, placeholder);
-            return createRecurry(func, bitmask, createHybrid, wrapper.placeholder, thisArg, args, newHolders, argPos, ary, arity - length);
-        }
-        var thisBinding = isBind ? thisArg : this, fn = isBindKey ? thisBinding[func] : func;
-        length = args.length;
-        if (argPos) args = reorder(args, argPos);
-        else if (isFlip && length > 1) args.reverse();
-        if (isAry && ary < length) args.length = ary;
-        if (this && this !== root && this instanceof wrapper) fn = Ctor || createCtor(fn);
-        return fn.apply(thisBinding, args);
-    }
-    return wrapper;
-}
-module.exports = createHybrid;
-
-},{"./_composeArgs":"c73Lg","./_composeArgsRight":"cSTDh","./_countHolders":"fPVGD","./_createCtor":"ibWBw","./_createRecurry":"6QHHK","./_getHolder":"fQE8c","./_reorder":"32jG3","./_replaceHolders":"8Pk3T","./_root":"9w0IQ"}],"c73Lg":[function(require,module,exports) {
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
-/**
- * Creates an array that is the composition of partially applied arguments,
- * placeholders, and provided arguments into a single array of arguments.
- *
- * @private
- * @param {Array} args The provided arguments.
- * @param {Array} partials The arguments to prepend to those provided.
- * @param {Array} holders The `partials` placeholder indexes.
- * @params {boolean} [isCurried] Specify composing for a curried function.
- * @returns {Array} Returns the new array of composed arguments.
- */ function composeArgs(args, partials, holders, isCurried) {
-    var argsIndex = -1, argsLength = args.length, holdersLength = holders.length, leftIndex = -1, leftLength = partials.length, rangeLength = nativeMax(argsLength - holdersLength, 0), result = Array(leftLength + rangeLength), isUncurried = !isCurried;
-    while((++leftIndex) < leftLength)result[leftIndex] = partials[leftIndex];
-    while((++argsIndex) < holdersLength)if (isUncurried || argsIndex < argsLength) result[holders[argsIndex]] = args[argsIndex];
-    while(rangeLength--)result[leftIndex++] = args[argsIndex++];
-    return result;
-}
-module.exports = composeArgs;
-
-},{}],"cSTDh":[function(require,module,exports) {
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMax = Math.max;
-/**
- * This function is like `composeArgs` except that the arguments composition
- * is tailored for `_.partialRight`.
- *
- * @private
- * @param {Array} args The provided arguments.
- * @param {Array} partials The arguments to append to those provided.
- * @param {Array} holders The `partials` placeholder indexes.
- * @params {boolean} [isCurried] Specify composing for a curried function.
- * @returns {Array} Returns the new array of composed arguments.
- */ function composeArgsRight(args, partials, holders, isCurried) {
-    var argsIndex = -1, argsLength = args.length, holdersIndex = -1, holdersLength = holders.length, rightIndex = -1, rightLength = partials.length, rangeLength = nativeMax(argsLength - holdersLength, 0), result = Array(rangeLength + rightLength), isUncurried = !isCurried;
-    while((++argsIndex) < rangeLength)result[argsIndex] = args[argsIndex];
-    var offset = argsIndex;
-    while((++rightIndex) < rightLength)result[offset + rightIndex] = partials[rightIndex];
-    while((++holdersIndex) < holdersLength)if (isUncurried || argsIndex < argsLength) result[offset + holders[holdersIndex]] = args[argsIndex++];
-    return result;
-}
-module.exports = composeArgsRight;
-
-},{}],"fPVGD":[function(require,module,exports) {
-/**
- * Gets the number of `placeholder` occurrences in `array`.
- *
- * @private
- * @param {Array} array The array to inspect.
- * @param {*} placeholder The placeholder to search for.
- * @returns {number} Returns the placeholder count.
- */ function countHolders(array, placeholder) {
-    var length = array.length, result = 0;
-    while(length--)if (array[length] === placeholder) ++result;
-    return result;
-}
-module.exports = countHolders;
-
-},{}],"6QHHK":[function(require,module,exports) {
-var isLaziable = require('./_isLaziable'), setData = require('./_setData'), setWrapToString = require('./_setWrapToString');
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_BOUND_FLAG = 4, WRAP_CURRY_FLAG = 8, WRAP_PARTIAL_FLAG = 32, WRAP_PARTIAL_RIGHT_FLAG = 64;
-/**
- * Creates a function that wraps `func` to continue currying.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @param {Function} wrapFunc The function to create the `func` wrapper.
- * @param {*} placeholder The placeholder value.
- * @param {*} [thisArg] The `this` binding of `func`.
- * @param {Array} [partials] The arguments to prepend to those provided to
- *  the new function.
- * @param {Array} [holders] The `partials` placeholder indexes.
- * @param {Array} [argPos] The argument positions of the new function.
- * @param {number} [ary] The arity cap of `func`.
- * @param {number} [arity] The arity of `func`.
- * @returns {Function} Returns the new wrapped function.
- */ function createRecurry(func, bitmask, wrapFunc, placeholder, thisArg, partials, holders, argPos, ary, arity) {
-    var isCurry = bitmask & WRAP_CURRY_FLAG, newHolders = isCurry ? holders : undefined, newHoldersRight = isCurry ? undefined : holders, newPartials = isCurry ? partials : undefined, newPartialsRight = isCurry ? undefined : partials;
-    bitmask |= isCurry ? WRAP_PARTIAL_FLAG : WRAP_PARTIAL_RIGHT_FLAG;
-    bitmask &= ~(isCurry ? WRAP_PARTIAL_RIGHT_FLAG : WRAP_PARTIAL_FLAG);
-    if (!(bitmask & WRAP_CURRY_BOUND_FLAG)) bitmask &= ~(WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG);
-    var newData = [
-        func,
-        bitmask,
-        thisArg,
-        newPartials,
-        newHolders,
-        newPartialsRight,
-        newHoldersRight,
-        argPos,
-        ary,
-        arity
-    ];
-    var result = wrapFunc.apply(undefined, newData);
-    if (isLaziable(func)) setData(result, newData);
-    result.placeholder = placeholder;
-    return setWrapToString(result, func, bitmask);
-}
-module.exports = createRecurry;
-
-},{"./_isLaziable":"d5nZZ","./_setData":"XwiwS","./_setWrapToString":"3scxv"}],"d5nZZ":[function(require,module,exports) {
-var LazyWrapper = require('./_LazyWrapper'), getData = require('./_getData'), getFuncName = require('./_getFuncName'), lodash = require('./wrapperLodash');
-/**
- * Checks if `func` has a lazy counterpart.
- *
- * @private
- * @param {Function} func The function to check.
- * @returns {boolean} Returns `true` if `func` has a lazy counterpart,
- *  else `false`.
- */ function isLaziable(func) {
-    var funcName = getFuncName(func), other = lodash[funcName];
-    if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) return false;
-    if (func === other) return true;
-    var data = getData(other);
-    return !!data && func === data[0];
-}
-module.exports = isLaziable;
-
-},{"./_LazyWrapper":"4chU7","./_getData":"g4Fmy","./_getFuncName":"dr13S","./wrapperLodash":"kNP0U"}],"4chU7":[function(require,module,exports) {
-var baseCreate = require('./_baseCreate'), baseLodash = require('./_baseLodash');
-/** Used as references for the maximum length and index of an array. */ var MAX_ARRAY_LENGTH = 4294967295;
-/**
- * Creates a lazy wrapper object which wraps `value` to enable lazy evaluation.
- *
- * @private
- * @constructor
- * @param {*} value The value to wrap.
- */ function LazyWrapper(value) {
-    this.__wrapped__ = value;
-    this.__actions__ = [];
-    this.__dir__ = 1;
-    this.__filtered__ = false;
-    this.__iteratees__ = [];
-    this.__takeCount__ = MAX_ARRAY_LENGTH;
-    this.__views__ = [];
-}
-// Ensure `LazyWrapper` is an instance of `baseLodash`.
-LazyWrapper.prototype = baseCreate(baseLodash.prototype);
-LazyWrapper.prototype.constructor = LazyWrapper;
-module.exports = LazyWrapper;
-
-},{"./_baseCreate":"1SO2E","./_baseLodash":"4VGJz"}],"4VGJz":[function(require,module,exports) {
-/**
- * The function whose prototype chain sequence wrappers inherit from.
- *
- * @private
- */ function baseLodash() {
-// No operation performed.
-}
-module.exports = baseLodash;
-
-},{}],"g4Fmy":[function(require,module,exports) {
-var metaMap = require('./_metaMap'), noop = require('./noop');
-/**
- * Gets metadata for `func`.
- *
- * @private
- * @param {Function} func The function to query.
- * @returns {*} Returns the metadata for `func`.
- */ var getData = !metaMap ? noop : function(func) {
-    return metaMap.get(func);
-};
-module.exports = getData;
-
-},{"./_metaMap":"kMAlx","./noop":"hdG5L"}],"hdG5L":[function(require,module,exports) {
-/**
- * This method returns `undefined`.
- *
- * @static
- * @memberOf _
- * @since 2.3.0
- * @category Util
- * @example
- *
- * _.times(2, _.noop);
- * // => [undefined, undefined]
- */ function noop() {
-// No operation performed.
-}
-module.exports = noop;
-
-},{}],"dr13S":[function(require,module,exports) {
-var realNames = require('./_realNames');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Gets the name of `func`.
- *
- * @private
- * @param {Function} func The function to query.
- * @returns {string} Returns the function name.
- */ function getFuncName(func) {
-    var result = func.name + '', array = realNames[result], length = hasOwnProperty.call(realNames, result) ? array.length : 0;
-    while(length--){
-        var data = array[length], otherFunc = data.func;
-        if (otherFunc == null || otherFunc == func) return data.name;
-    }
-    return result;
-}
-module.exports = getFuncName;
-
-},{"./_realNames":"hAXSU"}],"hAXSU":[function(require,module,exports) {
-/** Used to lookup unminified function names. */ var realNames = {
-};
-module.exports = realNames;
-
-},{}],"kNP0U":[function(require,module,exports) {
-var LazyWrapper = require('./_LazyWrapper'), LodashWrapper = require('./_LodashWrapper'), baseLodash = require('./_baseLodash'), isArray = require('./isArray'), isObjectLike = require('./isObjectLike'), wrapperClone = require('./_wrapperClone');
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Creates a `lodash` object which wraps `value` to enable implicit method
- * chain sequences. Methods that operate on and return arrays, collections,
- * and functions can be chained together. Methods that retrieve a single value
- * or may return a primitive value will automatically end the chain sequence
- * and return the unwrapped value. Otherwise, the value must be unwrapped
- * with `_#value`.
- *
- * Explicit chain sequences, which must be unwrapped with `_#value`, may be
- * enabled using `_.chain`.
- *
- * The execution of chained methods is lazy, that is, it's deferred until
- * `_#value` is implicitly or explicitly called.
- *
- * Lazy evaluation allows several methods to support shortcut fusion.
- * Shortcut fusion is an optimization to merge iteratee calls; this avoids
- * the creation of intermediate arrays and can greatly reduce the number of
- * iteratee executions. Sections of a chain sequence qualify for shortcut
- * fusion if the section is applied to an array and iteratees accept only
- * one argument. The heuristic for whether a section qualifies for shortcut
- * fusion is subject to change.
- *
- * Chaining is supported in custom builds as long as the `_#value` method is
- * directly or indirectly included in the build.
- *
- * In addition to lodash methods, wrappers have `Array` and `String` methods.
- *
- * The wrapper `Array` methods are:
- * `concat`, `join`, `pop`, `push`, `shift`, `sort`, `splice`, and `unshift`
- *
- * The wrapper `String` methods are:
- * `replace` and `split`
- *
- * The wrapper methods that support shortcut fusion are:
- * `at`, `compact`, `drop`, `dropRight`, `dropWhile`, `filter`, `find`,
- * `findLast`, `head`, `initial`, `last`, `map`, `reject`, `reverse`, `slice`,
- * `tail`, `take`, `takeRight`, `takeRightWhile`, `takeWhile`, and `toArray`
- *
- * The chainable wrapper methods are:
- * `after`, `ary`, `assign`, `assignIn`, `assignInWith`, `assignWith`, `at`,
- * `before`, `bind`, `bindAll`, `bindKey`, `castArray`, `chain`, `chunk`,
- * `commit`, `compact`, `concat`, `conforms`, `constant`, `countBy`, `create`,
- * `curry`, `debounce`, `defaults`, `defaultsDeep`, `defer`, `delay`,
- * `difference`, `differenceBy`, `differenceWith`, `drop`, `dropRight`,
- * `dropRightWhile`, `dropWhile`, `extend`, `extendWith`, `fill`, `filter`,
- * `flatMap`, `flatMapDeep`, `flatMapDepth`, `flatten`, `flattenDeep`,
- * `flattenDepth`, `flip`, `flow`, `flowRight`, `fromPairs`, `functions`,
- * `functionsIn`, `groupBy`, `initial`, `intersection`, `intersectionBy`,
- * `intersectionWith`, `invert`, `invertBy`, `invokeMap`, `iteratee`, `keyBy`,
- * `keys`, `keysIn`, `map`, `mapKeys`, `mapValues`, `matches`, `matchesProperty`,
- * `memoize`, `merge`, `mergeWith`, `method`, `methodOf`, `mixin`, `negate`,
- * `nthArg`, `omit`, `omitBy`, `once`, `orderBy`, `over`, `overArgs`,
- * `overEvery`, `overSome`, `partial`, `partialRight`, `partition`, `pick`,
- * `pickBy`, `plant`, `property`, `propertyOf`, `pull`, `pullAll`, `pullAllBy`,
- * `pullAllWith`, `pullAt`, `push`, `range`, `rangeRight`, `rearg`, `reject`,
- * `remove`, `rest`, `reverse`, `sampleSize`, `set`, `setWith`, `shuffle`,
- * `slice`, `sort`, `sortBy`, `splice`, `spread`, `tail`, `take`, `takeRight`,
- * `takeRightWhile`, `takeWhile`, `tap`, `throttle`, `thru`, `toArray`,
- * `toPairs`, `toPairsIn`, `toPath`, `toPlainObject`, `transform`, `unary`,
- * `union`, `unionBy`, `unionWith`, `uniq`, `uniqBy`, `uniqWith`, `unset`,
- * `unshift`, `unzip`, `unzipWith`, `update`, `updateWith`, `values`,
- * `valuesIn`, `without`, `wrap`, `xor`, `xorBy`, `xorWith`, `zip`,
- * `zipObject`, `zipObjectDeep`, and `zipWith`
- *
- * The wrapper methods that are **not** chainable by default are:
- * `add`, `attempt`, `camelCase`, `capitalize`, `ceil`, `clamp`, `clone`,
- * `cloneDeep`, `cloneDeepWith`, `cloneWith`, `conformsTo`, `deburr`,
- * `defaultTo`, `divide`, `each`, `eachRight`, `endsWith`, `eq`, `escape`,
- * `escapeRegExp`, `every`, `find`, `findIndex`, `findKey`, `findLast`,
- * `findLastIndex`, `findLastKey`, `first`, `floor`, `forEach`, `forEachRight`,
- * `forIn`, `forInRight`, `forOwn`, `forOwnRight`, `get`, `gt`, `gte`, `has`,
- * `hasIn`, `head`, `identity`, `includes`, `indexOf`, `inRange`, `invoke`,
- * `isArguments`, `isArray`, `isArrayBuffer`, `isArrayLike`, `isArrayLikeObject`,
- * `isBoolean`, `isBuffer`, `isDate`, `isElement`, `isEmpty`, `isEqual`,
- * `isEqualWith`, `isError`, `isFinite`, `isFunction`, `isInteger`, `isLength`,
- * `isMap`, `isMatch`, `isMatchWith`, `isNaN`, `isNative`, `isNil`, `isNull`,
- * `isNumber`, `isObject`, `isObjectLike`, `isPlainObject`, `isRegExp`,
- * `isSafeInteger`, `isSet`, `isString`, `isUndefined`, `isTypedArray`,
- * `isWeakMap`, `isWeakSet`, `join`, `kebabCase`, `last`, `lastIndexOf`,
- * `lowerCase`, `lowerFirst`, `lt`, `lte`, `max`, `maxBy`, `mean`, `meanBy`,
- * `min`, `minBy`, `multiply`, `noConflict`, `noop`, `now`, `nth`, `pad`,
- * `padEnd`, `padStart`, `parseInt`, `pop`, `random`, `reduce`, `reduceRight`,
- * `repeat`, `result`, `round`, `runInContext`, `sample`, `shift`, `size`,
- * `snakeCase`, `some`, `sortedIndex`, `sortedIndexBy`, `sortedLastIndex`,
- * `sortedLastIndexBy`, `startCase`, `startsWith`, `stubArray`, `stubFalse`,
- * `stubObject`, `stubString`, `stubTrue`, `subtract`, `sum`, `sumBy`,
- * `template`, `times`, `toFinite`, `toInteger`, `toJSON`, `toLength`,
- * `toLower`, `toNumber`, `toSafeInteger`, `toString`, `toUpper`, `trim`,
- * `trimEnd`, `trimStart`, `truncate`, `unescape`, `uniqueId`, `upperCase`,
- * `upperFirst`, `value`, and `words`
- *
- * @name _
- * @constructor
- * @category Seq
- * @param {*} value The value to wrap in a `lodash` instance.
- * @returns {Object} Returns the new `lodash` wrapper instance.
- * @example
- *
- * function square(n) {
- *   return n * n;
- * }
- *
- * var wrapped = _([1, 2, 3]);
- *
- * // Returns an unwrapped value.
- * wrapped.reduce(_.add);
- * // => 6
- *
- * // Returns a wrapped value.
- * var squares = wrapped.map(square);
- *
- * _.isArray(squares);
- * // => false
- *
- * _.isArray(squares.value());
- * // => true
- */ function lodash(value) {
-    if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
-        if (value instanceof LodashWrapper) return value;
-        if (hasOwnProperty.call(value, '__wrapped__')) return wrapperClone(value);
-    }
-    return new LodashWrapper(value);
-}
-// Ensure wrappers are instances of `baseLodash`.
-lodash.prototype = baseLodash.prototype;
-lodash.prototype.constructor = lodash;
-module.exports = lodash;
-
-},{"./_LazyWrapper":"4chU7","./_LodashWrapper":"1MAIv","./_baseLodash":"4VGJz","./isArray":"9D9dp","./isObjectLike":"6ihSr","./_wrapperClone":"8ditg"}],"1MAIv":[function(require,module,exports) {
-var baseCreate = require('./_baseCreate'), baseLodash = require('./_baseLodash');
-/**
- * The base constructor for creating `lodash` wrapper objects.
- *
- * @private
- * @param {*} value The value to wrap.
- * @param {boolean} [chainAll] Enable explicit method chain sequences.
- */ function LodashWrapper(value, chainAll) {
-    this.__wrapped__ = value;
-    this.__actions__ = [];
-    this.__chain__ = !!chainAll;
-    this.__index__ = 0;
-    this.__values__ = undefined;
-}
-LodashWrapper.prototype = baseCreate(baseLodash.prototype);
-LodashWrapper.prototype.constructor = LodashWrapper;
-module.exports = LodashWrapper;
-
-},{"./_baseCreate":"1SO2E","./_baseLodash":"4VGJz"}],"8ditg":[function(require,module,exports) {
-var LazyWrapper = require('./_LazyWrapper'), LodashWrapper = require('./_LodashWrapper'), copyArray = require('./_copyArray');
-/**
- * Creates a clone of `wrapper`.
- *
- * @private
- * @param {Object} wrapper The wrapper to clone.
- * @returns {Object} Returns the cloned wrapper.
- */ function wrapperClone(wrapper) {
-    if (wrapper instanceof LazyWrapper) return wrapper.clone();
-    var result = new LodashWrapper(wrapper.__wrapped__, wrapper.__chain__);
-    result.__actions__ = copyArray(wrapper.__actions__);
-    result.__index__ = wrapper.__index__;
-    result.__values__ = wrapper.__values__;
-    return result;
-}
-module.exports = wrapperClone;
-
-},{"./_LazyWrapper":"4chU7","./_LodashWrapper":"1MAIv","./_copyArray":"7dekD"}],"7dekD":[function(require,module,exports) {
-/**
- * Copies the values of `source` to `array`.
- *
- * @private
- * @param {Array} source The array to copy values from.
- * @param {Array} [array=[]] The array to copy values to.
- * @returns {Array} Returns `array`.
- */ function copyArray(source, array) {
-    var index = -1, length = source.length;
-    array || (array = Array(length));
-    while((++index) < length)array[index] = source[index];
-    return array;
-}
-module.exports = copyArray;
-
-},{}],"XwiwS":[function(require,module,exports) {
-var baseSetData = require('./_baseSetData'), shortOut = require('./_shortOut');
-/**
- * Sets metadata for `func`.
- *
- * **Note:** If this function becomes hot, i.e. is invoked a lot in a short
- * period of time, it will trip its breaker and transition to an identity
- * function to avoid garbage collection pauses in V8. See
- * [V8 issue 2070](https://bugs.chromium.org/p/v8/issues/detail?id=2070)
- * for more details.
- *
- * @private
- * @param {Function} func The function to associate metadata with.
- * @param {*} data The metadata.
- * @returns {Function} Returns `func`.
- */ var setData = shortOut(baseSetData);
-module.exports = setData;
-
-},{"./_baseSetData":"q9Ejo","./_shortOut":"axdhe"}],"3scxv":[function(require,module,exports) {
-var getWrapDetails = require('./_getWrapDetails'), insertWrapDetails = require('./_insertWrapDetails'), setToString = require('./_setToString'), updateWrapDetails = require('./_updateWrapDetails');
-/**
- * Sets the `toString` method of `wrapper` to mimic the source of `reference`
- * with wrapper details in a comment at the top of the source body.
- *
- * @private
- * @param {Function} wrapper The function to modify.
- * @param {Function} reference The reference function.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @returns {Function} Returns `wrapper`.
- */ function setWrapToString(wrapper, reference, bitmask) {
-    var source = reference + '';
-    return setToString(wrapper, insertWrapDetails(source, updateWrapDetails(getWrapDetails(source), bitmask)));
-}
-module.exports = setWrapToString;
-
-},{"./_getWrapDetails":"elIkU","./_insertWrapDetails":"9DKes","./_setToString":"duOCt","./_updateWrapDetails":"eMGEz"}],"elIkU":[function(require,module,exports) {
-/** Used to match wrap detail comments. */ var reWrapDetails = /\{\n\/\* \[wrapped with (.+)\] \*/, reSplitDetails = /,? & /;
-/**
- * Extracts wrapper details from the `source` body comment.
- *
- * @private
- * @param {string} source The source to inspect.
- * @returns {Array} Returns the wrapper details.
- */ function getWrapDetails(source) {
-    var match = source.match(reWrapDetails);
-    return match ? match[1].split(reSplitDetails) : [];
-}
-module.exports = getWrapDetails;
-
-},{}],"9DKes":[function(require,module,exports) {
-/** Used to match wrap detail comments. */ var reWrapComment = /\{(?:\n\/\* \[wrapped with .+\] \*\/)?\n?/;
-/**
- * Inserts wrapper `details` in a comment at the top of the `source` body.
- *
- * @private
- * @param {string} source The source to modify.
- * @returns {Array} details The details to insert.
- * @returns {string} Returns the modified source.
- */ function insertWrapDetails(source, details) {
-    var length = details.length;
-    if (!length) return source;
-    var lastIndex = length - 1;
-    details[lastIndex] = (length > 1 ? '& ' : '') + details[lastIndex];
-    details = details.join(length > 2 ? ', ' : ' ');
-    return source.replace(reWrapComment, '{\n/* [wrapped with ' + details + '] */\n');
-}
-module.exports = insertWrapDetails;
-
-},{}],"eMGEz":[function(require,module,exports) {
-var arrayEach = require('./_arrayEach'), arrayIncludes = require('./_arrayIncludes');
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_FLAG = 8, WRAP_CURRY_RIGHT_FLAG = 16, WRAP_PARTIAL_FLAG = 32, WRAP_PARTIAL_RIGHT_FLAG = 64, WRAP_ARY_FLAG = 128, WRAP_REARG_FLAG = 256, WRAP_FLIP_FLAG = 512;
-/** Used to associate wrap methods with their bit flags. */ var wrapFlags = [
-    [
-        'ary',
-        WRAP_ARY_FLAG
-    ],
-    [
-        'bind',
-        WRAP_BIND_FLAG
-    ],
-    [
-        'bindKey',
-        WRAP_BIND_KEY_FLAG
-    ],
-    [
-        'curry',
-        WRAP_CURRY_FLAG
-    ],
-    [
-        'curryRight',
-        WRAP_CURRY_RIGHT_FLAG
-    ],
-    [
-        'flip',
-        WRAP_FLIP_FLAG
-    ],
-    [
-        'partial',
-        WRAP_PARTIAL_FLAG
-    ],
-    [
-        'partialRight',
-        WRAP_PARTIAL_RIGHT_FLAG
-    ],
-    [
-        'rearg',
-        WRAP_REARG_FLAG
-    ]
-];
-/**
- * Updates wrapper `details` based on `bitmask` flags.
- *
- * @private
- * @returns {Array} details The details to modify.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @returns {Array} Returns `details`.
- */ function updateWrapDetails(details, bitmask) {
-    arrayEach(wrapFlags, function(pair) {
-        var value = '_.' + pair[0];
-        if (bitmask & pair[1] && !arrayIncludes(details, value)) details.push(value);
-    });
-    return details.sort();
-}
-module.exports = updateWrapDetails;
-
-},{"./_arrayEach":"9K3TC","./_arrayIncludes":"c9L47"}],"c9L47":[function(require,module,exports) {
-var baseIndexOf = require('./_baseIndexOf');
-/**
- * A specialized version of `_.includes` for arrays without support for
- * specifying an index to search from.
- *
- * @private
- * @param {Array} [array] The array to inspect.
- * @param {*} target The value to search for.
- * @returns {boolean} Returns `true` if `target` is found, else `false`.
- */ function arrayIncludes(array, value) {
-    var length = array == null ? 0 : array.length;
-    return !!length && baseIndexOf(array, value, 0) > -1;
-}
-module.exports = arrayIncludes;
-
-},{"./_baseIndexOf":"lS37n"}],"fQE8c":[function(require,module,exports) {
-/**
- * Gets the argument placeholder value for `func`.
- *
- * @private
- * @param {Function} func The function to inspect.
- * @returns {*} Returns the placeholder value.
- */ function getHolder(func) {
-    var object = func;
-    return object.placeholder;
-}
-module.exports = getHolder;
-
-},{}],"32jG3":[function(require,module,exports) {
-var copyArray = require('./_copyArray'), isIndex = require('./_isIndex');
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMin = Math.min;
-/**
- * Reorder `array` according to the specified indexes where the element at
- * the first index is assigned as the first element, the element at
- * the second index is assigned as the second element, and so on.
- *
- * @private
- * @param {Array} array The array to reorder.
- * @param {Array} indexes The arranged array indexes.
- * @returns {Array} Returns `array`.
- */ function reorder(array, indexes) {
-    var arrLength = array.length, length = nativeMin(indexes.length, arrLength), oldArray = copyArray(array);
-    while(length--){
-        var index = indexes[length];
-        array[length] = isIndex(index, arrLength) ? oldArray[index] : undefined;
-    }
-    return array;
-}
-module.exports = reorder;
-
-},{"./_copyArray":"7dekD","./_isIndex":"2RH5V"}],"8Pk3T":[function(require,module,exports) {
-/** Used as the internal argument placeholder. */ var PLACEHOLDER = '__lodash_placeholder__';
-/**
- * Replaces all `placeholder` elements in `array` with an internal placeholder
- * and returns an array of their indexes.
- *
- * @private
- * @param {Array} array The array to modify.
- * @param {*} placeholder The placeholder to replace.
- * @returns {Array} Returns the new array of placeholder indexes.
- */ function replaceHolders(array, placeholder) {
-    var index = -1, length = array.length, resIndex = 0, result = [];
-    while((++index) < length){
-        var value = array[index];
-        if (value === placeholder || value === PLACEHOLDER) {
-            array[index] = PLACEHOLDER;
-            result[resIndex++] = index;
-        }
-    }
-    return result;
-}
-module.exports = replaceHolders;
-
-},{}],"j9vFV":[function(require,module,exports) {
-var apply = require('./_apply'), createCtor = require('./_createCtor'), root = require('./_root');
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1;
-/**
- * Creates a function that wraps `func` to invoke it with the `this` binding
- * of `thisArg` and `partials` prepended to the arguments it receives.
- *
- * @private
- * @param {Function} func The function to wrap.
- * @param {number} bitmask The bitmask flags. See `createWrap` for more details.
- * @param {*} thisArg The `this` binding of `func`.
- * @param {Array} partials The arguments to prepend to those provided to
- *  the new function.
- * @returns {Function} Returns the new wrapped function.
- */ function createPartial(func, bitmask, thisArg, partials) {
-    var isBind = bitmask & WRAP_BIND_FLAG, Ctor = createCtor(func);
-    function wrapper() {
-        var argsIndex = -1, argsLength = arguments.length, leftIndex = -1, leftLength = partials.length, args = Array(leftLength + argsLength), fn = this && this !== root && this instanceof wrapper ? Ctor : func;
-        while((++leftIndex) < leftLength)args[leftIndex] = partials[leftIndex];
-        while(argsLength--)args[leftIndex++] = arguments[++argsIndex];
-        return apply(fn, isBind ? thisArg : this, args);
-    }
-    return wrapper;
-}
-module.exports = createPartial;
-
-},{"./_apply":"koVpD","./_createCtor":"ibWBw","./_root":"9w0IQ"}],"eavA7":[function(require,module,exports) {
-var composeArgs = require('./_composeArgs'), composeArgsRight = require('./_composeArgsRight'), replaceHolders = require('./_replaceHolders');
-/** Used as the internal argument placeholder. */ var PLACEHOLDER = '__lodash_placeholder__';
-/** Used to compose bitmasks for function metadata. */ var WRAP_BIND_FLAG = 1, WRAP_BIND_KEY_FLAG = 2, WRAP_CURRY_BOUND_FLAG = 4, WRAP_CURRY_FLAG = 8, WRAP_ARY_FLAG = 128, WRAP_REARG_FLAG = 256;
-/* Built-in method references for those with the same name as other `lodash` methods. */ var nativeMin = Math.min;
-/**
- * Merges the function metadata of `source` into `data`.
- *
- * Merging metadata reduces the number of wrappers used to invoke a function.
- * This is possible because methods like `_.bind`, `_.curry`, and `_.partial`
- * may be applied regardless of execution order. Methods like `_.ary` and
- * `_.rearg` modify function arguments, making the order in which they are
- * executed important, preventing the merging of metadata. However, we make
- * an exception for a safe combined case where curried functions have `_.ary`
- * and or `_.rearg` applied.
- *
- * @private
- * @param {Array} data The destination metadata.
- * @param {Array} source The source metadata.
- * @returns {Array} Returns `data`.
- */ function mergeData(data, source) {
-    var bitmask = data[1], srcBitmask = source[1], newBitmask = bitmask | srcBitmask, isCommon = newBitmask < (WRAP_BIND_FLAG | WRAP_BIND_KEY_FLAG | WRAP_ARY_FLAG);
-    var isCombo = srcBitmask == WRAP_ARY_FLAG && bitmask == WRAP_CURRY_FLAG || srcBitmask == WRAP_ARY_FLAG && bitmask == WRAP_REARG_FLAG && data[7].length <= source[8] || srcBitmask == (WRAP_ARY_FLAG | WRAP_REARG_FLAG) && source[7].length <= source[8] && bitmask == WRAP_CURRY_FLAG;
-    // Exit early if metadata can't be merged.
-    if (!(isCommon || isCombo)) return data;
-    // Use source `thisArg` if available.
-    if (srcBitmask & WRAP_BIND_FLAG) {
-        data[2] = source[2];
-        // Set when currying a bound function.
-        newBitmask |= bitmask & WRAP_BIND_FLAG ? 0 : WRAP_CURRY_BOUND_FLAG;
-    }
-    // Compose partial arguments.
-    var value = source[3];
-    if (value) {
-        var partials = data[3];
-        data[3] = partials ? composeArgs(partials, value, source[4]) : value;
-        data[4] = partials ? replaceHolders(data[3], PLACEHOLDER) : source[4];
-    }
-    // Compose partial right arguments.
-    value = source[5];
-    if (value) {
-        partials = data[5];
-        data[5] = partials ? composeArgsRight(partials, value, source[6]) : value;
-        data[6] = partials ? replaceHolders(data[5], PLACEHOLDER) : source[6];
-    }
-    // Use source `argPos` if available.
-    value = source[7];
-    if (value) data[7] = value;
-    // Use source `ary` if it's smaller.
-    if (srcBitmask & WRAP_ARY_FLAG) data[8] = data[8] == null ? source[8] : nativeMin(data[8], source[8]);
-    // Use source `arity` if one is not provided.
-    if (data[9] == null) data[9] = source[9];
-    // Use source `func` and merge bitmasks.
-    data[0] = source[0];
-    data[1] = newBitmask;
-    return data;
-}
-module.exports = mergeData;
-
-},{"./_composeArgs":"c73Lg","./_composeArgsRight":"cSTDh","./_replaceHolders":"8Pk3T"}],"5hRHL":[function(require,module,exports) {
-"use strict";
-var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
-exports.__esModule = true;
-exports["default"] = useClassNames;
-var _prefix = require("./prefix");
-var _classnames = _interopRequireDefault(require("classnames"));
-var _react = require("react");
-function useClassNames(componentClassName) {
-    var className = _prefix.defaultClassPrefix('icon');
-    var addPrefix = _react.useCallback(function(blockClassName) {
-        return _prefix.prefix(className, blockClassName);
-    }, []);
-    return [
-        _classnames["default"](className, _prefix.defaultClassPrefix(componentClassName)),
-        addPrefix
-    ];
-}
-module.exports = exports.default;
-
-},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","./prefix":"3Jn12","classnames":"bOXOh","react":"6TuXu"}],"fdn6Q":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports["default"] = _default;
-function _default() {
-    return typeof document !== 'undefined' && typeof window !== 'undefined' && typeof document.createElement === 'function';
-}
-module.exports = exports.default;
-
-},{}],"2SLaI":[function(require,module,exports) {
-"use strict";
-exports.__esModule = true;
-exports["default"] = void 0;
-var _insertCss = require("insert-css");
-var _prefix = require("./prefix");
-var _react = require("react");
-var prefix = _prefix.getClassNamePrefix(); // Generated with ../less/index.less
-var styles = "." + prefix + "icon {\n  display: -webkit-inline-box;\n  display: -ms-inline-flexbox;\n  display: inline-flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  text-rendering: optimizeLegibility;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n." + prefix + "icon[tabindex] {\n  cursor: pointer;\n}\n." + prefix + "icon-spin {\n  -webkit-animation: icon-spin 2s infinite linear;\n          animation: icon-spin 2s infinite linear;\n}\n." + prefix + "icon-pulse {\n  -webkit-animation: icon-spin 1s infinite steps(8);\n          animation: icon-spin 1s infinite steps(8);\n}\n." + prefix + "icon-flip-horizontal {\n  -webkit-transform: scaleX(-1);\n      -ms-transform: scaleX(-1);\n          transform: scaleX(-1);\n}\n." + prefix + "icon-flip-vertical {\n  -webkit-transform: scaleY(-1);\n      -ms-transform: scaleY(-1);\n          transform: scaleY(-1);\n}\n@-webkit-keyframes icon-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n  }\n}\n@keyframes icon-spin {\n  0% {\n    -webkit-transform: rotate(0deg);\n            transform: rotate(0deg);\n  }\n  100% {\n    -webkit-transform: rotate(359deg);\n            transform: rotate(359deg);\n  }\n}";
-var cssInjected = false;
-var useInsertStyles = function useInsertStyles1(styleStr) {
-    if (styleStr === void 0) styleStr = styles;
-    _react.useEffect(function() {
-        // Make sure css injected once.
-        if (!cssInjected) {
-            _insertCss.insertCss(styleStr, {
-                prepend: true
-            });
-            cssInjected = true;
-        }
-    }, []);
-};
-var _default = useInsertStyles;
-exports["default"] = _default;
-module.exports = exports.default;
-
-},{"insert-css":"1ktDN","./prefix":"3Jn12","react":"6TuXu"}],"1ktDN":[function(require,module,exports) {
-var containers = []; // will store container HTMLElement references
-var styleElements = []; // will store {prepend: HTMLElement, append: HTMLElement}
-var usage = 'insert-css: You need to provide a CSS string. Usage: insertCss(cssString[, options]).';
-function insertCss(css, options) {
-    options = options || {
-    };
-    if (css === undefined) throw new Error(usage);
-    var position = options.prepend === true ? 'prepend' : 'append';
-    var container = options.container !== undefined ? options.container : document.querySelector('head');
-    var containerId = containers.indexOf(container);
-    // first time we see this container, create the necessary entries
-    if (containerId === -1) {
-        containerId = containers.push(container) - 1;
-        styleElements[containerId] = {
-        };
-    }
-    // try to get the correponding container + position styleElement, create it otherwise
-    var styleElement;
-    if (styleElements[containerId] !== undefined && styleElements[containerId][position] !== undefined) styleElement = styleElements[containerId][position];
-    else {
-        styleElement = styleElements[containerId][position] = createStyleElement();
-        if (position === 'prepend') container.insertBefore(styleElement, container.childNodes[0]);
-        else container.appendChild(styleElement);
-    }
-    // strip potential UTF-8 BOM if css was read from a file
-    if (css.charCodeAt(0) === 65279) css = css.substr(1, css.length);
-    // actually add the stylesheet
-    if (styleElement.styleSheet) styleElement.styleSheet.cssText += css;
-    else styleElement.textContent += css;
-    return styleElement;
-}
-function createStyleElement() {
-    var styleElement = document.createElement('style');
-    styleElement.setAttribute('type', 'text/css');
-    return styleElement;
-}
-module.exports = insertCss;
-module.exports.insertCss = insertCss;
-
-},{}],"gVWOr":[function(require,module,exports) {
+},{"@babel/runtime/helpers/interopRequireDefault":"eigyQ","../../createSvgIcon":"ayDyh","@rsuite/icon-font/lib/legacy/Info":"gVWOr"}],"gVWOr":[function(require,module,exports) {
 "use strict";
 function _typeof(obj) {
     if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") _typeof = function _typeof1(obj1) {
@@ -34365,43 +37264,7 @@ function guid() {
 }
 exports.default = guid;
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"laXhr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "globalKey", ()=>globalKey
-);
-parcelHelpers.export(exports, "getClassNamePrefix", ()=>getClassNamePrefix
-);
-parcelHelpers.export(exports, "defaultClassPrefix", ()=>defaultClassPrefix
-);
-parcelHelpers.export(exports, "prefix", ()=>prefix
-);
-var _classnames = require("classnames");
-var _classnamesDefault = parcelHelpers.interopDefault(_classnames);
-var _curry = require("lodash/curry");
-var _curryDefault = parcelHelpers.interopDefault(_curry);
-var globalKey = 'rs-';
-var getClassNamePrefix = function getClassNamePrefix1() {
-    // TODO: A prefix that can be replaced at runtime.
-    return globalKey;
-};
-var defaultClassPrefix = function defaultClassPrefix1(name) {
-    return "" + getClassNamePrefix() + name;
-};
-function prefix(pre, className) {
-    if (!pre || !className) return '';
-    if (Array.isArray(className)) return _classnamesDefault.default(className.filter(function(name) {
-        return !!name;
-    }).map(function(name) {
-        return pre + "-" + name;
-    }));
-     // TODO Compatible with V4
-    if (pre[pre.length - 1] === '-') return "" + pre + className;
-    return pre + "-" + className;
-}
-exports.default = _curryDefault.default(prefix);
-
-},{"classnames":"bOXOh","lodash/curry":"4AtTE","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1gQPp":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1gQPp":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 /**
@@ -35444,415 +38307,7 @@ var baseClone = require('./_baseClone');
 }
 module.exports = clone;
 
-},{"./_baseClone":"4OMpY"}],"4OMpY":[function(require,module,exports) {
-var Stack = require('./_Stack'), arrayEach = require('./_arrayEach'), assignValue = require('./_assignValue'), baseAssign = require('./_baseAssign'), baseAssignIn = require('./_baseAssignIn'), cloneBuffer = require('./_cloneBuffer'), copyArray = require('./_copyArray'), copySymbols = require('./_copySymbols'), copySymbolsIn = require('./_copySymbolsIn'), getAllKeys = require('./_getAllKeys'), getAllKeysIn = require('./_getAllKeysIn'), getTag = require('./_getTag'), initCloneArray = require('./_initCloneArray'), initCloneByTag = require('./_initCloneByTag'), initCloneObject = require('./_initCloneObject'), isArray = require('./isArray'), isBuffer = require('./isBuffer'), isMap = require('./isMap'), isObject = require('./isObject'), isSet = require('./isSet'), keys = require('./keys'), keysIn = require('./keysIn');
-/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_FLAT_FLAG = 2, CLONE_SYMBOLS_FLAG = 4;
-/** `Object#toString` result references. */ var argsTag = '[object Arguments]', arrayTag = '[object Array]', boolTag = '[object Boolean]', dateTag = '[object Date]', errorTag = '[object Error]', funcTag = '[object Function]', genTag = '[object GeneratorFunction]', mapTag = '[object Map]', numberTag = '[object Number]', objectTag = '[object Object]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]', weakMapTag = '[object WeakMap]';
-var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
-/** Used to identify `toStringTag` values supported by `_.clone`. */ var cloneableTags = {
-};
-cloneableTags[argsTag] = cloneableTags[arrayTag] = cloneableTags[arrayBufferTag] = cloneableTags[dataViewTag] = cloneableTags[boolTag] = cloneableTags[dateTag] = cloneableTags[float32Tag] = cloneableTags[float64Tag] = cloneableTags[int8Tag] = cloneableTags[int16Tag] = cloneableTags[int32Tag] = cloneableTags[mapTag] = cloneableTags[numberTag] = cloneableTags[objectTag] = cloneableTags[regexpTag] = cloneableTags[setTag] = cloneableTags[stringTag] = cloneableTags[symbolTag] = cloneableTags[uint8Tag] = cloneableTags[uint8ClampedTag] = cloneableTags[uint16Tag] = cloneableTags[uint32Tag] = true;
-cloneableTags[errorTag] = cloneableTags[funcTag] = cloneableTags[weakMapTag] = false;
-/**
- * The base implementation of `_.clone` and `_.cloneDeep` which tracks
- * traversed objects.
- *
- * @private
- * @param {*} value The value to clone.
- * @param {boolean} bitmask The bitmask flags.
- *  1 - Deep clone
- *  2 - Flatten inherited properties
- *  4 - Clone symbols
- * @param {Function} [customizer] The function to customize cloning.
- * @param {string} [key] The key of `value`.
- * @param {Object} [object] The parent object of `value`.
- * @param {Object} [stack] Tracks traversed objects and their clone counterparts.
- * @returns {*} Returns the cloned value.
- */ function baseClone(value, bitmask, customizer, key, object, stack) {
-    var result, isDeep = bitmask & CLONE_DEEP_FLAG, isFlat = bitmask & CLONE_FLAT_FLAG, isFull = bitmask & CLONE_SYMBOLS_FLAG;
-    if (customizer) result = object ? customizer(value, key, object, stack) : customizer(value);
-    if (result !== undefined) return result;
-    if (!isObject(value)) return value;
-    var isArr = isArray(value);
-    if (isArr) {
-        result = initCloneArray(value);
-        if (!isDeep) return copyArray(value, result);
-    } else {
-        var tag = getTag(value), isFunc = tag == funcTag || tag == genTag;
-        if (isBuffer(value)) return cloneBuffer(value, isDeep);
-        if (tag == objectTag || tag == argsTag || isFunc && !object) {
-            result = isFlat || isFunc ? {
-            } : initCloneObject(value);
-            if (!isDeep) return isFlat ? copySymbolsIn(value, baseAssignIn(result, value)) : copySymbols(value, baseAssign(result, value));
-        } else {
-            if (!cloneableTags[tag]) return object ? value : {
-            };
-            result = initCloneByTag(value, tag, isDeep);
-        }
-    }
-    // Check for circular references and return its corresponding clone.
-    stack || (stack = new Stack);
-    var stacked = stack.get(value);
-    if (stacked) return stacked;
-    stack.set(value, result);
-    if (isSet(value)) value.forEach(function(subValue) {
-        result.add(baseClone(subValue, bitmask, customizer, subValue, value, stack));
-    });
-    else if (isMap(value)) value.forEach(function(subValue, key1) {
-        result.set(key1, baseClone(subValue, bitmask, customizer, key1, value, stack));
-    });
-    var keysFunc = isFull ? isFlat ? getAllKeysIn : getAllKeys : isFlat ? keysIn : keys;
-    var props = isArr ? undefined : keysFunc(value);
-    arrayEach(props || value, function(subValue, key1) {
-        if (props) {
-            key1 = subValue;
-            subValue = value[key1];
-        }
-        // Recursively populate clone (susceptible to call stack limits).
-        assignValue(result, key1, baseClone(subValue, bitmask, customizer, key1, value, stack));
-    });
-    return result;
-}
-module.exports = baseClone;
-
-},{"./_Stack":"iSswE","./_arrayEach":"9K3TC","./_assignValue":"8WIi8","./_baseAssign":"OgLDa","./_baseAssignIn":"5y8uK","./_cloneBuffer":"47Mij","./_copyArray":"7dekD","./_copySymbols":"gpX9x","./_copySymbolsIn":"iaJIk","./_getAllKeys":"kHVQG","./_getAllKeysIn":"atjAU","./_getTag":"6GSwf","./_initCloneArray":"13CXQ","./_initCloneByTag":"5t6In","./_initCloneObject":"142qT","./isArray":"9D9dp","./isBuffer":"ltSVx","./isMap":"jrEYD","./isObject":"hZIId","./isSet":"aWgQ7","./keys":"5XTkY","./keysIn":"420IE"}],"OgLDa":[function(require,module,exports) {
-var copyObject = require('./_copyObject'), keys = require('./keys');
-/**
- * The base implementation of `_.assign` without support for multiple sources
- * or `customizer` functions.
- *
- * @private
- * @param {Object} object The destination object.
- * @param {Object} source The source object.
- * @returns {Object} Returns `object`.
- */ function baseAssign(object, source) {
-    return object && copyObject(source, keys(source), object);
-}
-module.exports = baseAssign;
-
-},{"./_copyObject":"d0MPk","./keys":"5XTkY"}],"d0MPk":[function(require,module,exports) {
-var assignValue = require('./_assignValue'), baseAssignValue = require('./_baseAssignValue');
-/**
- * Copies properties of `source` to `object`.
- *
- * @private
- * @param {Object} source The object to copy properties from.
- * @param {Array} props The property identifiers to copy.
- * @param {Object} [object={}] The object to copy properties to.
- * @param {Function} [customizer] The function to customize copied values.
- * @returns {Object} Returns `object`.
- */ function copyObject(source, props, object, customizer) {
-    var isNew = !object;
-    object || (object = {
-    });
-    var index = -1, length = props.length;
-    while((++index) < length){
-        var key = props[index];
-        var newValue = customizer ? customizer(object[key], source[key], key, object, source) : undefined;
-        if (newValue === undefined) newValue = source[key];
-        if (isNew) baseAssignValue(object, key, newValue);
-        else assignValue(object, key, newValue);
-    }
-    return object;
-}
-module.exports = copyObject;
-
-},{"./_assignValue":"8WIi8","./_baseAssignValue":"4l1Lw"}],"5y8uK":[function(require,module,exports) {
-var copyObject = require('./_copyObject'), keysIn = require('./keysIn');
-/**
- * The base implementation of `_.assignIn` without support for multiple sources
- * or `customizer` functions.
- *
- * @private
- * @param {Object} object The destination object.
- * @param {Object} source The source object.
- * @returns {Object} Returns `object`.
- */ function baseAssignIn(object, source) {
-    return object && copyObject(source, keysIn(source), object);
-}
-module.exports = baseAssignIn;
-
-},{"./_copyObject":"d0MPk","./keysIn":"420IE"}],"47Mij":[function(require,module,exports) {
-var root = require('./_root');
-/** Detect free variable `exports`. */ var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
-/** Detect free variable `module`. */ var freeModule = freeExports && typeof module == 'object' && module && !module.nodeType && module;
-/** Detect the popular CommonJS extension `module.exports`. */ var moduleExports = freeModule && freeModule.exports === freeExports;
-/** Built-in value references. */ var Buffer = moduleExports ? root.Buffer : undefined, allocUnsafe = Buffer ? Buffer.allocUnsafe : undefined;
-/**
- * Creates a clone of  `buffer`.
- *
- * @private
- * @param {Buffer} buffer The buffer to clone.
- * @param {boolean} [isDeep] Specify a deep clone.
- * @returns {Buffer} Returns the cloned buffer.
- */ function cloneBuffer(buffer, isDeep) {
-    if (isDeep) return buffer.slice();
-    var length = buffer.length, result = allocUnsafe ? allocUnsafe(length) : new buffer.constructor(length);
-    buffer.copy(result);
-    return result;
-}
-module.exports = cloneBuffer;
-
-},{"./_root":"9w0IQ"}],"gpX9x":[function(require,module,exports) {
-var copyObject = require('./_copyObject'), getSymbols = require('./_getSymbols');
-/**
- * Copies own symbols of `source` to `object`.
- *
- * @private
- * @param {Object} source The object to copy symbols from.
- * @param {Object} [object={}] The object to copy symbols to.
- * @returns {Object} Returns `object`.
- */ function copySymbols(source, object) {
-    return copyObject(source, getSymbols(source), object);
-}
-module.exports = copySymbols;
-
-},{"./_copyObject":"d0MPk","./_getSymbols":"fHCPQ"}],"iaJIk":[function(require,module,exports) {
-var copyObject = require('./_copyObject'), getSymbolsIn = require('./_getSymbolsIn');
-/**
- * Copies own and inherited symbols of `source` to `object`.
- *
- * @private
- * @param {Object} source The object to copy symbols from.
- * @param {Object} [object={}] The object to copy symbols to.
- * @returns {Object} Returns `object`.
- */ function copySymbolsIn(source, object) {
-    return copyObject(source, getSymbolsIn(source), object);
-}
-module.exports = copySymbolsIn;
-
-},{"./_copyObject":"d0MPk","./_getSymbolsIn":"cvvFk"}],"13CXQ":[function(require,module,exports) {
-/** Used for built-in method references. */ var objectProto = Object.prototype;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/**
- * Initializes an array clone.
- *
- * @private
- * @param {Array} array The array to clone.
- * @returns {Array} Returns the initialized clone.
- */ function initCloneArray(array) {
-    var length = array.length, result = new array.constructor(length);
-    // Add properties assigned by `RegExp#exec`.
-    if (length && typeof array[0] == 'string' && hasOwnProperty.call(array, 'index')) {
-        result.index = array.index;
-        result.input = array.input;
-    }
-    return result;
-}
-module.exports = initCloneArray;
-
-},{}],"5t6In":[function(require,module,exports) {
-var cloneArrayBuffer = require('./_cloneArrayBuffer'), cloneDataView = require('./_cloneDataView'), cloneRegExp = require('./_cloneRegExp'), cloneSymbol = require('./_cloneSymbol'), cloneTypedArray = require('./_cloneTypedArray');
-/** `Object#toString` result references. */ var boolTag = '[object Boolean]', dateTag = '[object Date]', mapTag = '[object Map]', numberTag = '[object Number]', regexpTag = '[object RegExp]', setTag = '[object Set]', stringTag = '[object String]', symbolTag = '[object Symbol]';
-var arrayBufferTag = '[object ArrayBuffer]', dataViewTag = '[object DataView]', float32Tag = '[object Float32Array]', float64Tag = '[object Float64Array]', int8Tag = '[object Int8Array]', int16Tag = '[object Int16Array]', int32Tag = '[object Int32Array]', uint8Tag = '[object Uint8Array]', uint8ClampedTag = '[object Uint8ClampedArray]', uint16Tag = '[object Uint16Array]', uint32Tag = '[object Uint32Array]';
-/**
- * Initializes an object clone based on its `toStringTag`.
- *
- * **Note:** This function only supports cloning values with tags of
- * `Boolean`, `Date`, `Error`, `Map`, `Number`, `RegExp`, `Set`, or `String`.
- *
- * @private
- * @param {Object} object The object to clone.
- * @param {string} tag The `toStringTag` of the object to clone.
- * @param {boolean} [isDeep] Specify a deep clone.
- * @returns {Object} Returns the initialized clone.
- */ function initCloneByTag(object, tag, isDeep) {
-    var Ctor = object.constructor;
-    switch(tag){
-        case arrayBufferTag:
-            return cloneArrayBuffer(object);
-        case boolTag:
-        case dateTag:
-            return new Ctor(+object);
-        case dataViewTag:
-            return cloneDataView(object, isDeep);
-        case float32Tag:
-        case float64Tag:
-        case int8Tag:
-        case int16Tag:
-        case int32Tag:
-        case uint8Tag:
-        case uint8ClampedTag:
-        case uint16Tag:
-        case uint32Tag:
-            return cloneTypedArray(object, isDeep);
-        case mapTag:
-            return new Ctor;
-        case numberTag:
-        case stringTag:
-            return new Ctor(object);
-        case regexpTag:
-            return cloneRegExp(object);
-        case setTag:
-            return new Ctor;
-        case symbolTag:
-            return cloneSymbol(object);
-    }
-}
-module.exports = initCloneByTag;
-
-},{"./_cloneArrayBuffer":"2akbJ","./_cloneDataView":"9iLAx","./_cloneRegExp":"6oNbI","./_cloneSymbol":"6J9yI","./_cloneTypedArray":"fThpe"}],"2akbJ":[function(require,module,exports) {
-var Uint8Array1 = require('./_Uint8Array');
-/**
- * Creates a clone of `arrayBuffer`.
- *
- * @private
- * @param {ArrayBuffer} arrayBuffer The array buffer to clone.
- * @returns {ArrayBuffer} Returns the cloned array buffer.
- */ function cloneArrayBuffer(arrayBuffer) {
-    var result = new arrayBuffer.constructor(arrayBuffer.byteLength);
-    new Uint8Array1(result).set(new Uint8Array1(arrayBuffer));
-    return result;
-}
-module.exports = cloneArrayBuffer;
-
-},{"./_Uint8Array":"j5ZqO"}],"9iLAx":[function(require,module,exports) {
-var cloneArrayBuffer = require('./_cloneArrayBuffer');
-/**
- * Creates a clone of `dataView`.
- *
- * @private
- * @param {Object} dataView The data view to clone.
- * @param {boolean} [isDeep] Specify a deep clone.
- * @returns {Object} Returns the cloned data view.
- */ function cloneDataView(dataView, isDeep) {
-    var buffer = isDeep ? cloneArrayBuffer(dataView.buffer) : dataView.buffer;
-    return new dataView.constructor(buffer, dataView.byteOffset, dataView.byteLength);
-}
-module.exports = cloneDataView;
-
-},{"./_cloneArrayBuffer":"2akbJ"}],"6oNbI":[function(require,module,exports) {
-/** Used to match `RegExp` flags from their coerced string values. */ var reFlags = /\w*$/;
-/**
- * Creates a clone of `regexp`.
- *
- * @private
- * @param {Object} regexp The regexp to clone.
- * @returns {Object} Returns the cloned regexp.
- */ function cloneRegExp(regexp) {
-    var result = new regexp.constructor(regexp.source, reFlags.exec(regexp));
-    result.lastIndex = regexp.lastIndex;
-    return result;
-}
-module.exports = cloneRegExp;
-
-},{}],"6J9yI":[function(require,module,exports) {
-var Symbol1 = require('./_Symbol');
-/** Used to convert symbols to primitives and strings. */ var symbolProto = Symbol1 ? Symbol1.prototype : undefined, symbolValueOf = symbolProto ? symbolProto.valueOf : undefined;
-/**
- * Creates a clone of the `symbol` object.
- *
- * @private
- * @param {Object} symbol The symbol object to clone.
- * @returns {Object} Returns the cloned symbol object.
- */ function cloneSymbol(symbol) {
-    return symbolValueOf ? Object(symbolValueOf.call(symbol)) : {
-    };
-}
-module.exports = cloneSymbol;
-
-},{"./_Symbol":"g8MbF"}],"fThpe":[function(require,module,exports) {
-var cloneArrayBuffer = require('./_cloneArrayBuffer');
-/**
- * Creates a clone of `typedArray`.
- *
- * @private
- * @param {Object} typedArray The typed array to clone.
- * @param {boolean} [isDeep] Specify a deep clone.
- * @returns {Object} Returns the cloned typed array.
- */ function cloneTypedArray(typedArray, isDeep) {
-    var buffer = isDeep ? cloneArrayBuffer(typedArray.buffer) : typedArray.buffer;
-    return new typedArray.constructor(buffer, typedArray.byteOffset, typedArray.length);
-}
-module.exports = cloneTypedArray;
-
-},{"./_cloneArrayBuffer":"2akbJ"}],"142qT":[function(require,module,exports) {
-var baseCreate = require('./_baseCreate'), getPrototype = require('./_getPrototype'), isPrototype = require('./_isPrototype');
-/**
- * Initializes an object clone.
- *
- * @private
- * @param {Object} object The object to clone.
- * @returns {Object} Returns the initialized clone.
- */ function initCloneObject(object) {
-    return typeof object.constructor == 'function' && !isPrototype(object) ? baseCreate(getPrototype(object)) : {
-    };
-}
-module.exports = initCloneObject;
-
-},{"./_baseCreate":"1SO2E","./_getPrototype":"eqMRO","./_isPrototype":"3LrfV"}],"jrEYD":[function(require,module,exports) {
-var baseIsMap = require('./_baseIsMap'), baseUnary = require('./_baseUnary'), nodeUtil = require('./_nodeUtil');
-/* Node.js helper references. */ var nodeIsMap = nodeUtil && nodeUtil.isMap;
-/**
- * Checks if `value` is classified as a `Map` object.
- *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a map, else `false`.
- * @example
- *
- * _.isMap(new Map);
- * // => true
- *
- * _.isMap(new WeakMap);
- * // => false
- */ var isMap = nodeIsMap ? baseUnary(nodeIsMap) : baseIsMap;
-module.exports = isMap;
-
-},{"./_baseIsMap":"gKGqk","./_baseUnary":"4SrX0","./_nodeUtil":"2vDMj"}],"gKGqk":[function(require,module,exports) {
-var getTag = require('./_getTag'), isObjectLike = require('./isObjectLike');
-/** `Object#toString` result references. */ var mapTag = '[object Map]';
-/**
- * The base implementation of `_.isMap` without Node.js optimizations.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a map, else `false`.
- */ function baseIsMap(value) {
-    return isObjectLike(value) && getTag(value) == mapTag;
-}
-module.exports = baseIsMap;
-
-},{"./_getTag":"6GSwf","./isObjectLike":"6ihSr"}],"aWgQ7":[function(require,module,exports) {
-var baseIsSet = require('./_baseIsSet'), baseUnary = require('./_baseUnary'), nodeUtil = require('./_nodeUtil');
-/* Node.js helper references. */ var nodeIsSet = nodeUtil && nodeUtil.isSet;
-/**
- * Checks if `value` is classified as a `Set` object.
- *
- * @static
- * @memberOf _
- * @since 4.3.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a set, else `false`.
- * @example
- *
- * _.isSet(new Set);
- * // => true
- *
- * _.isSet(new WeakSet);
- * // => false
- */ var isSet = nodeIsSet ? baseUnary(nodeIsSet) : baseIsSet;
-module.exports = isSet;
-
-},{"./_baseIsSet":"8JLsF","./_baseUnary":"4SrX0","./_nodeUtil":"2vDMj"}],"8JLsF":[function(require,module,exports) {
-var getTag = require('./_getTag'), isObjectLike = require('./isObjectLike');
-/** `Object#toString` result references. */ var setTag = '[object Set]';
-/**
- * The base implementation of `_.isSet` without Node.js optimizations.
- *
- * @private
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a set, else `false`.
- */ function baseIsSet(value) {
-    return isObjectLike(value) && getTag(value) == setTag;
-}
-module.exports = baseIsSet;
-
-},{"./_getTag":"6GSwf","./isObjectLike":"6ihSr"}],"9gylO":[function(require,module,exports) {
+},{"./_baseClone":"4OMpY"}],"9gylO":[function(require,module,exports) {
 /**
  * Checks if `value` is `null` or `undefined`.
  *
@@ -35876,198 +38331,6 @@ module.exports = baseIsSet;
     return value == null;
 }
 module.exports = isNil;
-
-},{}],"jd3w3":[function(require,module,exports) {
-var arrayMap = require('./_arrayMap'), baseClone = require('./_baseClone'), baseUnset = require('./_baseUnset'), castPath = require('./_castPath'), copyObject = require('./_copyObject'), customOmitClone = require('./_customOmitClone'), flatRest = require('./_flatRest'), getAllKeysIn = require('./_getAllKeysIn');
-/** Used to compose bitmasks for cloning. */ var CLONE_DEEP_FLAG = 1, CLONE_FLAT_FLAG = 2, CLONE_SYMBOLS_FLAG = 4;
-/**
- * The opposite of `_.pick`; this method creates an object composed of the
- * own and inherited enumerable property paths of `object` that are not omitted.
- *
- * **Note:** This method is considerably slower than `_.pick`.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Object
- * @param {Object} object The source object.
- * @param {...(string|string[])} [paths] The property paths to omit.
- * @returns {Object} Returns the new object.
- * @example
- *
- * var object = { 'a': 1, 'b': '2', 'c': 3 };
- *
- * _.omit(object, ['a', 'c']);
- * // => { 'b': '2' }
- */ var omit = flatRest(function(object, paths) {
-    var result = {
-    };
-    if (object == null) return result;
-    var isDeep = false;
-    paths = arrayMap(paths, function(path) {
-        path = castPath(path, object);
-        isDeep || (isDeep = path.length > 1);
-        return path;
-    });
-    copyObject(object, getAllKeysIn(object), result);
-    if (isDeep) result = baseClone(result, CLONE_DEEP_FLAG | CLONE_FLAT_FLAG | CLONE_SYMBOLS_FLAG, customOmitClone);
-    var length = paths.length;
-    while(length--)baseUnset(result, paths[length]);
-    return result;
-});
-module.exports = omit;
-
-},{"./_arrayMap":"dYHNK","./_baseClone":"4OMpY","./_baseUnset":"b5cLr","./_castPath":"9StUN","./_copyObject":"d0MPk","./_customOmitClone":"3EvFV","./_flatRest":"1F4bu","./_getAllKeysIn":"atjAU"}],"b5cLr":[function(require,module,exports) {
-var castPath = require('./_castPath'), last = require('./last'), parent = require('./_parent'), toKey = require('./_toKey');
-/**
- * The base implementation of `_.unset`.
- *
- * @private
- * @param {Object} object The object to modify.
- * @param {Array|string} path The property path to unset.
- * @returns {boolean} Returns `true` if the property is deleted, else `false`.
- */ function baseUnset(object, path) {
-    path = castPath(path, object);
-    object = parent(object, path);
-    return object == null || delete object[toKey(last(path))];
-}
-module.exports = baseUnset;
-
-},{"./_castPath":"9StUN","./last":"9xHy1","./_parent":"ecABN","./_toKey":"8TD4q"}],"9xHy1":[function(require,module,exports) {
-/**
- * Gets the last element of `array`.
- *
- * @static
- * @memberOf _
- * @since 0.1.0
- * @category Array
- * @param {Array} array The array to query.
- * @returns {*} Returns the last element of `array`.
- * @example
- *
- * _.last([1, 2, 3]);
- * // => 3
- */ function last(array) {
-    var length = array == null ? 0 : array.length;
-    return length ? array[length - 1] : undefined;
-}
-module.exports = last;
-
-},{}],"ecABN":[function(require,module,exports) {
-var baseGet = require('./_baseGet'), baseSlice = require('./_baseSlice');
-/**
- * Gets the parent value at `path` of `object`.
- *
- * @private
- * @param {Object} object The object to query.
- * @param {Array} path The path to get the parent value of.
- * @returns {*} Returns the parent value.
- */ function parent(object, path) {
-    return path.length < 2 ? object : baseGet(object, baseSlice(path, 0, -1));
-}
-module.exports = parent;
-
-},{"./_baseGet":"awr9U","./_baseSlice":"lcI7n"}],"lcI7n":[function(require,module,exports) {
-/**
- * The base implementation of `_.slice` without an iteratee call guard.
- *
- * @private
- * @param {Array} array The array to slice.
- * @param {number} [start=0] The start position.
- * @param {number} [end=array.length] The end position.
- * @returns {Array} Returns the slice of `array`.
- */ function baseSlice(array, start, end) {
-    var index = -1, length = array.length;
-    if (start < 0) start = -start > length ? 0 : length + start;
-    end = end > length ? length : end;
-    if (end < 0) end += length;
-    length = start > end ? 0 : end - start >>> 0;
-    start >>>= 0;
-    var result = Array(length);
-    while((++index) < length)result[index] = array[index + start];
-    return result;
-}
-module.exports = baseSlice;
-
-},{}],"3EvFV":[function(require,module,exports) {
-var isPlainObject = require('./isPlainObject');
-/**
- * Used by `_.omit` to customize its `_.cloneDeep` use to only clone plain
- * objects.
- *
- * @private
- * @param {*} value The value to inspect.
- * @param {string} key The key of the property to inspect.
- * @returns {*} Returns the uncloned value or `undefined` to defer cloning to `_.cloneDeep`.
- */ function customOmitClone(value) {
-    return isPlainObject(value) ? undefined : value;
-}
-module.exports = customOmitClone;
-
-},{"./isPlainObject":"kxZNP"}],"kxZNP":[function(require,module,exports) {
-var baseGetTag = require('./_baseGetTag'), getPrototype = require('./_getPrototype'), isObjectLike = require('./isObjectLike');
-/** `Object#toString` result references. */ var objectTag = '[object Object]';
-/** Used for built-in method references. */ var funcProto = Function.prototype, objectProto = Object.prototype;
-/** Used to resolve the decompiled source of functions. */ var funcToString = funcProto.toString;
-/** Used to check objects for own properties. */ var hasOwnProperty = objectProto.hasOwnProperty;
-/** Used to infer the `Object` constructor. */ var objectCtorString = funcToString.call(Object);
-/**
- * Checks if `value` is a plain object, that is, an object created by the
- * `Object` constructor or one with a `[[Prototype]]` of `null`.
- *
- * @static
- * @memberOf _
- * @since 0.8.0
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is a plain object, else `false`.
- * @example
- *
- * function Foo() {
- *   this.a = 1;
- * }
- *
- * _.isPlainObject(new Foo);
- * // => false
- *
- * _.isPlainObject([1, 2, 3]);
- * // => false
- *
- * _.isPlainObject({ 'x': 0, 'y': 0 });
- * // => true
- *
- * _.isPlainObject(Object.create(null));
- * // => true
- */ function isPlainObject(value) {
-    if (!isObjectLike(value) || baseGetTag(value) != objectTag) return false;
-    var proto = getPrototype(value);
-    if (proto === null) return true;
-    var Ctor = hasOwnProperty.call(proto, 'constructor') && proto.constructor;
-    return typeof Ctor == 'function' && Ctor instanceof Ctor && funcToString.call(Ctor) == objectCtorString;
-}
-module.exports = isPlainObject;
-
-},{"./_baseGetTag":"hvTL4","./_getPrototype":"eqMRO","./isObjectLike":"6ihSr"}],"2aodM":[function(require,module,exports) {
-/**
- * Checks if `value` is `undefined`.
- *
- * @static
- * @since 0.1.0
- * @memberOf _
- * @category Lang
- * @param {*} value The value to check.
- * @returns {boolean} Returns `true` if `value` is `undefined`, else `false`.
- * @example
- *
- * _.isUndefined(void 0);
- * // => true
- *
- * _.isUndefined(null);
- * // => false
- */ function isUndefined(value) {
-    return value === undefined;
-}
-module.exports = isUndefined;
 
 },{}],"4nX2j":[function(require,module,exports) {
 var arrayMap = require('./_arrayMap'), baseIntersection = require('./_baseIntersection'), baseRest = require('./_baseRest'), castArrayLikeObject = require('./_castArrayLikeObject');
@@ -36150,21 +38413,7 @@ module.exports = baseIntersection;
 }
 module.exports = arrayIncludesWith;
 
-},{}],"3aq4z":[function(require,module,exports) {
-var identity = require('./identity'), overRest = require('./_overRest'), setToString = require('./_setToString');
-/**
- * The base implementation of `_.rest` which doesn't validate or coerce arguments.
- *
- * @private
- * @param {Function} func The function to apply a rest parameter to.
- * @param {number} [start=func.length-1] The start position of the rest parameter.
- * @returns {Function} Returns the new function.
- */ function baseRest(func, start) {
-    return setToString(overRest(func, start, identity), func + '');
-}
-module.exports = baseRest;
-
-},{"./identity":"czYGV","./_overRest":"ad34B","./_setToString":"duOCt"}],"6KRLt":[function(require,module,exports) {
+},{}],"6KRLt":[function(require,module,exports) {
 var isArrayLikeObject = require('./isArrayLikeObject');
 /**
  * Casts `value` to an empty array if it's not an array like object.
@@ -36808,1382 +39057,7 @@ OverlayTrigger.displayName = 'OverlayTrigger';
 OverlayTrigger.defaultProps = defaultProps;
 exports.default = OverlayTrigger;
 
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","lodash/isUndefined":"2aodM","react":"6TuXu","lodash/get":"5Dzuw","lodash/isNil":"9gylO","dom-lib":"hluqp","./Overlay":"ceriK","../utils":"iz9Dz","../utils/isOneOf":"2tC0p","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hluqp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "animation", ()=>_animation
-);
-parcelHelpers.export(exports, "transition", ()=>_transitionDefault.default
-);
-parcelHelpers.export(exports, "translateDOMPositionXY", ()=>_translateDOMPositionXYDefault.default
-);
-parcelHelpers.export(exports, "getVendorPrefixedName", ()=>_getVendorPrefixedNameDefault.default
-);
-parcelHelpers.export(exports, "BrowserSupportCore", ()=>_browserSupportCoreDefault.default
-);
-parcelHelpers.export(exports, "DOMMouseMoveTracker", ()=>_dommouseMoveTrackerDefault.default
-);
-parcelHelpers.export(exports, "WheelHandler", ()=>_wheelHandlerDefault.default
-);
-var _animation = require("./animation");
-var _classNames = require("./classNames");
-parcelHelpers.exportAll(_classNames, exports);
-var _style = require("./style");
-parcelHelpers.exportAll(_style, exports);
-var _query = require("./query");
-parcelHelpers.exportAll(_query, exports);
-var _events = require("./events");
-parcelHelpers.exportAll(_events, exports);
-var _transition = require("./transition");
-var _transitionDefault = parcelHelpers.interopDefault(_transition);
-var _translateDOMPositionXY = require("./transition/translateDOMPositionXY");
-var _translateDOMPositionXYDefault = parcelHelpers.interopDefault(_translateDOMPositionXY);
-var _getVendorPrefixedName = require("./getVendorPrefixedName");
-var _getVendorPrefixedNameDefault = parcelHelpers.interopDefault(_getVendorPrefixedName);
-var _browserSupportCore = require("./BrowserSupportCore");
-var _browserSupportCoreDefault = parcelHelpers.interopDefault(_browserSupportCore);
-var _dommouseMoveTracker = require("./DOMMouseMoveTracker");
-var _dommouseMoveTrackerDefault = parcelHelpers.interopDefault(_dommouseMoveTracker);
-var _wheelHandler = require("./WheelHandler");
-var _wheelHandlerDefault = parcelHelpers.interopDefault(_wheelHandler);
-
-},{"./classNames":"7zlrg","./style":"hHjWl","./query":"dX3vZ","./events":"6jkjG","./animation":"cdMa5","./transition":"8yzia","./transition/translateDOMPositionXY":"j8w56","./getVendorPrefixedName":"9fNX7","./BrowserSupportCore":"dgMaP","./DOMMouseMoveTracker":"adY8d","./WheelHandler":"6ID40","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7zlrg":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "addClass", ()=>_addClassDefault.default
-);
-parcelHelpers.export(exports, "hasClass", ()=>_hasClassDefault.default
-);
-parcelHelpers.export(exports, "removeClass", ()=>_removeClassDefault.default
-);
-parcelHelpers.export(exports, "toggleClass", ()=>_toggleClassDefault.default
-);
-var _addClass = require("./addClass");
-var _addClassDefault = parcelHelpers.interopDefault(_addClass);
-var _hasClass = require("./hasClass");
-var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
-var _removeClass = require("./removeClass");
-var _removeClassDefault = parcelHelpers.interopDefault(_removeClass);
-var _toggleClass = require("./toggleClass");
-var _toggleClassDefault = parcelHelpers.interopDefault(_toggleClass);
-
-},{"./addClass":"aFO2c","./hasClass":"axVAB","./removeClass":"hk0tr","./toggleClass":"5EzQG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aFO2c":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _hasClass = require("./hasClass");
-var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
-exports.default = function(target, className) {
-    if (className) {
-        if (target.classList) target.classList.add(className);
-        else if (!_hasClassDefault.default(target, className)) target.className = target.className + " " + className;
-    }
-    return target;
-};
-
-},{"./hasClass":"axVAB","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"axVAB":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(target, className) {
-    if (target.classList) return !!className && target.classList.contains(className);
-    return (" " + target.className + " ").indexOf(" " + className + " ") !== -1;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hk0tr":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(target, className) {
-    if (className) {
-        if (target.classList) target.classList.remove(className);
-        else target.className = target.className.replace(new RegExp("(^|\\s)" + className + "(?:\\s|$)", 'g'), '$1').replace(/\s+/g, ' ') // multiple spaces to one
-        .replace(/^\s*|\s*$/g, ''); // trim the ends
-    }
-    return target;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5EzQG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _hasClass = require("./hasClass");
-var _hasClassDefault = parcelHelpers.interopDefault(_hasClass);
-var _addClass = require("./addClass");
-var _addClassDefault = parcelHelpers.interopDefault(_addClass);
-var _removeClass = require("./removeClass");
-var _removeClassDefault = parcelHelpers.interopDefault(_removeClass);
-exports.default = function(target, className) {
-    if (_hasClassDefault.default(target, className)) return _removeClassDefault.default(target, className);
-    return _addClassDefault.default(target, className);
-};
-
-},{"./hasClass":"axVAB","./addClass":"aFO2c","./removeClass":"hk0tr","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hHjWl":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getStyle", ()=>_getStyleDefault.default
-);
-parcelHelpers.export(exports, "removeStyle", ()=>_removeStyleDefault.default
-);
-parcelHelpers.export(exports, "addStyle", ()=>_addStyleDefault.default
-);
-parcelHelpers.export(exports, "getComputedStyle", ()=>_getComputedStyleDefault.default
-);
-var _getStyle = require("./getStyle");
-var _getStyleDefault = parcelHelpers.interopDefault(_getStyle);
-var _removeStyle = require("./removeStyle");
-var _removeStyleDefault = parcelHelpers.interopDefault(_removeStyle);
-var _addStyle = require("./addStyle");
-var _addStyleDefault = parcelHelpers.interopDefault(_addStyle);
-var _getComputedStyle = require("./getComputedStyle");
-var _getComputedStyleDefault = parcelHelpers.interopDefault(_getComputedStyle);
-
-},{"./getStyle":"hTkp8","./removeStyle":"8r5se","./addStyle":"lJ0MF","./getComputedStyle":"bV7Mo","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hTkp8":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _camelizeStyleName = require("./camelizeStyleName");
-var _camelizeStyleNameDefault = parcelHelpers.interopDefault(_camelizeStyleName);
-var _getComputedStyle = require("./getComputedStyle");
-var _getComputedStyleDefault = parcelHelpers.interopDefault(_getComputedStyle);
-var _hyphenateStyleName = require("./hyphenateStyleName");
-var _hyphenateStyleNameDefault = parcelHelpers.interopDefault(_hyphenateStyleName);
-exports.default = function(node, property) {
-    if (property) {
-        var value = node.style[_camelizeStyleNameDefault.default(property)];
-        if (value) return value;
-        var styles = _getComputedStyleDefault.default(node);
-        if (styles) return styles.getPropertyValue(_hyphenateStyleNameDefault.default(property));
-    }
-    return node.style || _getComputedStyleDefault.default(node);
-};
-
-},{"./camelizeStyleName":"cDmPD","./getComputedStyle":"bV7Mo","./hyphenateStyleName":"eCW3M","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cDmPD":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _stringFormatter = require("../utils/stringFormatter");
-var msPattern = /^ms-/;
-exports.default = function(name) {
-    return _stringFormatter.camelize(name.replace(msPattern, 'ms-'));
-};
-
-},{"../utils/stringFormatter":"fXjfF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fXjfF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/* eslint-disable */ /**
- * @example
- * underscoreName('getList');
- * => get_list
- */ parcelHelpers.export(exports, "underscore", ()=>underscore
-);
-/**
- * @example
- * camelize('font-size');
- * => fontSize
- */ parcelHelpers.export(exports, "camelize", ()=>camelize
-);
-/**
- * @example
- * camelize('fontSize');
- * => font-size
- */ parcelHelpers.export(exports, "hyphenate", ()=>hyphenate
-);
-/**
- * @example
- * merge('{0} - A front-end {1} ','Suite','framework');
- * => Suite - A front-end framework
- */ parcelHelpers.export(exports, "merge", ()=>merge
-);
-function underscore(string) {
-    return string.replace(/([A-Z])/g, '_$1').toLowerCase();
-}
-function camelize(string) {
-    return string.replace(/\-(\w)/g, function(_char) {
-        return _char.slice(1).toUpperCase();
-    });
-}
-function hyphenate(string) {
-    return string.replace(/([A-Z])/g, '-$1').toLowerCase();
-}
-function merge(pattern) {
-    var pointer = 0, i;
-    for(i = 1; i < arguments.length; i += 1){
-        pattern = pattern.split("{" + pointer + "}").join(arguments[i]);
-        pointer += 1;
-    }
-    return pattern;
-}
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bV7Mo":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(node) {
-    if (!node) throw new TypeError('No Element passed to `getComputedStyle()`');
-    var doc = node.ownerDocument;
-    if ('defaultView' in doc) {
-        if (doc.defaultView.opener) return node.ownerDocument.defaultView.getComputedStyle(node, null);
-        return window.getComputedStyle(node, null);
-    }
-    return null;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eCW3M":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _stringFormatter = require("../utils/stringFormatter");
-var msPattern = /^ms-/;
-exports.default = function(string) {
-    return _stringFormatter.hyphenate(string).replace(msPattern, '-ms-');
-};
-
-},{"../utils/stringFormatter":"fXjfF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8r5se":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function removeStyle(node, key) {
-    var _style, _style$removeProperty;
-    (_style = node.style) === null || _style === void 0 || (_style$removeProperty = _style.removeProperty) === null || _style$removeProperty === void 0 || _style$removeProperty.call(_style, key);
-}
-exports.default = function(node, keys) {
-    if (typeof keys === 'string') removeStyle(node, keys);
-    else if (Array.isArray(keys)) keys.forEach(function(key) {
-        return removeStyle(node, key);
-    });
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"lJ0MF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _hyphenateStyleName = require("./hyphenateStyleName");
-var _hyphenateStyleNameDefault = parcelHelpers.interopDefault(_hyphenateStyleName);
-var _removeStyle = require("./removeStyle");
-var _removeStyleDefault = parcelHelpers.interopDefault(_removeStyle);
-exports.default = function(node, property, value) {
-    var css = '';
-    var props = property;
-    if (typeof property === 'string') {
-        if (value === undefined) throw new Error('value is undefined');
-        (props = {
-        })[property] = value;
-    }
-    if (typeof props === 'object') {
-        for(var _key in props)if (Object.prototype.hasOwnProperty.call(props, _key)) {
-            if (!props[_key] && props[_key] !== 0) _removeStyleDefault.default(node, _hyphenateStyleNameDefault.default(_key));
-            else css += _hyphenateStyleNameDefault.default(_key) + ":" + props[_key] + ";";
-        }
-    }
-    node.style.cssText += ";" + css;
-};
-
-},{"./hyphenateStyleName":"eCW3M","./removeStyle":"8r5se","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"dX3vZ":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ownerDocument", ()=>_ownerDocumentDefault.default
-);
-parcelHelpers.export(exports, "ownerWindow", ()=>_ownerWindowDefault.default
-);
-parcelHelpers.export(exports, "getWindow", ()=>_getWindowDefault.default
-);
-parcelHelpers.export(exports, "getContainer", ()=>_getContainerDefault.default
-);
-parcelHelpers.export(exports, "canUseDOM", ()=>_canUseDOMDefault.default
-);
-parcelHelpers.export(exports, "contains", ()=>_containsDefault.default
-);
-parcelHelpers.export(exports, "scrollTop", ()=>_scrollTopDefault.default
-);
-parcelHelpers.export(exports, "scrollLeft", ()=>_scrollLeftDefault.default
-);
-parcelHelpers.export(exports, "getOffset", ()=>_getOffsetDefault.default
-);
-parcelHelpers.export(exports, "nodeName", ()=>_nodeNameDefault.default
-);
-parcelHelpers.export(exports, "getOffsetParent", ()=>_getOffsetParentDefault.default
-);
-parcelHelpers.export(exports, "getPosition", ()=>_getPositionDefault.default
-);
-parcelHelpers.export(exports, "isOverflowing", ()=>_isOverflowingDefault.default
-);
-parcelHelpers.export(exports, "activeElement", ()=>_activeElementDefault.default
-);
-parcelHelpers.export(exports, "getScrollbarSize", ()=>_getScrollbarSizeDefault.default
-);
-parcelHelpers.export(exports, "getHeight", ()=>_getHeightDefault.default
-);
-parcelHelpers.export(exports, "getWidth", ()=>_getWidthDefault.default
-);
-var _ownerDocument = require("./ownerDocument");
-var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
-var _ownerWindow = require("./ownerWindow");
-var _ownerWindowDefault = parcelHelpers.interopDefault(_ownerWindow);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-var _getContainer = require("./getContainer");
-var _getContainerDefault = parcelHelpers.interopDefault(_getContainer);
-var _canUseDOM = require("./canUseDOM");
-var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
-var _contains = require("./contains");
-var _containsDefault = parcelHelpers.interopDefault(_contains);
-var _scrollTop = require("./scrollTop");
-var _scrollTopDefault = parcelHelpers.interopDefault(_scrollTop);
-var _scrollLeft = require("./scrollLeft");
-var _scrollLeftDefault = parcelHelpers.interopDefault(_scrollLeft);
-var _getOffset = require("./getOffset");
-var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
-var _nodeName = require("./nodeName");
-var _nodeNameDefault = parcelHelpers.interopDefault(_nodeName);
-var _getOffsetParent = require("./getOffsetParent");
-var _getOffsetParentDefault = parcelHelpers.interopDefault(_getOffsetParent);
-var _getPosition = require("./getPosition");
-var _getPositionDefault = parcelHelpers.interopDefault(_getPosition);
-var _isOverflowing = require("./isOverflowing");
-var _isOverflowingDefault = parcelHelpers.interopDefault(_isOverflowing);
-var _activeElement = require("./activeElement");
-var _activeElementDefault = parcelHelpers.interopDefault(_activeElement);
-var _getScrollbarSize = require("./getScrollbarSize");
-var _getScrollbarSizeDefault = parcelHelpers.interopDefault(_getScrollbarSize);
-var _getHeight = require("./getHeight");
-var _getHeightDefault = parcelHelpers.interopDefault(_getHeight);
-var _getWidth = require("./getWidth");
-var _getWidthDefault = parcelHelpers.interopDefault(_getWidth);
-
-},{"./ownerDocument":"5p6uk","./ownerWindow":"7xYdA","./getWindow":"gjq3Q","./getContainer":"hve0I","./canUseDOM":"d71TM","./contains":"h2Ttx","./scrollTop":"3okGk","./scrollLeft":"c2AFm","./getOffset":"cRld0","./nodeName":"eANiG","./getOffsetParent":"kAWFI","./getPosition":"8ZbAV","./isOverflowing":"ahG2B","./activeElement":"7b2Jv","./getScrollbarSize":"636L2","./getHeight":"Ic6Z4","./getWidth":"aN1RF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5p6uk":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(node) {
-    return node && node.ownerDocument || document;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7xYdA":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ownerDocument = require("./ownerDocument");
-var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
-exports.default = function(componentOrElement) {
-    var doc = _ownerDocumentDefault.default(componentOrElement);
-    return doc.defaultView;
-};
-
-},{"./ownerDocument":"5p6uk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gjq3Q":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(node) {
-    if (node === (node === null || node === void 0 ? void 0 : node.window)) return node;
-    return (node === null || node === void 0 ? void 0 : node.nodeType) === 9 ? (node === null || node === void 0 ? void 0 : node.defaultView) || (node === null || node === void 0 ? void 0 : node.parentWindow) : null;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hve0I":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(container, defaultContainer) {
-    container = typeof container === 'function' ? container() : container;
-    return container || defaultContainer;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"d71TM":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-exports.default = canUseDOM;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"h2Ttx":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _canUseDOM = require("./canUseDOM");
-var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
-var fallback = function fallback1(context, node) {
-    if (node) do {
-        if (node === context) return true;
-    }while (node = node.parentNode)
-    return false;
-}; // HTML DOM and SVG DOM may have different support levels,
-// so we need to check on context instead of a document root element.
-var contains = function contains1(context, node) {
-    if (context.contains) return context.contains(node);
-    else if (context.compareDocumentPosition) return context === node || !!(context.compareDocumentPosition(node) & 16);
-    return fallback(context, node);
-};
-exports.default = (function() {
-    return _canUseDOMDefault.default ? contains : fallback;
-})();
-
-},{"./canUseDOM":"d71TM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3okGk":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-exports.default = function(node, val) {
-    var win = _getWindowDefault.default(node);
-    var top = node.scrollTop;
-    var left = 0;
-    if (win) {
-        top = win.pageYOffset;
-        left = win.pageXOffset;
-    }
-    if (val !== undefined) {
-        if (win) win.scrollTo(left, val);
-        else node.scrollTop = val;
-    }
-    return top;
-};
-
-},{"./getWindow":"gjq3Q","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"c2AFm":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-exports.default = function(node, val) {
-    var win = _getWindowDefault.default(node);
-    var left = node.scrollLeft;
-    var top = 0;
-    if (win) {
-        left = win.pageXOffset;
-        top = win.pageYOffset;
-    }
-    if (val !== undefined) {
-        if (win) win.scrollTo(val, top);
-        else node.scrollLeft = val;
-    }
-    return left;
-};
-
-},{"./getWindow":"gjq3Q","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cRld0":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ownerDocument = require("./ownerDocument");
-var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-var _contains = require("./contains");
-var _containsDefault = parcelHelpers.interopDefault(_contains);
-exports.default = function(node) {
-    var doc = _ownerDocumentDefault.default(node);
-    var win = _getWindowDefault.default(doc);
-    var docElem = doc && doc.documentElement;
-    var box = {
-        top: 0,
-        left: 0,
-        height: 0,
-        width: 0
-    };
-    if (!doc) return null;
-     // Make sure it's not a disconnected DOM node
-    if (!_containsDefault.default(docElem, node)) return box;
-    if (node.getBoundingClientRect !== undefined) box = node.getBoundingClientRect();
-    if ((box.width || box.height) && docElem && win) box = {
-        top: box.top + (win.pageYOffset || docElem.scrollTop) - (docElem.clientTop || 0),
-        left: box.left + (win.pageXOffset || docElem.scrollLeft) - (docElem.clientLeft || 0),
-        width: (box.width === null ? node.offsetWidth : box.width) || 0,
-        height: (box.height === null ? node.offsetHeight : box.height) || 0
-    };
-    return box;
-};
-
-},{"./ownerDocument":"5p6uk","./getWindow":"gjq3Q","./contains":"h2Ttx","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eANiG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(node) {
-    var _node$nodeName;
-    return (node === null || node === void 0 ? void 0 : node.nodeName) && (node === null || node === void 0 ? void 0 : (_node$nodeName = node.nodeName) === null || _node$nodeName === void 0 ? void 0 : _node$nodeName.toLowerCase());
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kAWFI":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _ownerDocument = require("./ownerDocument");
-var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
-var _nodeName = require("./nodeName");
-var _nodeNameDefault = parcelHelpers.interopDefault(_nodeName);
-var _style = require("../style");
-exports.default = function(node) {
-    var _ref;
-    var doc = _ownerDocumentDefault.default(node);
-    var offsetParent = (_ref = node) === null || _ref === void 0 ? void 0 : _ref.offsetParent;
-    while(offsetParent && _nodeNameDefault.default(node) !== 'html' && _style.getStyle(offsetParent, 'position') === 'static')offsetParent = offsetParent.offsetParent;
-    return offsetParent || doc.documentElement;
-};
-
-},{"./ownerDocument":"5p6uk","./nodeName":"eANiG","../style":"hHjWl","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8ZbAV":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _getOffsetParent = require("./getOffsetParent");
-var _getOffsetParentDefault = parcelHelpers.interopDefault(_getOffsetParent);
-var _getOffset = require("./getOffset");
-var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
-var _style = require("../style");
-var _scrollTop = require("./scrollTop");
-var _scrollTopDefault = parcelHelpers.interopDefault(_scrollTop);
-var _scrollLeft = require("./scrollLeft");
-var _scrollLeftDefault = parcelHelpers.interopDefault(_scrollLeft);
-var _nodeName = require("./nodeName");
-var _nodeNameDefault = parcelHelpers.interopDefault(_nodeName);
-exports.default = function(node, offsetParent) {
-    var parentOffset = {
-        top: 0,
-        left: 0
-    };
-    var offset = null; // Fixed elements are offset from window (parentOffset = {top:0, left: 0},
-    // because it is its only offset parent
-    if (_style.getStyle(node, 'position') === 'fixed') offset = node.getBoundingClientRect();
-    else {
-        offsetParent = offsetParent || _getOffsetParentDefault.default(node);
-        offset = _getOffsetDefault.default(node);
-        if (_nodeNameDefault.default(offsetParent) !== 'html') {
-            var nextParentOffset = _getOffsetDefault.default(offsetParent);
-            if (nextParentOffset) {
-                parentOffset.top = nextParentOffset.top;
-                parentOffset.left = nextParentOffset.left;
-            }
-        }
-        parentOffset.top += parseInt(_style.getStyle(offsetParent, 'borderTopWidth'), 10) - _scrollTopDefault.default(offsetParent) || 0;
-        parentOffset.left += parseInt(_style.getStyle(offsetParent, 'borderLeftWidth'), 10) - _scrollLeftDefault.default(offsetParent) || 0;
-    } // Subtract parent offsets and node margins
-    if (offset) return _extendsDefault.default({
-    }, offset, {
-        top: offset.top - parentOffset.top - (parseInt(_style.getStyle(node, 'marginTop'), 10) || 0),
-        left: offset.left - parentOffset.left - (parseInt(_style.getStyle(node, 'marginLeft'), 10) || 0)
-    });
-    return null;
-};
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","./getOffsetParent":"kAWFI","./getOffset":"cRld0","../style":"hHjWl","./scrollTop":"3okGk","./scrollLeft":"c2AFm","./nodeName":"eANiG","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ahG2B":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-var _ownerDocument = require("./ownerDocument");
-var _ownerDocumentDefault = parcelHelpers.interopDefault(_ownerDocument);
-function bodyIsOverflowing(node) {
-    var doc = _ownerDocumentDefault.default(node);
-    var win = _getWindowDefault.default(doc);
-    var fullWidth = win.innerWidth;
-    if (doc.body) return doc.body.clientWidth < fullWidth;
-    return false;
-}
-exports.default = function(container) {
-    var win = _getWindowDefault.default(container);
-    var isBody = container && container.tagName.toLowerCase() === 'body';
-    return win || isBody ? bodyIsOverflowing(container) : container.scrollHeight > container.clientHeight;
-};
-
-},{"./getWindow":"gjq3Q","./ownerDocument":"5p6uk","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7b2Jv":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-exports.default = function(doc) {
-    if (doc === void 0) doc = document;
-    return doc.activeElement;
-};
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"636L2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _canUseDOM = require("./canUseDOM");
-var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
-var size;
-exports.default = function(recalc) {
-    if (size === undefined || recalc) {
-        if (_canUseDOMDefault.default) {
-            var scrollDiv = document.createElement('div');
-            var body = document.body;
-            scrollDiv.style.position = 'absolute';
-            scrollDiv.style.top = '-9999px';
-            scrollDiv.style.width = '50px';
-            scrollDiv.style.height = '50px';
-            scrollDiv.style.overflow = 'scroll';
-            body.appendChild(scrollDiv);
-            size = scrollDiv.offsetWidth - scrollDiv.clientWidth;
-            body.removeChild(scrollDiv);
-        }
-    }
-    return size;
-};
-
-},{"./canUseDOM":"d71TM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"Ic6Z4":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-var _getOffset = require("./getOffset");
-var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
-exports.default = function(node, client) {
-    var win = _getWindowDefault.default(node);
-    if (win) return win.innerHeight;
-    return client ? node.clientHeight : _getOffsetDefault.default(node).height;
-};
-
-},{"./getWindow":"gjq3Q","./getOffset":"cRld0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aN1RF":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getWindow = require("./getWindow");
-var _getWindowDefault = parcelHelpers.interopDefault(_getWindow);
-var _getOffset = require("./getOffset");
-var _getOffsetDefault = parcelHelpers.interopDefault(_getOffset);
-exports.default = function(node, client) {
-    var win = _getWindowDefault.default(node);
-    if (win) return win.innerWidth;
-    if (client) return node.clientWidth;
-    var offset = _getOffsetDefault.default(node);
-    return offset ? offset.width : 0;
-};
-
-},{"./getWindow":"gjq3Q","./getOffset":"cRld0","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"6jkjG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "on", ()=>_onDefault.default
-);
-parcelHelpers.export(exports, "off", ()=>_offDefault.default
-);
-var _on = require("./on");
-var _onDefault = parcelHelpers.interopDefault(_on);
-var _off = require("./off");
-var _offDefault = parcelHelpers.interopDefault(_off);
-
-},{"./on":"4PPE2","./off":"eyjDS","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"4PPE2":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function on(target, eventType, listener, options) {
-    if (options === void 0) options = false;
-    target.addEventListener(eventType, listener, options);
-    return {
-        off: function off() {
-            target.removeEventListener(eventType, listener, options);
-        }
-    };
-}
-exports.default = on;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eyjDS":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-function on(target, eventName, listener, options) {
-    if (options === void 0) options = false;
-    target.removeEventListener(eventName, listener, options);
-}
-exports.default = on;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"cdMa5":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "cancelAnimationFramePolyfill", ()=>_cancelAnimationFramePolyfillDefault.default
-);
-parcelHelpers.export(exports, "nativeRequestAnimationFrame", ()=>_nativeRequestAnimationFrameDefault.default
-);
-parcelHelpers.export(exports, "requestAnimationFramePolyfill", ()=>_requestAnimationFramePolyfillDefault.default
-);
-parcelHelpers.export(exports, "events", ()=>events
-);
-var _query = require("../query");
-var _cancelAnimationFramePolyfill = require("./cancelAnimationFramePolyfill");
-var _cancelAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_cancelAnimationFramePolyfill);
-var _nativeRequestAnimationFrame = require("./nativeRequestAnimationFrame");
-var _nativeRequestAnimationFrameDefault = parcelHelpers.interopDefault(_nativeRequestAnimationFrame);
-var _requestAnimationFramePolyfill = require("./requestAnimationFramePolyfill");
-var _requestAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_requestAnimationFramePolyfill);
-var vendorMap = {
-    animation: 'animationend',
-    OAnimation: 'oAnimationEnd',
-    MozAnimation: 'animationend',
-    WebkitAnimation: 'webkitAnimationEnd'
-};
-function getAnimationEvent() {
-    if (!_query.canUseDOM) return;
-    var tempAnimationEnd;
-    var style = document.createElement('div').style;
-    for(tempAnimationEnd in vendorMap){
-        if (style[tempAnimationEnd] !== undefined) return vendorMap[tempAnimationEnd];
-    }
-}
-var events = function events1() {
-    return {
-        end: getAnimationEvent()
-    };
-};
-
-},{"../query":"dX3vZ","./cancelAnimationFramePolyfill":"1vT9O","./nativeRequestAnimationFrame":"kKKKT","./requestAnimationFramePolyfill":"fMwZt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"1vT9O":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getGlobal = require("../getGlobal");
-var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
-var g = _getGlobalDefault.default();
-exports.default = g.cancelAnimationFrame || g.webkitCancelAnimationFrame || g.clearTimeout;
-
-},{"../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eTpKs":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-// the only reliable means to get the global object is
-// `Function('return this')()`
-// However, this causes CSP violations in Chrome apps.
-// https://github.com/tc39/proposal-global
-function getGlobal() {
-    if (typeof globalThis !== 'undefined') return globalThis;
-    if (typeof self !== 'undefined') return self;
-    if (typeof window !== 'undefined') return window;
-    throw new Error('unable to locate global object');
-}
-exports.default = getGlobal;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kKKKT":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getGlobal = require("../getGlobal");
-var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
-var g = _getGlobalDefault.default();
-exports.default = g.requestAnimationFrame || g.webkitRequestAnimationFrame;
-
-},{"../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fMwZt":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _nativeRequestAnimationFrame = require("./nativeRequestAnimationFrame");
-var _nativeRequestAnimationFrameDefault = parcelHelpers.interopDefault(_nativeRequestAnimationFrame);
-var _emptyFunction = require("../utils/emptyFunction");
-var _emptyFunctionDefault = parcelHelpers.interopDefault(_emptyFunction);
-var _getGlobal = require("../getGlobal");
-var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
-var g = _getGlobalDefault.default();
-var lastTime = 0;
-function _setTimeout(callback) {
-    var currTime = Date.now();
-    var timeDelay = Math.max(0, 16 - (currTime - lastTime));
-    lastTime = currTime + timeDelay;
-    return g.setTimeout(function() {
-        callback(Date.now());
-    }, timeDelay);
-}
-/**
- * Here is the native and polyfill version of requestAnimationFrame.
- * Please don't use it directly and use requestAnimationFrame module instead.
- */ var requestAnimationFrame = _nativeRequestAnimationFrameDefault.default && _nativeRequestAnimationFrameDefault.default.bind(g) || _setTimeout; // Works around a rare bug in Safari 6 where the first request is never invoked.
-requestAnimationFrame(_emptyFunctionDefault.default);
-exports.default = requestAnimationFrame;
-
-},{"./nativeRequestAnimationFrame":"kKKKT","../utils/emptyFunction":"gGpTG","../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gGpTG":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _this = undefined;
-function makeEmptyFunction(arg) {
-    return function() {
-        return arg;
-    };
-}
-function emptyFunction() {
-}
-emptyFunction.thatReturns = makeEmptyFunction;
-emptyFunction.thatReturnsFalse = makeEmptyFunction(false);
-emptyFunction.thatReturnsTrue = makeEmptyFunction(true);
-emptyFunction.thatReturnsNull = makeEmptyFunction(null);
-emptyFunction.thatReturnsThis = function() {
-    return _this;
-};
-emptyFunction.thatReturnsArgument = function(arg) {
-    return arg;
-};
-exports.default = emptyFunction;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8yzia":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _query = require("../query");
-function getTransitionProperties() {
-    if (!_query.canUseDOM) return {
-    };
-    var vendorMap = {
-        O: function O(e) {
-            return "o" + e.toLowerCase();
-        },
-        Moz: function Moz(e) {
-            return e.toLowerCase();
-        },
-        Webkit: function Webkit(e) {
-            return "webkit" + e;
-        },
-        ms: function ms(e) {
-            return "MS" + e;
-        }
-    };
-    var vendors = Object.keys(vendorMap);
-    var style = document.createElement('div').style;
-    var tempTransitionEnd;
-    var tempPrefix = '';
-    for(var i = 0; i < vendors.length; i += 1){
-        var vendor = vendors[i];
-        if (vendor + "TransitionProperty" in style) {
-            tempPrefix = "-" + vendor.toLowerCase();
-            tempTransitionEnd = vendorMap[vendor]('TransitionEnd');
-            break;
-        }
-    }
-    if (!tempTransitionEnd && 'transitionProperty' in style) tempTransitionEnd = 'transitionend';
-    style = null;
-    return {
-        transitionEnd: tempTransitionEnd,
-        prefix: tempPrefix
-    };
-}
-exports.default = function() {
-    var _getTransitionPropert = getTransitionProperties(), prefix = _getTransitionPropert.prefix, transitionEnd = _getTransitionPropert.transitionEnd;
-    var addPrefix = function addPrefix1(name) {
-        return prefix + "-" + name;
-    };
-    return {
-        end: transitionEnd,
-        backfaceVisibility: addPrefix('backface-visibility'),
-        transform: addPrefix('transform'),
-        property: addPrefix('transition-property'),
-        timing: addPrefix('transition-timing-function'),
-        delay: addPrefix('transition-delay'),
-        duration: addPrefix('transition-duration')
-    };
-};
-
-},{"../query":"dX3vZ","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"j8w56":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "getTranslateDOMPositionXY", ()=>getTranslateDOMPositionXY
-);
-/**
- * Source code reference from:
- * https://github.com/facebook/fbjs/blob/d308fa83c9/packages/fbjs/src/dom/translateDOMPositionXY.js
- */ var _browserSupportCore = require("../BrowserSupportCore");
-var _browserSupportCoreDefault = parcelHelpers.interopDefault(_browserSupportCore);
-var _getVendorPrefixedName = require("../getVendorPrefixedName");
-var _getVendorPrefixedNameDefault = parcelHelpers.interopDefault(_getVendorPrefixedName);
-var _getGlobal = require("../getGlobal");
-var _getGlobalDefault = parcelHelpers.interopDefault(_getGlobal);
-var g = _getGlobalDefault.default();
-var TRANSFORM = _getVendorPrefixedNameDefault.default('transform');
-var BACKFACE_VISIBILITY = _getVendorPrefixedNameDefault.default('backfaceVisibility');
-var getTranslateDOMPositionXY = function getTranslateDOMPositionXY1(conf) {
-    if (conf === void 0) conf = {
-        enable3DTransform: true
-    };
-    if (_browserSupportCoreDefault.default.hasCSSTransforms()) {
-        var ua = g.window ? g.window.navigator.userAgent : 'UNKNOWN';
-        var isSafari = /Safari\//.test(ua) && !/Chrome\//.test(ua); // It appears that Safari messes up the composition order
-        // of GPU-accelerated layers
-        // (see bug https://bugs.webkit.org/show_bug.cgi?id=61824).
-        // Use 2D translation instead.
-        if (!isSafari && _browserSupportCoreDefault.default.hasCSS3DTransforms() && conf.enable3DTransform) return function(style, x, y) {
-            if (x === void 0) x = 0;
-            if (y === void 0) y = 0;
-            style[TRANSFORM] = "translate3d(" + x + "px," + y + "px,0)";
-            style[BACKFACE_VISIBILITY] = 'hidden';
-            return style;
-        };
-        return function(style, x, y) {
-            if (x === void 0) x = 0;
-            if (y === void 0) y = 0;
-            style[TRANSFORM] = "translate(" + x + "px," + y + "px)";
-            return style;
-        };
-    }
-    return function(style, x, y) {
-        if (x === void 0) x = 0;
-        if (y === void 0) y = 0;
-        style.left = x + "px";
-        style.top = y + "px";
-        return style;
-    };
-};
-var translateDOMPositionXY = getTranslateDOMPositionXY();
-exports.default = translateDOMPositionXY;
-
-},{"../BrowserSupportCore":"dgMaP","../getVendorPrefixedName":"9fNX7","../getGlobal":"eTpKs","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"dgMaP":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _getVendorPrefixedName = require("./getVendorPrefixedName");
-var _getVendorPrefixedNameDefault = parcelHelpers.interopDefault(_getVendorPrefixedName);
-exports.default = {
-    /**
-   * @return {bool} True if browser supports css animations.
-   */ hasCSSAnimations: function hasCSSAnimations() {
-        return !!_getVendorPrefixedNameDefault.default('animationName');
-    },
-    /**
-   * @return {bool} True if browser supports css transforms.
-   */ hasCSSTransforms: function hasCSSTransforms() {
-        return !!_getVendorPrefixedNameDefault.default('transform');
-    },
-    /**
-   * @return {bool} True if browser supports css 3d transforms.
-   */ hasCSS3DTransforms: function hasCSS3DTransforms() {
-        return !!_getVendorPrefixedNameDefault.default('perspective');
-    },
-    /**
-   * @return {bool} True if browser supports css transitions.
-   */ hasCSSTransitions: function hasCSSTransitions() {
-        return !!_getVendorPrefixedNameDefault.default('transition');
-    }
-};
-
-},{"./getVendorPrefixedName":"9fNX7","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9fNX7":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _canUseDOM = require("./query/canUseDOM");
-var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
-var _stringFormatter = require("./utils/stringFormatter");
-var memoized = {
-};
-var prefixes = [
-    'Webkit',
-    'ms',
-    'Moz',
-    'O'
-];
-var prefixRegex = new RegExp("^(" + prefixes.join('|') + ")");
-var testStyle = _canUseDOMDefault.default ? document.createElement('div').style : {
-};
-function getWithPrefix(name) {
-    for(var i = 0; i < prefixes.length; i += 1){
-        var prefixedName = prefixes[i] + name;
-        if (prefixedName in testStyle) return prefixedName;
-    }
-    return null;
-}
-/**
- * @param {string} property Name of a css property to check for.
- * @return {?string} property name supported in the browser, or null if not
- * supported.
- */ function getVendorPrefixedName(property) {
-    var name = _stringFormatter.camelize(property);
-    if (memoized[name] === undefined) {
-        var capitalizedName = name.charAt(0).toUpperCase() + name.slice(1);
-        if (prefixRegex.test(capitalizedName)) throw new Error("getVendorPrefixedName must only be called with unprefixed\n          CSS property names. It was called with " + property);
-        memoized[name] = name in testStyle ? name : getWithPrefix(capitalizedName);
-    }
-    return memoized[name];
-}
-exports.default = getVendorPrefixedName;
-
-},{"./query/canUseDOM":"d71TM","./utils/stringFormatter":"fXjfF","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"adY8d":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-/**
- * Source code reference from:
- * https://github.com/facebook/fbjs/blob/master/packages/fbjs/src/dom/DOMMouseMoveTracker.js
- */ var _on = require("./events/on");
-var _onDefault = parcelHelpers.interopDefault(_on);
-var _cancelAnimationFramePolyfill = require("./animation/cancelAnimationFramePolyfill");
-var _cancelAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_cancelAnimationFramePolyfill);
-var _requestAnimationFramePolyfill = require("./animation/requestAnimationFramePolyfill");
-var _requestAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_requestAnimationFramePolyfill);
-var DOMMouseMoveTracker = /*#__PURE__*/ function() {
-    /**
-   * onMove is the callback that will be called on every mouse move.
-   * onMoveEnd is called on mouse up when movement has ended.
-   */ function DOMMouseMoveTracker1(onMove, onMoveEnd, domNode) {
-        var _this = this;
-        this.isDraggingStatus = false;
-        this.animationFrameID = null;
-        this.domNode = void 0;
-        this.onMove = null;
-        this.onMoveEnd = null;
-        this.eventMoveToken = null;
-        this.eventUpToken = null;
-        this.moveEvent = null;
-        this.deltaX = 0;
-        this.deltaY = 0;
-        this.x = 0;
-        this.y = 0;
-        this.isDragging = function() {
-            return _this.isDraggingStatus;
-        };
-        this.onMouseMove = function(event) {
-            var x = event.clientX;
-            var y = event.clientY;
-            _this.deltaX += x - _this.x;
-            _this.deltaY += y - _this.y;
-            if (_this.animationFrameID === null) // The mouse may move faster then the animation frame does.
-            // Use `requestAnimationFramePolyfill` to avoid over-updating.
-            _this.animationFrameID = _requestAnimationFramePolyfillDefault.default(_this.didMouseMove);
-            _this.x = x;
-            _this.y = y;
-            _this.moveEvent = event;
-            event.preventDefault();
-        };
-        this.didMouseMove = function() {
-            _this.animationFrameID = null;
-            _this.onMove(_this.deltaX, _this.deltaY, _this.moveEvent);
-            _this.deltaX = 0;
-            _this.deltaY = 0;
-        };
-        this.onMouseUp = function(event) {
-            if (_this.animationFrameID) _this.didMouseMove();
-            _this.onMoveEnd && _this.onMoveEnd(event);
-        };
-        this.domNode = domNode;
-        this.onMove = onMove;
-        this.onMoveEnd = onMoveEnd;
-    }
-    /**
-   * This is to set up the listeners for listening to mouse move
-   * and mouse up signaling the movement has ended. Please note that these
-   * listeners are added at the document.body level. It takes in an event
-   * in order to grab inital state.
-   */ var _proto = DOMMouseMoveTracker1.prototype;
-    _proto.captureMouseMoves = function captureMouseMoves(event) {
-        if (!this.eventMoveToken && !this.eventUpToken) {
-            this.eventMoveToken = _onDefault.default(this.domNode, 'mousemove', this.onMouseMove);
-            this.eventUpToken = _onDefault.default(this.domNode, 'mouseup', this.onMouseUp);
-        }
-        if (!this.isDraggingStatus) {
-            this.deltaX = 0;
-            this.deltaY = 0;
-            this.isDraggingStatus = true;
-            this.x = event.clientX;
-            this.y = event.clientY;
-        }
-        event.preventDefault();
-    };
-    _proto.releaseMouseMoves = function releaseMouseMoves() {
-        if (this.eventMoveToken) {
-            this.eventMoveToken.off();
-            this.eventMoveToken = null;
-        }
-        if (this.eventUpToken) {
-            this.eventUpToken.off();
-            this.eventUpToken = null;
-        }
-        if (this.animationFrameID !== null) {
-            _cancelAnimationFramePolyfillDefault.default(this.animationFrameID);
-            this.animationFrameID = null;
-        }
-        if (this.isDraggingStatus) {
-            this.isDraggingStatus = false;
-            this.x = 0;
-            this.y = 0;
-        }
-    };
-    return DOMMouseMoveTracker1;
-}();
-exports.default = DOMMouseMoveTracker;
-
-},{"./events/on":"4PPE2","./animation/cancelAnimationFramePolyfill":"1vT9O","./animation/requestAnimationFramePolyfill":"fMwZt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"6ID40":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _emptyFunction = require("./utils/emptyFunction");
-var _emptyFunctionDefault = parcelHelpers.interopDefault(_emptyFunction);
-var _normalizeWheel = require("./normalizeWheel");
-var _normalizeWheelDefault = parcelHelpers.interopDefault(_normalizeWheel);
-var _requestAnimationFramePolyfill = require("./animation/requestAnimationFramePolyfill");
-var _requestAnimationFramePolyfillDefault = parcelHelpers.interopDefault(_requestAnimationFramePolyfill);
-var WheelHandler = /*#__PURE__*/ function() {
-    function WheelHandler1(onWheel, handleScrollX, handleScrollY, stopPropagation) {
-        this.animationFrameID = null;
-        this.deltaX = 0;
-        this.deltaY = 0;
-        this.handleScrollX = null;
-        this.handleScrollY = null;
-        this.stopPropagation = null;
-        this.onWheelCallback = null;
-        this.didWheel = this.didWheel.bind(this);
-        if (typeof handleScrollX !== 'function') handleScrollX = handleScrollX ? _emptyFunctionDefault.default.thatReturnsTrue : _emptyFunctionDefault.default.thatReturnsFalse;
-        if (typeof handleScrollY !== 'function') handleScrollY = handleScrollY ? _emptyFunctionDefault.default.thatReturnsTrue : _emptyFunctionDefault.default.thatReturnsFalse;
-        if (typeof stopPropagation !== 'function') stopPropagation = stopPropagation ? _emptyFunctionDefault.default.thatReturnsTrue : _emptyFunctionDefault.default.thatReturnsFalse;
-        this.handleScrollX = handleScrollX;
-        this.handleScrollY = handleScrollY;
-        this.stopPropagation = stopPropagation;
-        this.onWheelCallback = onWheel;
-        this.onWheel = this.onWheel.bind(this);
-    }
-    var _proto = WheelHandler1.prototype;
-    _proto.onWheel = function onWheel(event) {
-        var normalizedEvent = _normalizeWheelDefault.default(event);
-        var deltaX = this.deltaX + normalizedEvent.pixelX;
-        var deltaY = this.deltaY + normalizedEvent.pixelY;
-        var handleScrollX = this.handleScrollX(deltaX, deltaY);
-        var handleScrollY = this.handleScrollY(deltaY, deltaX);
-        if (!handleScrollX && !handleScrollY) return;
-        this.deltaX += handleScrollX ? normalizedEvent.pixelX : 0;
-        this.deltaY += handleScrollY ? normalizedEvent.pixelY : 0;
-        event.preventDefault();
-        var changed;
-        if (this.deltaX !== 0 || this.deltaY !== 0) {
-            if (this.stopPropagation()) event.stopPropagation();
-            changed = true;
-        }
-        if (changed === true && this.animationFrameID === null) this.animationFrameID = _requestAnimationFramePolyfillDefault.default(this.didWheel);
-    };
-    _proto.didWheel = function didWheel() {
-        this.animationFrameID = null;
-        this.onWheelCallback(this.deltaX, this.deltaY);
-        this.deltaX = 0;
-        this.deltaY = 0;
-    };
-    return WheelHandler1;
-}();
-exports.default = WheelHandler;
-
-},{"./utils/emptyFunction":"gGpTG","./normalizeWheel":"9hCfL","./animation/requestAnimationFramePolyfill":"fMwZt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"9hCfL":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _userAgentDEPRECATED = require("./utils/UserAgent_DEPRECATED");
-var _userAgentDEPRECATEDDefault = parcelHelpers.interopDefault(_userAgentDEPRECATED);
-var _isEventSupported = require("./utils/isEventSupported"); // Reasonable defaults
-var _isEventSupportedDefault = parcelHelpers.interopDefault(_isEventSupported);
-var PIXEL_STEP = 10;
-var LINE_HEIGHT = 40;
-var PAGE_HEIGHT = 800;
-function normalizeWheel(event) {
-    var sX = 0;
-    var sY = 0; // spinX, spinY
-    var pX = 0;
-    var pY = 0; // pixelX, pixelY
-    // Legacy
-    if ('detail' in event) sY = event.detail;
-    if ('wheelDelta' in event) sY = -event.wheelDelta / 120;
-    if ('wheelDeltaY' in event) sY = -event.wheelDeltaY / 120;
-    if ('wheelDeltaX' in event) sX = -event.wheelDeltaX / 120;
-     // side scrolling on FF with DOMMouseScroll
-    if ('axis' in event && event.axis === event.HORIZONTAL_AXIS) {
-        sX = sY;
-        sY = 0;
-    }
-    pX = sX * PIXEL_STEP;
-    pY = sY * PIXEL_STEP;
-    if ('deltaY' in event) pY = event.deltaY;
-    if ('deltaX' in event) pX = event.deltaX;
-    if ((pX || pY) && event.deltaMode) {
-        if (event.deltaMode === 1) {
-            // delta in LINE units
-            pX *= LINE_HEIGHT;
-            pY *= LINE_HEIGHT;
-        } else {
-            // delta in PAGE units
-            pX *= PAGE_HEIGHT;
-            pY *= PAGE_HEIGHT;
-        }
-    } // Fall-back if spin cannot be determined
-    if (pX && !sX) sX = pX < 1 ? -1 : 1;
-    if (pY && !sY) sY = pY < 1 ? -1 : 1;
-    return {
-        spinX: sX,
-        spinY: sY,
-        pixelX: pX,
-        pixelY: pY
-    };
-}
-/**
- * The best combination if you prefer spinX + spinY normalization.  It favors
- * the older DOMMouseScroll for Firefox, as FF does not include wheelDelta with
- * 'wheel' event, making spin speed determination impossible.
- */ normalizeWheel.getEventType = function() {
-    if (_userAgentDEPRECATEDDefault.default.firefox()) return 'DOMMouseScroll';
-    return _isEventSupportedDefault.default('wheel') ? 'wheel' : 'mousewheel';
-};
-exports.default = normalizeWheel;
-
-},{"./utils/UserAgent_DEPRECATED":"3j8ZK","./utils/isEventSupported":"35Ffp","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"3j8ZK":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var populated = false; // Browsers
-var _ie;
-var _firefox;
-var _opera;
-var _webkit;
-var _chrome; // Actual IE browser for compatibility mode
-var ieRealVersion; // Platforms
-var _osx;
-var _windows;
-var _linux;
-var _android; // Architectures
-var win64; // Devices
-var _iphone;
-var _ipad;
-var _native;
-var _mobile;
-function populate() {
-    if (populated) return;
-    populated = true; // To work around buggy JS libraries that can't handle multi-digit
-    // version numbers, Opera 10's user agent string claims it's Opera
-    // 9, then later includes a Version/X.Y field:
-    //
-    // Opera/9.80 (foo) Presto/2.2.15 Version/10.10
-    var uas = navigator.userAgent;
-    var agent = /(?:MSIE.(\d+\.\d+))|(?:(?:Firefox|GranParadiso|Iceweasel).(\d+\.\d+))|(?:Opera(?:.+Version.|.)(\d+\.\d+))|(?:AppleWebKit.(\d+(?:\.\d+)?))|(?:Trident\/\d+\.\d+.*rv:(\d+\.\d+))/.exec(uas);
-    var os = /(Mac OS X)|(Windows)|(Linux)/.exec(uas);
-    _iphone = /\b(iPhone|iP[ao]d)/.exec(uas);
-    _ipad = /\b(iP[ao]d)/.exec(uas);
-    _android = /Android/i.exec(uas);
-    _native = /FBAN\/\w+;/i.exec(uas);
-    _mobile = /Mobile/i.exec(uas); // Note that the IE team blog would have you believe you should be checking
-    // for 'Win64; x64'.  But MSDN then reveals that you can actually be coming
-    // from either x64 or ia64;  so ultimately, you should just check for Win64
-    // as in indicator of whether you're in 64-bit IE.  32-bit IE on 64-bit
-    // Windows will send 'WOW64' instead.
-    win64 = !!/Win64/.exec(uas);
-    if (agent) {
-        if (agent[1]) _ie = parseFloat(agent[1]);
-        else _ie = agent[5] ? parseFloat(agent[5]) : NaN;
-         // IE compatibility mode
-        // @ts-ignore
-        if (_ie && document && document.documentMode) // @ts-ignore
-        _ie = document.documentMode;
-         // grab the "true" ie version from the trident token if available
-        var trident = /(?:Trident\/(\d+.\d+))/.exec(uas);
-        ieRealVersion = trident ? parseFloat(trident[1]) + 4 : _ie;
-        _firefox = agent[2] ? parseFloat(agent[2]) : NaN;
-        _opera = agent[3] ? parseFloat(agent[3]) : NaN;
-        _webkit = agent[4] ? parseFloat(agent[4]) : NaN;
-        if (_webkit) {
-            // We do not add the regexp to the above test, because it will always
-            // match 'safari' only since 'AppleWebKit' appears before 'Chrome' in
-            // the userAgent string.
-            agent = /(?:Chrome\/(\d+\.\d+))/.exec(uas);
-            _chrome = agent && agent[1] ? parseFloat(agent[1]) : NaN;
-        } else _chrome = NaN;
-    } else {
-        _ie = NaN;
-        _firefox = NaN;
-        _opera = NaN;
-        _chrome = NaN;
-        _webkit = NaN;
-    }
-    if (os) {
-        if (os[1]) {
-            // Detect OS X version.  If no version number matches, set osx to true.
-            // Version examples:  10, 10_6_1, 10.7
-            // Parses version number as a float, taking only first two sets of
-            // digits.  If only one set of digits is found, returns just the major
-            // version number.
-            var ver = /(?:Mac OS X (\d+(?:[._]\d+)?))/.exec(uas);
-            _osx = ver ? parseFloat(ver[1].replace('_', '.')) : true;
-        } else _osx = false;
-        _windows = !!os[2];
-        _linux = !!os[3];
-    } else {
-        _osx = false;
-        _windows = false;
-        _linux = false;
-    }
-}
-var UserAgent = {
-    /**
-   *  Check if the UA is Internet Explorer.
-   *
-   *
-   *  @return float|NaN Version number (if match) or NaN.
-   */ ie: function ie() {
-        return populate() || _ie;
-    },
-    /**
-   * Check if we're in Internet Explorer compatibility mode.
-   *
-   * @return bool true if in compatibility mode, false if
-   * not compatibility mode or not ie
-   */ ieCompatibilityMode: function ieCompatibilityMode() {
-        return populate() || ieRealVersion > _ie;
-    },
-    /**
-   * Whether the browser is 64-bit IE.  Really, this is kind of weak sauce;  we
-   * only need this because Skype can't handle 64-bit IE yet.  We need to remove
-   * this when we don't need it -- tracked by #601957.
-   */ ie64: function ie64() {
-        return UserAgent.ie() && win64;
-    },
-    /**
-   *  Check if the UA is Firefox.
-   *
-   *
-   *  @return float|NaN Version number (if match) or NaN.
-   */ firefox: function firefox() {
-        return populate() || _firefox;
-    },
-    /**
-   *  Check if the UA is Opera.
-   *
-   *
-   *  @return float|NaN Version number (if match) or NaN.
-   */ opera: function opera() {
-        return populate() || _opera;
-    },
-    /**
-   *  Check if the UA is WebKit.
-   *
-   *
-   *  @return float|NaN Version number (if match) or NaN.
-   */ webkit: function webkit() {
-        return populate() || _webkit;
-    },
-    /**
-   *  For Push
-   *  WILL BE REMOVED VERY SOON. Use UserAgent_DEPRECATED.webkit
-   */ safari: function safari() {
-        return UserAgent.webkit();
-    },
-    /**
-   *  Check if the UA is a Chrome browser.
-   *
-   *
-   *  @return float|NaN Version number (if match) or NaN.
-   */ chrome: function chrome() {
-        return populate() || _chrome;
-    },
-    /**
-   *  Check if the user is running Windows.
-   *
-   *  @return bool `true' if the user's OS is Windows.
-   */ windows: function windows() {
-        return populate() || _windows;
-    },
-    /**
-   *  Check if the user is running Mac OS X.
-   *
-   *  @return float|bool   Returns a float if a version number is detected,
-   *                       otherwise true/false.
-   */ osx: function osx() {
-        return populate() || _osx;
-    },
-    /**
-   * Check if the user is running Linux.
-   *
-   * @return bool `true' if the user's OS is some flavor of Linux.
-   */ linux: function linux() {
-        return populate() || _linux;
-    },
-    /**
-   * Check if the user is running on an iPhone or iPod platform.
-   *
-   * @return bool `true' if the user is running some flavor of the
-   *    iPhone OS.
-   */ iphone: function iphone() {
-        return populate() || _iphone;
-    },
-    mobile: function mobile() {
-        return populate() || _iphone || _ipad || _android || _mobile;
-    },
-    // webviews inside of the native apps
-    nativeApp: function nativeApp() {
-        return populate() || _native;
-    },
-    android: function android() {
-        return populate() || _android;
-    },
-    ipad: function ipad() {
-        return populate() || _ipad;
-    }
-};
-exports.default = UserAgent;
-
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"35Ffp":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _canUseDOM = require("../query/canUseDOM");
-var _canUseDOMDefault = parcelHelpers.interopDefault(_canUseDOM);
-var useHasFeature;
-if (_canUseDOMDefault.default) useHasFeature = document.implementation && document.implementation.hasFeature && // @see http://dom.spec.whatwg.org/#dom-domimplementation-hasfeature
-document.implementation.hasFeature('', '') !== true;
-function isEventSupported(eventNameSuffix, capture) {
-    if (!_canUseDOMDefault.default || capture && !('addEventListener' in document)) return false;
-    var eventName = "on" + eventNameSuffix;
-    var isSupported = eventName in document;
-    if (!isSupported) {
-        var element = document.createElement('div');
-        element.setAttribute(eventName, 'return;');
-        isSupported = typeof element[eventName] === 'function';
-    }
-    if (!isSupported && useHasFeature && eventNameSuffix === 'wheel') // This is the only way to test support for the `wheel` event in IE9+.
-    isSupported = document.implementation.hasFeature('Events.wheel', '3.0');
-    return isSupported;
-}
-exports.default = isEventSupported;
-
-},{"../query/canUseDOM":"d71TM","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ceriK":[function(require,module,exports) {
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","lodash/isUndefined":"2aodM","react":"6TuXu","lodash/get":"5Dzuw","lodash/isNil":"9gylO","dom-lib":"hluqp","./Overlay":"ceriK","../utils":"iz9Dz","../utils/isOneOf":"2tC0p","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ceriK":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "overlayPropTypes", ()=>overlayPropTypes
@@ -38512,22 +39386,7 @@ module.exports.unbind = function(element, fn) {
     }
 };
 
-},{}],"8RlUt":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _domLib = require("dom-lib");
-parcelHelpers.exportAll(_domLib, exports);
-var DOMHelper = _extendsDefault.default({
-}, _domLib, {
-    isElement: function isElement(node) {
-        return (node === null || node === void 0 ? void 0 : node.nodeType) && typeof (node === null || node === void 0 ? void 0 : node.nodeName) === 'string';
-    }
-});
-exports.default = DOMHelper;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","dom-lib":"hluqp","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"aAo6i":[function(require,module,exports) {
+},{}],"aAo6i":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "AutoPlacement", ()=>AutoPlacement
@@ -39564,91 +40423,7 @@ var animationPropTypes = {
     onExited: _propTypesDefault.default.func
 };
 
-},{"prop-types":"1tgq3","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fvq4Z":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CustomContext", ()=>_customProvider.CustomContext
-);
-parcelHelpers.export(exports, "CustomConsumer", ()=>_customProvider.CustomConsumer
-);
-parcelHelpers.export(exports, "FormattedDate", ()=>_formattedDateDefault.default
-);
-var _customProvider = require("./CustomProvider");
-var _customProviderDefault = parcelHelpers.interopDefault(_customProvider);
-var _formattedDate = require("./FormattedDate");
-var _formattedDateDefault = parcelHelpers.interopDefault(_formattedDate);
-exports.default = _customProviderDefault.default;
-
-},{"./CustomProvider":"eLdDg","./FormattedDate":"fZGOX","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"eLdDg":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "CustomContext", ()=>CustomContext
-);
-parcelHelpers.export(exports, "CustomConsumer", ()=>Consumer
-);
-var _extends = require("@babel/runtime/helpers/esm/extends");
-var _extendsDefault = parcelHelpers.interopDefault(_extends);
-var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
-var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _prefix = require("../utils/prefix");
-var _domhelper = require("../DOMHelper");
-var CustomContext = /*#__PURE__*/ _reactDefault.default.createContext({
-});
-var Consumer = CustomContext.Consumer, Provider = CustomContext.Provider;
-var themes = [
-    'light',
-    'dark',
-    'high-contrast'
-];
-var CustomProvider = function CustomProvider1(props) {
-    var children = props.children, _props$classPrefix = props.classPrefix, classPrefix = _props$classPrefix === void 0 ? _prefix.getClassNamePrefix() : _props$classPrefix, theme = props.theme, rest = _objectWithoutPropertiesLooseDefault.default(props, [
-        "children",
-        "classPrefix",
-        "theme"
-    ]);
-    var value = _reactDefault.default.useMemo(function() {
-        return _extendsDefault.default({
-            classPrefix: classPrefix,
-            theme: theme
-        }, rest);
-    }, [
-        classPrefix,
-        theme,
-        rest
-    ]);
-    _reactDefault.default.useEffect(function() {
-        if (_domhelper.canUseDOM && theme) {
-            _domhelper.addClass(document.body, _prefix.prefix(classPrefix, "theme-" + theme)); // Remove the className that will cause style conflicts
-            themes.forEach(function(t) {
-                if (t !== theme) _domhelper.removeClass(document.body, _prefix.prefix(classPrefix, "theme-" + t));
-            });
-        }
-    }, [
-        classPrefix,
-        theme
-    ]);
-    return(/*#__PURE__*/ _reactDefault.default.createElement(Provider, {
-        value: value
-    }, children));
-};
-exports.default = CustomProvider;
-
-},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","../utils/prefix":"laXhr","../DOMHelper":"8RlUt","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fZGOX":[function(require,module,exports) {
-var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
-parcelHelpers.defineInteropFlag(exports);
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _utils = require("../utils");
-function FormattedDate(_ref) {
-    var date = _ref.date, formatStr = _ref.formatStr;
-    var _useCustom = _utils.useCustom('Calendar'), formatDate = _useCustom.formatDate;
-    return(/*#__PURE__*/ _reactDefault.default.createElement(_reactDefault.default.Fragment, null, formatDate(date, formatStr)));
-}
-exports.default = FormattedDate;
-
-},{"react":"6TuXu","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"lXyum":[function(require,module,exports) {
+},{"prop-types":"1tgq3","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"lXyum":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "dropdownMenuPropTypes", ()=>dropdownMenuPropTypes
@@ -47437,126 +48212,1988 @@ var useUpdateEffect = function useUpdateEffect1(effect, deps) {
 };
 exports.default = useUpdateEffect;
 
-},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"5V79J":[function(require,module,exports) {
-"use strict";
-var Refresh = require('react-refresh/runtime');
-function debounce(func, delay) {
-    var args;
-    var timeout = undefined;
-    return function(args1) {
-        clearTimeout(timeout);
-        timeout = setTimeout(function() {
-            timeout = undefined;
-            func.call(null, args1);
-        }, delay);
-    };
-}
-var enqueueUpdate = debounce(function() {
-    Refresh.performReactRefresh();
-}, 30); // Everthing below is either adapted or copied from
-// https://github.com/facebook/metro/blob/61de16bd1edd7e738dd0311c89555a644023ab2d/packages/metro/src/lib/polyfills/require.js
-// MIT License - Copyright (c) Facebook, Inc. and its affiliates.
-module.exports.prelude = function(module) {
-    window.$RefreshReg$ = function(type, id) {
-        Refresh.register(type, module.id + ' ' + id);
-    };
-    window.$RefreshSig$ = Refresh.createSignatureFunctionForTransform;
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kzFZ3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _button = require("../Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _utils = require("../utils");
+var _utils1 = require("./utils");
+var defaultProps = {
+    classPrefix: 'picker-toolbar',
+    as: 'div'
 };
-module.exports.postlude = function(module) {
-    if (isReactRefreshBoundary(module.exports)) {
-        registerExportsForReactRefresh(module);
-        if (module.hot) {
-            module.hot.dispose(function(data) {
-                if (Refresh.hasUnrecoverableErrors()) window.location.reload();
-                data.prevExports = module.exports;
-            });
-            module.hot.accept(function(getParents) {
-                var prevExports = module.hot.data.prevExports;
-                var nextExports = module.exports; // Since we just executed the code for it, it's possible
-                // that the new exports make it ineligible for being a boundary.
-                var isNoLongerABoundary = !isReactRefreshBoundary(nextExports); // It can also become ineligible if its exports are incompatible
-                // with the previous exports.
-                // For example, if you add/remove/change exports, we'll want
-                // to re-execute the importing modules, and force those components
-                // to re-render. Similarly, if you convert a class component
-                // to a function, we want to invalidate the boundary.
-                var didInvalidate = shouldInvalidateReactRefreshBoundary(prevExports, nextExports);
-                if (isNoLongerABoundary || didInvalidate) {
-                    // We'll be conservative. The only case in which we won't do a full
-                    // reload is if all parent modules are also refresh boundaries.
-                    // In that case we'll add them to the current queue.
-                    var parents = getParents();
-                    if (parents.length === 0) {
-                        // Looks like we bubbled to the root. Can't recover from that.
-                        window.location.reload();
-                        return;
-                    }
-                    return parents;
-                }
-                enqueueUpdate();
-            });
+/**
+ * Toolbar for DatePicker and DateRangePicker
+ */ var Toolbar = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, disabledOkBtn = props.disabledOkBtn, disabledShortcut = props.disabledShortcut, hideOkBtn = props.hideOkBtn, onOk = props.onOk, onClickShortcut = props.onClickShortcut, calendarDate = props.calendarDate, rangesProp = props.ranges, locale = props.locale, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "disabledOkBtn",
+        "disabledShortcut",
+        "hideOkBtn",
+        "onOk",
+        "onClickShortcut",
+        "calendarDate",
+        "ranges",
+        "locale"
+    ]);
+    var _useState = _react.useState(_utils1.getRanges(props)), ranges = _useState[0], setRanges = _useState[1];
+    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, prefix = _useClassNames.prefix, withClassPrefix = _useClassNames.withClassPrefix;
+    _utils.useUpdateEffect(function() {
+        setRanges(_utils1.getRanges({
+            ranges: rangesProp,
+            calendarDate: calendarDate
+        }));
+    }, [
+        calendarDate,
+        rangesProp
+    ]);
+    var hasLocaleKey = _react.useCallback(function(key) {
+        return _utils1.getDefaultRanges(calendarDate).some(function(item) {
+            return item.label === key;
+        });
+    }, [
+        calendarDate
+    ]);
+    var renderOkButton = _react.useCallback(function() {
+        if (hideOkBtn) return null;
+        var disabled = disabledOkBtn === null || disabledOkBtn === void 0 ? void 0 : disabledOkBtn(calendarDate);
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix('right')
+        }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            appearance: "primary",
+            size: "sm",
+            disabled: disabled,
+            onClick: disabled ? undefined : onOk
+        }, locale === null || locale === void 0 ? void 0 : locale.ok)));
+    }, [
+        disabledOkBtn,
+        hideOkBtn,
+        locale,
+        onOk,
+        calendarDate,
+        prefix
+    ]);
+    if (hideOkBtn && ranges.length === 0) return null;
+    var classes = merge(className, withClassPrefix());
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('ranges')
+    }, ranges.map(function(_ref, index) {
+        var value = _ref.value, closeOverlay = _ref.closeOverlay, label = _ref.label;
+        var disabled = disabledShortcut === null || disabledShortcut === void 0 ? void 0 : disabledShortcut(value);
+        var handleClickShortcut = function handleClickShortcut1(event) {
+            if (disabled) return;
+            onClickShortcut === null || onClickShortcut === void 0 || onClickShortcut(value, closeOverlay, event);
+        };
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            appearance: "link",
+            size: "sm",
+            key: index,
+            disabled: disabled,
+            onClick: handleClickShortcut
+        }, hasLocaleKey(label) && typeof label === 'string' ? locale === null || locale === void 0 ? void 0 : locale[label] : label));
+    })), renderOkButton()));
+});
+Toolbar.displayName = 'Toolbar';
+Toolbar.propTypes = {
+    ranges: _propTypesDefault.default.array,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    calendarDate: _propTypesDefault.default.oneOfType([
+        _propTypesDefault.default.instanceOf(Date),
+        _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date))
+    ]),
+    onClickShortcut: _propTypesDefault.default.func,
+    onOk: _propTypesDefault.default.func,
+    disabledShortcut: _propTypesDefault.default.func,
+    disabledOkBtn: _propTypesDefault.default.func,
+    hideOkButton: _propTypesDefault.default.bool
+};
+Toolbar.defaultProps = defaultProps;
+exports.default = Toolbar;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../Button":"7S1xo","../utils":"iz9Dz","./utils":"kjtzd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"kjtzd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "getDefaultRanges", ()=>getDefaultRanges
+);
+parcelHelpers.export(exports, "getRanges", ()=>getRanges
+);
+parcelHelpers.export(exports, "useCalendarState", ()=>useCalendarState
+);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _react = require("react");
+var _utils = require("../DateRangePicker/utils");
+var _dateUtils = require("../utils/dateUtils");
+var _calendar = require("../Calendar");
+function getDefaultRanges(date) {
+    var todayDate = new Date();
+    /**
+   * Is Date[] type
+   * If it is an array type, it returns the default shortcut key suitable for DateRangePicker Toolbar,
+   * otherwise it returns the default shortcut key suitable for DatePicker Toolbar
+   */ var isRange = date instanceof Array;
+    var rangeKeys = [
+        'today',
+        'yesterday'
+    ];
+    function rangeIterator(label) {
+        var defaultRange = {
+            today: isRange ? {
+                value: [
+                    _utils.setTimingMargin(todayDate),
+                    _utils.setTimingMargin(todayDate, 'right')
+                ]
+            } : {
+                closeOverlay: true,
+                value: todayDate
+            },
+            yesterday: isRange ? {
+                value: [
+                    _utils.setTimingMargin(_dateUtils.subDays(todayDate, 1)),
+                    _utils.setTimingMargin(_dateUtils.subDays(todayDate, 1), 'right')
+                ]
+            } : {
+                closeOverlay: true,
+                value: _dateUtils.subDays(todayDate, 1)
+            },
+            last7Days: {
+                value: [
+                    _utils.setTimingMargin(_dateUtils.subDays(todayDate, 6)),
+                    _utils.setTimingMargin(todayDate, 'right')
+                ]
+            }
+        };
+        return _extendsDefault.default({
+            label: label
+        }, defaultRange[label]);
+    }
+    isRange && rangeKeys.push('last7Days');
+    return rangeKeys.map(rangeIterator);
+}
+var generateRangesIterator = function generateRangesIterator1(_ref) {
+    var calendarDate = _ref.calendarDate;
+    return function(_ref2) {
+        var value = _ref2.value, rest = _objectWithoutPropertiesLooseDefault.default(_ref2, [
+            "value"
+        ]);
+        value = typeof value === 'function' ? value(calendarDate) : value;
+        return _extendsDefault.default({
+            value: value
+        }, rest);
+    };
+};
+var getRanges = function getRanges1(_ref3) {
+    var ranges = _ref3.ranges, calendarDate = _ref3.calendarDate;
+    return typeof ranges === 'undefined' ? getDefaultRanges(calendarDate) : ranges.map(generateRangesIterator({
+        calendarDate: calendarDate
+    }));
+};
+var useCalendarState = function useCalendarState1() {
+    var _useState = _react.useState(), calendarState = _useState[0], setCalendarState = _useState[1];
+    var reset = _react.useCallback(function() {
+        setCalendarState(undefined);
+    }, []);
+    var openMonth = _react.useCallback(function() {
+        setCalendarState(_calendar.CalendarState.DROP_MONTH);
+    }, []);
+    var openTime = _react.useCallback(function() {
+        setCalendarState(_calendar.CalendarState.DROP_TIME);
+    }, []);
+    return {
+        calendarState: calendarState,
+        reset: reset,
+        openMonth: openMonth,
+        openTime: openTime
+    };
+};
+
+},{"@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","@babel/runtime/helpers/esm/extends":"bKAu6","react":"6TuXu","../DateRangePicker/utils":"fe6jy","../utils/dateUtils":"jqDhs","../Calendar":"amnyK","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"fe6jy":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "setTimingMargin", ()=>setTimingMargin
+);
+parcelHelpers.export(exports, "getCalendarDate", ()=>getCalendarDate
+);
+parcelHelpers.export(exports, "getDefaultRanges", ()=>getDefaultRanges
+);
+parcelHelpers.export(exports, "isSameRange", ()=>isSameRange
+);
+parcelHelpers.export(exports, "getMonthHoverRange", ()=>getMonthHoverRange
+);
+parcelHelpers.export(exports, "getWeekHoverRange", ()=>getWeekHoverRange
+);
+var _utils = require("../utils");
+var setTimingMargin = function setTimingMargin1(date, way) {
+    if (way === void 0) way = 'left';
+    return way === 'right' ? _utils.DateUtils.endOfDay(date) : _utils.DateUtils.startOfDay(date);
+};
+function getCalendarDate(_ref) {
+    var _value;
+    var value = _ref.value;
+    // Update calendarDate if the value is not null
+    value = (_value = value) !== null && _value !== void 0 ? _value : [];
+    if (value[0] && value[1]) {
+        var sameMonth = _utils.DateUtils.isSameMonth(value[0], value[1]);
+        return [
+            value[0],
+            sameMonth ? _utils.DateUtils.addMonths(value[1], 1) : value[1]
+        ]; // If only the start date
+    } else if (value[0]) return [
+        value[0],
+        _utils.DateUtils.addMonths(value[0], 1)
+    ];
+    var todayDate = new Date();
+    return [
+        todayDate,
+        _utils.DateUtils.addMonths(todayDate, 1)
+    ];
+}
+var getDefaultRanges = function getDefaultRanges1() {
+    var todayDate = new Date();
+    return [
+        {
+            label: 'today',
+            value: [
+                setTimingMargin(todayDate),
+                setTimingMargin(todayDate, 'right')
+            ]
+        },
+        {
+            label: 'yesterday',
+            value: [
+                setTimingMargin(_utils.DateUtils.addDays(todayDate, -1)),
+                setTimingMargin(_utils.DateUtils.addDays(todayDate, -1), 'right')
+            ]
+        },
+        {
+            label: 'last7Days',
+            value: [
+                setTimingMargin(_utils.DateUtils.subDays(todayDate, 6)),
+                setTimingMargin(todayDate, 'right')
+            ]
         }
-    }
+    ];
 };
-function isReactRefreshBoundary(exports) {
-    if (Refresh.isLikelyComponentType(exports)) return true;
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    return false;
-    var hasExports = false;
-    var areAllExportsComponents = true;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        hasExports = true;
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) // Don't invoke getters for CJS as they may have side effects.
+var isSameRange = function isSameRange1(source, dest, format) {
+    var result = _utils.DateUtils.isSameDay(source === null || source === void 0 ? void 0 : source[0], dest === null || dest === void 0 ? void 0 : dest[0]) && _utils.DateUtils.isSameDay(source === null || source === void 0 ? void 0 : source[1], dest === null || dest === void 0 ? void 0 : dest[1]);
+    if (_utils.DateUtils.shouldTime(format)) result && (result = _utils.DateUtils.isSameSecond(source === null || source === void 0 ? void 0 : source[0], dest === null || dest === void 0 ? void 0 : dest[0]) && _utils.DateUtils.isSameSecond(source === null || source === void 0 ? void 0 : source[1], dest === null || dest === void 0 ? void 0 : dest[1]));
+    return result;
+};
+var getMonthHoverRange = function getMonthHoverRange1(date) {
+    return [
+        _utils.DateUtils.startOfMonth(date),
+        _utils.DateUtils.endOfMonth(date)
+    ];
+};
+var getWeekHoverRange = function getWeekHoverRange1(isoWeek, date) {
+    if (isoWeek) // set to the first day of this week according to ISO 8601, 12:00 am
+    return [
+        _utils.DateUtils.startOfISOWeek(date),
+        _utils.DateUtils.endOfISOWeek(date)
+    ];
+    return [
+        _utils.DateUtils.startOfWeek(date),
+        _utils.DateUtils.endOfWeek(date)
+    ];
+};
+
+},{"../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"amnyK":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "Calendar", ()=>_calendarDefault.default
+);
+parcelHelpers.export(exports, "CalendarContext", ()=>_calendarContextDefault.default
+);
+parcelHelpers.export(exports, "CalendarState", ()=>_calendar.CalendarState
+);
+var _calendarPanel = require("./CalendarPanel");
+var _calendarPanelDefault = parcelHelpers.interopDefault(_calendarPanel);
+var _calendar = require("./Calendar");
+var _calendarDefault = parcelHelpers.interopDefault(_calendar);
+var _calendarContext = require("./CalendarContext");
+var _calendarContextDefault = parcelHelpers.interopDefault(_calendarContext);
+exports.default = _calendarPanelDefault.default;
+
+},{"./CalendarPanel":"i59m3","./Calendar":"bLucr","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"i59m3":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _calendar = require("./Calendar");
+var _calendarDefault = parcelHelpers.interopDefault(_calendar);
+var _button = require("../Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _customProvider = require("../CustomProvider");
+var _utils = require("../utils");
+var _useCalendarDate = require("./useCalendarDate");
+var _useCalendarDateDefault = parcelHelpers.interopDefault(_useCalendarDate);
+var defaultProps = {
+    defaultValue: new Date(),
+    classPrefix: 'calendar',
+    as: _calendarDefault.default
+};
+var CalendarPanel = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, bordered = props.bordered, className = props.className, classPrefix = props.classPrefix, compact = props.compact, defaultValue = props.defaultValue, isoWeek = props.isoWeek, overrideLocale = props.locale, onChange = props.onChange, onSelect = props.onSelect, renderCell = props.renderCell, value = props.value, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "bordered",
+        "className",
+        "classPrefix",
+        "compact",
+        "defaultValue",
+        "isoWeek",
+        "locale",
+        "onChange",
+        "onSelect",
+        "renderCell",
+        "value"
+    ]);
+    var _useCalendarDate1 = _useCalendarDateDefault.default(value, defaultValue), calendarDate = _useCalendarDate1.calendarDate, setCalendarDate = _useCalendarDate1.setCalendarDate;
+    var _useState = _react.useState(false), showMonth = _useState[0], setShowMonth = _useState[1];
+    var _useCustom = _utils.useCustom('Calendar', overrideLocale), locale = _useCustom.locale;
+    var handleToggleMonthDropdown = _react.useCallback(function() {
+        setShowMonth(function(prevShowMonth) {
+            return !prevShowMonth;
+        });
+    }, []);
+    var handleChange = _react.useCallback(function(nextValue) {
+        setCalendarDate(nextValue);
+        onChange === null || onChange === void 0 || onChange(nextValue);
+    }, [
+        setCalendarDate,
+        onChange
+    ]);
+    var handleChangePageDate = _react.useCallback(function(nextValue) {
+        setShowMonth(false);
+        handleChange(nextValue);
+    }, [
+        handleChange
+    ]);
+    var handleClickToday = _react.useCallback(function() {
+        setShowMonth(false);
+        handleChange(new Date());
+    }, [
+        handleChange
+    ]);
+    var handleSelect = _react.useCallback(function(nextValue) {
+        onSelect === null || onSelect === void 0 || onSelect(nextValue);
+        handleChange(nextValue);
+    }, [
+        handleChange,
+        onSelect
+    ]);
+    var _useClassNames = _utils.useClassNames(classPrefix), prefix = _useClassNames.prefix, merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix;
+    var renderToolbar = _react.useCallback(function() {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, {
+            className: prefix('btn-today'),
+            size: "sm",
+            onClick: handleClickToday
+        }, locale.today || 'Today'));
+    }, [
+        handleClickToday,
+        locale.today,
+        prefix
+    ]);
+    var customRenderCell = _react.useCallback(function(date) {
+        return renderCell === null || renderCell === void 0 ? void 0 : renderCell(date);
+    }, [
+        renderCell
+    ]);
+    var classes = merge(className, withClassPrefix('panel', {
+        bordered: bordered,
+        compact: compact
+    }));
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, rest, {
+        inline: true,
+        className: classes,
+        ref: ref,
+        isoWeek: isoWeek,
+        format: "yyyy-MM-dd",
+        calendarState: showMonth ? _calendar.CalendarState.DROP_MONTH : null,
+        calendarDate: calendarDate,
+        limitEndYear: 1000,
+        locale: locale,
+        renderTitle: function renderTitle(date) {
+            return(/*#__PURE__*/ _reactDefault.default.createElement(_customProvider.FormattedDate, {
+                date: date,
+                formatStr: locale.formattedMonthPattern || 'MMMM  yyyy'
+            }));
+        },
+        renderToolbar: renderToolbar,
+        renderCell: customRenderCell,
+        onMoveForward: handleChange,
+        onMoveBackward: handleChange,
+        onToggleMonthDropdown: handleToggleMonthDropdown,
+        onChangePageDate: handleChangePageDate,
+        onSelect: handleSelect
+    })));
+});
+CalendarPanel.displayName = 'CalendarPanel';
+CalendarPanel.propTypes = {
+    value: _propTypesDefault.default.instanceOf(Date),
+    defaultValue: _propTypesDefault.default.instanceOf(Date),
+    isoWeek: _propTypesDefault.default.bool,
+    compact: _propTypesDefault.default.bool,
+    bordered: _propTypesDefault.default.bool,
+    locale: _propTypesDefault.default.object,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    onChange: _propTypesDefault.default.func,
+    onSelect: _propTypesDefault.default.func,
+    renderCell: _propTypesDefault.default.func
+};
+CalendarPanel.defaultProps = defaultProps;
+exports.default = CalendarPanel;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","./Calendar":"bLucr","../Button":"7S1xo","../CustomProvider":"fvq4Z","../utils":"iz9Dz","./useCalendarDate":"bVMCT","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bLucr":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CalendarState", ()=>CalendarState
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _pick = require("lodash/pick");
+var _pickDefault = parcelHelpers.interopDefault(_pick);
+var _monthDropdown = require("./MonthDropdown");
+var _monthDropdownDefault = parcelHelpers.interopDefault(_monthDropdown);
+var _timeDropdown = require("./TimeDropdown");
+var _timeDropdownDefault = parcelHelpers.interopDefault(_timeDropdown);
+var _view = require("./View");
+var _viewDefault = parcelHelpers.interopDefault(_view);
+var _header = require("./Header");
+var _headerDefault = parcelHelpers.interopDefault(_header);
+var _utils = require("../utils");
+var _calendarContext = require("./CalendarContext");
+var CalendarState;
+(function(CalendarState1) {
+    CalendarState1["DROP_TIME"] = "DROP_TIME";
+    CalendarState1["DROP_MONTH"] = "DROP_MONTH";
+})(CalendarState || (CalendarState = {
+}));
+var defaultProps = {
+    classPrefix: 'calendar',
+    as: 'div'
+};
+var Calendar = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, calendarState = props.calendarState, dateRange = props.dateRange, disabledBackward = props.disabledBackward, disabledDate = props.disabledDate, disabledForward = props.disabledForward, format = props.format, hoverRangeValue = props.hoverRangeValue, inSameMonth = props.inSameMonth, isoWeek = props.isoWeek, limitEndYear = props.limitEndYear, locale = props.locale, onChangePageDate = props.onChangePageDate, onChangePageTime = props.onChangePageTime, onMouseMove = props.onMouseMove, onMoveBackward = props.onMoveBackward, onMoveForward = props.onMoveForward, onSelect = props.onSelect, onToggleMeridian = props.onToggleMeridian, onToggleMonthDropdown = props.onToggleMonthDropdown, onToggleTimeDropdown = props.onToggleTimeDropdown, calendarDate = props.calendarDate, renderCell = props.renderCell, renderTitle = props.renderTitle, renderToolbar = props.renderToolbar, showMeridian = props.showMeridian, showWeekNumbers = props.showWeekNumbers, inline = props.inline, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "calendarState",
+        "dateRange",
+        "disabledBackward",
+        "disabledDate",
+        "disabledForward",
+        "format",
+        "hoverRangeValue",
+        "inSameMonth",
+        "isoWeek",
+        "limitEndYear",
+        "locale",
+        "onChangePageDate",
+        "onChangePageTime",
+        "onMouseMove",
+        "onMoveBackward",
+        "onMoveForward",
+        "onSelect",
+        "onToggleMeridian",
+        "onToggleMonthDropdown",
+        "onToggleTimeDropdown",
+        "calendarDate",
+        "renderCell",
+        "renderTitle",
+        "renderToolbar",
+        "showMeridian",
+        "showWeekNumbers",
+        "inline"
+    ]);
+    var _useClassNames = _utils.useClassNames(classPrefix), withClassPrefix = _useClassNames.withClassPrefix, merge = _useClassNames.merge;
+    var isDisabledDate = function isDisabledDate1(date) {
+        return disabledDate === null || disabledDate === void 0 ? void 0 : disabledDate(date);
+    };
+    var isTimeDisabled = function isTimeDisabled1(date) {
+        return _utils.DateUtils.disabledTime(props, date);
+    };
+    var handleMoveForward = _react.useCallback(function() {
+        onMoveForward === null || onMoveForward === void 0 || onMoveForward(_utils.DateUtils.addMonths(calendarDate, 1));
+    }, [
+        onMoveForward,
+        calendarDate
+    ]);
+    var handleMoveBackward = _react.useCallback(function() {
+        onMoveBackward === null || onMoveBackward === void 0 || onMoveBackward(_utils.DateUtils.addMonths(calendarDate, -1));
+    }, [
+        onMoveBackward,
+        calendarDate
+    ]);
+    var showDate = _utils.DateUtils.shouldDate(format);
+    var showTime = _utils.DateUtils.shouldTime(format);
+    var showMonth = _utils.DateUtils.shouldMonth(format);
+    var onlyShowTime = showTime && !showDate && !showMonth;
+    var onlyShowMonth = showMonth && !showDate && !showTime;
+    var dropTime = calendarState === CalendarState.DROP_TIME || onlyShowTime;
+    var dropMonth = calendarState === CalendarState.DROP_MONTH || onlyShowMonth;
+    var inSameThisMonthDate = _react.useCallback(function(date) {
+        return _utils.composeFunctions(function(d) {
+            return _utils.DateUtils.setDate(d, 1);
+        }, function(d) {
+            return _utils.DateUtils.isSameMonth(d, date);
+        })(date);
+    }, []);
+    var calendarClasses = merge(className, withClassPrefix({
+        'show-time-dropdown': dropTime,
+        'show-month-dropdown': dropMonth,
+        'show-week-numbers': showWeekNumbers
+    }));
+    var timeDropdownProps = _pickDefault.default(rest, _utils.DateUtils.calendarOnlyProps);
+    var contextValue = {
+        date: calendarDate,
+        dateRange: dateRange,
+        disabledDate: isDisabledDate,
+        format: format,
+        hoverRangeValue: hoverRangeValue,
+        inSameMonth: inSameMonth !== null && inSameMonth !== void 0 ? inSameMonth : inSameThisMonthDate,
+        isoWeek: isoWeek,
+        locale: locale,
+        onChangePageDate: onChangePageDate,
+        onChangePageTime: onChangePageTime,
+        onMouseMove: onMouseMove,
+        onSelect: onSelect,
+        renderCell: renderCell,
+        showWeekNumbers: showWeekNumbers,
+        inline: inline
+    };
+    return(/*#__PURE__*/ _reactDefault.default.createElement(_calendarContext.CalendarProvider, {
+        value: contextValue
+    }, /*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, _utils.DateUtils.omitHideDisabledProps(rest), {
+        role: "table",
+        className: calendarClasses,
+        ref: ref
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_headerDefault.default, {
+        showMonth: showMonth,
+        showDate: showDate,
+        showTime: showTime,
+        showMeridian: showMeridian,
+        disabledTime: isTimeDisabled,
+        onMoveForward: handleMoveForward,
+        onMoveBackward: handleMoveBackward,
+        onToggleMonthDropdown: onToggleMonthDropdown,
+        onToggleTimeDropdown: onToggleTimeDropdown,
+        onToggleMeridian: onToggleMeridian,
+        renderTitle: renderTitle,
+        renderToolbar: renderToolbar,
+        disabledBackward: disabledBackward,
+        disabledForward: disabledForward
+    }), showDate && /*#__PURE__*/ _reactDefault.default.createElement(_viewDefault.default, null), showMonth && /*#__PURE__*/ _reactDefault.default.createElement(_monthDropdownDefault.default, {
+        show: dropMonth,
+        limitEndYear: limitEndYear,
+        disabledMonth: isDisabledDate
+    }), showTime && /*#__PURE__*/ _reactDefault.default.createElement(_timeDropdownDefault.default, _extendsDefault.default({
+    }, timeDropdownProps, {
+        show: dropTime,
+        showMeridian: showMeridian
+    })))));
+});
+Calendar.displayName = 'Calendar';
+Calendar.defaultProps = defaultProps;
+Calendar.propTypes = {
+    calendarState: _propTypesDefault.default.oneOf(Object.values(CalendarState)),
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    disabledDate: _propTypesDefault.default.func,
+    disabledHours: _propTypesDefault.default.func,
+    disabledMinutes: _propTypesDefault.default.func,
+    disabledSeconds: _propTypesDefault.default.func,
+    format: _propTypesDefault.default.string,
+    hideHours: _propTypesDefault.default.func,
+    hideMinutes: _propTypesDefault.default.func,
+    hideSeconds: _propTypesDefault.default.func,
+    inSameMonth: _propTypesDefault.default.func,
+    isoWeek: _propTypesDefault.default.bool,
+    limitEndYear: _propTypesDefault.default.number,
+    locale: _propTypesDefault.default.object,
+    onChangePageDate: _propTypesDefault.default.func,
+    onChangePageTime: _propTypesDefault.default.func,
+    onMoveBackward: _propTypesDefault.default.func,
+    onMoveForward: _propTypesDefault.default.func,
+    onSelect: _propTypesDefault.default.func,
+    onToggleMeridian: _propTypesDefault.default.func,
+    onToggleMonthDropdown: _propTypesDefault.default.func,
+    onToggleTimeDropdown: _propTypesDefault.default.func,
+    calendarDate: _propTypesDefault.default.instanceOf(Date),
+    renderCell: _propTypesDefault.default.func,
+    renderTitle: _propTypesDefault.default.func,
+    renderToolbar: _propTypesDefault.default.func,
+    showMeridian: _propTypesDefault.default.bool,
+    showWeekNumbers: _propTypesDefault.default.bool
+};
+exports.default = Calendar;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","lodash/pick":"kLdKc","./MonthDropdown":"7QdHp","./TimeDropdown":"gfNEE","./View":"2FrSm","./Header":"31qoh","../utils":"iz9Dz","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7QdHp":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _virtualizedList = require("../Picker/VirtualizedList");
+var _utils = require("../utils");
+var _monthDropdownItem = require("./MonthDropdownItem");
+var _monthDropdownItemDefault = parcelHelpers.interopDefault(_monthDropdownItem);
+var _calendarContext = require("./CalendarContext");
+var monthMap = [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+];
+/**
+ * Set the row height.
+ * Add 1px to the first and last lines.
+ */ function getRowHeight(count) {
+    return function(_ref) {
+        var index = _ref.index;
+        if (index === 0 || count - 1 === index) return 76;
+        return 75;
+    };
+}
+var defaultProps = {
+    as: 'div',
+    classPrefix: 'calendar-month-dropdown',
+    limitEndYear: 5,
+    height: 221,
+    width: 256
+};
+var MonthDropdown = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, limitEndYear = props.limitEndYear, show = props.show, defaultHeight = props.height, defaultWidth = props.width, disabledMonth = props.disabledMonth, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "limitEndYear",
+        "show",
+        "height",
+        "width",
+        "disabledMonth"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), _useCalendarContext$d = _useCalendarContext.date, date = _useCalendarContext$d === void 0 ? new Date() : _useCalendarContext$d;
+    var _useClassNames = _utils.useClassNames(classPrefix), prefix = _useClassNames.prefix, merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix;
+    var getRowCount = _react.useCallback(function() {
+        return _utils.DateUtils.getYear(new Date()) + limitEndYear;
+    }, [
+        limitEndYear
+    ]);
+    var isMonthDisabled = _react.useCallback(function(year, month) {
+        if (disabledMonth) {
+            var days = _utils.DateUtils.getDaysInMonth(new Date(year, month)); // If all dates in a month are disabled, disable the current month
+            for(var i = 1; i <= days; i++){
+                if (!disabledMonth(new Date(year, month, i))) return false;
+            }
+            return true;
+        }
         return false;
-        var exportValue = exports[key];
-        if (!Refresh.isLikelyComponentType(exportValue)) areAllExportsComponents = false;
-    }
-    return hasExports && areAllExportsComponents;
+    }, [
+        disabledMonth
+    ]);
+    var rowRenderer = function rowRenderer1(_ref2) {
+        var index = _ref2.index, key = _ref2.key, style = _ref2.style;
+        var selectedMonth = _utils.DateUtils.getMonth(date);
+        var selectedYear = _utils.DateUtils.getYear(date);
+        var year = index + 1;
+        var isSelectedYear = year === selectedYear;
+        var count = getRowCount();
+        var titleClassName = prefix('year', {
+            'year-active': isSelectedYear
+        });
+        var rowClassName = merge(prefix('row'), {
+            'first-row': index === 0,
+            'last-row': index === count - 1
+        });
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: rowClassName,
+            role: "row",
+            key: key,
+            style: style
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: titleClassName,
+            role: "rowheader"
+        }, year), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix('list'),
+            role: "gridcell"
+        }, monthMap.map(function(item, month) {
+            return(/*#__PURE__*/ _reactDefault.default.createElement(_monthDropdownItemDefault.default, {
+                disabled: isMonthDisabled(year, month),
+                active: isSelectedYear && month === selectedMonth,
+                key: month + "_" + item,
+                month: month + 1,
+                year: year
+            }));
+        }))));
+    };
+    var count = getRowCount();
+    var classes = merge(className, withClassPrefix(), {
+        show: show
+    });
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        role: "menu"
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('content')
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('scroll')
+    }, show && /*#__PURE__*/ _reactDefault.default.createElement(_virtualizedList.AutoSizer, {
+        defaultHeight: defaultHeight,
+        defaultWidth: defaultWidth
+    }, function(_ref3) {
+        var height = _ref3.height, width = _ref3.width;
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_virtualizedList.List, {
+            className: prefix('row-wrapper'),
+            width: width || defaultWidth,
+            height: height || defaultHeight,
+            rowHeight: getRowHeight(count),
+            rowCount: count,
+            scrollToIndex: _utils.DateUtils.getYear(date),
+            rowRenderer: rowRenderer
+        }));
+    })))));
+});
+MonthDropdown.displayName = 'MonthDropdown';
+MonthDropdown.defaultProps = defaultProps;
+MonthDropdown.propTypes = {
+    limitEndYear: _propTypesDefault.default.number,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    show: _propTypesDefault.default.bool,
+    disabledMonth: _propTypesDefault.default.func
+};
+exports.default = MonthDropdown;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../Picker/VirtualizedList":"6sfXi","../utils":"iz9Dz","./MonthDropdownItem":"8Mg8T","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"8Mg8T":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _utils = require("../utils");
+var _dateUtils = require("../utils/dateUtils");
+var _calendarContext = require("./CalendarContext");
+var defaultProps = {
+    as: 'div',
+    classPrefix: 'calendar-month-dropdown-cell',
+    month: 0
+};
+var MonthDropdownItem = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, active = props.active, disabled = props.disabled, month = props.month, year = props.year, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "active",
+        "disabled",
+        "month",
+        "year"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), date = _useCalendarContext.date, onSelect = _useCalendarContext.onChangePageDate;
+    var handleClick = _react.useCallback(function(event) {
+        if (disabled) return;
+        if (year && month && date) {
+            var nextMonth = _utils.composeFunctions(function(d) {
+                return _dateUtils.setYear(d, year);
+            }, function(d) {
+                return _dateUtils.setMonth(d, month - 1);
+            })(date);
+            onSelect === null || onSelect === void 0 || onSelect(nextMonth, event);
+        }
+    }, [
+        date,
+        disabled,
+        month,
+        onSelect,
+        year
+    ]);
+    var _useClassNames = _utils.useClassNames(classPrefix), prefix = _useClassNames.prefix, merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix;
+    var classes = merge(className, withClassPrefix({
+        active: active
+    }), {
+        disabled: disabled
+    });
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, rest, {
+        ref: ref,
+        className: classes,
+        onClick: handleClick,
+        key: month,
+        tabIndex: -1
+    }), /*#__PURE__*/ _reactDefault.default.createElement("span", {
+        className: prefix('content')
+    }, month)));
+});
+MonthDropdownItem.displayName = 'MonthDropdownItem';
+MonthDropdownItem.defaultProps = defaultProps;
+MonthDropdownItem.propTypes = {
+    month: _propTypesDefault.default.number,
+    year: _propTypesDefault.default.number,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    active: _propTypesDefault.default.bool,
+    disabled: _propTypesDefault.default.bool
+};
+exports.default = MonthDropdownItem;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../utils":"iz9Dz","../utils/dateUtils":"jqDhs","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"hOlUW":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CalendarProvider", ()=>CalendarProvider
+);
+parcelHelpers.export(exports, "useCalendarContext", ()=>useCalendarContext
+);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var CalendarContext = /*#__PURE__*/ _reactDefault.default.createContext(null);
+exports.default = CalendarContext;
+var CalendarProvider = CalendarContext.Provider;
+var useCalendarContext = function useCalendarContext1() {
+    return _react.useContext(CalendarContext) || {
+    };
+};
+
+},{"react":"6TuXu","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gfNEE":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ * Get the effective range of hours, minutes and seconds
+ * @param meridian
+ */ parcelHelpers.export(exports, "getRanges", ()=>getRanges
+);
+/**
+ * Convert the 24-hour clock to the 12-hour clock
+ * @param hours
+ */ parcelHelpers.export(exports, "getMeridianHours", ()=>getMeridianHours
+);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _domLib = require("dom-lib");
+var _partial = require("lodash/partial");
+var _partialDefault = parcelHelpers.interopDefault(_partial);
+var _camelCase = require("lodash/camelCase");
+var _camelCaseDefault = parcelHelpers.interopDefault(_camelCase);
+var _isNumber = require("lodash/isNumber");
+var _isNumberDefault = parcelHelpers.interopDefault(_isNumber);
+var _utils = require("../utils");
+var _calendarContext = require("./CalendarContext");
+var defaultProps = {
+    classPrefix: 'calendar-time-dropdown',
+    as: 'div'
+};
+function getRanges(meridian) {
+    return {
+        hours: {
+            start: 0,
+            end: meridian ? 11 : 23
+        },
+        minutes: {
+            start: 0,
+            end: 59
+        },
+        seconds: {
+            start: 0,
+            end: 59
+        }
+    };
 }
-function shouldInvalidateReactRefreshBoundary(prevExports, nextExports) {
-    var prevSignature = getRefreshBoundarySignature(prevExports);
-    var nextSignature = getRefreshBoundarySignature(nextExports);
-    if (prevSignature.length !== nextSignature.length) return true;
-    for(var i = 0; i < nextSignature.length; i++){
-        if (prevSignature[i] !== nextSignature[i]) return true;
-    }
-    return false;
-} // When this signature changes, it's unsafe to stop at this refresh boundary.
-function getRefreshBoundarySignature(exports) {
-    var signature = [];
-    signature.push(Refresh.getFamilyByType(exports));
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return signature;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        if (key === '__esModule') continue;
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        signature.push(key);
-        signature.push(Refresh.getFamilyByType(exportValue));
-    }
-    return signature;
+function getMeridianHours(hours) {
+    return hours >= 12 ? hours - 12 : hours;
 }
-function registerExportsForReactRefresh(module) {
-    var exports = module.exports, id = module.id;
-    Refresh.register(exports, id + ' %exports%');
-    if (exports == null || typeof exports !== 'object') // Exit if we can't iterate over exports.
-    // (This is important for legacy environments.)
-    return;
-    let isESM = '__esModule' in exports;
-    for(var key in exports){
-        var desc = Object.getOwnPropertyDescriptor(exports, key);
-        if (desc && desc.get && !isESM) continue;
-        var exportValue = exports[key];
-        Refresh.register(exportValue, id + ' %exports% ' + key);
+var getTime = function getTime1(props) {
+    var format = props.format, date = props.date, showMeridian = props.showMeridian;
+    var time = date || new Date();
+    var nextTime = {
+    };
+    if (!format) return nextTime;
+    if (/(H|h)/.test(format)) {
+        var hours = _utils.DateUtils.getHours(time);
+        nextTime.hours = showMeridian ? getMeridianHours(hours) : hours;
     }
+    if (/m/.test(format)) nextTime.minutes = _utils.DateUtils.getMinutes(time);
+    if (/s/.test(format)) nextTime.seconds = _utils.DateUtils.getSeconds(time);
+    return nextTime;
+};
+var scrollTo = function scrollTo1(time, row) {
+    if (!row) return;
+    Object.entries(time).forEach(function(_ref) {
+        var type = _ref[0], value = _ref[1];
+        var container = row.querySelector("[data-type=\"" + type + "\"]");
+        var node = container === null || container === void 0 ? void 0 : container.querySelector("[data-key=\"" + type + "-" + value + "\"]");
+        if (node && container) {
+            var _getPosition = _domLib.getPosition(node, container), top = _getPosition.top;
+            _utils.scrollTopAnimation(container, top, _domLib.scrollTop(container) !== 0);
+        }
+    });
+};
+var TimeDropdown = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, show = props.show, showMeridian = props.showMeridian, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "show",
+        "showMeridian"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), locale = _useCalendarContext.locale, format = _useCalendarContext.format, date = _useCalendarContext.date, onSelect = _useCalendarContext.onChangePageTime;
+    var rowRef = _react.useRef(null);
+    _react.useEffect(function() {
+        var time = getTime({
+            format: format,
+            date: date,
+            showMeridian: showMeridian
+        }); // The currently selected time scrolls to the visible range.
+        show && scrollTo(time, rowRef.current);
+    }, [
+        date,
+        format,
+        show,
+        showMeridian
+    ]);
+    var handleClick = function handleClick1(type, d, event) {
+        var nextDate = date || new Date();
+        switch(type){
+            case 'hours':
+                nextDate = _utils.DateUtils.setHours(date, showMeridian && _utils.DateUtils.getHours(nextDate) >= 12 ? d + 12 : d);
+                break;
+            case 'minutes':
+                nextDate = _utils.DateUtils.setMinutes(date, d);
+                break;
+            case 'seconds':
+                nextDate = _utils.DateUtils.setSeconds(date, d);
+                break;
+        }
+        onSelect === null || onSelect === void 0 || onSelect(nextDate, event);
+    };
+    var _useClassNames = _utils.useClassNames(classPrefix), prefix = _useClassNames.prefix, rootPrefix = _useClassNames.rootPrefix, merge = _useClassNames.merge;
+    var renderColumn = function renderColumn1(type, active) {
+        if (!_isNumberDefault.default(active)) return null;
+        var _getRanges$type = getRanges(showMeridian)[type], start = _getRanges$type.start, end = _getRanges$type.end;
+        var items = [];
+        var hideFunc = props[_camelCaseDefault.default("hide_" + type)];
+        var disabledFunc = props[_camelCaseDefault.default("disabled_" + type)];
+        for(var i = start; i <= end; i += 1)if (!(hideFunc !== null && hideFunc !== void 0 && hideFunc(i, date))) {
+            var disabled = disabledFunc === null || disabledFunc === void 0 ? void 0 : disabledFunc(i, date);
+            var itemClasses = prefix('cell', {
+                'cell-active': active === i,
+                'cell-disabled': disabled
+            });
+            items.push(/*#__PURE__*/ _reactDefault.default.createElement("li", {
+                key: i,
+                role: "menuitem"
+            }, /*#__PURE__*/ _reactDefault.default.createElement("a", {
+                role: "button",
+                className: itemClasses,
+                tabIndex: -1,
+                "data-key": type + "-" + i,
+                onClick: !disabled ? _partialDefault.default(handleClick, type, i) : null
+            }, showMeridian && type === 'hours' && i === 0 ? '12' : i)));
+        }
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix('column'),
+            role: "listitem"
+        }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+            className: prefix('column-title')
+        }, locale === null || locale === void 0 ? void 0 : locale[type]), /*#__PURE__*/ _reactDefault.default.createElement("ul", {
+            "data-type": type,
+            role: "menu"
+        }, items)));
+    };
+    var time = getTime({
+        format: format,
+        date: date,
+        showMeridian: showMeridian
+    });
+    var classes = merge(className, rootPrefix(classPrefix));
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        role: "list"
+    }, _utils.DateUtils.omitHideDisabledProps(rest), {
+        ref: ref,
+        className: classes
+    }), /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('content')
+    }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('row'),
+        ref: rowRef
+    }, renderColumn('hours', time.hours), renderColumn('minutes', time.minutes), renderColumn('seconds', time.seconds)))));
+});
+TimeDropdown.displayName = 'TimeDropdown';
+TimeDropdown.defaultProps = defaultProps;
+TimeDropdown.propTypes = {
+    show: _propTypesDefault.default.bool,
+    showMeridian: _propTypesDefault.default.bool,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    disabledDate: _propTypesDefault.default.func,
+    disabledHours: _propTypesDefault.default.func,
+    disabledMinutes: _propTypesDefault.default.func,
+    disabledSeconds: _propTypesDefault.default.func,
+    hideHours: _propTypesDefault.default.func,
+    hideMinutes: _propTypesDefault.default.func,
+    hideSeconds: _propTypesDefault.default.func
+};
+exports.default = TimeDropdown;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","dom-lib":"hluqp","lodash/partial":"g9xWX","lodash/camelCase":"bEIEa","lodash/isNumber":"gTo4p","../utils":"iz9Dz","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bEIEa":[function(require,module,exports) {
+var capitalize = require('./capitalize'), createCompounder = require('./_createCompounder');
+/**
+ * Converts `string` to [camel case](https://en.wikipedia.org/wiki/CamelCase).
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the camel cased string.
+ * @example
+ *
+ * _.camelCase('Foo Bar');
+ * // => 'fooBar'
+ *
+ * _.camelCase('--foo-bar--');
+ * // => 'fooBar'
+ *
+ * _.camelCase('__FOO_BAR__');
+ * // => 'fooBar'
+ */ var camelCase = createCompounder(function(result, word, index) {
+    word = word.toLowerCase();
+    return result + (index ? capitalize(word) : word);
+});
+module.exports = camelCase;
+
+},{"./capitalize":"8gH6d","./_createCompounder":"i2zcK"}],"8gH6d":[function(require,module,exports) {
+var toString = require('./toString'), upperFirst = require('./upperFirst');
+/**
+ * Converts the first character of `string` to upper case and the remaining
+ * to lower case.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to capitalize.
+ * @returns {string} Returns the capitalized string.
+ * @example
+ *
+ * _.capitalize('FRED');
+ * // => 'Fred'
+ */ function capitalize(string) {
+    return upperFirst(toString(string).toLowerCase());
+}
+module.exports = capitalize;
+
+},{"./toString":"aVIvq","./upperFirst":"cmwGg"}],"cmwGg":[function(require,module,exports) {
+var createCaseFirst = require('./_createCaseFirst');
+/**
+ * Converts the first character of `string` to upper case.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.upperFirst('fred');
+ * // => 'Fred'
+ *
+ * _.upperFirst('FRED');
+ * // => 'FRED'
+ */ var upperFirst = createCaseFirst('toUpperCase');
+module.exports = upperFirst;
+
+},{"./_createCaseFirst":"fPATE"}],"fPATE":[function(require,module,exports) {
+var castSlice = require('./_castSlice'), hasUnicode = require('./_hasUnicode'), stringToArray = require('./_stringToArray'), toString = require('./toString');
+/**
+ * Creates a function like `_.lowerFirst`.
+ *
+ * @private
+ * @param {string} methodName The name of the `String` case method to use.
+ * @returns {Function} Returns the new case function.
+ */ function createCaseFirst(methodName) {
+    return function(string) {
+        string = toString(string);
+        var strSymbols = hasUnicode(string) ? stringToArray(string) : undefined;
+        var chr = strSymbols ? strSymbols[0] : string.charAt(0);
+        var trailing = strSymbols ? castSlice(strSymbols, 1).join('') : string.slice(1);
+        return chr[methodName]() + trailing;
+    };
+}
+module.exports = createCaseFirst;
+
+},{"./_castSlice":"2Azg1","./_hasUnicode":"1iERT","./_stringToArray":"lk2UH","./toString":"aVIvq"}],"2FrSm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _utils = require("../utils");
+var _table = require("./Table");
+var _tableDefault = parcelHelpers.interopDefault(_table);
+var _calendarContext = require("./CalendarContext");
+var defaultProps = {
+    as: 'div',
+    classPrefix: 'calendar-view'
+};
+var View = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), _useCalendarContext$d = _useCalendarContext.date, date = _useCalendarContext$d === void 0 ? new Date() : _useCalendarContext$d, isoWeek = _useCalendarContext.isoWeek;
+    var thisMonthDate = _utils.DateUtils.setDate(date, 1);
+    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix;
+    var classes = merge(className, withClassPrefix());
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        role: "row"
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_tableDefault.default, {
+        rows: _utils.DateUtils.getMonthView(thisMonthDate, isoWeek)
+    })));
+});
+View.displayName = 'View';
+View.defaultProps = defaultProps;
+View.propTypes = {
+    as: _propTypesDefault.default.elementType,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string
+};
+exports.default = View;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../utils":"iz9Dz","./Table":"7DvFm","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"7DvFm":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _tableRow = require("./TableRow");
+var _tableRowDefault = parcelHelpers.interopDefault(_tableRow);
+var _tableHeaderRow = require("./TableHeaderRow");
+var _tableHeaderRowDefault = parcelHelpers.interopDefault(_tableHeaderRow);
+var _utils = require("../utils");
+var defaultProps = {
+    as: 'div',
+    classPrefix: 'calendar-table',
+    rows: []
+};
+var Table = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, rows = props.rows, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "rows"
+    ]);
+    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix;
+    var classes = merge(className, withClassPrefix());
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        role: "table"
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), /*#__PURE__*/ _reactDefault.default.createElement(_tableHeaderRowDefault.default, null), rows.map(function(week, index) {
+        return(/*#__PURE__*/ _reactDefault.default.createElement(_tableRowDefault.default, {
+            key: index,
+            weekendDate: week
+        }));
+    })));
+});
+Table.displayName = 'Table';
+Table.defaultProps = defaultProps;
+Table.propTypes = {
+    rows: _propTypesDefault.default.array,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string
+};
+exports.default = Table;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","./TableRow":"63p5F","./TableHeaderRow":"2SeJZ","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"63p5F":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _partial = require("lodash/partial");
+var _partialDefault = parcelHelpers.interopDefault(_partial);
+var _utils = require("../utils");
+var _calendarContext = require("./CalendarContext");
+var defaultProps = {
+    as: 'div',
+    classPrefix: 'calendar-table',
+    weekendDate: new Date()
+};
+var TableRow = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, weekendDate = props.weekendDate, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "weekendDate"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), _useCalendarContext$d = _useCalendarContext.date, selected = _useCalendarContext$d === void 0 ? new Date() : _useCalendarContext$d, dateRange = _useCalendarContext.dateRange, disabledDate = _useCalendarContext.disabledDate, formatDate = _useCalendarContext.formatDate, hoverRangeValue = _useCalendarContext.hoverRangeValue, inSameMonth = _useCalendarContext.inSameMonth, isoWeek = _useCalendarContext.isoWeek, onMouseMove = _useCalendarContext.onMouseMove, onSelect = _useCalendarContext.onSelect, renderCell = _useCalendarContext.renderCell, locale = _useCalendarContext.locale, showWeekNumbers = _useCalendarContext.showWeekNumbers;
+    var _useClassNames = _utils.useClassNames(classPrefix), prefix = _useClassNames.prefix, merge = _useClassNames.merge;
+    var handleSelect = _react.useCallback(function(date, disabled, event) {
+        if (disabled) return;
+        onSelect === null || onSelect === void 0 || onSelect(date, event);
+    }, [
+        onSelect
+    ]);
+    var renderDays = function renderDays1() {
+        var formatStr = (locale === null || locale === void 0 ? void 0 : locale.formattedDayPattern) || 'yyyy-MM-dd';
+        var days = [];
+        var _ref = dateRange || [], selectedStartDate = _ref[0], selectedEndDate = _ref[1];
+        var _ref2 = hoverRangeValue || [], hoverStartDate = _ref2[0], hoverEndDate = _ref2[1];
+        var isRangeSelectionMode = typeof dateRange !== 'undefined';
+        var todayDate = new Date();
+        for(var i = 0; i < 7; i += 1){
+            var thisDate = _utils.DateUtils.addDays(weekendDate, i);
+            var disabled = disabledDate === null || disabledDate === void 0 ? void 0 : disabledDate(thisDate, dateRange, _utils.DATERANGE_DISABLED_TARGET.CALENDAR);
+            var isToday = _utils.DateUtils.isSameDay(thisDate, todayDate);
+            var unSameMonth = !(inSameMonth !== null && inSameMonth !== void 0 && inSameMonth(thisDate));
+            var isStartSelected = !unSameMonth && selectedStartDate && _utils.DateUtils.isSameDay(thisDate, selectedStartDate);
+            var isEndSelected = !unSameMonth && selectedEndDate && _utils.DateUtils.isSameDay(thisDate, selectedEndDate);
+            var isSelected = isStartSelected || isEndSelected;
+            var inRange = false; // for Selected
+            if (selectedStartDate && selectedEndDate) {
+                if (_utils.DateUtils.isBefore(thisDate, selectedEndDate) && _utils.DateUtils.isAfter(thisDate, selectedStartDate)) inRange = true;
+                if (_utils.DateUtils.isBefore(thisDate, selectedStartDate) && _utils.DateUtils.isAfter(thisDate, selectedEndDate)) inRange = true;
+            } // for Hovering
+            if (!isSelected && hoverStartDate && hoverEndDate) {
+                if (!_utils.DateUtils.isAfter(thisDate, hoverEndDate) && !_utils.DateUtils.isBefore(thisDate, hoverStartDate)) inRange = true;
+                if (!_utils.DateUtils.isAfter(thisDate, hoverStartDate) && !_utils.DateUtils.isBefore(thisDate, hoverEndDate)) inRange = true;
+            }
+            var _classes = prefix('cell', {
+                'cell-un-same-month': unSameMonth,
+                'cell-is-today': isToday,
+                'cell-selected': isRangeSelectionMode ? isSelected : _utils.DateUtils.isSameDay(thisDate, selected),
+                'cell-selected-start': isStartSelected,
+                'cell-selected-end': isEndSelected,
+                'cell-in-range': !unSameMonth && inRange,
+                'cell-disabled': disabled
+            });
+            var title = formatDate ? formatDate(thisDate, formatStr) : _utils.DateUtils.format(thisDate, formatStr);
+            days.push(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+                role: "cell",
+                key: title,
+                className: _classes
+            }, /*#__PURE__*/ _reactDefault.default.createElement("div", {
+                role: "button",
+                className: prefix('cell-content'),
+                tabIndex: -1,
+                title: isToday ? title + " (" + (locale === null || locale === void 0 ? void 0 : locale.today) + ")" : title,
+                onMouseEnter: !disabled && onMouseMove ? onMouseMove.bind(null, thisDate) : undefined,
+                onClick: _partialDefault.default(handleSelect, thisDate, disabled)
+            }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+                className: prefix('cell-day')
+            }, _utils.DateUtils.getDate(thisDate)), renderCell && renderCell(thisDate))));
+        }
+        return days;
+    };
+    var classes = merge(className, prefix('row'));
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, rest, {
+        ref: ref,
+        role: "row",
+        className: classes
+    }), showWeekNumbers && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('cell-week-number'),
+        role: "cell"
+    }, _utils.DateUtils.format(props.weekendDate, isoWeek ? 'I' : 'w')), renderDays()));
+});
+TableRow.displayName = 'TableRow';
+TableRow.defaultProps = defaultProps;
+TableRow.propTypes = {
+    weekendDate: _propTypesDefault.default.instanceOf(Date),
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string
+};
+exports.default = TableRow;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","lodash/partial":"g9xWX","../utils":"iz9Dz","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"2SeJZ":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _utils = require("../utils");
+var _calendarContext = require("./CalendarContext");
+var defaultProps = {
+    classPrefix: 'calendar-table',
+    as: 'div'
+};
+var weekKeys = [
+    'sunday',
+    'monday',
+    'tuesday',
+    'wednesday',
+    'thursday',
+    'friday',
+    'saturday'
+];
+var TableHeaderRow = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), locale = _useCalendarContext.locale, showWeekNumbers = _useCalendarContext.showWeekNumbers, isoWeek = _useCalendarContext.isoWeek;
+    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, prefix = _useClassNames.prefix;
+    var classes = merge(className, prefix('row', 'header-row'));
+    var items = weekKeys;
+    if (isoWeek) {
+        items = weekKeys.filter(function(v) {
+            return v !== 'sunday';
+        });
+        items.push('sunday');
+    }
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        role: "row"
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), showWeekNumbers && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('cell'),
+        role: "columnheader"
+    }), items.map(function(key) {
+        return(/*#__PURE__*/ _reactDefault.default.createElement("div", {
+            key: key,
+            className: prefix('cell'),
+            role: "columnheader"
+        }, /*#__PURE__*/ _reactDefault.default.createElement("span", {
+            className: prefix('cell-content')
+        }, locale === null || locale === void 0 ? void 0 : locale[key])));
+    })));
+});
+TableHeaderRow.displayName = 'TableHeaderRow';
+TableHeaderRow.propTypes = {
+    as: _propTypesDefault.default.elementType,
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string
+};
+TableHeaderRow.defaultProps = defaultProps;
+exports.default = TableHeaderRow;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../utils":"iz9Dz","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"31qoh":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _angleLeft = require("@rsuite/icons/legacy/AngleLeft");
+var _angleLeftDefault = parcelHelpers.interopDefault(_angleLeft);
+var _angleRight = require("@rsuite/icons/legacy/AngleRight");
+var _angleRightDefault = parcelHelpers.interopDefault(_angleRight);
+var _iconButton = require("../IconButton");
+var _iconButtonDefault = parcelHelpers.interopDefault(_iconButton);
+var _button = require("../Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _utils = require("../utils");
+var _customProvider = require("../CustomProvider");
+var _calendarContext = require("./CalendarContext");
+var defaultProps = {
+    classPrefix: 'calendar-header',
+    as: 'div'
+};
+var Header = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, className = props.className, classPrefix = props.classPrefix, disabledBackward = props.disabledBackward, disabledForward = props.disabledForward, showDate = props.showDate, showMeridian = props.showMeridian, showMonth = props.showMonth, showTime = props.showTime, disabledTime = props.disabledTime, onMoveBackward = props.onMoveBackward, onMoveForward = props.onMoveForward, onToggleMeridian = props.onToggleMeridian, onToggleMonthDropdown = props.onToggleMonthDropdown, onToggleTimeDropdown = props.onToggleTimeDropdown, renderTitleProp = props.renderTitle, renderToolbar = props.renderToolbar, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "className",
+        "classPrefix",
+        "disabledBackward",
+        "disabledForward",
+        "showDate",
+        "showMeridian",
+        "showMonth",
+        "showTime",
+        "disabledTime",
+        "onMoveBackward",
+        "onMoveForward",
+        "onToggleMeridian",
+        "onToggleMonthDropdown",
+        "onToggleTimeDropdown",
+        "renderTitle",
+        "renderToolbar"
+    ]);
+    var _useCalendarContext = _calendarContext.useCalendarContext(), locale = _useCalendarContext.locale, _useCalendarContext$d = _useCalendarContext.date, date = _useCalendarContext$d === void 0 ? new Date() : _useCalendarContext$d, format = _useCalendarContext.format, inline = _useCalendarContext.inline, disabledDate = _useCalendarContext.disabledDate;
+    var _useClassNames = _utils.useClassNames(classPrefix), prefix = _useClassNames.prefix, withClassPrefix = _useClassNames.withClassPrefix, merge = _useClassNames.merge;
+    var btnProps = {
+        appearance: 'subtle',
+        size: inline ? 'sm' : 'xs'
+    };
+    var getTimeFormat = _react.useCallback(function() {
+        var timeFormat = [];
+        if (!format) return '';
+        if (/([Hh])/.test(format)) timeFormat.push(showMeridian ? 'hh' : 'HH');
+        if (/m/.test(format)) timeFormat.push('mm');
+        if (/s/.test(format)) timeFormat.push('ss');
+        return timeFormat.join(':');
+    }, [
+        format,
+        showMeridian
+    ]);
+    var getDateFormat = _react.useCallback(function() {
+        if (showDate) return (locale === null || locale === void 0 ? void 0 : locale.formattedDayPattern) || 'yyyy-MM-dd';
+        else if (showMonth) return (locale === null || locale === void 0 ? void 0 : locale.formattedMonthPattern) || 'yyyy-MM';
+        return 'yyyy';
+    }, [
+        locale,
+        showDate,
+        showMonth
+    ]);
+    var renderTitle = _react.useCallback(function() {
+        var _renderTitleProp;
+        return (_renderTitleProp = renderTitleProp === null || renderTitleProp === void 0 ? void 0 : renderTitleProp(date)) !== null && _renderTitleProp !== void 0 ? _renderTitleProp : date && /*#__PURE__*/ _reactDefault.default.createElement(_customProvider.FormattedDate, {
+            date: date,
+            formatStr: getDateFormat()
+        });
+    }, [
+        date,
+        getDateFormat,
+        renderTitleProp
+    ]);
+    var dateTitleClasses = prefix('title', 'title-date', {
+        error: disabledDate === null || disabledDate === void 0 ? void 0 : disabledDate(date)
+    });
+    var timeTitleClasses = prefix('title', 'title-time', {
+        error: disabledTime === null || disabledTime === void 0 ? void 0 : disabledTime(date)
+    });
+    var backwardClass = prefix('backward', {
+        'btn-disabled': disabledBackward
+    });
+    var forwardClass = prefix('forward', {
+        'btn-disabled': disabledForward
+    });
+    var monthToolbar = /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('month-toolbar')
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_iconButtonDefault.default, _extendsDefault.default({
+    }, btnProps, {
+        className: backwardClass,
+        onClick: disabledBackward ? undefined : onMoveBackward,
+        icon: /*#__PURE__*/ _reactDefault.default.createElement(_angleLeftDefault.default, null)
+    })), /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, _extendsDefault.default({
+    }, btnProps, {
+        className: dateTitleClasses,
+        onClick: onToggleMonthDropdown
+    }), renderTitle()), /*#__PURE__*/ _reactDefault.default.createElement(_iconButtonDefault.default, _extendsDefault.default({
+    }, btnProps, {
+        className: forwardClass,
+        onClick: disabledForward ? undefined : onMoveForward,
+        icon: /*#__PURE__*/ _reactDefault.default.createElement(_angleRightDefault.default, null)
+    })));
+    var hasMonth = showDate || showMonth;
+    var classes = merge(className, withClassPrefix({
+        'has-month': hasMonth,
+        'has-time': showTime
+    }));
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+        role: "row"
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), hasMonth && monthToolbar, showTime && /*#__PURE__*/ _reactDefault.default.createElement("div", {
+        className: prefix('time-toolbar')
+    }, /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, _extendsDefault.default({
+    }, btnProps, {
+        className: timeTitleClasses,
+        onClick: onToggleTimeDropdown
+    }), date && /*#__PURE__*/ _reactDefault.default.createElement(_customProvider.FormattedDate, {
+        date: date,
+        formatStr: getTimeFormat()
+    })), showMeridian && /*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, _extendsDefault.default({
+    }, btnProps, {
+        className: prefix('meridian'),
+        onClick: onToggleMeridian
+    }), date && /*#__PURE__*/ _reactDefault.default.createElement(_customProvider.FormattedDate, {
+        date: date,
+        formatStr: "a"
+    }))), renderToolbar === null || renderToolbar === void 0 ? void 0 : renderToolbar(date)));
+});
+Header.displayName = 'Header';
+Header.propTypes = {
+    className: _propTypesDefault.default.string,
+    classPrefix: _propTypesDefault.default.string,
+    disabledBackward: _propTypesDefault.default.bool,
+    disabledForward: _propTypesDefault.default.bool,
+    disabledTime: _propTypesDefault.default.func,
+    onMoveBackward: _propTypesDefault.default.func,
+    onMoveForward: _propTypesDefault.default.func,
+    onToggleMeridian: _propTypesDefault.default.func,
+    onToggleMonthDropdown: _propTypesDefault.default.func,
+    onToggleTimeDropdown: _propTypesDefault.default.func,
+    renderTitle: _propTypesDefault.default.func,
+    renderToolbar: _propTypesDefault.default.func,
+    showDate: _propTypesDefault.default.bool,
+    showMeridian: _propTypesDefault.default.bool,
+    showMonth: _propTypesDefault.default.bool,
+    showTime: _propTypesDefault.default.bool
+};
+Header.defaultProps = defaultProps;
+exports.default = Header;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","@rsuite/icons/legacy/AngleLeft":"6gXqx","@rsuite/icons/legacy/AngleRight":"9I5rW","../IconButton":"bg6IG","../Button":"7S1xo","../utils":"iz9Dz","../CustomProvider":"fvq4Z","./CalendarContext":"hOlUW","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bg6IG":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _iconButton = require("./IconButton");
+var _iconButtonDefault = parcelHelpers.interopDefault(_iconButton);
+exports.default = _iconButtonDefault.default;
+
+},{"./IconButton":"ac6Pd","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"ac6Pd":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _button = require("../Button");
+var _buttonDefault = parcelHelpers.interopDefault(_button);
+var _utils = require("../utils");
+var defaultProps = {
+    classPrefix: 'btn-icon',
+    placement: 'left'
+};
+var IconButton = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var icon = props.icon, placement = props.placement, children = props.children, circle = props.circle, classPrefix = props.classPrefix, className = props.className, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "icon",
+        "placement",
+        "children",
+        "circle",
+        "classPrefix",
+        "className"
+    ]);
+    var _useClassNames = _utils.useClassNames(classPrefix), merge = _useClassNames.merge, withClassPrefix = _useClassNames.withClassPrefix;
+    var classes = merge(className, withClassPrefix("placement-" + placement, {
+        circle: circle,
+        'with-text': typeof children !== 'undefined'
+    }));
+    return(/*#__PURE__*/ _reactDefault.default.createElement(_buttonDefault.default, _extendsDefault.default({
+    }, rest, {
+        ref: ref,
+        className: classes
+    }), icon, children));
+});
+IconButton.displayName = 'IconButton';
+IconButton.defaultProps = defaultProps;
+IconButton.propTypes = {
+    className: _propTypesDefault.default.string,
+    icon: _propTypesDefault.default.any,
+    classPrefix: _propTypesDefault.default.string,
+    circle: _propTypesDefault.default.bool,
+    children: _propTypesDefault.default.node,
+    placement: _propTypesDefault.default.oneOf([
+        'left',
+        'right'
+    ])
+};
+exports.default = IconButton;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","react":"6TuXu","prop-types":"1tgq3","../Button":"7S1xo","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"bVMCT":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _react = require("react");
+var _utils = require("../utils");
+var useCalendarDate = function useCalendarDate1(value, defaultDate) {
+    var _ref;
+    var valueRef = _react.useRef(value);
+    var _useState = _react.useState((_ref = value !== null && value !== void 0 ? value : defaultDate) !== null && _ref !== void 0 ? _ref : new Date()), calendarDate = _useState[0], setValue = _useState[1];
+    var setCalendarDate = _react.useCallback(function(date) {
+        if (date && (date === null || date === void 0 ? void 0 : date.valueOf()) !== (calendarDate === null || calendarDate === void 0 ? void 0 : calendarDate.valueOf())) setValue(date);
+    }, [
+        calendarDate
+    ]);
+    _utils.useUpdateEffect(function() {
+        var _valueRef$current;
+        if ((value === null || value === void 0 ? void 0 : value.valueOf()) !== ((_valueRef$current = valueRef.current) === null || _valueRef$current === void 0 ? void 0 : _valueRef$current.valueOf())) {
+            setCalendarDate(value);
+            valueRef.current = value;
+        }
+    }, [
+        value
+    ]);
+    return {
+        calendarDate: calendarDate,
+        setCalendarDate: setCalendarDate
+    };
+};
+exports.default = useCalendarDate;
+
+},{"react":"6TuXu","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"gKbay":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _extends = require("@babel/runtime/helpers/esm/extends");
+var _extendsDefault = parcelHelpers.interopDefault(_extends);
+var _objectWithoutPropertiesLoose = require("@babel/runtime/helpers/esm/objectWithoutPropertiesLoose");
+var _objectWithoutPropertiesLooseDefault = parcelHelpers.interopDefault(_objectWithoutPropertiesLoose);
+var _propTypes = require("prop-types");
+var _propTypesDefault = parcelHelpers.interopDefault(_propTypes);
+var _react = require("react");
+var _reactDefault = parcelHelpers.interopDefault(_react);
+var _dateUtils = require("../utils/dateUtils");
+var _calendar = require("../Calendar/Calendar");
+var _calendarDefault = parcelHelpers.interopDefault(_calendar);
+var _utils = require("../utils");
+var defaultProps = {
+    as: _calendarDefault.default,
+    calendarDate: [
+        new Date(),
+        _dateUtils.addMonths(new Date(), 1)
+    ],
+    format: 'yyyy-MM-dd',
+    index: 0,
+    value: []
+};
+var Calendar = /*#__PURE__*/ _reactDefault.default.forwardRef(function(props, ref) {
+    var Component = props.as, calendarDate = props.calendarDate, disabledDate = props.disabledDate, index = props.index, limitEndYear = props.limitEndYear, onChangeCalendarDate = props.onChangeCalendarDate, onChangeCalendarTime = props.onChangeCalendarTime, showOneCalendar = props.showOneCalendar, value = props.value, rest = _objectWithoutPropertiesLooseDefault.default(props, [
+        "as",
+        "calendarDate",
+        "disabledDate",
+        "index",
+        "limitEndYear",
+        "onChangeCalendarDate",
+        "onChangeCalendarTime",
+        "showOneCalendar",
+        "value"
+    ]);
+    var _useState = _react.useState(), calendarState = _useState[0], setCalendarState = _useState[1];
+    var onMoveForward = _react.useCallback(function(nextPageDate) {
+        onChangeCalendarDate === null || onChangeCalendarDate === void 0 || onChangeCalendarDate(index, nextPageDate);
+    }, [
+        index,
+        onChangeCalendarDate
+    ]);
+    var onMoveBackward = _react.useCallback(function(nextPageDate) {
+        onChangeCalendarDate === null || onChangeCalendarDate === void 0 || onChangeCalendarDate(index, nextPageDate);
+    }, [
+        index,
+        onChangeCalendarDate
+    ]);
+    var handleChangePageDate = _react.useCallback(function(nextPageDate) {
+        onChangeCalendarDate === null || onChangeCalendarDate === void 0 || onChangeCalendarDate(index, nextPageDate);
+        setCalendarState(undefined);
+    }, [
+        index,
+        onChangeCalendarDate
+    ]);
+    var handleChangePageTime = _react.useCallback(function(nextPageDate) {
+        onChangeCalendarTime(index, nextPageDate);
+    }, [
+        index,
+        onChangeCalendarTime
+    ]);
+    var toggleMonthDropdown = _react.useCallback(function() {
+        setCalendarState(calendarState === _calendar.CalendarState.DROP_MONTH ? undefined : _calendar.CalendarState.DROP_MONTH);
+    }, [
+        calendarState
+    ]);
+    var toggleTimeDropdown = _react.useCallback(function() {
+        setCalendarState(calendarState === _calendar.CalendarState.DROP_TIME ? undefined : _calendar.CalendarState.DROP_TIME);
+    }, [
+        calendarState
+    ]);
+    var inSameMonth = _react.useCallback(function(date) {
+        return _dateUtils.isSameMonth(date, calendarDate[index]);
+    }, [
+        calendarDate,
+        index
+    ]);
+    var getCalendarDate = _react.useCallback(function() {
+        return calendarDate[index];
+    }, [
+        calendarDate,
+        index
+    ]);
+    var handleMoveForward = _react.useCallback(function() {
+        onMoveForward === null || onMoveForward === void 0 || onMoveForward(_dateUtils.addMonths(getCalendarDate(), 1));
+    }, [
+        getCalendarDate,
+        onMoveForward
+    ]);
+    var handleMoveBackward = _react.useCallback(function() {
+        onMoveBackward === null || onMoveBackward === void 0 || onMoveBackward(_dateUtils.addMonths(getCalendarDate(), -1));
+    }, [
+        getCalendarDate,
+        onMoveBackward
+    ]);
+    var disabledBackward = _react.useCallback(function() {
+        var after = _dateUtils.isAfter(_dateUtils.setDate(calendarDate[1], 1), _dateUtils.setDate(_dateUtils.addMonths(calendarDate[0], 1), 1));
+        if (index === 0) return false;
+        return !after;
+    }, [
+        calendarDate,
+        index
+    ]);
+    var disabledForward = _react.useCallback(function() {
+        if (showOneCalendar) return false;
+        var after = _dateUtils.isAfter(_dateUtils.setDate(calendarDate[1], 1), _dateUtils.setDate(_dateUtils.addMonths(calendarDate[0], 1), 1));
+        if (index === 1) return false;
+        return !after;
+    }, [
+        calendarDate,
+        index,
+        showOneCalendar
+    ]);
+    var disabledMonth = _react.useCallback(function(date) {
+        var after;
+        if (disabledDate !== null && disabledDate !== void 0 && disabledDate(date, value, _utils.DATERANGE_DISABLED_TARGET.CALENDAR)) return true;
+        if (showOneCalendar) return false;
+        if (index === 1) {
+            after = _dateUtils.isAfter(date, calendarDate[0]);
+            return !after;
+        }
+        after = _dateUtils.isAfter(calendarDate[1], date);
+        return !after;
+    }, [
+        calendarDate,
+        disabledDate,
+        index,
+        showOneCalendar,
+        value
+    ]);
+    return(/*#__PURE__*/ _reactDefault.default.createElement(Component, _extendsDefault.default({
+    }, rest, {
+        calendarState: calendarState,
+        dateRange: value,
+        disabledBackward: disabledBackward(),
+        disabledDate: disabledMonth,
+        disabledForward: disabledForward(),
+        inSameMonth: inSameMonth,
+        index: index,
+        limitEndYear: limitEndYear,
+        onChangePageDate: handleChangePageDate,
+        onChangePageTime: handleChangePageTime,
+        onMoveBackward: handleMoveBackward,
+        onMoveForward: handleMoveForward,
+        onToggleMonthDropdown: toggleMonthDropdown,
+        onToggleTimeDropdown: toggleTimeDropdown,
+        calendarDate: getCalendarDate(),
+        ref: ref
+    })));
+});
+Calendar.displayName = 'DateRangePicker.Calendar';
+Calendar.defaultProps = defaultProps;
+Calendar.propTypes = {
+    value: _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date)),
+    hoverValue: _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date)),
+    calendarDate: _propTypesDefault.default.arrayOf(_propTypesDefault.default.instanceOf(Date)),
+    index: _propTypesDefault.default.number,
+    format: _propTypesDefault.default.string,
+    isoWeek: _propTypesDefault.default.bool,
+    limitEndYear: _propTypesDefault.default.number,
+    classPrefix: _propTypesDefault.default.string,
+    disabledDate: _propTypesDefault.default.func,
+    onSelect: _propTypesDefault.default.func,
+    onMouseMove: _propTypesDefault.default.func,
+    onChangeCalendarDate: _propTypesDefault.default.func
+};
+exports.default = Calendar;
+
+},{"@babel/runtime/helpers/esm/extends":"bKAu6","@babel/runtime/helpers/esm/objectWithoutPropertiesLoose":"3Rubg","prop-types":"1tgq3","react":"6TuXu","../utils/dateUtils":"jqDhs","../Calendar/Calendar":"bLucr","../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}],"amO87":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+/**
+ Allow the maximum number of days specified, other dates are disabled.
+ */ parcelHelpers.export(exports, "allowedMaxDays", ()=>allowedMaxDays
+);
+/**
+ Only allowed days are specified, other dates are disabled.
+ */ parcelHelpers.export(exports, "allowedDays", ()=>allowedDays
+);
+/**
+ Allow specified date range, other dates are disabled.
+ */ parcelHelpers.export(exports, "allowedRange", ()=>allowedRange
+);
+/**
+ Disable dates after the specified date.
+ */ parcelHelpers.export(exports, "before", ()=>before
+);
+/**
+ Disable dates before the specified date.
+ */ parcelHelpers.export(exports, "after", ()=>after
+);
+/**
+ Disable dates after today.
+ */ parcelHelpers.export(exports, "beforeToday", ()=>beforeToday
+);
+/**
+ Disable dates before today.
+ */ parcelHelpers.export(exports, "afterToday", ()=>afterToday
+);
+/**
+ Used to combine multiple conditions.
+ */ parcelHelpers.export(exports, "combine", ()=>combine
+);
+var _utils = require("../utils");
+function isAfterDay(date1, date2) {
+    return _utils.DateUtils.isAfter(new Date(date1.getFullYear(), date1.getMonth(), date1.getDate()), new Date(date2.getFullYear(), date2.getMonth(), date2.getDate()));
+}
+function isBeforeDay(date1, date2) {
+    return _utils.DateUtils.isBefore(new Date(date1.getFullYear(), date1.getMonth(), date1.getDate()), new Date(date2.getFullYear(), date2.getMonth(), date2.getDate()));
+}
+function allowedMaxDays(days) {
+    return function(date, selectValue, selectedDone, target) {
+        var beforeLimit = false;
+        var afterLimit = false;
+        if (selectValue !== null && selectValue !== void 0 && selectValue[0]) {
+            var startDate = selectValue[0];
+            beforeLimit = _utils.composeFunctions(function(f) {
+                return _utils.DateUtils.addDays(f, -days + 1);
+            }, function(f) {
+                return isAfterDay(f, date);
+            })(startDate);
+            afterLimit = _utils.composeFunctions(function(f) {
+                return _utils.DateUtils.addDays(f, days - 1);
+            }, function(f) {
+                return isBeforeDay(f, date);
+            })(startDate);
+        }
+        if (target === 'CALENDAR' && !selectedDone && (beforeLimit || afterLimit)) return true;
+        return false;
+    };
+}
+function allowedDays(days) {
+    return function(date, selectValue, selectedDone, target) {
+        var beforeLimit = false;
+        var afterLimit = false;
+        if (selectValue !== null && selectValue !== void 0 && selectValue[0]) {
+            var startDate = selectValue[0];
+            beforeLimit = _utils.composeFunctions(function(f) {
+                return _utils.DateUtils.addDays(f, -days + 1);
+            }, function(f) {
+                return !_utils.DateUtils.isSameDay(f, date);
+            })(startDate);
+            afterLimit = _utils.composeFunctions(function(f) {
+                return _utils.DateUtils.addDays(f, days - 1);
+            }, function(f) {
+                return !_utils.DateUtils.isSameDay(f, date);
+            })(startDate);
+        }
+        if (target === 'CALENDAR' && !selectedDone && beforeLimit && afterLimit) return true;
+        return false;
+    };
+}
+function allowedRange(startDate, endDate) {
+    return function(date) {
+        if (isBeforeDay(date, new Date(startDate)) || isAfterDay(date, new Date(endDate))) return true;
+        return false;
+    };
+}
+function before(beforeDate) {
+    if (beforeDate === void 0) beforeDate = new Date();
+    return function(date) {
+        if (isBeforeDay(date, new Date(beforeDate))) return true;
+        return false;
+    };
+}
+function after(afterDate) {
+    if (afterDate === void 0) afterDate = new Date();
+    return function(date) {
+        if (isAfterDay(date, new Date(afterDate))) return true;
+        return false;
+    };
+}
+function beforeToday() {
+    return before();
+}
+function afterToday() {
+    return after();
+}
+function combine() {
+    for(var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++)args[_key] = arguments[_key];
+    return function() {
+        for(var _len2 = arguments.length, disabledDateArgs = new Array(_len2), _key2 = 0; _key2 < _len2; _key2++)disabledDateArgs[_key2] = arguments[_key2];
+        return args.reduce(function(a, b) {
+            return a.apply(void 0, disabledDateArgs) || b.apply(void 0, disabledDateArgs);
+        });
+    };
 }
 
-},{"react-refresh/runtime":"fNmB3"}]},["2rAXy","VR6yo","bw7S0"], "bw7S0", "parcelRequire94c2")
+},{"../utils":"iz9Dz","@parcel/transformer-js/src/esmodule-helpers.js":"JacNc"}]},["2rAXy","VR6yo","bw7S0"], "bw7S0", "parcelRequire94c2")
 
 //# sourceMappingURL=index.7c3d8ba2.js.map

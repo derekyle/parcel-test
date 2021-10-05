@@ -1,6 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Loader from 'rsuite/Loader';
+import DateRangePicker from "rsuite/DateRangePicker";
+
+import 'rsuite/styles/index.less';
   
 var mountNode = document.getElementById("app");
-ReactDOM.render(<Loader />, mountNode);
+
+const instance = <DateRangePicker
+                  style={{ paddingTop: 5 }}
+                  placeholder="Select Date Range"
+                  />;
+
+ReactDOM.render(instance, mountNode);
