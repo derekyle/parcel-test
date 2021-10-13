@@ -2,7 +2,7 @@
   "scripts": {
     "serve": "parcel index.html --port 9995",
     "watch": "parcel watch index.html --public-url /dist/",
-    "build": "parcel build index.html --public-url /dist/ --log-level verbose"
+    "build": "parcel build index.html index2.html --public-url /dist/ --log-level verbose"
   },
   "dependencies": {
     "parcel": "^2.0.0-rc.0",
